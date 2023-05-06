@@ -58,12 +58,46 @@ mm.add({
 // jQuery
 $(document).ready(() => {
   
+    // bts collapse
     $('#btsCollapse1').on("click", () => {
-        $('#btsCollapseText2').hide();
+        // $('#btsCollapseText1').css("display", "block");
+        $('#btsCollapseText1').slideToggle(250);
+        $('#btsCollapseText2').slideUp(250);
+        $('#btsCollapseText3').slideUp(250);
+        
+    })
+    
+    $('#btsCollapse2').on("click", () => {
+        $('#btsCollapseText2').slideToggle(250);
+        $('#btsCollapseText1').slideUp(250);
+        $('#btsCollapseText3').slideUp(250);
+
+    })
+
+    $('#btsCollapse3').on("click", () => {
+        $('#btsCollapseText3').slideToggle(250);
+        $('#btsCollapseText1').slideUp(250);
+        $('#btsCollapseText2').slideUp(250);
+
     })
 
     $('#green').on("click", (event) => {
         $(event.currentTarget).hide();
     })
+
+    $('#footerHouseFill').hide();
+    
+    // footer house icon
+    $('#footerHouseLink').on("mouseenter", () => {
+        $('#footerHouseFill').show();
+        $('#footerHouseNoFill').hide();
+    })
+    
+    $('#footerHouseFill').on("mouseleave", () => {
+        $('#footerHouseNoFill').show();
+        $('#footerHouseFill').hide();
+        
+    })
+
   
 });

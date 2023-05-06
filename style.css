@@ -17,6 +17,10 @@ body {
     text-decoration: none;
 }
 
+.cursor-pointer:hover {
+    cursor: pointer;
+}
+
 #landingPage {
     padding-inline: 0px !important;
 }
@@ -47,10 +51,28 @@ body {
     /* border: solid green; */
 }
 
+/* our services */
+#servicesCol {
+    border: solid red;
+    height: 100vh;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.child {
+    border: solid green;
+}
+
 /* bts */
 #btsRow {
-    padding-inline: 80px;
-    border: solid green;
+    /* padding-inline: 80px; */
+    /* border: solid green; */
 }
 
 #btsCol {
@@ -60,13 +82,15 @@ body {
 }
 
 #btsTextBox {
-    /* border: solid red; */
+    /* padding-right: 0px; */
 }
 
 #btsSpeedImages {
-    border: solid red;
+    /* border: solid red; */
     height: 50%;
 }
+
+
 
 
 @media only screen and (max-width: 1024px) {
@@ -84,6 +108,10 @@ body {
 @media only screen and (max-width: 425px) {
     .carousel-img {
         height: 90vh;
+    }
+
+    #btsRow {
+        padding-inline: 0px;
     }
     
 }
