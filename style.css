@@ -1,0 +1,96 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+#green {
+    border: solid green;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    bottom: 0%;
+    border-radius: 20px;
+}
+
+.no-underline {
+    text-decoration: none;
+}
+
+#landingPage {
+    padding-inline: 0px !important;
+}
+
+/* carousel */
+.carousel-img {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 25px solid white;
+    border-radius: 35px;
+    background-position: 50% 50%;
+}
+
+#carousel1 {
+    background-image: url(./assets/carousel/1.jpg);
+}
+#carousel2 {
+    background-image: url(./assets/carousel/2.jpg);
+}
+#carousel3 {
+    background-image: url(./assets/carousel/3.jpg);
+}
+
+/* navbar */
+#mainNavbar {
+    /* border: solid green; */
+}
+
+/* bts */
+#btsRow {
+    padding-inline: 80px;
+    border: solid green;
+}
+
+#btsCol {
+    height: 100vh;
+    width: 100vw;
+    padding: 0px !important;
+}
+
+#btsTextBox {
+    /* border: solid red; */
+}
+
+#btsSpeedImages {
+    border: solid red;
+    height: 50%;
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .carousel-img {
+        height: 80vh;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .carousel-img {
+        height: 60vh;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .carousel-img {
+        height: 90vh;
+    }
+    
+}
+
+@media only screen and (max-width: 320px) {
+    .carousel-img {
+        height: 90vh;
+    }
+    
+}
