@@ -18,6 +18,10 @@ let tween = gsap.fromTo(
 
 tween.reverse(true);
 
+gsap.set(".navbar", {
+    // y: "-1440%",
+    // x: "100%",
+})
 
 
 // client slide

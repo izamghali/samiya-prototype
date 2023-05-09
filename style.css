@@ -33,6 +33,10 @@ html {
     visibility: hidden;
 }
 
+.display-none {
+    display: none;
+}
+
 .padding-zero {
     padding: 0px;
 }
@@ -79,9 +83,38 @@ html {
     background-image: url(./assets/carousel/3.jpg);
 }
 
+#mainCarousel {
+    z-index: 0;
+}
+
 /* navbar */
 #mainNavbar {
-    /* border: solid green; */
+    z-index: 1;
+    position: absolute;
+    top: 4%;
+    right: 10%;
+}
+
+#mainNavbar li {
+    margin-right: 3em;
+}
+
+#aBrand {
+    position: absolute;
+    left: -55%;
+}
+
+#navbarTablet {
+    display: none;
+}
+
+.layer {
+    position: relative;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    border-radius: var(--border-radius-modern);
+    opacity: 0.4;
 }
 
 /* our services */
@@ -123,6 +156,11 @@ html {
     height: 50%;
 }
 
+@media only screen and (min-width: 1440px) {
+    #aBrand {
+        display: none;
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     .carousel-img {
@@ -131,6 +169,20 @@ html {
 
     .modern-padding-inline {
         padding-inline: 50px;
+    }
+
+    #mainNavbar li {
+        margin-right: 2em;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    #mainNavbar {
+        display: none;
+    }
+
+    #navbarTablet {
+        display: block;
     }
 }
 
@@ -146,6 +198,15 @@ html {
     .tablet-justify-center {
         justify-content: center !important;
     }
+
+    #navbarTablet {
+        display: block;
+    }
+
+    #mainNavbar {
+        display: none;
+    }
+
 }
 
 @media only screen and (max-width: 425px) {
