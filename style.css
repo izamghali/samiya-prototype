@@ -19,7 +19,7 @@ html {
 }
 
 .no-border {
-    border: none;
+    border: none !important;
 }
 
 .debug-border-red {
@@ -118,7 +118,8 @@ html {
     opacity: 0.4;
 }
 
-/* our services */
+/* client */
+
 
 
 /* bts */
@@ -136,6 +137,12 @@ html {
 #btsSpeedImages {
     /* border: solid red; */
     height: 50%;
+}
+
+.always-square {
+    height:0;
+    width:20%;
+    padding-bottom:20%;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -189,6 +196,25 @@ html {
         display: none;
     }
 
+    #clientsTablet {
+        display: block !important;
+        height: auto;
+    }
+
+    #mainClients {
+        display: none;
+    }
+
+    .always-square {
+        height:0;
+        width:100%;
+        padding-bottom:50%;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    
 }
 
 @media only screen and (max-width: 425px) {
@@ -203,26 +229,15 @@ html {
     .modern-padding-inline {
         padding-inline: 25px;
     }
-
-    .client-boxes {
-        height: 6.7rem !important;
-    }
     
 }
 
 @media only screen and (max-width: 375px) {
-    .client-boxes {
-        height: 5.7rem !important;
-    }
 }
 
 @media only screen and (max-width: 320px) {
     .carousel-img {
         height: 90vh;
-    }
-
-    .client-boxes {
-        height: 4.58rem !important;
     }
     
 }
