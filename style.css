@@ -118,22 +118,7 @@ html {
 }
 
 /* our services */
-#servicesCol {
-    border: solid red;
-    height: 100vh;
-}
 
-.parent {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-
-.child {
-    border: solid green;
-}
 
 /* bts */
 #btsRow {
@@ -145,10 +130,6 @@ html {
     height: 100vh;
     width: 100vw;
     padding: 0px !important;
-}
-
-#btsTextBox {
-    /* padding-right: 0px; */
 }
 
 #btsSpeedImages {
@@ -220,6 +201,10 @@ html {
 
     .modern-padding-inline {
         padding-inline: 25px;
+    }
+
+    .client-boxes {
+        height: 7rem !important;
     }
     
 }
