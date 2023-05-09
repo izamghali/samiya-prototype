@@ -6,6 +6,7 @@ body {
 
 html {
     --border-radius-modern: 20px;
+    --client-width: 12px
 }
 
 /* custom class */
@@ -204,14 +205,24 @@ html {
     }
 
     .client-boxes {
-        height: 7rem !important;
+        height: 6.7rem !important;
     }
     
+}
+
+@media only screen and (max-width: 375px) {
+    .client-boxes {
+        height: 5.7rem !important;
+    }
 }
 
 @media only screen and (max-width: 320px) {
     .carousel-img {
         height: 90vh;
+    }
+
+    .client-boxes {
+        height: 4.58rem !important;
     }
     
 }
