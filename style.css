@@ -55,9 +55,15 @@ html {
     text-decoration: none;
 }
 
+.color-white {
+    color: #fff;
+}
+
 .cursor-pointer:hover {
     cursor: pointer;
 }
+
+/* landing page */
 
 #landingPage {
     padding-inline: 0px !important;
@@ -116,6 +122,10 @@ html {
     width: 100%;
     border-radius: var(--border-radius-modern);
     opacity: 0.4;
+}
+
+#toggleOff {
+
 }
 
 /* client */

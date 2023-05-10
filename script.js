@@ -445,6 +445,8 @@ mm.add(
 
 // jQuery
 $(document).ready(() => {
+  
+
   // bts collapse
   $("#btsCollapse1").on("click", () => {
     // $('#btsCollapseText1').css("display", "block");
@@ -477,8 +479,29 @@ $(document).ready(() => {
     $("#footerHouseNoFill").hide();
   });
 
-  $("#footerHouseFill").on("mouseleave", () => {
+  $("#footerHouseLink").on("mouseleave", () => {
     $("#footerHouseNoFill").show();
     $("#footerHouseFill").hide();
   });
+
+  // dark/light mode toggle
+  let $body = document.body;
+
+  $("#toggleOff").on("click", () => {
+    $("#toggleOn").show();
+    $("#toggleOff").hide();
+    $("#moonMode").fadeIn();
+    $("#sunMode").hide();
+    $body.dataset.bsTheme = "dark";
+    $(".carousel-border").css("border", "25px solid #212529")
+  })
+  $("#toggleOn").on("click", () => {
+    $("#toggleOff").show();
+    $("#toggleOn").hide();
+    $("#sunMode").fadeIn();
+    $("#moonMode").hide();
+    $body.dataset.bsTheme = "light";
+    $(".carousel-border").css("border", "25px solid #fff")
+  })
+
 });
