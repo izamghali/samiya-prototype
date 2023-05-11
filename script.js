@@ -18,11 +18,6 @@ let tween = gsap.fromTo(
 
 tween.reverse(true);
 
-gsap.set(".navbar", {
-    // y: "-1440%",
-    // x: "100%",
-})
-
 
 // client slide
 function slideThreeImages() {
@@ -403,7 +398,6 @@ function slideFourImages() {
   style6();
 }
 
-
 slideThreeImages();
 slideFourImages();
 
@@ -446,7 +440,6 @@ mm.add(
 // jQuery
 $(document).ready(() => {
   
-
   // bts collapse
   $("#btsCollapse1").on("click", () => {
     // $('#btsCollapseText1').css("display", "block");
@@ -501,7 +494,7 @@ $(document).ready(() => {
     $("#sunMode").fadeIn();
     $("#moonMode").hide();
     $body.dataset.bsTheme = "light";
-    $(".carousel-border").css("border", "25px solid #fff")
+    $(".carousel-border").css("border", "25px solid #fff");
   })
 
 });

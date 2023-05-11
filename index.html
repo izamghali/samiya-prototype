@@ -166,77 +166,85 @@
         <div class="col d-flex justify-content-start align-items-center py-5" id="btsCol" style="height: 80vh;">
 
           <!-- bts scroll speed images -->
-          <div class="col" id="btsSpeedImages">
+          <div class="col debug-border-red d-flex justify-content-around" style="height: 50vh;" id="btsSpeedImages">
+            <!-- back img -->
+            <div class="debug-border-green" style="width: 20rem;">
+              <img src="./test-img/kam-idris-_HqHX3LBN18-unsplash.jpg" style="width: 100%;" alt="">
+            </div>
+            <div class="debug-border-green" style="width: 20rem;">
+              <img src="./test-img/kam-idris-_HqHX3LBN18-unsplash.jpg" style="width: 100%;" alt="">
+            </div>
             
+            <!-- front img -->
+            <div class="debug-border-green position-absolute top-10 start-10" style="width: 20rem;">
+              <img class="debug-border-green" src="./test-img/linh-le-FYgnwFMZBM0-unsplash.jpg" style="width: 100%;" alt="">
+            </div>
           </div>
 
           <!-- bts textbox -->
-          <div class="col">
-            <div class="col">
-              
-              <!-- bts textbox heading -->
-              <div class="row">
-                <div class="col">
-                  <h3>Behind The <span>Scenes</span></h3>
-                </div>
+          <div class="col debug-border-red">
+            <!-- bts textbox heading -->
+            <div class="row">
+              <div class="col">
+                <h3>Behind The <span>Scenes</span></h3>
               </div>
-  
-              <!-- bts textbox collapse -->
-              <div class="row">
-                <div class="col d-flex-inline" id="btsTextBox">
-  
-                  <!-- textbox1 -->
-                  <div class="row">
-                    <div class="col">
-                      <a class="no-underline text-dark cursor-pointer" id="btsCollapse1">
-                        Some important information
-                      </a>     
-                      <hr>         
-                      <div class="" >
-                        <div class="card card-body collapse" id="btsCollapseText1">
-                          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-  
-                  <!-- textbox 2 -->
-                  <div class="row">
-                    <div class="col">
-                      <a class="no-underline text-dark cursor-pointer" id="btsCollapse2">
-                        Some important information
-                      </a>  
-                      <hr>            
-                      <div class="" >
-                        <div class="card card-body display-none" id="btsCollapseText2">
-                          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <br>
-                  
-                  <!-- textbox 3 -->
-                  <div class="row">
-                    <div class="col">
-                      <a class="no-underline text-dark cursor-pointer" id="btsCollapse3">
-                        Some important information
-                      </a>  
-                      <hr>            
-                      <div class="" >
-                        <div class="card card-body display-none" id="btsCollapseText3">
-                          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            </div>
 
+            <!-- bts textbox collapse -->
+            <div class="row">
+              <div class="col d-flex-inline" id="btsTextBox">
+
+                <!-- textbox1 -->
+                <div class="row">
+                  <div class="col">
+                    <a class="no-underline text-dark cursor-pointer" id="btsCollapse1">
+                      Some important information
+                    </a>     
+                    <hr>         
+                    <div>
+                      <div class="card card-body" id="btsCollapseText1">
+                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+
+                <!-- textbox 2 -->
+                <div class="row">
+                  <div class="col">
+                    <a class="no-underline text-dark cursor-pointer" id="btsCollapse2">
+                      Some important information
+                    </a>  
+                    <hr>            
+                    <div class="" >
+                      <div class="card card-body display-none" id="btsCollapseText2">
+                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br>
+                
+                <!-- textbox 3 -->
+                <div class="row">
+                  <div class="col">
+                    <a class="no-underline text-dark cursor-pointer" id="btsCollapse3">
+                      Some important information
+                    </a>  
+                    <hr>            
+                    <div class="" >
+                      <div class="card card-body display-none" id="btsCollapseText3">
+                        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
           </div>
+
 
         </div>
       </div>
@@ -337,7 +345,7 @@
       </div>
 
       <!-- clients -->
-      <div class="container-fluid py-5" id="mainClients">
+      <div class="container-fluid py-5" id="mainClients" data-bs-theme="light">
 
         <!-- 1# row -->
         <div class="row modern-padding-inline">
@@ -412,7 +420,7 @@
       </div>
 
       <!-- clients tablet -->
-      <div class="container-fluid py-5 display-none" id="clientsTablet">
+      <div class="container-fluid py-5 display-none" id="clientsTablet" data-bs-theme="light">
 
         <!-- 1# row -->
         <div class="row modern-padding-inline" id="clientsTabletFirstRow">
