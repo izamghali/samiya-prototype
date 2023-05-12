@@ -74,7 +74,7 @@ body #landingPage #mainNavbar li {
   margin-right: 3em;
   display: block;
 }
-@media (min-width: 1025px) {
+@media (max-width: 1440px) {
   body #landingPage #mainNavbar li {
     margin-right: 2em;
   }
@@ -173,14 +173,55 @@ body #bodyPage #professionalCardsCol {
   padding-inline: 10%;
   justify-content: space-between;
 }
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   body #bodyPage #professionalCardsCol {
     justify-content: space-around;
+  }
+}
+@media (max-width: 950px) {
+  body #bodyPage #professionalCardsCol {
+    padding-inline: 5%;
+  }
+}
+@media (min-width: 800px) and (max-width: 853px) {
+  body #bodyPage #professionalCardsCol {
+    padding-inline: 5%;
   }
 }
 body #bodyPage #professionalCardsCol .professional-cards {
   border-radius: 20px;
   overflow-x: hidden;
+  max-width: 25%;
+}
+@media (max-width: 1440px) {
+  body #bodyPage #professionalCardsCol .professional-cards {
+    max-width: 28%;
+    background-color: pink;
+  }
+}
+@media (max-width: 1024px) {
+  body #bodyPage #professionalCardsCol .professional-cards {
+    max-width: 30%;
+    background-color: black;
+  }
+}
+@media (max-width: 950px) {
+  body #bodyPage #professionalCardsCol .professional-cards {
+    background-color: burlywood;
+    max-width: 34%;
+  }
+}
+@media (max-width: 767px) {
+  body #bodyPage #professionalCardsCol .professional-cards {
+    background-color: darkorange;
+    max-width: 70%;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #professionalCardsCol .professional-cards {
+    max-width: 80%;
+    background-color: #fff;
+  }
 }
 body #bodyPage #mainClients {
   padding-inline: 10%;

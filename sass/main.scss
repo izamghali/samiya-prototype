@@ -188,12 +188,43 @@ body {
         #professionalCardsCol {
             padding-inline: 10%;
             justify-content: space-between;
-            @include tablet {
+            @include desktop {
                 justify-content: space-around;
             }
+            @include large-tablet {
+                padding-inline: 5%;
+            }
+            @media (min-width: 800px) and (max-width: 853px) {
+                padding-inline: 5%;
+            }
+
             .professional-cards {
                 border-radius: $standard-border-radius;
                 overflow-x: hidden;
+                max-width: 25%;
+
+                @include large-desktop {
+                    max-width: 28%;
+                    background-color: pink;
+                }
+                @include desktop {
+                    max-width: 30%;
+                    background-color: black;
+                }
+                @include large-tablet {
+                    background-color: burlywood;
+                    max-width: 34%;
+                }
+                @include tablet {
+                    background-color:darkorange;
+                    max-width: 70%;
+                }
+                @include large-mobile {
+                    max-width: 80%;
+                    background-color:#fff;
+                }
+                
+                
             }
         }
         
