@@ -1,0 +1,35 @@
+%hidden-overflow {
+    overflow: hidden;
+}
+
+%display-none {
+    display: none;
+}
+
+%no-border {
+    border: none;
+}
+
+%cursor-pointer {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+%color-white {
+    color: #fff;
+}
+
+%no-underline {
+    text-decoration: none;
+}
+
+.debug-border-one {
+    border: solid red;
+}
+.debug-border-two {
+    border: solid green;
+}
+.debug-border-three {
+    border: solid blue;
+}

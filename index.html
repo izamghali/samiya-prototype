@@ -15,75 +15,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
 
     <!-- main css -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./sass/main.css">
   </head>
   <body data-bs-theme="light">
 
     <!-- navbar & carousel -->
     <div class="container-fluid" id="landingPage">
-
-      <!-- navbar tablet -->
-      <nav class="navbar navbar-expand-lg bg-transparent" id="navbarTablet">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Samiya Studio</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Our Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">BTS</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Gallery
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">How We Work</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contact Us</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- carousel -->
-      <div class="carousel slide carousel-fade" data-bs-pause="false" id="mainCarousel" data-bs-ride="carousel">
-
-        <div class="carousel-inner">
-
-          <!-- 1# slide -->
-          <div class="carousel-item carousel-border active carousel-img" id="carousel1" data-bs-interval="4000">
-            <div class="layer"></div>
-          </div>
-          
-          <!-- 2# slide -->
-          <div class="carousel-item carousel-border carousel-img" id="carousel2" data-bs-interval="4000">
-            <div class="layer"></div>
-          </div>
-          
-          <!-- 3# slide -->
-          <div class="carousel-item carousel-border carousel-img" id="carousel3" data-bs-interval="4000">
-            <div class="layer"></div>
-          </div>
-          
-        </div>
-        
-      </div>
 
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg bg-transparent" id="mainNavbar">
@@ -106,6 +43,7 @@
               <li class="nav-item">
                 <a class="nav-link text-light" href="#">BTS</a>
               </li>
+              <!-- Gallery -->
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Gallery
@@ -128,76 +66,102 @@
               <li class="nav-item">
 
                 <!-- toggle on -->
-                <svg class="bi bi-toggle-on display-none color-white cursor-pointer" id="toggleOn" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <svg class="bi bi-toggle-on dark-light-toggle" id="toggleOn" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                   <path d="M5 3a5 5 0 0 0 0 10h6a5 5 0 0 0 0-10H5zm6 9a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
                 </svg>
 
                 <!-- moon -->
-                <svg class="bi bi-moon-stars-fill display-none color-white" id="moonMode"  width="30" height="30" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                <svg class="bi bi-moon-stars-fill" id="moonMode"  width="30" height="30" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
                   <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
                 </svg>
 
                 <!-- toggle off -->
-                <svg class="bi bi-toggle-off color-white cursor-pointer" id="toggleOff" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <svg class="bi bi-toggle-off dark-light-toggle" id="toggleOff" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                   <path d="M11 4a4 4 0 0 1 0 8H8a4.992 4.992 0 0 0 2-4 4.992 4.992 0 0 0-2-4h3zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5z"/>
                 </svg>
 
                 <!-- sun -->
-                <svg class="bi bi-brightness-high-fill color-white" id="sunMode" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                <svg class="bi bi-brightness-high-fill" id="sunMode" width="30" height="30" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
                   <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
                 </svg>
 
                 
 
               </li>
+
             </ul>
           </div>
         </div>
       </nav>
 
+      <!-- carousel -->
+      <div class="carousel slide carousel-fade" data-bs-pause="false" id="mainCarousel" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+
+          <!-- 1# slide -->
+          <div class="carousel-item carousel-img active" id="carousel1" data-bs-interval="4000">
+            <div class="layer"></div>
+          </div>
+          
+          <!-- 2# slide -->
+          <div class="carousel-item carousel-img" id="carousel2" data-bs-interval="4000">
+            <div class="layer"></div>
+          </div>
+          
+          <!-- 3# slide -->
+          <div class="carousel-item carousel-img" id="carousel3" data-bs-interval="4000">
+            <div class="layer"></div>
+          </div>
+          
+        </div>
+        
+      </div>
+    
+
     </div>
 
     <!-- body -->
-    <div class="container-fluid overflow-x-hidden">
+    <div class="container-fluid overflow-x-hidden" id="bodyPage">
 
       <!-- bts -->
       <div class="row">
-        <div class="col d-flex justify-content-start align-items-center py-5" id="btsCol" style="height: 80vh;">
+        <div class="col d-flex flex-column justify-content-start align-items-center py-5" id="btsCol" style="height: 80vh;">
 
           <!-- bts scroll speed images -->
-          <div class="col debug-border-red d-flex justify-content-around" style="height: 50vh;" id="btsSpeedImages">
+          <div class="col justify-content-around" style="height: 50vh;" id="btsSpeedImages">
             <!-- back img -->
-            <div class="debug-border-green" style="width: 20rem;">
+            <div class="" style="width: 20rem;">
               <img src="./test-img/kam-idris-_HqHX3LBN18-unsplash.jpg" style="width: 100%;" alt="">
             </div>
-            <div class="debug-border-green" style="width: 20rem;">
+            <div class="" style="width: 20rem;">
               <img src="./test-img/kam-idris-_HqHX3LBN18-unsplash.jpg" style="width: 100%;" alt="">
             </div>
             
             <!-- front img -->
-            <div class="debug-border-green position-absolute top-10 start-10" style="width: 20rem;">
-              <img class="debug-border-green" src="./test-img/linh-le-FYgnwFMZBM0-unsplash.jpg" style="width: 100%;" alt="">
+            <div class=" position-absolute top-10 start-10" style="width: 20rem;">
+              <img class="" src="./test-img/linh-le-FYgnwFMZBM0-unsplash.jpg" style="width: 100%;" alt="">
             </div>
           </div>
 
           <!-- bts textbox -->
-          <div class="col debug-border-red">
+          <div class="col">
             <!-- bts textbox heading -->
             <div class="row">
               <div class="col">
-                <h3>Behind The <span>Scenes</span></h3>
+                <h3>Behind The <span class="">Scenes</span></h3>
               </div>
             </div>
 
             <!-- bts textbox collapse -->
             <div class="row">
-              <div class="col d-flex-inline" id="btsTextBox">
+              <div class="col d-flex-inline">
 
                 <!-- textbox1 -->
                 <div class="row">
                   <div class="col">
-                    <a class="no-underline text-dark cursor-pointer" id="btsCollapse1">
+                    <a class="text-dark" id="btsCollapse1">
                       Some important information
                     </a>     
                     <hr>         
@@ -213,12 +177,12 @@
                 <!-- textbox 2 -->
                 <div class="row">
                   <div class="col">
-                    <a class="no-underline text-dark cursor-pointer" id="btsCollapse2">
+                    <a class="text-dark" id="btsCollapse2">
                       Some important information
                     </a>  
                     <hr>            
                     <div class="" >
-                      <div class="card card-body display-none" id="btsCollapseText2">
+                      <div class="card card-body" id="btsCollapseText2">
                         Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                       </div>
                     </div>
@@ -229,12 +193,12 @@
                 <!-- textbox 3 -->
                 <div class="row">
                   <div class="col">
-                    <a class="no-underline text-dark cursor-pointer" id="btsCollapse3">
+                    <a class="text-dark" id="btsCollapse3">
                       Some important information
                     </a>  
                     <hr>            
                     <div class="" >
-                      <div class="card card-body display-none" id="btsCollapseText3">
+                      <div class="card card-body" id="btsCollapseText3">
                         Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                       </div>
                     </div>
@@ -244,7 +208,6 @@
             </div>
 
           </div>
-
 
         </div>
       </div>
@@ -275,10 +238,10 @@
 
       <!-- professionals cards -->
       <div class="row">
-        <div class="col py-5 d-flex justify-content-around flex-md-nowrap flex-wrap">
+        <div class="col py-5 d-flex flex-md-nowrap flex-wrap" id="professionalCardsCol">
 
           <!-- photographer -->
-          <div class="card modern-border-radius mb-3 overflow-x-hidden" style="max-width: 18rem;">
+          <div class="card professional-cards mb-3" style="max-width: 18rem;">
             <img src="./assets/professionals/1.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5>Professional Name</h5>
@@ -300,7 +263,7 @@
           </div>
         
           <!-- director -->
-          <div class="card modern-border-radius mb-3 mx-3 overflow-x-hidden" style="max-width: 18rem;">
+          <div class="card professional-cards mb-3 mx-3" style="max-width: 18rem;">
             <img src="./assets/professionals/2.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5>Professional Name</h5>
@@ -321,7 +284,7 @@
           </div>
 
           <!-- editor -->
-          <div class="card modern-border-radius mb-3 overflow-x-hidden" style="max-width: 18rem;">
+          <div class="card professional-cards mb-3" style="max-width: 18rem;">
             <img src="./assets/professionals/3.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5>Professional Name</h5>
@@ -348,24 +311,24 @@
       <div class="container-fluid py-5" id="mainClients" data-bs-theme="light">
 
         <!-- 1# row -->
-        <div class="row modern-padding-inline">
-
-          <div class="col d-flex justify-content-end align-items-center tablet-justify-center">
+        <div class="row client-rows">
+          <div class="col client-col justify-content-end align-items-center tablet-justify-center">
             
+            <!-- heading -->
             <div class="col">
               <h2>We Satisfy 20+ Clients</h2>
               <p>And Still Counting</p>
             </div>
 
             <!-- style 1 -->
-            <div class="card overflow-hidden always-square">
+            <div class="card client-boxes">
               <img class="style-1-img-one" alt="..." src="./assets/clients/company/1.jpg">
               <img class="style-1-img-two" alt="..." src="./assets/clients/fnb/1.jpg">
               <img class="style-1-img-three" alt="..." src="./assets/clients/product/1.jpg">
             </div>
   
             <!-- style 4 -->
-            <div class="card overflow-hidden always-square">
+            <div class="card client-boxes">
               <img class="style-4-img-one" alt="..." src="./assets/clients/company/2.jpg">
               <img class="style-4-img-two" alt="..." src="./assets/clients/fnb/2.jpg">
               <img class="style-4-img-three" alt="..." src="./assets/clients/product/2.jpg">
@@ -373,7 +336,7 @@
             </div>
   
             <!-- style 3 -->
-            <div class="card overflow-hidden always-square">
+            <div class="card client-boxes">
               <img class="style-3-img-one" alt="..." src="./assets/clients/company/3.jpg">
               <img class="style-3-img-two" alt="..." src="./assets/clients/fnb/3.jpg">
               <img class="style-3-img-three" alt="..." src="./assets/clients/product/3.jpg">
@@ -384,11 +347,11 @@
         </div>
 
         <!-- 2# row -->
-        <div class="row modern-padding-inline">
-          <div class="col d-flex justify-content-center align-items-center tablet-justify-center">
+        <div class="row client-rows">
+          <div class="col client-col justify-content-center align-items-center tablet-justify-center">
   
             <!-- style 5 -->
-            <div class="card overflow-hidden always-square">
+            <div class="card client-boxes">
               <img class="style-5-img-one" alt="..." src="./assets/clients/fnb/4.jpg">
               <img class="style-5-img-two" alt="..." src="./assets/clients/fnb/5.jpg">
               <img class="style-5-img-three" alt="..." src="./assets/clients/product/4.jpg">
@@ -396,7 +359,7 @@
             </div>
 
             <!-- style 6 -->
-            <div class="card overflow-hidden always-square">
+            <div class="card client-boxes">
               <img class="style-6-img-one" alt="..." src="./assets/clients/fnb/6.jpg">
               <img class="style-6-img-two" alt="..." src="./assets/clients/fnb/7.jpg">
               <img class="style-6-img-three" alt="..." src="./assets/clients/product/5.jpg">
@@ -404,15 +367,11 @@
             </div>
   
             <!-- style 2 -->
-            <div class="card overflow-hidden always-square">
+            <div class="card client-boxes">
               <img class="style-2-img-one" alt="..." src="./assets/clients/fnb/9.jpg">
               <img class="style-2-img-two" alt="..." src="./assets/clients/fnb/10.jpg">
               <img class="style-2-img-three" alt="..." src="./assets/clients/fnb/11.jpg">
             </div>
-  
-            
-            
-  
   
           </div>
         </div>
@@ -420,10 +379,10 @@
       </div>
 
       <!-- clients tablet -->
-      <div class="container-fluid py-5 display-none" id="clientsTablet" data-bs-theme="light">
+      <div class="container-fluid py-5" id="mainClientsTablet" data-bs-theme="light">
 
         <!-- 1# row -->
-        <div class="row modern-padding-inline" id="clientsTabletFirstRow">
+        <div class="row client-rows-tablet">
 
           <!-- heading -->
           <div class="col d-flex-inline justify-content-start align-items-end">
@@ -431,17 +390,17 @@
             <p class="text-center">And still counting</p>
           </div>
 
-          <div class="col d-flex justify-content-end align-items-center tablet-justify-center">
+          <div class="col d-flex justify-content-center align-items-center">
   
             <!-- style 1 -->
-            <div class="card overflow-hidden no-border always-square">
+            <div class="card client-boxes-tablet">
               <img class="style-1-img-one" alt="..." src="./assets/clients/company/1.jpg">
               <img class="style-1-img-two" alt="..." src="./assets/clients/fnb/1.jpg">
               <img class="style-1-img-three" alt="..." src="./assets/clients/product/1.jpg">
             </div>
   
             <!-- style 4 -->
-            <div class="card overflow-hidden no-border always-square">
+            <div class="card client-boxes-tablet">
               <img class="style-4-img-one" alt="..." src="./assets/clients/company/2.jpg">
               <img class="style-4-img-two" alt="..." src="./assets/clients/fnb/2.jpg">
               <img class="style-4-img-three" alt="..." src="./assets/clients/product/2.jpg">
@@ -453,11 +412,11 @@
         </div>
 
         <!-- 2# row -->
-        <div class="row modern-padding-inline">
-          <div class="col d-flex justify-content-end align-items-center tablet-justify-center">
+        <div class="row client-rows-tablet">
+          <div class="col d-flex justify-content-center align-items-center">
   
             <!-- style 3 -->
-            <div class="card overflow-hidden no-border always-square">
+            <div class="card client-boxes-tablet">
               <img class="style-3-img-one" alt="..." src="./assets/clients/company/3.jpg">
               <img class="style-3-img-two" alt="..." src="./assets/clients/fnb/3.jpg">
               <img class="style-3-img-three" alt="..." src="./assets/clients/product/3.jpg">
@@ -465,7 +424,7 @@
             </div>
 
             <!-- style 5 -->
-            <div class="card overflow-hidden no-border always-square">
+            <div class="card client-boxes-tablet">
               <img class="style-5-img-one" alt="..." src="./assets/clients/fnb/4.jpg">
               <img class="style-5-img-two" alt="..." src="./assets/clients/fnb/5.jpg">
               <img class="style-5-img-three" alt="..." src="./assets/clients/product/4.jpg">
@@ -476,11 +435,11 @@
         </div>
 
         <!-- 3# row -->
-        <div class="row modern-padding-inline">
-          <div class="col d-flex justify-content-end align-items-center tablet-justify-center">
+        <div class="row client-rows-tablet">
+          <div class="col d-flex justify-content-center align-items-center">
 
               <!-- style 6 -->
-            <div class="card overflow-hidden no-border always-square">
+            <div class="card client-boxes-tablet">
               <img class="style-6-img-one" alt="..." src="./assets/clients/fnb/6.jpg">
               <img class="style-6-img-two" alt="..." src="./assets/clients/fnb/7.jpg">
               <img class="style-6-img-three" alt="..." src="./assets/clients/product/5.jpg">
@@ -488,7 +447,7 @@
             </div>
   
             <!-- style 2 -->
-            <div class="card overflow-hidden no-border always-square">
+            <div class="card client-boxes-tablet">
               <img class="style-2-img-one" alt="..." src="./assets/clients/fnb/9.jpg">
               <img class="style-2-img-two" alt="..." src="./assets/clients/fnb/10.jpg">
               <img class="style-2-img-three" alt="..." src="./assets/clients/fnb/11.jpg">
@@ -501,14 +460,13 @@
       </div>
 
       <!-- footer -->
-      <div class="row footer-section bg-dark text-light py-5" id="footer">
-        <div class="col-lg-12 footer-col flex-wrap d-flex justify-content-around">
+      <div class="row bg-dark text-light py-5" id="footer">
+        <div class="col-lg-12 flex-wrap d-flex justify-content-around">
 
           <!-- contact -->
           <div class="col-lg-3 col-sm-12 mb-4">
 
             <h4>Contact</h4>
-
 
           </div>
 
@@ -516,21 +474,21 @@
           <div class="col-lg-3 col-sm-12 mb-3">
 
             <!-- instagram -->
-            <a href="" class="btn bg-white footer-social-media">
+            <a href="" class="btn bg-white">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
                 <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
               </svg>
             </a>
 
             <!-- facebook -->
-            <a href="" class="btn bg-white footer-social-media">
+            <a href="" class="btn bg-white">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                 <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
               </svg>
             </a>
 
             <!-- linkedin -->
-            <a href="" class="btn bg-white footer-social-media">
+            <a href="" class="btn bg-white">
               <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                 <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
               </svg>
@@ -538,7 +496,7 @@
 
             <!-- address -->
             <div class="col pt-3">
-              <a class="card-link cursor-pointer" id="footerHouseLink">
+              <a class="card-link" id="footerHouseLink">
                 <svg xmlns="http://www.w3.org/2000/svg" id="footerHouseNoFill" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
                   <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
                 </svg>
@@ -556,24 +514,10 @@
 
     </div>
 
-    <!-- <div class="d-flex align-items-center justify-content-center">satisfy more</div> -->
-    <!-- <div class="row">
-      <div class="col">
-        <div class="card overflow-hidden" style="border: 5px solid red; height: 20em; width: 100%; background-color: black;">
-          <img src="./assets/professionals/1.jpg" id="green" alt="">
-        </div>
-      </div>
-    </div> -->
-
-
-
-    <!-- <div style="height: 50vh;"></div> -->
-
     <!-- GSAP first, jQuery second, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     
     <!-- Main JavaScript -->

@@ -1,0 +1,183 @@
+@import "./helpers/placeholders";
+@import "./helpers/mixins";
+@import "./layouts/breakpoints";
+@import "./helpers/variables";
+
+
+body {
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    // background-color: pink;
+
+    #landingPage {
+        padding-inline: 0px !important;
+        // navbar
+        #mainNavbar {
+            z-index: 1;
+            position: absolute;
+            top: 4%;
+            right: 10%;
+            @include tablet {
+                position: static;
+            }
+            @include desktop {
+                // position: relative;
+                top: 4%;
+                right: 0%;
+            }
+
+            #aBrand {
+                position: absolute;
+                left: -55%;
+                display: none;
+                @include tablet {
+                    display: block;
+                    position: static;
+                }
+            }
+            li {
+            margin-right: 3em;
+            display: block;
+            @include large-desktop {
+                margin-right: 2em;
+            }
+            .dark-light-toggle {
+                @extend %cursor-pointer;
+                @extend %color-white;
+            }
+            #moonMode, #sunMode {
+                @extend %color-white;
+            }
+            #toggleOn, #moonMode {
+                @extend %display-none;
+            }
+            a {
+                color: black !important;
+            }
+        }
+        
+        }
+
+        // carousel
+        #mainCarousel {
+            z-index: 0;
+            .carousel-img {
+                width: 100vw;
+                height: 100vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 40px;
+                background-position: 50% 50%;
+                @include desktop {
+                    height: 80vh;
+                }
+                @include large-mobile {
+                    height: 90vh;
+                }
+            }
+            #carousel1 {
+                background-image: url(../assets/carousel/1.jpg);
+            }
+            #carousel2 {
+                background-image: url(../assets/carousel/2.jpg);
+            }
+            #carousel3 {
+                background-image: url(../assets/carousel/3.jpg);
+            }
+            .layer {
+                position: relative;
+                background: linear-gradient(0deg, rgba(0,0,0,0.8) 0% 22%, rgba(255,255,255, 0.1) 80% 100%);
+                height: 100%;
+                width: 100%;
+                border-radius: 35px;
+                opacity: 1;
+                border: 25px solid white;
+            }
+        }
+    }
+
+    #bodyPage {
+        // bts
+        #btsCol {
+            border: solid red;
+
+            #btsSpeedImages {
+                @extend %display-none;
+            }
+
+            #btsCollapse1, #btsCollapse2, #btsCollapse3 {
+                @extend %cursor-pointer;
+                @extend %no-underline;
+            }
+            
+            #btsCollapseText2, #btsCollapseText3 {
+                @extend %display-none;   
+            }
+        }
+
+        // professional cards
+        #professionalCardsCol {
+            padding-inline: 10%;
+            justify-content: space-between;
+            @include tablet {
+                justify-content: space-around;
+            }
+            .professional-cards {
+                border-radius: $standard-border-radius;
+                overflow-x: hidden;
+            }
+        }
+        
+        // clients
+        #mainClients {
+            padding-inline: 10%;
+            @include small-tablet {
+                display: none;
+            }
+            .client-rows {
+                .client-col {
+                    display: flex;
+                }
+
+                @include tablet {
+                    padding-inline: 5%;
+                }
+
+                .client-boxes {
+                    @include always-square(0, 20%, 20%);
+                    @extend %hidden-overflow;
+                }
+            }
+            
+        }
+
+        #mainClientsTablet {
+            @extend %display-none;
+            
+            .client-rows-tablet {
+                padding-inline: 10%;
+            }
+
+            .client-boxes-tablet {
+                @include always-square(0, 40%, 40%);
+                overflow: hidden;
+            }
+
+            @include small-tablet {
+                display: block;
+            }
+        }
+
+
+        // footer
+        #footer {
+            #footerHouseLink {
+                @extend %cursor-pointer;
+            }
+        }
+    }  
+
+}
+
+
