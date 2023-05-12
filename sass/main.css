@@ -2,11 +2,15 @@ body #bodyPage #mainClients .client-rows .client-boxes {
   overflow: hidden;
 }
 
-body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsCollapseText2, body #bodyPage #btsCol #btsCollapseText3, body #bodyPage #btsCol #btsSpeedImages, body #landingPage #mainNavbar li #toggleOn, body #landingPage #mainNavbar li #moonMode {
+body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3, body #bodyPage #btsCol #btsFirstChild #btsFrontImg, body #landingPage #mainNavbar li #toggleOn, body #landingPage #mainNavbar li #moonMode {
   display: none;
 }
 
-body #bodyPage #footer #footerHouseLink:hover, body #bodyPage #btsCol #btsCollapse1:hover, body #bodyPage #btsCol #btsCollapse2:hover, body #bodyPage #btsCol #btsCollapse3:hover, body #landingPage #mainNavbar li .dark-light-toggle:hover {
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
+  border: none;
+}
+
+body #bodyPage #footer #footerHouseLink:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3:hover, body #landingPage #mainNavbar li .dark-light-toggle:hover {
   cursor: pointer;
 }
 
@@ -14,7 +18,7 @@ body #landingPage #mainNavbar li #moonMode, body #landingPage #mainNavbar li #su
   color: #fff;
 }
 
-body #bodyPage #btsCol #btsCollapse1, body #bodyPage #btsCol #btsCollapse2, body #bodyPage #btsCol #btsCollapse3 {
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3 {
   text-decoration: none;
 }
 
@@ -44,7 +48,7 @@ body #landingPage #mainNavbar {
   top: 4%;
   right: 10%;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body #landingPage #mainNavbar {
     position: static;
   }
@@ -60,7 +64,7 @@ body #landingPage #mainNavbar #aBrand {
   left: -55%;
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body #landingPage #mainNavbar #aBrand {
     display: block;
     position: static;
@@ -119,12 +123,57 @@ body #landingPage #mainCarousel .layer {
 }
 body #bodyPage #btsCol {
   border: solid red;
+  flex-direction: row;
+  height: 100vh;
+}
+@media (max-width: 767px) {
+  body #bodyPage #btsCol {
+    flex-direction: column;
+  }
+}
+body #bodyPage #btsCol #btsFirstChild {
+  width: 80vw;
+  height: 40rem;
+  border: solid greenyellow;
+}
+body #bodyPage #btsCol #btsFirstChild .bts-back-images {
+  width: 40%;
+}
+body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
+  position: absolute;
+  border: solid red;
+  width: 55vw;
+}
+body #bodyPage #btsCol #btsSecondChild {
+  border: solid blue;
+}
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
+  padding-inline: 5%;
+  width: 30vw;
+}
+@media (max-width: 767px) {
+  body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
+    width: 80vw;
+  }
+}
+@media (max-width: 660px) {
+  body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
+    width: 80vw;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
+    width: 80vw;
+  }
+}
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-hr {
+  color: green;
 }
 body #bodyPage #professionalCardsCol {
   padding-inline: 10%;
   justify-content: space-between;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body #bodyPage #professionalCardsCol {
     justify-content: space-around;
   }
@@ -144,7 +193,7 @@ body #bodyPage #mainClients {
 body #bodyPage #mainClients .client-rows .client-col {
   display: flex;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   body #bodyPage #mainClients .client-rows {
     padding-inline: 5%;
   }

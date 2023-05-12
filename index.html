@@ -127,26 +127,26 @@
 
       <!-- bts -->
       <div class="row">
-        <div class="col d-flex flex-column justify-content-start align-items-center py-5" id="btsCol" style="height: 80vh;">
+        <div class="col d-flex align-items-center py-5" id="btsCol">
 
           <!-- bts scroll speed images -->
-          <div class="col justify-content-around" style="height: 50vh;" id="btsSpeedImages">
+          <div class="col d-flex justify-content-around" id="btsFirstChild">
             <!-- back img -->
-            <div class="" style="width: 20rem;">
+            <div class="bts-back-images">
               <img src="./test-img/kam-idris-_HqHX3LBN18-unsplash.jpg" style="width: 100%;" alt="">
             </div>
-            <div class="" style="width: 20rem;">
+            <div class="bts-back-images">
               <img src="./test-img/kam-idris-_HqHX3LBN18-unsplash.jpg" style="width: 100%;" alt="">
             </div>
             
             <!-- front img -->
-            <div class=" position-absolute top-10 start-10" style="width: 20rem;">
+            <div class="" id="btsFrontImg">
               <img class="" src="./test-img/linh-le-FYgnwFMZBM0-unsplash.jpg" style="width: 100%;" alt="">
             </div>
           </div>
 
           <!-- bts textbox -->
-          <div class="col">
+          <div class="col" id="btsSecondChild">
             <!-- bts textbox heading -->
             <div class="row">
               <div class="col">
@@ -156,7 +156,7 @@
 
             <!-- bts textbox collapse -->
             <div class="row">
-              <div class="col d-flex-inline">
+              <div class="col d-flex-inline" id="btsTextBoxCol">
 
                 <!-- textbox1 -->
                 <div class="row">
@@ -164,9 +164,9 @@
                     <a class="text-dark" id="btsCollapse1">
                       Some important information
                     </a>     
-                    <hr>         
+                    <hr class="bts-hr">         
                     <div>
-                      <div class="card card-body" id="btsCollapseText1">
+                      <div class="card card-body bts-card-text" id="btsCollapseText1">
                         Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                       </div>
                     </div>
@@ -180,9 +180,9 @@
                     <a class="text-dark" id="btsCollapse2">
                       Some important information
                     </a>  
-                    <hr>            
+                    <hr class="bts-hr">            
                     <div class="" >
-                      <div class="card card-body" id="btsCollapseText2">
+                      <div class="card card-body bts-card-text" id="btsCollapseText2">
                         Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                       </div>
                     </div>
@@ -196,9 +196,9 @@
                     <a class="text-dark" id="btsCollapse3">
                       Some important information
                     </a>  
-                    <hr>            
+                    <hr class="bts-hr">            
                     <div class="" >
-                      <div class="card card-body" id="btsCollapseText3">
+                      <div class="card card-body bts-card-text" id="btsCollapseText3">
                         Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
                       </div>
                     </div>

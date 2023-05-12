@@ -101,19 +101,87 @@ body {
         // bts
         #btsCol {
             border: solid red;
-
-            #btsSpeedImages {
-                @extend %display-none;
-            }
-
-            #btsCollapse1, #btsCollapse2, #btsCollapse3 {
-                @extend %cursor-pointer;
-                @extend %no-underline;
-            }
+            flex-direction: row;
+            height: 100vh;
             
-            #btsCollapseText2, #btsCollapseText3 {
-                @extend %display-none;   
+            @include tablet {
+                flex-direction: column;
+                // height: 200vh;
             }
+
+            // @include small-tablet {
+            //     height: 170vh;
+            // }
+            
+            // @include smaller-tablet {
+            //     height: 130vh;
+
+            // }
+
+            // @include large-mobile {
+            //     height: 120vh;
+            // }
+            // @include small-mobile {
+            //     height: 120vh;
+            // }
+            
+            #btsFirstChild {
+                // @extend %display-none;
+                // position: absolute;
+                width: 80vw;
+                height: 40rem;
+                border: solid greenyellow;
+                
+                .bts-back-images {
+                    width: 40%;
+                }
+                #btsFrontImg {
+                    @extend %display-none;
+                    position: absolute;
+                    // left: 20vw;
+                    border: solid red;
+                    width: 55vw;
+                }
+            }
+
+            #btsSecondChild {
+                border: solid blue;
+                
+                #btsTextBoxCol {
+                    padding-inline: 5%;
+                    width: 30vw;
+    
+                    @include tablet {
+                        width: 80vw;
+                    }
+                    @include small-tablet {
+                        width: 80vw;
+                    }
+                    @include large-mobile {
+                        width: 80vw;
+                    }
+                    
+                    .bts-hr {
+                        color: green;
+                    }
+        
+                    #btsCollapse1, #btsCollapse2, #btsCollapse3 {
+                        @extend %cursor-pointer;
+                        @extend %no-underline;
+                    }
+        
+                    .bts-card-text {
+                        @extend %no-border;
+                    }
+                    
+                    #btsCollapseText2, #btsCollapseText3 {
+                        @extend %display-none;   
+                    }
+    
+                }
+            }
+
+
         }
 
         // professional cards
