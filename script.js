@@ -377,6 +377,20 @@ function slideFourImages() {
   style6();
 }
 
+// gsap.fromTo(
+//   ".carousel-img",
+//   {
+//     backgroundSize: isDesktop ? "100%" : "410%",
+//   },
+//   {
+//     ease: "power1.inOut",
+//     duration: 12,
+//     yoyo: true,
+//     backgroundSize: isDesktop ? "130%" : "500%",
+//     repeat: -1,
+//   }
+// );
+
 slideThreeImages();
 slideFourImages();
 
@@ -384,9 +398,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 // GSAP matchMedia
 let mm = gsap.matchMedia()
-
-
-
 
 mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
   gsap.fromTo("#btsFrontImg",
@@ -428,7 +439,6 @@ mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
   );
 
 });
-
 mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
   gsap.fromTo("#btsFrontImg",
   { 
@@ -632,12 +642,12 @@ mm.add("(max-width: 374px)", () => {
   gsap.fromTo("#btsFrontImg",
   {
     y: "45%",
-    x: "-5%",
-    scale: 1,
+    x: "5%",
+    scale: 1.2,
     zIndex: 1,
   },
   {
-    y: "-100%",
+    y: "-60%",
     scrollTrigger: {
       scrub: 3,
     }
@@ -669,9 +679,7 @@ mm.add("(max-width: 374px)", () => {
 
 });
 
-
-
-
+// jQuery
 $(document).ready(() => {
   
   // bts collapse
