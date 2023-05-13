@@ -103,42 +103,56 @@ body {
             border: solid red;
             flex-direction: row;
             height: 100vh;
+            padding-inline: 23%;
+            background-color: red;
+            justify-content: space-around;
+            @include desktop {
+                justify-content: space-around;
+                background-color:#fff;
+                padding-inline: 30%;
+            }
+            
+            @include large-tablet {
+                background-color:darkolivegreen;
+                padding-inline: 27%;
+            }
             
             @include tablet {
                 flex-direction: column;
-                // height: 200vh;
+                background-color: orange;
+                padding-inline: $padding-inline-tablet;
             }
 
-            // @include small-tablet {
-            //     height: 170vh;
-            // }
-            
-            // @include smaller-tablet {
-            //     height: 130vh;
+            @include small-tablet {
+                background-color: aqua;
+            }
 
-            // }
+            @include smaller-tablet {
+                background-color: darkslateblue;
+            }
 
-            // @include large-mobile {
-            //     height: 120vh;
-            // }
-            // @include small-mobile {
-            //     height: 120vh;
-            // }
+            @include large-mobile {
+                background-color: firebrick;
+            }
             
             #btsFirstChild {
                 // @extend %display-none;
-                // position: absolute;
-                width: 80vw;
+                min-width: 100%;
                 height: 40rem;
                 border: solid greenyellow;
+
+                @include large-tablet {
+                }
                 
                 .bts-back-images {
                     width: 40%;
+                    @include large-tablet {
+                        width: 45%;
+                    }
                 }
                 #btsFrontImg {
                     @extend %display-none;
                     position: absolute;
-                    // left: 20vw;
                     border: solid red;
                     width: 55vw;
                 }
@@ -146,18 +160,23 @@ body {
 
             #btsSecondChild {
                 border: solid blue;
+                max-width: 100%;
+                
+                @include desktop {
+                    min-width: 100%;
+                }
+                @include tablet {
+                    min-width: 100%;
+                }
+                @include small-tablet {
+                    max-width: 80%;
+                }
                 
                 #btsTextBoxCol {
                     padding-inline: 5%;
                     width: 30vw;
     
                     @include tablet {
-                        width: 80vw;
-                    }
-                    @include small-tablet {
-                        width: 80vw;
-                    }
-                    @include large-mobile {
                         width: 80vw;
                     }
                     
@@ -194,9 +213,6 @@ body {
             @include large-tablet {
                 padding-inline: 5%;
             }
-            @media (min-width: 800px) and (max-width: 853px) {
-                padding-inline: 5%;
-            }
 
             .professional-cards {
                 border-radius: $standard-border-radius;
@@ -205,23 +221,18 @@ body {
 
                 @include large-desktop {
                     max-width: 28%;
-                    background-color: pink;
                 }
                 @include desktop {
                     max-width: 30%;
-                    background-color: black;
                 }
                 @include large-tablet {
-                    background-color: burlywood;
                     max-width: 34%;
                 }
                 @include tablet {
-                    background-color:darkorange;
                     max-width: 70%;
                 }
                 @include large-mobile {
                     max-width: 80%;
-                    background-color:#fff;
                 }
                 
                 
@@ -267,7 +278,6 @@ body {
                 display: block;
             }
         }
-
 
         // footer
         #footer {

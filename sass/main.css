@@ -125,19 +125,57 @@ body #bodyPage #btsCol {
   border: solid red;
   flex-direction: row;
   height: 100vh;
+  padding-inline: 23%;
+  background-color: red;
+  justify-content: space-around;
+}
+@media (max-width: 1024px) {
+  body #bodyPage #btsCol {
+    justify-content: space-around;
+    background-color: #fff;
+    padding-inline: 30%;
+  }
+}
+@media (max-width: 950px) {
+  body #bodyPage #btsCol {
+    background-color: darkolivegreen;
+    padding-inline: 27%;
+  }
 }
 @media (max-width: 767px) {
   body #bodyPage #btsCol {
     flex-direction: column;
+    background-color: orange;
+    padding-inline: 3%;
+  }
+}
+@media (max-width: 660px) {
+  body #bodyPage #btsCol {
+    background-color: aqua;
+  }
+}
+@media (max-width: 659px) and (min-width: 426px) {
+  body #bodyPage #btsCol {
+    background-color: darkslateblue;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #btsCol {
+    background-color: firebrick;
   }
 }
 body #bodyPage #btsCol #btsFirstChild {
-  width: 80vw;
+  min-width: 100%;
   height: 40rem;
   border: solid greenyellow;
 }
 body #bodyPage #btsCol #btsFirstChild .bts-back-images {
   width: 40%;
+}
+@media (max-width: 950px) {
+  body #bodyPage #btsCol #btsFirstChild .bts-back-images {
+    width: 45%;
+  }
 }
 body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   position: absolute;
@@ -146,22 +184,28 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
 }
 body #bodyPage #btsCol #btsSecondChild {
   border: solid blue;
+  max-width: 100%;
+}
+@media (max-width: 1024px) {
+  body #bodyPage #btsCol #btsSecondChild {
+    min-width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  body #bodyPage #btsCol #btsSecondChild {
+    min-width: 100%;
+  }
+}
+@media (max-width: 660px) {
+  body #bodyPage #btsCol #btsSecondChild {
+    max-width: 80%;
+  }
 }
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
   padding-inline: 5%;
   width: 30vw;
 }
 @media (max-width: 767px) {
-  body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
-    width: 80vw;
-  }
-}
-@media (max-width: 660px) {
-  body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
-    width: 80vw;
-  }
-}
-@media (max-width: 425px) {
   body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
     width: 80vw;
   }
@@ -183,11 +227,6 @@ body #bodyPage #professionalCardsCol {
     padding-inline: 5%;
   }
 }
-@media (min-width: 800px) and (max-width: 853px) {
-  body #bodyPage #professionalCardsCol {
-    padding-inline: 5%;
-  }
-}
 body #bodyPage #professionalCardsCol .professional-cards {
   border-radius: 20px;
   overflow-x: hidden;
@@ -196,31 +235,26 @@ body #bodyPage #professionalCardsCol .professional-cards {
 @media (max-width: 1440px) {
   body #bodyPage #professionalCardsCol .professional-cards {
     max-width: 28%;
-    background-color: pink;
   }
 }
 @media (max-width: 1024px) {
   body #bodyPage #professionalCardsCol .professional-cards {
     max-width: 30%;
-    background-color: black;
   }
 }
 @media (max-width: 950px) {
   body #bodyPage #professionalCardsCol .professional-cards {
-    background-color: burlywood;
     max-width: 34%;
   }
 }
 @media (max-width: 767px) {
   body #bodyPage #professionalCardsCol .professional-cards {
-    background-color: darkorange;
     max-width: 70%;
   }
 }
 @media (max-width: 425px) {
   body #bodyPage #professionalCardsCol .professional-cards {
     max-width: 80%;
-    background-color: #fff;
   }
 }
 body #bodyPage #mainClients {
