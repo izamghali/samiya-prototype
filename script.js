@@ -391,11 +391,11 @@ let mm = gsap.matchMedia()
 mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
   gsap.fromTo("#btsFrontImg",
   { 
-    y: "50%",
+    y: "85%",
     scale: 1.1,
     x: "-40%",
   },{ 
-    y: "-120%",
+    y: "-100%",
     scrollTrigger: {
       scrub: 2,
     }
