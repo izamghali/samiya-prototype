@@ -2,7 +2,7 @@ body #bodyPage #mainClients .client-rows .client-boxes {
   overflow: hidden;
 }
 
-body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3, body #bodyPage #btsCol #btsFirstChild #btsFrontImg, body #landingPage #mainNavbar li #toggleOn, body #landingPage #mainNavbar li #moonMode {
+body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3, body #landingPage #mainNavbar li #toggleOn, body #landingPage #mainNavbar li #moonMode {
   display: none;
 }
 
@@ -124,15 +124,20 @@ body #landingPage #mainCarousel .layer {
 body #bodyPage #btsCol {
   border: solid red;
   flex-direction: row;
-  height: 100vh;
+  height: auto;
   padding-inline: 23%;
-  background-color: red;
   justify-content: space-around;
+  background-color: #fff;
+}
+@media (max-width: 1440px) {
+  body #bodyPage #btsCol {
+    background-color: red;
+  }
 }
 @media (max-width: 1024px) {
   body #bodyPage #btsCol {
     justify-content: space-around;
-    background-color: #fff;
+    background-color: black;
     padding-inline: 30%;
   }
 }
@@ -149,11 +154,6 @@ body #bodyPage #btsCol {
     padding-inline: 3%;
   }
 }
-@media (max-width: 660px) {
-  body #bodyPage #btsCol {
-    background-color: aqua;
-  }
-}
 @media (max-width: 659px) and (min-width: 426px) {
   body #bodyPage #btsCol {
     background-color: darkslateblue;
@@ -166,8 +166,31 @@ body #bodyPage #btsCol {
 }
 body #bodyPage #btsCol #btsFirstChild {
   min-width: 100%;
-  height: 40rem;
   border: solid greenyellow;
+  min-height: 75vh;
+  max-height: 80vh;
+}
+@media (max-width: 1024px) {
+  body #bodyPage #btsCol #btsFirstChild {
+    min-height: 75vh;
+    max-height: 80vh;
+  }
+}
+@media (max-width: 767px) {
+  body #bodyPage #btsCol #btsFirstChild {
+    min-height: 35rem;
+  }
+}
+@media (max-width: 659px) and (min-width: 426px) {
+  body #bodyPage #btsCol #btsFirstChild {
+    min-height: 70vh;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #btsCol #btsFirstChild {
+    min-height: 55vh;
+    max-height: 60vh;
+  }
 }
 body #bodyPage #btsCol #btsFirstChild .bts-back-images {
   width: 40%;
@@ -179,8 +202,53 @@ body #bodyPage #btsCol #btsFirstChild .bts-back-images {
 }
 body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   position: absolute;
-  border: solid red;
-  width: 55vw;
+  max-width: 20%;
+  min-width: 18%;
+  border: solid pink;
+}
+@media (max-width: 1440px) {
+  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
+    min-width: 10%;
+    max-width: 20%;
+    bottom: -75%;
+  }
+}
+@media (max-width: 1024px) {
+  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
+    max-width: 30%;
+    bottom: -60%;
+  }
+}
+@media (max-width: 950px) {
+  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
+    max-width: 35%;
+  }
+}
+@media (max-width: 767px) {
+  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
+    max-width: 37%;
+    min-width: 32%;
+    bottom: -65%;
+  }
+}
+@media (max-width: 659px) and (min-width: 426px) {
+  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
+    bottom: -60%;
+    max-width: 38%;
+    min-width: 35%;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
+    bottom: -55%;
+    max-width: 47%;
+    min-width: 45%;
+  }
+}
+@media (max-width: 320px) {
+  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
+    min-width: 50%;
+  }
 }
 body #bodyPage #btsCol #btsSecondChild {
   border: solid blue;
@@ -191,27 +259,8 @@ body #bodyPage #btsCol #btsSecondChild {
     min-width: 100%;
   }
 }
-@media (max-width: 767px) {
-  body #bodyPage #btsCol #btsSecondChild {
-    min-width: 100%;
-  }
-}
-@media (max-width: 660px) {
-  body #bodyPage #btsCol #btsSecondChild {
-    max-width: 80%;
-  }
-}
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
-  padding-inline: 5%;
   width: 30vw;
-}
-@media (max-width: 767px) {
-  body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
-    width: 80vw;
-  }
-}
-body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-hr {
-  color: green;
 }
 body #bodyPage #professionalCardsCol {
   padding-inline: 10%;

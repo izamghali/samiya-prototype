@@ -102,13 +102,18 @@ body {
         #btsCol {
             border: solid red;
             flex-direction: row;
-            height: 100vh;
+            height: auto;
             padding-inline: 23%;
-            background-color: red;
             justify-content: space-around;
+            background-color:#fff;
+            
+            @include large-desktop {
+                background-color: red;
+            }
+            
             @include desktop {
                 justify-content: space-around;
-                background-color:#fff;
+                background-color: black;
                 padding-inline: 30%;
             }
             
@@ -123,10 +128,6 @@ body {
                 padding-inline: $padding-inline-tablet;
             }
 
-            @include small-tablet {
-                background-color: aqua;
-            }
-
             @include smaller-tablet {
                 background-color: darkslateblue;
             }
@@ -136,13 +137,31 @@ body {
             }
             
             #btsFirstChild {
-                // @extend %display-none;
                 min-width: 100%;
-                height: 40rem;
                 border: solid greenyellow;
+                min-height: 75vh;
+                max-height: 80vh;
 
-                @include large-tablet {
+                @include desktop {
+                    min-height: 75vh;
+                    max-height: 80vh;
                 }
+                
+                @include tablet {
+                    min-height: 35rem;
+                }
+
+                @include smaller-tablet {
+                    min-height: 70vh;
+                }
+                
+                @include large-mobile {
+                    min-height: 55vh;
+                    max-height: 60vh;
+                }
+                // @include small-mobile {
+                //     min-height: 55vh;
+                // }
                 
                 .bts-back-images {
                     width: 40%;
@@ -151,10 +170,51 @@ body {
                     }
                 }
                 #btsFrontImg {
-                    @extend %display-none;
                     position: absolute;
-                    border: solid red;
-                    width: 55vw;
+                    max-width: 20%;
+                    min-width: 18%;
+                    border: solid pink;
+                    
+                    @include large-desktop {
+                        min-width: 10%;
+                        max-width: 20%;
+                        bottom: -75%;
+                    }
+                    
+                    @include desktop {
+                        max-width: 30%;
+                        bottom: -60%;
+                    }
+                    
+                    @include large-tablet {
+                        max-width: 35%;
+                    }
+                    
+                    @include tablet {
+                        max-width: 37%;
+                        min-width: 32%;
+                        bottom: -65%;
+                        // bottom: min(-50%, -55%);
+                    }
+                    
+                    @include smaller-tablet {
+                        bottom: -60%;
+                        // max-width: 36%;
+                        max-width: 38%;
+                        min-width: 35%;
+                    }
+                    
+                    @include large-mobile {
+                        bottom: -55%;
+                        max-width: 47%;
+                        min-width: 45%;
+
+                    }
+                    
+                    @include small-mobile {
+                        min-width: 50%;
+                    }
+
                 }
             }
 
@@ -165,24 +225,9 @@ body {
                 @include desktop {
                     min-width: 100%;
                 }
-                @include tablet {
-                    min-width: 100%;
-                }
-                @include small-tablet {
-                    max-width: 80%;
-                }
                 
                 #btsTextBoxCol {
-                    padding-inline: 5%;
                     width: 30vw;
-    
-                    @include tablet {
-                        width: 80vw;
-                    }
-                    
-                    .bts-hr {
-                        color: green;
-                    }
         
                     #btsCollapse1, #btsCollapse2, #btsCollapse3 {
                         @extend %cursor-pointer;
