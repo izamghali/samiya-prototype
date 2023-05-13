@@ -125,7 +125,7 @@ body {
             @include tablet {
                 flex-direction: column;
                 background-color: orange;
-                padding-inline: $padding-inline-tablet;
+                padding-inline: 3%;
             }
 
             @include smaller-tablet {
@@ -141,6 +141,7 @@ body {
                 border: solid greenyellow;
                 min-height: 75vh;
                 max-height: 80vh;
+                justify-content: space-between;
 
                 @include desktop {
                     min-height: 75vh;
@@ -169,11 +170,14 @@ body {
                         width: 45%;
                     }
                 }
+
                 #btsFrontImg {
                     position: absolute;
                     max-width: 20%;
                     min-width: 18%;
+                    left: 25%;
                     border: solid pink;
+                    bottom: -100%;
                     
                     @include large-desktop {
                         min-width: 10%;
@@ -184,10 +188,12 @@ body {
                     @include desktop {
                         max-width: 30%;
                         bottom: -60%;
+                        left: 13%;
                     }
                     
                     @include large-tablet {
                         max-width: 35%;
+                        left: 10%;
                     }
                     
                     @include tablet {

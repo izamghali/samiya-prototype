@@ -169,6 +169,7 @@ body #bodyPage #btsCol #btsFirstChild {
   border: solid greenyellow;
   min-height: 75vh;
   max-height: 80vh;
+  justify-content: space-between;
 }
 @media (max-width: 1024px) {
   body #bodyPage #btsCol #btsFirstChild {
@@ -204,7 +205,9 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   position: absolute;
   max-width: 20%;
   min-width: 18%;
+  left: 25%;
   border: solid pink;
+  bottom: -100%;
 }
 @media (max-width: 1440px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
@@ -217,11 +220,13 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     max-width: 30%;
     bottom: -60%;
+    left: 13%;
   }
 }
 @media (max-width: 950px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     max-width: 35%;
+    left: 10%;
   }
 }
 @media (max-width: 767px) {

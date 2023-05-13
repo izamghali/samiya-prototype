@@ -1,24 +1,3 @@
-
-
-let tween = gsap.fromTo(
-    "#green",
-    {
-      x: 200,
-      y: 100,
-      scale: 3,
-    },
-    {
-      ease: "power4.out",
-      scale: 3,
-      x: 700,
-      duration: 2,
-      delay: 0.6,
-    }
-);
-
-tween.reverse(true);
-
-
 // client slide
 function slideThreeImages() {
   function style1() {
@@ -401,13 +380,51 @@ function slideFourImages() {
 slideThreeImages();
 slideFourImages();
 
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to("#btsFrontImg", {
+  y: "-80%",
+  delay: 0.6,
+  duration: 5, 
+  scrollTrigger: {
+    scrub: 3,
+  }
+})
+
+gsap.fromTo("#btsBackImg1",
+{
+  y: "80%",
+  delay: 0.6,
+  duration: 5, 
+},
+{
+  y: "-20%",
+  scrollTrigger: {
+    scrub: 1,
+  }
+  }
+);
+gsap.fromTo("#btsBackImg2",
+{
+  y: "10%",
+  delay: 0.6,
+  duration: 5, 
+},
+{
+  y: "-20%",
+  scrollTrigger: {
+    scrub: 4,
+  }
+  }
+);
+
+
 // GSAP matchMedia
 let mm = gsap.matchMedia(),
   breakPoint = 768;
 
 mm.add(
-  {
-    // set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.,
+  { // set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.,
     isDesktop: `(min-width: ${breakPoint}px)`,
     isMobile: `(max-width: ${breakPoint - 1}px)`,
     reduceMotion: "(prefers-reduced-motion: reduce)",
@@ -417,8 +434,7 @@ mm.add(
     let { isDesktop, isMobile, isTablet } = context.conditions;
 
     // carousel zoom-in
-    gsap.fromTo(
-      ".carousel-img",
+    gsap.fromTo( ".carousel-img",
       {
         backgroundSize: isDesktop ? "100%" : "410%",
       },
@@ -430,6 +446,8 @@ mm.add(
         repeat: -1,
       }
     );
+
+    // bts images scroll smooth
 
     return () => {
       // optional
