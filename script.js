@@ -382,80 +382,296 @@ slideFourImages();
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to("#btsFrontImg", {
-  y: "-80%",
-  delay: 0.6,
-  duration: 5, 
-  scrollTrigger: {
-    scrub: 3,
-  }
-})
+// GSAP matchMedia
+let mm = gsap.matchMedia()
 
-gsap.fromTo("#btsBackImg1",
+
+
+
+mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
+  gsap.fromTo("#btsFrontImg",
+  { 
+    y: "50%",
+    scale: 1.1,
+    x: "-40%",
+  },{ 
+    y: "-120%",
+    scrollTrigger: {
+      scrub: 2,
+    }
+    }
+  );
+  gsap.fromTo("#btsBackImg1",
 {
-  y: "80%",
-  delay: 0.6,
-  duration: 5, 
+  y: "10%",
 },
 {
-  y: "-20%",
+  y: "-40%",
   scrollTrigger: {
     scrub: 1,
   }
   }
-);
-gsap.fromTo("#btsBackImg2",
+  );
+  gsap.fromTo("#btsBackImg2",
+  {
+    y: "150%",
+    scale: 1,
+    x: "-5%",
+    zIndex: 0,
+  },
+  {
+    y: "-100%",
+    scrollTrigger: {
+      scrub: 2,
+    }
+    }
+  );
+
+});
+
+mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
+  gsap.fromTo("#btsFrontImg",
+  { 
+    y: "200%",
+    scale: 1.2,
+    x: "-30%",
+  },{ 
+    y: "-120%",
+    scrollTrigger: {
+      scrub: 2,
+    }
+    }
+  );
+  gsap.fromTo("#btsBackImg1",
 {
-  y: "10%",
-  delay: 0.6,
-  duration: 5, 
+  y: "50%",
+},
+{
+  y: "-40%",
+  scrollTrigger: {
+    scrub: 1,
+  }
+  }
+  );
+  gsap.fromTo("#btsBackImg2",
+  {
+    y: "150%",
+    scale: 1.2,
+    x: "-15%",
+    zIndex: 0,
+  },
+  {
+    y: "-100%",
+    scrollTrigger: {
+      scrub: 2,
+    }
+    }
+  );
+
+});
+mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
+  gsap.fromTo("#btsFrontImg",
+  {
+    y: "90%",
+    x: "0%",
+    zIndex: 1,
+  },
+  {
+    y: "-50%",
+    scrollTrigger: {
+      scrub: 3,
+    }
+  }
+  );
+  gsap.fromTo("#btsBackImg1",
+{
+  y: "50%",
+  scale: 1.2,
 },
 {
   y: "-20%",
   scrollTrigger: {
-    scrub: 4,
+    scrub: 10,
   }
   }
-);
-
-
-// GSAP matchMedia
-let mm = gsap.matchMedia(),
-  breakPoint = 768;
-
-mm.add(
-  { // set up any number of arbitrarily-named conditions. The function below will be called when ANY of them match.,
-    isDesktop: `(min-width: ${breakPoint}px)`,
-    isMobile: `(max-width: ${breakPoint - 1}px)`,
-    reduceMotion: "(prefers-reduced-motion: reduce)",
+  );
+  gsap.fromTo("#btsBackImg2",
+  {
+    y: "30%",
+    zIndex: 2,
   },
-  (context) => {
-    // context.conditions has a boolean property for each condition defined above indicating if it's matched or not.
-    let { isDesktop, isMobile, isTablet } = context.conditions;
+  {
+    y: "-30%",
+    scrollTrigger: {
+      scrub: 1,
+    }
+    }
+  );
 
-    // carousel zoom-in
-    gsap.fromTo( ".carousel-img",
-      {
-        backgroundSize: isDesktop ? "100%" : "410%",
-      },
-      {
-        ease: "power1.inOut",
-        duration: 12,
-        yoyo: true,
-        backgroundSize: isDesktop ? "130%" : "500%",
-        repeat: -1,
-      }
-    );
-
-    // bts images scroll smooth
-
-    return () => {
-      // optional
-    };
+});
+mm.add("(max-width: 768px) and (min-width: 680px)", () => {
+  gsap.fromTo("#btsFrontImg",
+  {
+    y: "90%",
+    x: "-7%",
+    zIndex: 1,
+  },
+  {
+    y: "-80%",
+    scrollTrigger: {
+      scrub: 3,
+    }
   }
-);
+  );
+  gsap.fromTo("#btsBackImg1",
+{
+  y: "10%",
+},
+{
+  y: "-20%",
+  scrollTrigger: {
+    scrub: 10,
+  }
+  }
+  );
+  gsap.fromTo("#btsBackImg2",
+  {
+    y: "30%",
+    zIndex: 2,
+  },
+  {
+    y: "-30%",
+    scrollTrigger: {
+      scrub: 1,
+    }
+    }
+  );
 
-// jQuery
+});
+mm.add("(max-width: 679px) and (min-width: 500px)", () => {
+  gsap.fromTo("#btsFrontImg",
+  {
+    y: "60%",
+    x: "20%",
+    scale: 1.2,
+    zIndex: 1,
+  },
+  {
+    y: "-120%",
+    scrollTrigger: {
+      scrub: 3,
+    }
+  }
+  );
+  gsap.fromTo("#btsBackImg1",
+{
+  y: "0%",
+},
+{
+  y: "-20%",
+  scrollTrigger: {
+    scrub: 10,
+  }
+  }
+  );
+  gsap.fromTo("#btsBackImg2",
+  {
+    y: "30%",
+    zIndex: 2,
+  },
+  {
+    y: "-30%",
+    scrollTrigger: {
+      scrub: 1,
+    }
+    }
+  );
+
+});
+mm.add("(max-width: 499px) and (min-width: 375px)", () => {
+  gsap.fromTo("#btsFrontImg",
+  {
+    y: "90%",
+    x: "10%",
+    scale: 1,
+    zIndex: 1,
+  },
+  {
+    y: "-120%",
+    scrollTrigger: {
+      scrub: 3,
+    }
+  }
+  );
+  gsap.fromTo("#btsBackImg1",
+{
+  y: "0%",
+},
+{
+  y: "-20%",
+  scrollTrigger: {
+    scrub: 10,
+  }
+  }
+  );
+  gsap.fromTo("#btsBackImg2",
+  {
+    y: "30%",
+    zIndex: 2,
+  },
+  {
+    y: "-30%",
+    scrollTrigger: {
+      scrub: 1,
+    }
+    }
+  );
+
+});
+mm.add("(max-width: 374px)", () => {
+  gsap.fromTo("#btsFrontImg",
+  {
+    y: "45%",
+    x: "-5%",
+    scale: 1,
+    zIndex: 1,
+  },
+  {
+    y: "-100%",
+    scrollTrigger: {
+      scrub: 3,
+    }
+  }
+  );
+  gsap.fromTo("#btsBackImg1",
+{
+  y: "0%",
+},
+{
+  y: "-20%",
+  scrollTrigger: {
+    scrub: 10,
+  }
+  }
+  );
+  gsap.fromTo("#btsBackImg2",
+  {
+    y: "30%",
+    zIndex: 2,
+  },
+  {
+    y: "-30%",
+    scrollTrigger: {
+      scrub: 1,
+    }
+    }
+  );
+
+});
+
+
+
+
 $(document).ready(() => {
   
   // bts collapse

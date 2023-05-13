@@ -122,51 +122,30 @@ body #landingPage #mainCarousel .layer {
   border: 25px solid white;
 }
 body #bodyPage #btsCol {
-  border: solid red;
   flex-direction: row;
   height: auto;
   padding-inline: 23%;
   justify-content: space-around;
-  background-color: #fff;
-}
-@media (max-width: 1440px) {
-  body #bodyPage #btsCol {
-    background-color: red;
-  }
 }
 @media (max-width: 1024px) {
   body #bodyPage #btsCol {
     justify-content: space-around;
-    background-color: black;
     padding-inline: 30%;
   }
 }
 @media (max-width: 950px) {
   body #bodyPage #btsCol {
-    background-color: darkolivegreen;
     padding-inline: 27%;
   }
 }
 @media (max-width: 767px) {
   body #bodyPage #btsCol {
     flex-direction: column;
-    background-color: orange;
     padding-inline: 3%;
-  }
-}
-@media (max-width: 659px) and (min-width: 426px) {
-  body #bodyPage #btsCol {
-    background-color: darkslateblue;
-  }
-}
-@media (max-width: 425px) {
-  body #bodyPage #btsCol {
-    background-color: firebrick;
   }
 }
 body #bodyPage #btsCol #btsFirstChild {
   min-width: 100%;
-  border: solid greenyellow;
   min-height: 75vh;
   max-height: 80vh;
   justify-content: space-between;
@@ -199,6 +178,7 @@ body #bodyPage #btsCol #btsFirstChild .bts-back-images {
 @media (max-width: 950px) {
   body #bodyPage #btsCol #btsFirstChild .bts-back-images {
     width: 45%;
+    z-index: 1;
   }
 }
 body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
@@ -206,7 +186,6 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   max-width: 20%;
   min-width: 18%;
   left: 25%;
-  border: solid pink;
   bottom: -100%;
 }
 @media (max-width: 1440px) {
@@ -255,8 +234,12 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     min-width: 50%;
   }
 }
+@media (max-width: 2560px) {
+  body #bodyPage #btsCol #btsFirstChild #btsBackImg2 {
+    z-index: 1;
+  }
+}
 body #bodyPage #btsCol #btsSecondChild {
-  border: solid blue;
   max-width: 100%;
 }
 @media (max-width: 1024px) {

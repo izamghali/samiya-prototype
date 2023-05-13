@@ -100,75 +100,49 @@ body {
     #bodyPage {
         // bts
         #btsCol {
-            border: solid red;
             flex-direction: row;
             height: auto;
             padding-inline: 23%;
-            justify-content: space-around;
-            background-color:#fff;
-            
-            @include large-desktop {
-                background-color: red;
-            }
-            
+            justify-content: space-around;  
             @include desktop {
                 justify-content: space-around;
-                background-color: black;
                 padding-inline: 30%;
             }
-            
             @include large-tablet {
-                background-color:darkolivegreen;
                 padding-inline: 27%;
             }
-            
             @include tablet {
                 flex-direction: column;
-                background-color: orange;
                 padding-inline: 3%;
-            }
-
-            @include smaller-tablet {
-                background-color: darkslateblue;
-            }
-
-            @include large-mobile {
-                background-color: firebrick;
             }
             
             #btsFirstChild {
                 min-width: 100%;
-                border: solid greenyellow;
                 min-height: 75vh;
                 max-height: 80vh;
                 justify-content: space-between;
-
                 @include desktop {
                     min-height: 75vh;
                     max-height: 80vh;
                 }
-                
                 @include tablet {
                     min-height: 35rem;
                 }
-
                 @include smaller-tablet {
                     min-height: 70vh;
                 }
-                
                 @include large-mobile {
                     min-height: 55vh;
                     max-height: 60vh;
                 }
-                // @include small-mobile {
-                //     min-height: 55vh;
-                // }
-                
+
                 .bts-back-images {
                     width: 40%;
                     @include large-tablet {
                         width: 45%;
+                        z-index: 1;
                     }
+
                 }
 
                 #btsFrontImg {
@@ -176,56 +150,51 @@ body {
                     max-width: 20%;
                     min-width: 18%;
                     left: 25%;
-                    border: solid pink;
                     bottom: -100%;
-                    
                     @include large-desktop {
                         min-width: 10%;
                         max-width: 20%;
                         bottom: -75%;
                     }
-                    
                     @include desktop {
                         max-width: 30%;
                         bottom: -60%;
                         left: 13%;
                     }
-                    
                     @include large-tablet {
                         max-width: 35%;
                         left: 10%;
                     }
-                    
                     @include tablet {
                         max-width: 37%;
                         min-width: 32%;
                         bottom: -65%;
-                        // bottom: min(-50%, -55%);
                     }
-                    
                     @include smaller-tablet {
                         bottom: -60%;
-                        // max-width: 36%;
                         max-width: 38%;
                         min-width: 35%;
                     }
-                    
                     @include large-mobile {
                         bottom: -55%;
                         max-width: 47%;
                         min-width: 45%;
 
                     }
-                    
                     @include small-mobile {
                         min-width: 50%;
                     }
 
                 }
+
+                #btsBackImg2 {
+                    @include larger-desktop {
+                        z-index: 1;
+                    }
+                }
             }
 
             #btsSecondChild {
-                border: solid blue;
                 max-width: 100%;
                 
                 @include desktop {
