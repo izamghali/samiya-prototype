@@ -396,10 +396,88 @@ slideFourImages();
 
 gsap.registerPlugin(ScrollTrigger);
 
+// custom zoom effect
+// desktop
+gsap.registerEffect({
+  name: "zoomDesktop",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "100%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+// medium desktop
+gsap.registerEffect({
+  name: "zoomMediumDesktop",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "117%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+// tablet
+gsap.registerEffect({
+  name: "zoomTablet",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "127%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+// large mobile
+gsap.registerEffect({
+  name: "zoomLargeMobile",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "296%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+// small mobile
+gsap.registerEffect({
+name: "zoomSmallMobile",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "346%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+
+
+
 // GSAP matchMedia
 let mm = gsap.matchMedia()
 
 mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
+  // zoom carousel
+  gsap.effects.zoomDesktop(".carousel-img", {duration: 5.8, backgroundSize: "115%"});
+  
+  // bts vertical slide
   gsap.fromTo("#btsFrontImg",
   { 
     y: "85%",
@@ -440,6 +518,10 @@ mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
 
 });
 mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
+  // zoom carousel
+  gsap.effects.zoomMediumDesktop(".carousel-img", {duration: 5.8, backgroundSize: "130%"});
+
+  // bts vertical slide
   gsap.fromTo("#btsFrontImg",
   { 
     y: "200%",
@@ -480,6 +562,10 @@ mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
 
 });
 mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
+  // zoom carousel
+  gsap.effects.zoomDesktop(".carousel-img", {duration: 5.8, backgroundSize: "115%"});
+  
+  // bts vertical slide
   gsap.fromTo("#btsFrontImg",
   {
     y: "90%",
@@ -520,6 +606,10 @@ mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
 
 });
 mm.add("(max-width: 768px) and (min-width: 680px)", () => {
+  // zoom carousel
+  gsap.effects.zoomTablet(".carousel-img", {duration: 5, backgroundSize: "145%"});
+
+  // bts vertical slide
   gsap.fromTo("#btsFrontImg",
   {
     y: "90%",
@@ -559,6 +649,9 @@ mm.add("(max-width: 768px) and (min-width: 680px)", () => {
 
 });
 mm.add("(max-width: 679px) and (min-width: 500px)", () => {
+  // zoom carousel
+  
+  
   gsap.fromTo("#btsFrontImg",
   {
     y: "60%",
@@ -599,6 +692,10 @@ mm.add("(max-width: 679px) and (min-width: 500px)", () => {
 
 });
 mm.add("(max-width: 499px) and (min-width: 375px)", () => {
+  // zoom carousel
+  gsap.effects.zoomLargeMobile(".carousel-img", {duration: 5, backgroundSize: "335%"});
+  
+  // bts vertical slide
   gsap.fromTo("#btsFrontImg",
   {
     y: "90%",
@@ -639,6 +736,10 @@ mm.add("(max-width: 499px) and (min-width: 375px)", () => {
 
 });
 mm.add("(max-width: 374px)", () => {
+  // zoom carousel
+  gsap.effects.zoomSmallMobile(".carousel-img", {duration: 5, backgroundSize: "450%"});
+
+  // bts vertical slide
   gsap.fromTo("#btsFrontImg",
   {
     y: "45%",
