@@ -397,12 +397,41 @@ slideFourImages();
 gsap.registerPlugin(ScrollTrigger);
 
 // custom zoom effect
-// desktop
+
+// super duper large desktop
 gsap.registerEffect({
-  name: "zoomDesktop",
+  name: "zoomSuperDuperLargeDesktop",
   effect: (targets, config) => {
     return gsap.fromTo(targets, {
-      backgroundSize: "100%", 
+      backgroundSize: "127%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+// super large desktop
+gsap.registerEffect({
+  name: "zoomSuperLargeDesktop",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "117%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+// large desktop
+gsap.registerEffect({
+  name: "zoomLargeDesktop",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "115%", 
     }, {
       backgroundSize: config.backgroundSize, 
       ease: "power1.inOut",
@@ -416,7 +445,7 @@ gsap.registerEffect({
   name: "zoomMediumDesktop",
   effect: (targets, config) => {
     return gsap.fromTo(targets, {
-      backgroundSize: "117%", 
+      backgroundSize: "121%", 
     }, {
       backgroundSize: config.backgroundSize, 
       ease: "power1.inOut",
@@ -425,12 +454,40 @@ gsap.registerEffect({
       duration: config.duration})
   }
 })
-// tablet
+// small desktop
 gsap.registerEffect({
-  name: "zoomTablet",
+  name: "zoomSmallDesktop",
   effect: (targets, config) => {
     return gsap.fromTo(targets, {
       backgroundSize: "127%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+// large tablet
+gsap.registerEffect({
+  name: "zoomLargeTablet",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "143%", 
+    }, {
+      backgroundSize: config.backgroundSize, 
+      ease: "power1.inOut",
+      repeat: -1, 
+      yoyo: true,
+      duration: config.duration})
+  }
+})
+// small tablet
+gsap.registerEffect({
+  name: "zoomSmallTablet",
+  effect: (targets, config) => {
+    return gsap.fromTo(targets, {
+      backgroundSize: "194%", 
     }, {
       backgroundSize: config.backgroundSize, 
       ease: "power1.inOut",
@@ -473,9 +530,17 @@ name: "zoomSmallMobile",
 // GSAP matchMedia
 let mm = gsap.matchMedia()
 
-mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
+mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
   // zoom carousel
-  gsap.effects.zoomDesktop(".carousel-img", {duration: 5.8, backgroundSize: "115%"});
+  gsap.effects.zoomSuperDuperLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "135%"});
+})
+mm.add("(max-width: 2000px) and (min-width: 1513px)", () => {
+  // zoom carousel
+  gsap.effects.zoomSuperLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "133%"});
+})
+mm.add("(max-width: 1512px) and (min-width: 1441px)", () => {
+  // zoom carousel
+  gsap.effects.zoomLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "130%"});
   
   // bts vertical slide
   gsap.fromTo("#btsFrontImg",
@@ -511,7 +576,7 @@ mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
   {
     y: "-100%",
     scrollTrigger: {
-      scrub: 2,
+      scrub: 3,
     }
     }
   );
@@ -519,7 +584,7 @@ mm.add("(max-width: 2560px) and (min-width: 1441px)", () => {
 });
 mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
   // zoom carousel
-  gsap.effects.zoomMediumDesktop(".carousel-img", {duration: 5.8, backgroundSize: "130%"});
+  gsap.effects.zoomMediumDesktop(".carousel-img", {duration: 5, backgroundSize: "148%"});
 
   // bts vertical slide
   gsap.fromTo("#btsFrontImg",
@@ -563,7 +628,7 @@ mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
 });
 mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
   // zoom carousel
-  gsap.effects.zoomDesktop(".carousel-img", {duration: 5.8, backgroundSize: "115%"});
+  gsap.effects.zoomSmallDesktop(".carousel-img", {duration: 4.8, backgroundSize: "160%"});
   
   // bts vertical slide
   gsap.fromTo("#btsFrontImg",
@@ -607,7 +672,7 @@ mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
 });
 mm.add("(max-width: 768px) and (min-width: 680px)", () => {
   // zoom carousel
-  gsap.effects.zoomTablet(".carousel-img", {duration: 5, backgroundSize: "145%"});
+  gsap.effects.zoomLargeTablet(".carousel-img", {duration: 5, backgroundSize: "160%"});
 
   // bts vertical slide
   gsap.fromTo("#btsFrontImg",
@@ -650,7 +715,7 @@ mm.add("(max-width: 768px) and (min-width: 680px)", () => {
 });
 mm.add("(max-width: 679px) and (min-width: 500px)", () => {
   // zoom carousel
-  
+  gsap.effects.zoomSmallTablet(".carousel-img", {duration: 4.8, backgroundSize: "220%"});
   
   gsap.fromTo("#btsFrontImg",
   {
@@ -698,15 +763,15 @@ mm.add("(max-width: 499px) and (min-width: 375px)", () => {
   // bts vertical slide
   gsap.fromTo("#btsFrontImg",
   {
-    y: "90%",
-    x: "10%",
+    y: "50%",
+    x: "-5%",
     scale: 1,
     zIndex: 1,
   },
   {
-    y: "-120%",
+    y: "-30%",
     scrollTrigger: {
-      scrub: 3,
+      scrub: 1,
     }
   }
   );
@@ -729,7 +794,7 @@ mm.add("(max-width: 499px) and (min-width: 375px)", () => {
   {
     y: "-30%",
     scrollTrigger: {
-      scrub: 1,
+      scrub: 6,
     }
     }
   );
