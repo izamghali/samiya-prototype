@@ -37,6 +37,13 @@ body {
             li {
             margin-right: 3em;
             display: block;
+            
+            .navbar-link {
+                color: #fff;
+            }
+            .navbar-dark-light-toggle {
+                @extend .navbar-link;
+            }
             @include large-desktop {
                 margin-right: 2em;
             }
@@ -88,6 +95,15 @@ body {
     }
 
     #bodyPage {
+        // our services
+        #ourServicesHeadingCol {
+            padding-inline: 10%;
+        }
+
+        #ourServicesCol {
+            // height: 80vh;
+        }
+        
         // bts
         #btsCol {
             flex-direction: row;
@@ -132,7 +148,6 @@ body {
                         width: 45%;
                         z-index: 1;
                     }
-
                 }
 
                 #btsFrontImg {
@@ -140,7 +155,7 @@ body {
                     max-width: 20%;
                     min-width: 18%;
                     left: 25%;
-                    bottom: -100%;
+                    bottom: -90%;
                     @include large-desktop {
                         min-width: 10%;
                         max-width: 20%;
@@ -211,6 +226,11 @@ body {
             }
 
 
+        }
+
+        // professional heading
+        #professionalHeadingCol {
+            padding-inline: 10%;
         }
 
         // professional cards

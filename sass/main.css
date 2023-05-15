@@ -70,6 +70,9 @@ body #landingPage #mainNavbar li {
   margin-right: 3em;
   display: block;
 }
+body #landingPage #mainNavbar li .navbar-link, body #landingPage #mainNavbar li .navbar-dark-light-toggle {
+  color: #fff;
+}
 @media (max-width: 1440px) {
   body #landingPage #mainNavbar li {
     margin-right: 2em;
@@ -113,6 +116,9 @@ body #landingPage #mainCarousel .layer {
   border-radius: 35px;
   opacity: 1;
   border: 25px solid white;
+}
+body #bodyPage #ourServicesHeadingCol {
+  padding-inline: 10%;
 }
 body #bodyPage #btsCol {
   flex-direction: row;
@@ -179,7 +185,7 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   max-width: 20%;
   min-width: 18%;
   left: 25%;
-  bottom: -100%;
+  bottom: -90%;
 }
 @media (max-width: 1440px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
@@ -242,6 +248,9 @@ body #bodyPage #btsCol #btsSecondChild {
 }
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
   width: 30vw;
+}
+body #bodyPage #professionalHeadingCol {
+  padding-inline: 10%;
 }
 body #bodyPage #professionalCardsCol {
   padding-inline: 10%;
