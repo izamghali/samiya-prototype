@@ -101,7 +101,54 @@ body {
         }
 
         #ourServicesCol {
-            // height: 80vh;
+            height: auto;
+
+            #ourServicesRow1Col {
+                justify-content: center;
+                @include large-mobile {
+                    flex-direction: column;
+                }
+                img {
+                    @include large-mobile {
+                        width: 80% !important;
+                    }
+                }
+
+                .our-services-box {
+                    width: 18rem;
+                }
+
+                .box-test {
+                    // border: solid blue;
+                    padding-inline: 1rem;
+                    padding-top: 1rem;
+                    @include large-mobile {
+                        padding-inline: 0rem;
+                        padding-top: 0rem;
+                        margin-top: 1rem;
+                        
+                    }
+                }
+            }
+
+            #ourServicesRow2Col {
+                @extend #ourServicesRow1Col;
+                @include large-mobile {
+                    display: none !important;
+                }
+            }
+            
+            #ourServicesRow2RowMobile {
+                @extend #ourServicesRow1Col;
+                display: none;
+                @include large-mobile {
+                    display: flex;
+                }
+                #ourServicesRow2ColMobile {
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
         }
         
         // bts

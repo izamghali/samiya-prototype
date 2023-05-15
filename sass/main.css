@@ -6,6 +6,10 @@ body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTe
   display: none;
 }
 
+.visibility-hidden {
+  visibility: hidden;
+}
+
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
   border: none;
 }
@@ -119,6 +123,53 @@ body #landingPage #mainCarousel .layer {
 }
 body #bodyPage #ourServicesHeadingCol {
   padding-inline: 10%;
+}
+body #bodyPage #ourServicesCol {
+  height: auto;
+}
+body #bodyPage #ourServicesCol #ourServicesRow1Col, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile, body #bodyPage #ourServicesCol #ourServicesRow2Col {
+  justify-content: center;
+}
+@media (max-width: 425px) {
+  body #bodyPage #ourServicesCol #ourServicesRow1Col, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile, body #bodyPage #ourServicesCol #ourServicesRow2Col {
+    flex-direction: column;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #ourServicesCol #ourServicesRow1Col img, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile img, body #bodyPage #ourServicesCol #ourServicesRow2Col img {
+    width: 80% !important;
+  }
+}
+body #bodyPage #ourServicesCol #ourServicesRow1Col .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2Col .our-services-box {
+  width: 18rem;
+}
+body #bodyPage #ourServicesCol #ourServicesRow1Col .box-test, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .box-test, body #bodyPage #ourServicesCol #ourServicesRow2Col .box-test {
+  padding-inline: 1rem;
+  padding-top: 1rem;
+}
+@media (max-width: 425px) {
+  body #bodyPage #ourServicesCol #ourServicesRow1Col .box-test, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .box-test, body #bodyPage #ourServicesCol #ourServicesRow2Col .box-test {
+    padding-inline: 0rem;
+    padding-top: 0rem;
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #ourServicesCol #ourServicesRow2Col {
+    display: none !important;
+  }
+}
+body #bodyPage #ourServicesCol #ourServicesRow2RowMobile {
+  display: none;
+}
+@media (max-width: 425px) {
+  body #bodyPage #ourServicesCol #ourServicesRow2RowMobile {
+    display: flex;
+  }
+}
+body #bodyPage #ourServicesCol #ourServicesRow2RowMobile #ourServicesRow2ColMobile {
+  justify-content: center;
+  flex-direction: column;
 }
 body #bodyPage #btsCol {
   flex-direction: row;
