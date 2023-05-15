@@ -79,7 +79,6 @@ function slideThreeImages() {
   style1();
   style2();
 }
-
 function slideFourImages() {
   function style3() {
     let tl3 = gsap.timeline({ scrollTrigger: {
@@ -376,156 +375,141 @@ function slideFourImages() {
   style5();
   style6();
 }
-
-// gsap.fromTo(
-//   ".carousel-img",
-//   {
-//     backgroundSize: isDesktop ? "100%" : "410%",
-//   },
-//   {
-//     ease: "power1.inOut",
-//     duration: 12,
-//     yoyo: true,
-//     backgroundSize: isDesktop ? "130%" : "500%",
-//     repeat: -1,
-//   }
-// );
-
 slideThreeImages();
 slideFourImages();
 
 gsap.registerPlugin(ScrollTrigger);
 
-// custom zoom effect
+function zoomCarouselRegister() {
+  // super duper large desktop
+  gsap.registerEffect({
+    name: "zoomSuperDuperLargeDesktop",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "127%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
+  // super large desktop
+  gsap.registerEffect({
+    name: "zoomSuperLargeDesktop",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "117%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
+  // large desktop
+  gsap.registerEffect({
+    name: "zoomLargeDesktop",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "115%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
+  // medium desktop
+  gsap.registerEffect({
+    name: "zoomMediumDesktop",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "121%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
+  // small desktop
+  gsap.registerEffect({
+    name: "zoomSmallDesktop",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "127%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
+  // large tablet
+  gsap.registerEffect({
+    name: "zoomLargeTablet",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "143%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
+  // small tablet
+  gsap.registerEffect({
+    name: "zoomSmallTablet",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "194%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
+  // large mobile
+  gsap.registerEffect({
+    name: "zoomLargeMobile",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "296%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
+  // small mobile
+  gsap.registerEffect({
+  name: "zoomSmallMobile",
+    effect: (targets, config) => {
+      return gsap.fromTo(targets, {
+        backgroundSize: "346%", 
+      }, {
+        backgroundSize: config.backgroundSize, 
+        ease: "power1.inOut",
+        repeat: -1, 
+        yoyo: true,
+        duration: config.duration})
+    }
+  })
 
-// super duper large desktop
-gsap.registerEffect({
-  name: "zoomSuperDuperLargeDesktop",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "127%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-// super large desktop
-gsap.registerEffect({
-  name: "zoomSuperLargeDesktop",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "117%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-// large desktop
-gsap.registerEffect({
-  name: "zoomLargeDesktop",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "115%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-// medium desktop
-gsap.registerEffect({
-  name: "zoomMediumDesktop",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "121%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-// small desktop
-gsap.registerEffect({
-  name: "zoomSmallDesktop",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "127%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-// large tablet
-gsap.registerEffect({
-  name: "zoomLargeTablet",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "143%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-// small tablet
-gsap.registerEffect({
-  name: "zoomSmallTablet",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "194%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-// large mobile
-gsap.registerEffect({
-  name: "zoomLargeMobile",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "296%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-// small mobile
-gsap.registerEffect({
-name: "zoomSmallMobile",
-  effect: (targets, config) => {
-    return gsap.fromTo(targets, {
-      backgroundSize: "346%", 
-    }, {
-      backgroundSize: config.backgroundSize, 
-      ease: "power1.inOut",
-      repeat: -1, 
-      yoyo: true,
-      duration: config.duration})
-  }
-})
-
-
+}
+zoomCarouselRegister();
 
 // GSAP matchMedia
 let mm = gsap.matchMedia()
@@ -894,7 +878,9 @@ $(document).ready(() => {
     $("#moonMode").fadeIn();
     $("#sunMode").hide();
     $body.dataset.bsTheme = "dark";
-    $(".carousel-border").css("border", "25px solid #212529")
+    $(".layer").css("border", "25px solid #212529");
+    $(".navbar-link").css("color", "#212529");
+    $(".navbar-dark-light-toggle").css("color", "#212529");
   })
   $("#toggleOn").on("click", () => {
     $("#toggleOff").show();
@@ -902,7 +888,16 @@ $(document).ready(() => {
     $("#sunMode").fadeIn();
     $("#moonMode").hide();
     $body.dataset.bsTheme = "light";
-    $(".carousel-border").css("border", "25px solid #fff");
+    $(".layer").css("border", "25px solid #fff");
+    $(".navbar-link").css("color", "#fff");
+    $(".navbar-dark-light-toggle").css("color", "#fff");
   })
+
+  // hover navbar
+  // $(".navbar-link").on("mouseenter", (event) => {
+  //   $(".navbar-link").siblings().css("opacity", "0");
+  // }).on("mouseleave", (event) => {
+  //   $(".navbar-link").css("opacity", "1");
+  // })
 
 });

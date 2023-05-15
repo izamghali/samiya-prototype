@@ -8,7 +8,6 @@ body {
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
-    // background-color: pink;
 
     #landingPage {
         padding-inline: 0px !important;
@@ -26,7 +25,6 @@ body {
                 top: 4%;
                 right: 0%;
             }
-
             #aBrand {
                 position: absolute;
                 left: -55%;
@@ -44,19 +42,15 @@ body {
             }
             .dark-light-toggle {
                 @extend %cursor-pointer;
-                @extend %color-white;
-            }
-            #moonMode, #sunMode {
-                @extend %color-white;
             }
             #toggleOn, #moonMode {
                 @extend %display-none;
             }
-            a {
-                color: black !important;
             }
-        }
-        
+
+            .navbar-dark-light-toggle {
+                // 
+            }
         }
 
         // carousel

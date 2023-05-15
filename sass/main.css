@@ -14,10 +14,6 @@ body #bodyPage #footer #footerHouseLink:hover, body #bodyPage #btsCol #btsSecond
   cursor: pointer;
 }
 
-body #landingPage #mainNavbar li #moonMode, body #landingPage #mainNavbar li #sunMode, body #landingPage #mainNavbar li .dark-light-toggle {
-  color: #fff;
-}
-
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3 {
   text-decoration: none;
 }
@@ -78,9 +74,6 @@ body #landingPage #mainNavbar li {
   body #landingPage #mainNavbar li {
     margin-right: 2em;
   }
-}
-body #landingPage #mainNavbar li a {
-  color: black !important;
 }
 body #landingPage #mainCarousel {
   z-index: 0;
