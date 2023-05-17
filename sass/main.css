@@ -137,11 +137,11 @@ body #bodyPage #ourServicesCol #ourServicesRow1Col, body #bodyPage #ourServicesC
 }
 @media (max-width: 425px) {
   body #bodyPage #ourServicesCol #ourServicesRow1Col img, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile img, body #bodyPage #ourServicesCol #ourServicesRow2Col img {
-    width: 80% !important;
+    width: 100% !important;
   }
 }
 body #bodyPage #ourServicesCol #ourServicesRow1Col .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2Col .our-services-box {
-  width: 18rem;
+  width: 15rem;
 }
 body #bodyPage #ourServicesCol #ourServicesRow1Col .box-test, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .box-test, body #bodyPage #ourServicesCol #ourServicesRow2Col .box-test {
   padding-inline: 1rem;
@@ -236,19 +236,19 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   max-width: 20%;
   min-width: 18%;
   left: 25%;
-  bottom: -90%;
+  bottom: -200%;
 }
 @media (max-width: 1440px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     min-width: 10%;
     max-width: 20%;
-    bottom: -75%;
+    bottom: -175%;
   }
 }
 @media (max-width: 1024px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     max-width: 30%;
-    bottom: -60%;
+    bottom: -180%;
     left: 13%;
   }
 }
@@ -256,6 +256,7 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     max-width: 35%;
     left: 10%;
+    bottom: -180%;
   }
 }
 @media (max-width: 767px) {
@@ -274,7 +275,7 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
 }
 @media (max-width: 425px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
-    bottom: -55%;
+    bottom: -440%;
     max-width: 47%;
     min-width: 45%;
   }

@@ -110,12 +110,12 @@ body {
                 }
                 img {
                     @include large-mobile {
-                        width: 80% !important;
+                        width: 100% !important;
                     }
                 }
 
                 .our-services-box {
-                    width: 18rem;
+                    width: 15rem;
                 }
 
                 .box-test {
@@ -202,20 +202,21 @@ body {
                     max-width: 20%;
                     min-width: 18%;
                     left: 25%;
-                    bottom: -90%;
+                    bottom: -200%;
                     @include large-desktop {
                         min-width: 10%;
                         max-width: 20%;
-                        bottom: -75%;
+                        bottom: -175%;
                     }
                     @include desktop {
                         max-width: 30%;
-                        bottom: -60%;
+                        bottom: -180%;
                         left: 13%;
                     }
                     @include large-tablet {
                         max-width: 35%;
                         left: 10%;
+                        bottom: -180%;
                     }
                     @include tablet {
                         max-width: 37%;
@@ -228,7 +229,8 @@ body {
                         min-width: 35%;
                     }
                     @include large-mobile {
-                        bottom: -55%;
+                        bottom: -440%;
+
                         max-width: 47%;
                         min-width: 45%;
 
