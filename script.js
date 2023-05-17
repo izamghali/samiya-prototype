@@ -511,323 +511,124 @@ function zoomCarouselRegister() {
 }
 zoomCarouselRegister();
 
+const verticalScroll = gsap.registerEffect({
+  name: "verticalScrollFrom",
+  effect: (targets, config) => {
+    return gsap.from(targets, {
+      y: config.y,
+      scrollTrigger: {
+        scrub: config.scrollTrigger.scrub
+      },
+    });
+  }
+});
+
 // GSAP matchMedia
 let mm = gsap.matchMedia()
 
-mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
-  // zoom carousel
-  gsap.effects.zoomSuperDuperLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "135%"});
-})
-mm.add("(max-width: 2000px) and (min-width: 1513px)", () => {
-  // zoom carousel
-  gsap.effects.zoomSuperLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "133%"});
-})
-mm.add("(max-width: 1512px) and (min-width: 1441px)", () => {
-  // zoom carousel
-  gsap.effects.zoomLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "130%"});
+function desktopSize() {
+  mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
+    // zoom carousel
+    gsap.effects.zoomSuperDuperLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "135%"});
   
-  // bts vertical slide
-  gsap.fromTo("#btsFrontImg",
-  { 
-    y: "85%",
-    scale: 1.1,
-    x: "-40%",
-  },{ 
-    y: "-100%",
-    scrollTrigger: {
-      scrub: 2,
-    }
-    }
-  );
-  gsap.fromTo("#btsBackImg1",
-{
-  y: "10%",
-},
-{
-  y: "-40%",
-  scrollTrigger: {
-    scrub: 1,
-  }
-  }
-  );
-  gsap.fromTo("#btsBackImg2",
-  {
-    y: "150%",
-    scale: 1,
-    x: "-5%",
-    zIndex: 0,
-  },
-  {
-    y: "-100%",
-    scrollTrigger: {
-      scrub: 3,
-    }
-    }
-  );
+    gsap.set("#btsFrontImg", {x: "60%"})
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "270%", scrollTrigger: {scrub: 1}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "15%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 2}});
+  })
+  mm.add("(max-width: 2000px) and (min-width: 1513px)", () => {
+    // zoom carousel
+    gsap.effects.zoomSuperLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "133%"});
 
-});
-mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
-  // zoom carousel
-  gsap.effects.zoomMediumDesktop(".carousel-img", {duration: 5, backgroundSize: "148%"});
-
-  // bts vertical slide
-  gsap.fromTo("#btsFrontImg",
-  { 
-    y: "200%",
-    scale: 1.2,
-    x: "-30%",
-  },{ 
-    y: "-120%",
-    scrollTrigger: {
-      scrub: 2,
-    }
-    }
-  );
-  gsap.fromTo("#btsBackImg1",
-{
-  y: "50%",
-},
-{
-  y: "-40%",
-  scrollTrigger: {
-    scrub: 1,
-  }
-  }
-  );
-  gsap.fromTo("#btsBackImg2",
-  {
-    y: "150%",
-    scale: 1.2,
-    x: "-15%",
-    zIndex: 0,
-  },
-  {
-    y: "-100%",
-    scrollTrigger: {
-      scrub: 2,
-    }
-    }
-  );
-
-});
-mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
-  // zoom carousel
-  gsap.effects.zoomSmallDesktop(".carousel-img", {duration: 4.8, backgroundSize: "160%"});
+    gsap.set("#btsFrontImg", {x: "60%"})
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "240%", scrollTrigger: {scrub: 1}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "-25%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 2}});
+  })
+  mm.add("(max-width: 1512px) and (min-width: 1441px)", () => {
+    // zoom carousel
+    gsap.effects.zoomLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "130%"});
   
-  // bts vertical slide
-  gsap.fromTo("#btsFrontImg",
-  {
-    y: "90%",
-    x: "0%",
-    zIndex: 1,
-  },
-  {
-    y: "-50%",
-    scrollTrigger: {
-      scrub: 3,
-    }
-  }
-  );
-  gsap.fromTo("#btsBackImg1",
-{
-  y: "50%",
-  scale: 1.2,
-},
-{
-  y: "-20%",
-  scrollTrigger: {
-    scrub: 10,
-  }
-  }
-  );
-  gsap.fromTo("#btsBackImg2",
-  {
-    y: "30%",
-    zIndex: 2,
-  },
-  {
-    y: "-30%",
-    scrollTrigger: {
-      scrub: 1,
-    }
-    }
-  );
-
-});
-mm.add("(max-width: 768px) and (min-width: 680px)", () => {
-  // zoom carousel
-  gsap.effects.zoomLargeTablet(".carousel-img", {duration: 5, backgroundSize: "160%"});
-
-  // bts vertical slide
-  gsap.fromTo("#btsFrontImg",
-  {
-    y: "90%",
-    x: "-7%",
-    zIndex: 1,
-  },
-  {
-    y: "-80%",
-    scrollTrigger: {
-      scrub: 3,
-    }
-  }
-  );
-  gsap.fromTo("#btsBackImg1",
-{
-  y: "10%",
-},
-{
-  y: "-20%",
-  scrollTrigger: {
-    scrub: 10,
-  }
-  }
-  );
-  gsap.fromTo("#btsBackImg2",
-  {
-    y: "30%",
-    zIndex: 2,
-  },
-  {
-    y: "-30%",
-    scrollTrigger: {
-      scrub: 1,
-    }
-    }
-  );
-
-});
-mm.add("(max-width: 679px) and (min-width: 500px)", () => {
-  // zoom carousel
-  gsap.effects.zoomSmallTablet(".carousel-img", {duration: 4.8, backgroundSize: "220%"});
+    // bts vertical slide
+    gsap.set("#btsFrontImg", {x: "60%"})
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "255%", scrollTrigger: {scrub: 1}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "-25%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 4}});
   
-  gsap.fromTo("#btsFrontImg",
-  {
-    y: "60%",
-    x: "20%",
-    scale: 1.2,
-    zIndex: 1,
-  },
-  {
-    y: "-120%",
-    scrollTrigger: {
-      scrub: 3,
-    }
-  }
-  );
-  gsap.fromTo("#btsBackImg1",
-{
-  y: "0%",
-},
-{
-  y: "-20%",
-  scrollTrigger: {
-    scrub: 10,
-  }
-  }
-  );
-  gsap.fromTo("#btsBackImg2",
-  {
-    y: "30%",
-    zIndex: 2,
-  },
-  {
-    y: "-30%",
-    scrollTrigger: {
-      scrub: 1,
-    }
-    }
-  );
-
-});
-mm.add("(max-width: 499px) and (min-width: 375px)", () => {
-  // zoom carousel
-  gsap.effects.zoomLargeMobile(".carousel-img", {duration: 5, backgroundSize: "335%"});
+  });
+  mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
+    // zoom carousel
+    gsap.effects.zoomMediumDesktop(".carousel-img", {duration: 5, backgroundSize: "148%"});
   
-  // bts vertical slide
-  gsap.fromTo("#btsFrontImg",
-  {
-    y: "50%",
-    x: "-5%",
-    scale: 1,
-    zIndex: 1,
-  },
-  {
-    y: "-30%",
-    scrollTrigger: {
-      scrub: 1,
-    }
-  }
-  );
-  gsap.fromTo("#btsBackImg1",
-{
-  y: "0%",
-},
-{
-  y: "-20%",
-  scrollTrigger: {
-    scrub: 10,
-  }
-  }
-  );
-  gsap.fromTo("#btsBackImg2",
-  {
-    y: "30%",
-    zIndex: 2,
-  },
-  {
-    y: "-30%",
-    scrollTrigger: {
-      scrub: 6,
-    }
-    }
-  );
+    // bts vertical slide
+    gsap.set("#btsFrontImg", {x: "30%"})
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 1200, scrollTrigger: {scrub: 1}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "10%", scrollTrigger: {scrub: 7}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 4}});
+  });
+  mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
+    // zoom carousel
+    gsap.effects.zoomSmallDesktop(".carousel-img", {duration: 4.8, backgroundSize: "160%"});
+    
+    // bts vertical slide
+    gsap.set("#btsFrontImg", {x: "-5%", zIndex: -1})
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "100%", scrollTrigger: {scrub: 4}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "-25%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
+  
+  });
 
-});
-mm.add("(max-width: 374px)", () => {
-  // zoom carousel
-  gsap.effects.zoomSmallMobile(".carousel-img", {duration: 5, backgroundSize: "450%"});
+}
+function tabletSize() {
+  mm.add("(max-width: 768px) and (min-width: 680px)", () => {
+    // zoom carousel
+    gsap.effects.zoomLargeTablet(".carousel-img", {duration: 5, backgroundSize: "160%"});
+  
+    gsap.set("#btsFrontImg", {x: "0%"})
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 750, scrollTrigger: {scrub: 4}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "30%", scrollTrigger: {scrub: 7}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
+  
+  });
+  mm.add("(max-width: 679px) and (min-width: 500px)", () => {
+    // zoom carousel
+    gsap.effects.zoomSmallTablet(".carousel-img", {duration: 4.8, backgroundSize: "220%"});
+    
+    gsap.set("#btsFrontImg", {x: "0%"})
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 750, scrollTrigger: {scrub: 4}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "30%", scrollTrigger: {scrub: 7}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
+  
+  });
+}
+function mobileSize() {
+  mm.add("(max-width: 499px) and (min-width: 375px)", () => {
+    // zoom carousel
+    gsap.effects.zoomLargeMobile(".carousel-img", {duration: 5, backgroundSize: "335%"});
+  
+    // bts vertical slide
+    gsap.set("#btsFrontImg", {x: "0%"})
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 550, scrollTrigger: {scrub: 4}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "10%", scrollTrigger: {scrub: 7}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "80%", scrollTrigger: {scrub: 1}});
+  
+   
+  });
+  mm.add("(max-width: 374px)", () => {
+    // zoom carousel
+    gsap.effects.zoomSmallMobile(".carousel-img", {duration: 5, backgroundSize: "450%"});
+  
+    // bts vertical slide
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "315%", scrollTrigger: {scrub: 4}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "-25%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 1}});
+  
+  });
+}
 
-  // bts vertical slide
-  gsap.fromTo("#btsFrontImg",
-  {
-    y: "45%",
-    x: "5%",
-    scale: 1.2,
-    zIndex: 1,
-  },
-  {
-    y: "-60%",
-    scrollTrigger: {
-      scrub: 3,
-    }
-  }
-  );
-  gsap.fromTo("#btsBackImg1",
-{
-  y: "0%",
-},
-{
-  y: "-20%",
-  scrollTrigger: {
-    scrub: 10,
-  }
-  }
-  );
-  gsap.fromTo("#btsBackImg2",
-  {
-    y: "30%",
-    zIndex: 2,
-  },
-  {
-    y: "-30%",
-    scrollTrigger: {
-      scrub: 1,
-    }
-    }
-  );
-
-});
+desktopSize();
+tabletSize();
+mobileSize();
 
 // jQuery
 $(document).ready(() => {

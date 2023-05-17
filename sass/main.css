@@ -77,7 +77,7 @@ body #landingPage #mainNavbar li {
 body #landingPage #mainNavbar li .navbar-link, body #landingPage #mainNavbar li .navbar-dark-light-toggle {
   color: #fff;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1440px) and (min-width: 1025px) {
   body #landingPage #mainNavbar li {
     margin-right: 2em;
   }
@@ -235,20 +235,16 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   position: absolute;
   max-width: 20%;
   min-width: 18%;
-  left: 25%;
-  bottom: -200%;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1440px) and (min-width: 1025px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     min-width: 10%;
     max-width: 20%;
-    bottom: -175%;
   }
 }
 @media (max-width: 1024px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     max-width: 30%;
-    bottom: -180%;
     left: 13%;
   }
 }
@@ -256,26 +252,10 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     max-width: 35%;
     left: 10%;
-    bottom: -180%;
-  }
-}
-@media (max-width: 767px) {
-  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
-    max-width: 37%;
-    min-width: 32%;
-    bottom: -65%;
-  }
-}
-@media (max-width: 659px) and (min-width: 426px) {
-  body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
-    bottom: -60%;
-    max-width: 38%;
-    min-width: 35%;
   }
 }
 @media (max-width: 425px) {
   body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
-    bottom: -440%;
     max-width: 47%;
     min-width: 45%;
   }
@@ -285,7 +265,7 @@ body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
     min-width: 50%;
   }
 }
-@media (max-width: 2560px) {
+@media (max-width: 2560px) and (min-width: 1441px) {
   body #bodyPage #btsCol #btsFirstChild #btsBackImg2 {
     z-index: 1;
   }
@@ -323,7 +303,7 @@ body #bodyPage #professionalCardsCol .professional-cards {
   overflow-x: hidden;
   max-width: 25%;
 }
-@media (max-width: 1440px) {
+@media (max-width: 1440px) and (min-width: 1025px) {
   body #bodyPage #professionalCardsCol .professional-cards {
     max-width: 28%;
   }
@@ -351,7 +331,7 @@ body #bodyPage #professionalCardsCol .professional-cards {
 body #bodyPage #mainClients {
   padding-inline: 10%;
 }
-@media (max-width: 660px) {
+@media screen and (max-width: 660px) {
   body #bodyPage #mainClients {
     display: none;
   }
@@ -378,7 +358,7 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
   padding-bottom: 40%;
   overflow: hidden;
 }
-@media (max-width: 660px) {
+@media screen and (max-width: 660px) {
   body #bodyPage #mainClientsTablet {
     display: block;
   }
