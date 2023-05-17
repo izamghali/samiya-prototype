@@ -176,7 +176,6 @@ body #bodyPage #btsCol {
   height: auto;
   padding-inline: 23%;
   justify-content: space-around;
-  border: solid red;
 }
 @media (max-width: 1024px) {
   body #bodyPage #btsCol {

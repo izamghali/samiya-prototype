@@ -155,8 +155,6 @@ body {
             height: auto;
             padding-inline: 23%;
             justify-content: space-around;  
-            border: solid red;
-            // overflow: hidden !important;
             @include desktop {
                 justify-content: space-around;
                 padding-inline: 30%;
