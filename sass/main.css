@@ -176,6 +176,7 @@ body #bodyPage #btsCol {
   height: auto;
   padding-inline: 23%;
   justify-content: space-around;
+  border: solid red;
 }
 @media (max-width: 1024px) {
   body #bodyPage #btsCol {
@@ -224,6 +225,7 @@ body #bodyPage #btsCol #btsFirstChild {
 }
 body #bodyPage #btsCol #btsFirstChild .bts-back-images {
   width: 40%;
+  transform: translate(0%, -20%);
 }
 @media (max-width: 950px) {
   body #bodyPage #btsCol #btsFirstChild .bts-back-images {

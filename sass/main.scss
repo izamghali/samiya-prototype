@@ -155,6 +155,8 @@ body {
             height: auto;
             padding-inline: 23%;
             justify-content: space-around;  
+            border: solid red;
+            // overflow: hidden !important;
             @include desktop {
                 justify-content: space-around;
                 padding-inline: 30%;
@@ -189,6 +191,7 @@ body {
 
                 .bts-back-images {
                     width: 40%;
+                    transform: translate(0%, -20%);
                     @include large-tablet {
                         width: 45%;
                         z-index: 1;

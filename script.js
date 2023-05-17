@@ -533,7 +533,7 @@ function desktopSize() {
   
     gsap.set("#btsFrontImg", {x: "60%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "270%", scrollTrigger: {scrub: 1}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "15%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 2}});
   })
   mm.add("(max-width: 2000px) and (min-width: 1513px)", () => {
@@ -542,7 +542,7 @@ function desktopSize() {
 
     gsap.set("#btsFrontImg", {x: "60%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "240%", scrollTrigger: {scrub: 1}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "-25%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 2}});
   })
   mm.add("(max-width: 1512px) and (min-width: 1441px)", () => {
@@ -551,8 +551,8 @@ function desktopSize() {
   
     // bts vertical slide
     gsap.set("#btsFrontImg", {x: "60%"})
-    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "255%", scrollTrigger: {scrub: 1}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "-25%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 850, scrollTrigger: {scrub: 1}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 4}});
   
   });
@@ -563,7 +563,7 @@ function desktopSize() {
     // bts vertical slide
     gsap.set("#btsFrontImg", {x: "30%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 1200, scrollTrigger: {scrub: 1}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "10%", scrollTrigger: {scrub: 7}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 4}});
   });
   mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
@@ -573,7 +573,7 @@ function desktopSize() {
     // bts vertical slide
     gsap.set("#btsFrontImg", {x: "-5%", zIndex: -1})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "100%", scrollTrigger: {scrub: 4}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "-25%", scrollTrigger: {scrub: 10}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
   
   });
@@ -586,7 +586,7 @@ function tabletSize() {
   
     gsap.set("#btsFrontImg", {x: "0%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 750, scrollTrigger: {scrub: 4}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "30%", scrollTrigger: {scrub: 7}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "50%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
   
   });
@@ -596,7 +596,7 @@ function tabletSize() {
     
     gsap.set("#btsFrontImg", {x: "0%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 750, scrollTrigger: {scrub: 4}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "30%", scrollTrigger: {scrub: 7}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "20%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
   
   });
@@ -609,7 +609,7 @@ function mobileSize() {
     // bts vertical slide
     gsap.set("#btsFrontImg", {x: "0%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 550, scrollTrigger: {scrub: 4}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "10%", scrollTrigger: {scrub: 7}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "80%", scrollTrigger: {scrub: 1}});
   
    
@@ -620,8 +620,8 @@ function mobileSize() {
   
     // bts vertical slide
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "315%", scrollTrigger: {scrub: 4}});
-    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "-25%", scrollTrigger: {scrub: 10}});
-    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 1}});
+    gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
+    gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "150%", scrollTrigger: {scrub: true}});
   
   });
 }
