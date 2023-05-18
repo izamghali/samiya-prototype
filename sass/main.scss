@@ -187,6 +187,22 @@ body {
                     max-height: 60vh;
                 }
 
+                .white-layer {
+                    position:absolute;
+                    height: 100%;
+                    width: 100%;
+                    background-color: #fff;
+                    border: #fff;
+                    @media screen and (max-width: 768px) {
+                        display: none;
+                    }
+
+                }
+
+                .bts-image-box {
+                    overflow: hidden;
+                }
+
                 .bts-back-images {
                     width: 40%;
                     transform: translate(0%, -20%);

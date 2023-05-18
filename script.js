@@ -526,6 +526,21 @@ const verticalScroll = gsap.registerEffect({
 // GSAP matchMedia
 let mm = gsap.matchMedia()
 
+function whiteLayerFlash() {
+  gsap.to(".white-layer", {
+    x: 400,
+    ease: "power4.inOut",
+    delay: 0.1,
+    duration: 0.9,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".white-layer",
+      start: "top 85%",
+      end: "top 40%",
+    }
+  });
+}
+
 function desktopSize() {
   mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
     // zoom carousel
@@ -535,6 +550,8 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "270%", scrollTrigger: {scrub: 1}});
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 2}});
+
+    whiteLayerFlash();
   })
   mm.add("(max-width: 2000px) and (min-width: 1513px)", () => {
     // zoom carousel
@@ -544,6 +561,8 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "240%", scrollTrigger: {scrub: 1}});
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 2}});
+
+    whiteLayerFlash();
   })
   mm.add("(max-width: 1512px) and (min-width: 1441px)", () => {
     // zoom carousel
@@ -555,6 +574,7 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 4}});
   
+    whiteLayerFlash();
   });
   mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
     // zoom carousel
@@ -565,6 +585,8 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 1200, scrollTrigger: {scrub: 1}});
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 4}});
+
+    whiteLayerFlash();
   });
   mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
     // zoom carousel
@@ -575,6 +597,8 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "100%", scrollTrigger: {scrub: 4}});
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "25%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
+
+    whiteLayerFlash();
   
   });
 
@@ -595,7 +619,7 @@ function tabletSize() {
     gsap.effects.zoomSmallTablet(".carousel-img", {duration: 4.8, backgroundSize: "220%"});
     
     gsap.set("#btsFrontImg", {x: "0%"})
-    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 750, scrollTrigger: {scrub: 4}});
+    gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 490, scrollTrigger: {scrub: 4}});
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "20%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
   

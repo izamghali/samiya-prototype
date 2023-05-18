@@ -222,6 +222,21 @@ body #bodyPage #btsCol #btsFirstChild {
     max-height: 60vh;
   }
 }
+body #bodyPage #btsCol #btsFirstChild .white-layer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border: #fff;
+}
+@media screen and (max-width: 768px) {
+  body #bodyPage #btsCol #btsFirstChild .white-layer {
+    display: none;
+  }
+}
+body #bodyPage #btsCol #btsFirstChild .bts-image-box {
+  overflow: hidden;
+}
 body #bodyPage #btsCol #btsFirstChild .bts-back-images {
   width: 40%;
   transform: translate(0%, -20%);
