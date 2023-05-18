@@ -75,7 +75,7 @@ body #landingPage #mainNavbar li {
   display: block;
 }
 body #landingPage #mainNavbar li .navbar-link, body #landingPage #mainNavbar li .navbar-dark-light-toggle {
-  color: #fff;
+  color: #212529;
 }
 @media (max-width: 1440px) and (min-width: 1025px) {
   body #landingPage #mainNavbar li {

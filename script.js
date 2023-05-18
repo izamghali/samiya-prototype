@@ -704,8 +704,9 @@ $(document).ready(() => {
     $("#sunMode").hide();
     $body.dataset.bsTheme = "dark";
     $(".layer").css("border", "25px solid #212529");
-    $(".navbar-link").css("color", "#212529");
-    $(".navbar-dark-light-toggle").css("color", "#212529");
+    $(".navbar-link").css("color", "#fff");
+    $(".navbar-dark-light-toggle").css("color", "#fff");
+    
   })
   $("#toggleOn").on("click", () => {
     $("#toggleOff").show();
@@ -714,8 +715,9 @@ $(document).ready(() => {
     $("#moonMode").hide();
     $body.dataset.bsTheme = "light";
     $(".layer").css("border", "25px solid #fff");
-    $(".navbar-link").css("color", "#fff");
-    $(".navbar-dark-light-toggle").css("color", "#fff");
+    $(".navbar-link").css("color", "#212529");
+    $(".navbar-dark-light-toggle").css("color", "#212529");
+    
   })
 
   // hover navbar
