@@ -48,6 +48,11 @@ body #landingPage #mainNavbar {
   top: 4%;
   right: 10%;
 }
+@media screen and (max-width: 991px) and (min-width: 951px) {
+  body #landingPage #mainNavbar {
+    position: relative;
+  }
+}
 @media (max-width: 1024px) {
   body #landingPage #mainNavbar {
     top: 4%;
@@ -63,6 +68,20 @@ body #landingPage #mainNavbar .navbar-collapse {
   background-color: none;
 }
 @media (max-width: 950px) {
+  body #landingPage #mainNavbar .navbar-collapse {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-block: 2rem;
+    padding-left: 2rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 951px) {
   body #landingPage #mainNavbar .navbar-collapse {
     position: absolute;
     right: 0;
@@ -94,6 +113,12 @@ body #landingPage #mainNavbar #aBrand {
   display: none;
 }
 @media (max-width: 950px) {
+  body #landingPage #mainNavbar #aBrand {
+    display: block;
+    position: static;
+  }
+}
+@media screen and (max-width: 991px) and (min-width: 951px) {
   body #landingPage #mainNavbar #aBrand {
     display: block;
     position: static;
