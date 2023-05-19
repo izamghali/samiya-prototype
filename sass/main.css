@@ -2,7 +2,7 @@ body #bodyPage #mainClients .client-rows .client-boxes {
   overflow: hidden;
 }
 
-body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3, body #landingPage #mainNavbar li #toggleOn, body #landingPage #mainNavbar li #moonMode {
+body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3, body #landingPage #mainNavbar .navbar-collapse li #toggleOn, body #landingPage #mainNavbar .navbar-collapse li #moonMode {
   display: none;
 }
 
@@ -14,7 +14,7 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
   border: none;
 }
 
-body #bodyPage #footer #footerHouseLink:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3:hover, body #landingPage #mainNavbar li .dark-light-toggle:hover {
+body #bodyPage #footer #footerHouseLink:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3:hover, body #landingPage #mainNavbar .navbar-collapse li .dark-light-toggle:hover {
   cursor: pointer;
 }
 
@@ -48,15 +48,44 @@ body #landingPage #mainNavbar {
   top: 4%;
   right: 10%;
 }
-@media (max-width: 767px) {
-  body #landingPage #mainNavbar {
-    position: static;
-  }
-}
 @media (max-width: 1024px) {
   body #landingPage #mainNavbar {
     top: 4%;
     right: 0%;
+  }
+}
+@media (max-width: 950px) {
+  body #landingPage #mainNavbar {
+    position: relative;
+  }
+}
+body #landingPage #mainNavbar .navbar-collapse {
+  background-color: none;
+}
+@media (max-width: 950px) {
+  body #landingPage #mainNavbar .navbar-collapse {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    z-index: -1;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-block: 2rem;
+    padding-left: 2rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+body #landingPage #mainNavbar .navbar-collapse li {
+  margin-right: 3em;
+  display: block;
+}
+body #landingPage #mainNavbar .navbar-collapse li .navbar-link, body #landingPage #mainNavbar .navbar-collapse li .navbar-dark-light-toggle {
+  color: #212529;
+}
+@media (max-width: 1440px) and (min-width: 1025px) {
+  body #landingPage #mainNavbar .navbar-collapse li {
+    margin-right: 2em;
   }
 }
 body #landingPage #mainNavbar #aBrand {
@@ -64,22 +93,10 @@ body #landingPage #mainNavbar #aBrand {
   left: -55%;
   display: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 950px) {
   body #landingPage #mainNavbar #aBrand {
     display: block;
     position: static;
-  }
-}
-body #landingPage #mainNavbar li {
-  margin-right: 3em;
-  display: block;
-}
-body #landingPage #mainNavbar li .navbar-link, body #landingPage #mainNavbar li .navbar-dark-light-toggle {
-  color: #212529;
-}
-@media (max-width: 1440px) and (min-width: 1025px) {
-  body #landingPage #mainNavbar li {
-    margin-right: 2em;
   }
 }
 body #landingPage #mainCarousel {

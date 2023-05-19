@@ -17,42 +17,58 @@ body {
             position: absolute;
             top: 4%;
             right: 10%;
-            @include tablet {
-                position: static;
-            }
             @include desktop {
-                // position: relative;
                 top: 4%;
                 right: 0%;
             }
+            @include large-tablet {
+                position: relative;
+            }
+            .navbar-collapse {
+                background-color: none;
+                @include large-tablet {
+                    position: absolute;
+                    right: 0;
+                    top: 25%;
+                    z-index: -1;
+                    background-color: rgba(255,255,255,0.7);
+                    padding-block: 2rem;
+                    padding-left: 2rem;
+                    border-top-left-radius: $standard-border-radius;
+                    border-bottom-left-radius: $standard-border-radius;
+                    border-bottom-right-radius: $standard-border-radius;
+                }
+                
+                li {
+                margin-right: 3em;
+                display: block;
+                
+                .navbar-link {
+                    color: #212529;
+                }
+                .navbar-dark-light-toggle {
+                    @extend .navbar-link;
+                }
+                @include large-desktop {
+                    margin-right: 2em;
+                }
+                .dark-light-toggle {
+                    @extend %cursor-pointer;
+                }
+                #toggleOn, #moonMode {
+                    @extend %display-none;
+                }
+                }
+            }
+
             #aBrand {
                 position: absolute;
                 left: -55%;
                 display: none;
-                @include tablet {
+                @include large-tablet {
                     display: block;
                     position: static;
                 }
-            }
-            li {
-            margin-right: 3em;
-            display: block;
-            
-            .navbar-link {
-                color: #212529;
-            }
-            .navbar-dark-light-toggle {
-                @extend .navbar-link;
-            }
-            @include large-desktop {
-                margin-right: 2em;
-            }
-            .dark-light-toggle {
-                @extend %cursor-pointer;
-            }
-            #toggleOn, #moonMode {
-                @extend %display-none;
-            }
             }
         }
 

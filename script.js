@@ -612,7 +612,6 @@ function tabletSize() {
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 750, scrollTrigger: {scrub: 4}});
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "50%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
-  
   });
   mm.add("(max-width: 679px) and (min-width: 500px)", () => {
     // zoom carousel
@@ -624,6 +623,7 @@ function tabletSize() {
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
   
   });
+
 }
 function mobileSize() {
   mm.add("(max-width: 499px) and (min-width: 375px)", () => {
@@ -696,6 +696,7 @@ $(document).ready(() => {
 
   // dark/light mode toggle
   let $body = document.body;
+  let $mq = window.matchMedia( "(min-width: 769px)" );
 
   $("#toggleOff").on("click", () => {
     $("#toggleOn").show();
@@ -706,7 +707,11 @@ $(document).ready(() => {
     $(".layer").css("border", "25px solid #212529");
     $(".navbar-link").css("color", "#fff");
     $(".navbar-dark-light-toggle").css("color", "#fff");
-    
+    if ($mq.matches) {
+      $(".navbar-collapse").css("background-color", "none");
+    } else {
+      $(".navbar-collapse").css("background-color", "rgba(33,37,41,0.7)");
+    }
   })
   $("#toggleOn").on("click", () => {
     $("#toggleOff").show();
@@ -717,7 +722,11 @@ $(document).ready(() => {
     $(".layer").css("border", "25px solid #fff");
     $(".navbar-link").css("color", "#212529");
     $(".navbar-dark-light-toggle").css("color", "#212529");
-    
+    if ($mq.matches) {
+      $(".navbar-collapse").css("background-color", "none");
+    } else {
+      $(".navbar-collapse").css("background-color", "rgba(255,255,255,0.7)");
+    }
   })
 
   // hover navbar
