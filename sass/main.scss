@@ -28,8 +28,6 @@ body {
                 position: relative;
             }
             .navbar-collapse {
-                background-color: none;
-
                 @include large-tablet {
                     position: absolute;
                     right: 0;

@@ -64,9 +64,6 @@ body #landingPage #mainNavbar {
     position: relative;
   }
 }
-body #landingPage #mainNavbar .navbar-collapse {
-  background-color: none;
-}
 @media (max-width: 950px) {
   body #landingPage #mainNavbar .navbar-collapse {
     position: absolute;

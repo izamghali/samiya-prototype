@@ -697,6 +697,7 @@ $(document).ready(() => {
   // dark/light mode toggle
   let $body = document.body;
   let $mq = window.matchMedia( "(min-width: 769px)" );
+  let $mqTablet = window.matchMedia( "(max-width: 768px)" );
 
   $("#toggleOff").on("click", () => {
     $("#toggleOn").show();
@@ -764,6 +765,24 @@ $(document).ready(() => {
     $(".navbar-link").fadeTo("100", 0.4);
   }).on("mouseleave", () => {
     $(".navbar-link").fadeTo("100", 1);
+  })
+
+  // hover dropdown
+  // if ($mqTablet.matches) {
+  //   $("#galleryDropDown").on("click", () => {
+  //     $(".dropdown-menu").slideDown();
+  //   })
+  //   $("#galleryDropDown").on("click", () => {
+  //     $(".dropdown-menu").slideUp();
+  //   })
+  // if (mq.matches) {
+  // }
+
+  $("#galleryDropDown").on("mouseenter", () => {
+    $(".dropdown-menu").slideDown();
+  })
+  $(".dropdown-area-leave").on("mouseleave", () => {
+    $(".dropdown-menu").slideUp();
   })
 
 });
