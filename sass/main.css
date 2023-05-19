@@ -143,6 +143,11 @@ body #bodyPage #ourServicesCol #ourServicesRow1Col, body #bodyPage #ourServicesC
 body #bodyPage #ourServicesCol #ourServicesRow1Col .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2Col .our-services-box {
   width: 15rem;
 }
+@media (max-width: 1024px) {
+  body #bodyPage #ourServicesCol #ourServicesRow1Col .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2Col .our-services-box {
+    width: 20%;
+  }
+}
 body #bodyPage #ourServicesCol #ourServicesRow1Col .box-test, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .box-test, body #bodyPage #ourServicesCol #ourServicesRow2Col .box-test {
   padding-inline: 1rem;
   padding-top: 1rem;

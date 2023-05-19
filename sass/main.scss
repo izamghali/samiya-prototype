@@ -116,6 +116,9 @@ body {
 
                 .our-services-box {
                     width: 15rem;
+                    @include desktop {
+                        width: 20%;
+                    }
                 }
 
                 .box-test {
