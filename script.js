@@ -767,17 +767,6 @@ $(document).ready(() => {
     $(".navbar-link").fadeTo("100", 1);
   })
 
-  // hover dropdown
-  // if ($mqTablet.matches) {
-  //   $("#galleryDropDown").on("click", () => {
-  //     $(".dropdown-menu").slideDown();
-  //   })
-  //   $("#galleryDropDown").on("click", () => {
-  //     $(".dropdown-menu").slideUp();
-  //   })
-  // if (mq.matches) {
-  // }
-
   $("#galleryDropDown").on("mouseenter", () => {
     $(".dropdown-menu").slideDown();
   })
