@@ -123,9 +123,22 @@ body #landingPage #mainCarousel .layer {
 }
 body #bodyPage #ourServicesHeadingCol {
   padding-inline: 10%;
+  margin-top: 5%;
+}
+@media (max-width: 425px) {
+  body #bodyPage #ourServicesHeadingCol {
+    margin-top: 15%;
+  }
 }
 body #bodyPage #ourServicesCol {
   height: auto;
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+@media (max-width: 425px) {
+  body #bodyPage #ourServicesCol {
+    margin-bottom: 15%;
+  }
 }
 body #bodyPage #ourServicesCol #ourServicesRow1Col, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile, body #bodyPage #ourServicesCol #ourServicesRow2Col {
   justify-content: center;

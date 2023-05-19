@@ -98,11 +98,19 @@ body {
         // our services
         #ourServicesHeadingCol {
             padding-inline: 10%;
+            margin-top: 5%;
+            @include large-mobile {
+                margin-top: 15%;
+            }
         }
 
         #ourServicesCol {
             height: auto;
-
+            margin-bottom: 5%;
+            margin-top: 2%;
+            @include large-mobile {
+                margin-bottom: 15%;
+            }
             #ourServicesRow1Col {
                 justify-content: center;
                 @include large-mobile {
