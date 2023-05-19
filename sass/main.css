@@ -64,6 +64,11 @@ body #landingPage #mainNavbar {
     position: relative;
   }
 }
+@media screen and (max-width: 991px) {
+  body #landingPage #mainNavbar {
+    padding-top: 1.5rem;
+  }
+}
 @media (max-width: 950px) {
   body #landingPage #mainNavbar .navbar-collapse {
     position: absolute;
@@ -160,20 +165,41 @@ body #landingPage #mainCarousel .layer {
   opacity: 1;
   border: 25px solid white;
 }
-body #landingPage #mainCarousel #carouselCompanyTitle {
+body #landingPage #mainCarousel #companyTitle {
   color: #fff;
   position: absolute;
   top: 60%;
   left: 10%;
   z-index: 1;
 }
-body #landingPage #mainCarousel #carouselCompanyTitle h1 {
+@media (max-width: 425px) {
+  body #landingPage #mainCarousel #companyTitle {
+    top: 10%;
+    left: 12%;
+  }
+}
+body #landingPage #mainCarousel #companyTitle #companyRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+body #landingPage #mainCarousel #companyTitle #companyRow #companyImgBox {
+  width: 10vw;
+}
+body #landingPage #mainCarousel #companyTitle #companyRow #companyImgBox img {
+  width: 100%;
+}
+body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h1 {
   font-size: 6.5vw;
   font-weight: 700;
-  font-family: "Montserrat";
+  font-family: "Inter";
+}
+body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h4 {
+  margin-left: 1%;
 }
 @media (max-width: 2560px) and (min-width: 1441px) {
-  body #landingPage #mainCarousel #carouselCompanyTitle h4 {
+  body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h4 {
     font-size: 2rem;
     font-weight: 300;
   }
