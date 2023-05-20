@@ -47,6 +47,7 @@ body #landingPage #mainNavbar {
   position: absolute;
   top: 4%;
   right: 10%;
+  padding-bottom: 0;
 }
 @media screen and (max-width: 991px) and (min-width: 951px) {
   body #landingPage #mainNavbar {
@@ -64,10 +65,9 @@ body #landingPage #mainNavbar {
     position: relative;
   }
 }
-@media screen and (max-width: 991px) {
+@media (max-width: 425px) {
   body #landingPage #mainNavbar {
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    padding-top: 1.2rem;
   }
 }
 @media (max-width: 950px) {
@@ -114,6 +114,7 @@ body #landingPage #mainNavbar #aBrand {
   position: absolute;
   left: -55%;
   display: none;
+  font-family: "Inter";
 }
 @media (max-width: 950px) {
   body #landingPage #mainNavbar #aBrand {
@@ -121,7 +122,7 @@ body #landingPage #mainNavbar #aBrand {
     position: static;
   }
 }
-@media screen and (max-width: 991px) and (min-width: 951px) {
+@media screen and (max-width: 991px) {
   body #landingPage #mainNavbar #aBrand {
     display: block;
     position: static;
@@ -171,7 +172,7 @@ body #landingPage #mainCarousel .layer {
   opacity: 1;
   border: 25px solid white;
 }
-@media (max-width: 425px) {
+@media screen and (max-width: 768px) {
   body #landingPage #mainCarousel .layer {
     border: 15px solid white;
   }
@@ -180,7 +181,7 @@ body #landingPage #mainCarousel #companyTitle {
   color: #fff;
   position: absolute;
   top: 60%;
-  left: 10%;
+  padding-inline: 65px;
   z-index: 1;
 }
 @media (max-width: 425px) {
@@ -195,7 +196,12 @@ body #landingPage #mainCarousel #companyTitle #companyRow {
   gap: 1rem;
 }
 body #landingPage #mainCarousel #companyTitle #companyRow #companyImgBox {
-  width: 10vw;
+  max-width: 10vw;
+}
+@media (max-width: 767px) {
+  body #landingPage #mainCarousel #companyTitle #companyRow #companyImgBox {
+    max-width: 15vw;
+  }
 }
 body #landingPage #mainCarousel #companyTitle #companyRow #companyImgBox img {
   width: 100%;
@@ -212,6 +218,11 @@ body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h4 {
   font-weight: 100;
   font-size: 2rem;
 }
+@media screen and (max-width: 560px) {
+  body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h4 {
+    letter-spacing: 0.4rem;
+  }
+}
 body #landingPage #mainCarousel #companyTitleMobile {
   color: #000;
   display: flex;
@@ -219,7 +230,6 @@ body #landingPage #mainCarousel #companyTitleMobile {
   position: absolute;
   top: -4rem;
   padding-left: 1.5rem;
-  padding-top: 0.5rem;
   width: 100vw;
   height: 9%;
   z-index: 1;
@@ -227,6 +237,11 @@ body #landingPage #mainCarousel #companyTitleMobile {
 @media screen and (min-width: 426px) {
   body #landingPage #mainCarousel #companyTitleMobile {
     display: none;
+  }
+}
+@media screen and (max-width: 425px) and (min-width: 376px) {
+  body #landingPage #mainCarousel #companyTitleMobile {
+    padding-top: 15%;
   }
 }
 body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile {
@@ -257,6 +272,11 @@ body #landingPage #mainCarousel #companySloganMobile {
   font-style: italic;
   font-weight: 100;
   font-size: 2rem;
+}
+@media screen and (min-width: 426px) {
+  body #landingPage #mainCarousel #companySloganMobile {
+    display: none;
+  }
 }
 body #bodyPage #ourServicesHeadingCol {
   padding-inline: 10%;
