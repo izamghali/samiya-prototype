@@ -28,7 +28,8 @@ body {
                 position: relative;
             }
             @media screen and (max-width: 991px) {
-                padding-top: 1.5rem;
+                padding-top: 1rem;
+                padding-bottom: 0.5rem;
             }
 
             .navbar-collapse {
@@ -93,6 +94,10 @@ body {
                     display: block;
                     position: static;
                 }
+
+                @include large-mobile {
+                    visibility: hidden;
+                }
             }
         }
 
@@ -130,6 +135,10 @@ body {
                 border-radius: 35px;
                 opacity: 1;
                 border: 25px solid white;
+                @include large-mobile {
+                    border: 15px solid white;
+                    
+                }
             }
 
             #companyTitle {
@@ -139,8 +148,7 @@ body {
                 left: 10%;
                 z-index: 1;
                 @include large-mobile {
-                    top: 10%;
-                    left: 12%;
+                    display: none;
                 }
 
                 #companyRow {
@@ -177,6 +185,64 @@ body {
                     
                 }
 
+            }
+
+            #companyTitleMobile {
+                color: #000;
+                display: flex;
+                justify-content: start;
+                position: absolute;
+                // top: -10.7%;
+                top: -4rem;
+                padding-left: 1.5rem;
+                padding-top: 0.5rem;
+                // padding-bottom: 0.5rem;
+                width: 100vw;
+                height: 9%;
+                z-index: 1;
+                // border: solid red;
+                @media screen and (min-width: 426px) {
+                    display: none;
+                }
+
+                #companyRowMobile {
+                    display: flex;
+                    align-items: end;
+                    justify-content: space-between;
+                    gap: 0.6rem;
+                    #companyImgBoxMobile {
+                        width: 10vw;
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    #companyTitleBoxMobile {
+                        // display: flex;
+                        // align-items: center;
+                        h1 {
+                            font-size: 7vw;
+                            font-weight: 900;
+                            font-family: 'Inter';
+                            // font-family: 'Montserrat';
+                        }
+                        
+                    }
+                    
+                }
+            }
+
+            #companySloganMobile {
+                width: 100vw;
+                position: absolute;
+                color: #fff;
+                top: 5%;
+                z-index: 1;
+                padding-inline: 2rem;
+                letter-spacing: 0.1rem;
+                font-style: italic;
+                font-weight: 100;
+                font-size: 2rem;
             }
 
         }
