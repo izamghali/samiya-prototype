@@ -696,8 +696,7 @@ $(document).ready(() => {
 
   // dark/light mode toggle
   let $body = document.body;
-  let $mq = window.matchMedia( "(min-width: 769px)" );
-  let $mqTablet = window.matchMedia( "(max-width: 768px)" );
+  let $mq = window.matchMedia( "(min-width: 992px)" );
 
   $("#toggleOff").on("click", () => {
     $("#toggleOn").show();
@@ -713,6 +712,10 @@ $(document).ready(() => {
     } else {
       $(".navbar-collapse").css("background-color", "rgba(33,37,41,0.7)");
     }
+    $("#whiteLogo").show()
+    $("#blackLogo").hide()
+    $("#companyTitleBoxMobile").css("color", "#acb5bd")
+    
   })
   $("#toggleOn").on("click", () => {
     $("#toggleOff").show();
@@ -728,6 +731,9 @@ $(document).ready(() => {
     } else {
       $(".navbar-collapse").css("background-color", "rgba(255,255,255,0.7)");
     }
+    $("#blackLogo").show()
+    $("#whiteLogo").hide()
+    $("#companyTitleBoxMobile").css("color", "#212529")
   })
 
   // hover navbar

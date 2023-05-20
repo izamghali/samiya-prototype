@@ -253,6 +253,9 @@ body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile {
 body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile {
   width: 10vw;
 }
+body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile #whiteLogo {
+  display: none;
+}
 body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile img {
   width: 100%;
 }

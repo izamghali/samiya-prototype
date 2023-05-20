@@ -217,6 +217,9 @@ body {
                     gap: 0.6rem;
                     #companyImgBoxMobile {
                         width: 10vw;
+                        #whiteLogo {
+                            display: none;
+                        }
                         img {
                             width: 100%;
                         }
