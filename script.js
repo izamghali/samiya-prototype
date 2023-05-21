@@ -551,6 +551,28 @@ zoomCarouselRegister();
 // GSAP matchMedia
 let mm = gsap.matchMedia()
 
+function footerSlide() {
+  let footerTl = gsap.timeline();
+
+  footerTl.set("#footer", {
+    position: "absolute",
+    y: "-10%",
+  });
+
+  footerTl.set("#footerDummy", {
+    height: "10rem",
+  });
+
+  footerTl.to("#footer", {
+    y: "-60%",
+    scrollTrigger: {
+      trigger: "#footerDummy",
+      scrub: 1,
+      start: "top 100%",
+      end: "top 75%",
+    }
+  });
+}
 function desktopSize() {
   mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
     // zoom carousel
@@ -660,6 +682,7 @@ function mobileSize() {
   });
 }
 
+footerSlide();
 desktopSize();
 tabletSize();
 mobileSize();
