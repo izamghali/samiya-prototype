@@ -58,6 +58,12 @@ body {
                     border-bottom-left-radius: $standard-border-radius;
                     border-bottom-right-radius: $standard-border-radius;
                 }
+
+                .navbar-link {
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
                 
                 li {
                 margin-right: 3em;

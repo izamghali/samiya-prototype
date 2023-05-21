@@ -1,3 +1,6 @@
+gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
+
 // client slide
 function slideThreeImages() {
   function style1() {
@@ -378,8 +381,42 @@ function slideFourImages() {
 slideThreeImages();
 slideFourImages();
 
-gsap.registerPlugin(ScrollTrigger);
+const navbarScroll = gsap.registerEffect({
+  name: "navbarScrollTo",
+  effect: (targets, config) => {
+    return gsap.to(window, {
+      duration: 0.1,
+      ease: "elastic.out(1, 0.3)",
+      scrollTo: { y: config.y, offsetY: config.offsetY }
+    });
+  }
+});
+const verticalScroll = gsap.registerEffect({
+  name: "verticalScrollFrom",
+  effect: (targets, config) => {
+    return gsap.from(targets, {
+      y: config.y,
+      scrollTrigger: {
+        scrub: config.scrollTrigger.scrub
+      },
+    });
+  }
+});
 
+function whiteLayerFlash() {
+  gsap.to(".white-layer", {
+    x: 400,
+    ease: "power4.inOut",
+    delay: 0.1,
+    duration: 0.9,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".white-layer",
+      start: "top 85%",
+      end: "top 40%",
+    }
+  });
+}
 function zoomCarouselRegister() {
   // super duper large desktop
   gsap.registerEffect({
@@ -511,35 +548,8 @@ function zoomCarouselRegister() {
 }
 zoomCarouselRegister();
 
-const verticalScroll = gsap.registerEffect({
-  name: "verticalScrollFrom",
-  effect: (targets, config) => {
-    return gsap.from(targets, {
-      y: config.y,
-      scrollTrigger: {
-        scrub: config.scrollTrigger.scrub
-      },
-    });
-  }
-});
-
 // GSAP matchMedia
 let mm = gsap.matchMedia()
-
-function whiteLayerFlash() {
-  gsap.to(".white-layer", {
-    x: 400,
-    ease: "power4.inOut",
-    delay: 0.1,
-    duration: 0.9,
-    stagger: 0.2,
-    scrollTrigger: {
-      trigger: ".white-layer",
-      start: "top 85%",
-      end: "top 40%",
-    }
-  });
-}
 
 function desktopSize() {
   mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
@@ -773,11 +783,20 @@ $(document).ready(() => {
     $(".navbar-link").fadeTo("100", 1);
   })
 
+  // hover dropdown menu
   $("#galleryDropDown").on("mouseenter", () => {
     $(".dropdown-menu").slideDown();
   })
   $(".dropdown-area-leave").on("mouseleave", () => {
     $(".dropdown-menu").slideUp();
+  })
+
+  // clicked navbar list
+  $("#navLinkOurServices").on("click", () => {
+    gsap.effects.navbarScrollTo(window, {y: "#ourServicesHeadingCol", offsetY: 10});
+  })
+  $("#navLinkBts").on("click", () => {
+    gsap.effects.navbarScrollTo(window, {y: "#btsCol", offsetY: 110});
   })
 
 });
