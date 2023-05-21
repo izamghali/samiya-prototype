@@ -406,9 +406,19 @@ const verticalScroll = gsap.registerEffect({
 function whiteLayerFlash() {
   gsap.to(".white-layer", {
     x: 400,
-    ease: "power4.inOut",
+    ease: "power2.inOut",
     delay: 0.1,
     duration: 0.9,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".white-layer",
+      start: "top 75%",
+      end: "top 40%",
+    }});
+
+  gsap.to(".white-layer", {
+    visibility: "hidden",
+    delay: 1, 
     stagger: 0.2,
     scrollTrigger: {
       trigger: ".white-layer",
@@ -416,6 +426,30 @@ function whiteLayerFlash() {
       end: "top 40%",
     }
   });
+
+  gsap.to(".bts-image-box", {
+    overflowX: "visible",
+    delay: 1, 
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".white-layer",
+      start: "top 85%",
+      end: "top 40%",
+    }
+  });
+    
+  gsap.to(".bts-image-box img", {
+    duration: 0.5,
+    stagger: 0.2,
+    delay: 1.6,
+    ease: "power4.inOut",
+    boxShadow: "-10px 20px 25px rgba(0,0,0,0.3)",
+    scrollTrigger: {
+      trigger: ".white-layer",
+      start: "top 85%",
+      end: "top 40%",
+    }
+  })  
 }
 function zoomCarouselRegister() {
   // super duper large desktop

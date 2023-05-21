@@ -416,7 +416,7 @@ body #bodyPage #btsCol #btsFirstChild .white-layer {
   }
 }
 body #bodyPage #btsCol #btsFirstChild .bts-image-box {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 body #bodyPage #btsCol #btsFirstChild .bts-back-images {
   width: 40%;
@@ -430,6 +430,7 @@ body #bodyPage #btsCol #btsFirstChild .bts-back-images {
 }
 body #bodyPage #btsCol #btsFirstChild #btsFrontImg {
   position: absolute;
+  z-index: 2;
   max-width: 20%;
   min-width: 18%;
 }

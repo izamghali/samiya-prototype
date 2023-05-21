@@ -380,7 +380,7 @@ body {
                 }
 
                 .bts-image-box {
-                    overflow: hidden;
+                    overflow-x: hidden;
                 }
 
                 .bts-back-images {
@@ -390,10 +390,15 @@ body {
                         width: 45%;
                         z-index: 1;
                     }
+                    img {
+                        // border: solid red;
+                        // box-shadow: -10px 20px 25px rgba(0,0,0,0.3);
+                    }
                 }
 
                 #btsFrontImg {
                     position: absolute;
+                    z-index: 2;
                     max-width: 20%;
                     min-width: 18%;
                     @include larger-desktop {
