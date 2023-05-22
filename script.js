@@ -402,6 +402,17 @@ const verticalScroll = gsap.registerEffect({
     });
   }
 });
+const footerHover = gsap.registerEffect({
+  name: "footerHover",
+  effect: (targets, config) => {
+    return gsap.set(targets, {
+      duration: 3,
+      backgroundColor: config.backgroundColor,
+      fill: config.fill,
+      border: config.border
+    });
+  }
+});
 
 function whiteLayerFlash() {
   gsap.to(".white-layer", {
@@ -819,60 +830,23 @@ $(document).ready(() => {
     $("#footerCol1").children().css("color", $bootstrapLight);
   })
 
-  gsap.registerEffect({
-    name: "footerHover",
-    effect: (targets, config) => {
-      return gsap.set(targets, {
-        duration: 3,
-        backgroundColor: config.backgroundColor,
-        fill: config.fill,
-        border: config.border
-      })
-    }
-  })
-
   // hover on social btn when dark mode
   $("#footerSocial .btn").on("mouseenter", (event) => {
     if ($body.dataset.bsTheme === "dark") {
-      gsap.set($(event.currentTarget), {
-        backgroundColor: $bootstrapDark,
-        duration: "300ms",
-      })
-      gsap.set($(event.currentTarget).children(), {
-        fill: $bootstrapLight,
-        duration: "300ms",
-      })
+      gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapDark})
+      gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapLight})
     } else {
-      gsap.set($(event.currentTarget), {
-        backgroundColor: $bootstrapLight,
-        duration: "300ms",
-      })
-      gsap.set($(event.currentTarget).children(), {
-        fill: $bootstrapDark,
-        duration: "300ms",
-      })
+      gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapLight})
+      gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapDark})
     }
   })
   $("#footerSocial .btn").on("mouseleave", (event) => {
     if ($body.dataset.bsTheme === "dark") {
-      gsap.set($(event.currentTarget), {
-        backgroundColor: $bootstrapLight,
-        duration: "300ms",
-      })
-      gsap.set($(event.currentTarget).children(), {
-        fill: $bootstrapDark,
-        duration: "300ms",
-      })
+      gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapLight})
+      gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapDark})
     } else {
-      gsap.set($(event.currentTarget), {
-        border: "0.5 solid" + $bootstrapLight,
-        backgroundColor: $bootstrapDark,
-        duration: "300ms",
-      })
-      gsap.set($(event.currentTarget).children(), {
-        fill: $bootstrapLight,
-        duration: "300ms",
-      })
+      gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapDark})
+      gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapLight})
     }
   })
 
