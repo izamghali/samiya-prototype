@@ -149,7 +149,7 @@ body {
             }
 
             #companyTitle {
-                color: #fff;
+                color: $standard-white-color;
                 position: absolute;
                 top: 60%;
                 padding-inline: 65px;
@@ -199,7 +199,7 @@ body {
             }
 
             #companyTitleMobile {
-                color: #000;
+                color: $standard-black-color;
                 display: flex;
                 justify-content: start;
                 position: absolute;
@@ -247,7 +247,7 @@ body {
             #companySloganMobile {
                 width: 100vw;
                 position: absolute;
-                color: #fff;
+                color: $standard-white-color;
                 top: 5%;
                 z-index: 1;
                 padding-inline: 2rem;
@@ -371,8 +371,7 @@ body {
                     position:absolute;
                     height: 100%;
                     width: 100%;
-                    background-color: #fff;
-                    border: #fff;
+                    background-color: $standard-white-color;
                     @media screen and (max-width: 768px) {
                         display: none;
                     }
@@ -389,10 +388,6 @@ body {
                     @include large-tablet {
                         width: 45%;
                         z-index: 1;
-                    }
-                    img {
-                        // border: solid red;
-                        // box-shadow: -10px 20px 25px rgba(0,0,0,0.3);
                     }
                 }
 
@@ -451,6 +446,10 @@ body {
                 
                 #btsTextBoxCol {
                     width: 30vw;
+
+                    .bts-heading-texts {
+                        color: $standard-black-color;
+                    }
         
                     #btsCollapse1, #btsCollapse2, #btsCollapse3 {
                         @extend %cursor-pointer;
@@ -558,7 +557,7 @@ body {
 }
 // footer
 #footer {
-    background-color: #212529 !important;
+    background-color: #212529;
     color: #f8f9fa;
     width: 100vw;
     height: 35vh; 

@@ -764,6 +764,9 @@ $(document).ready(() => {
   // dark/light mode toggle
   let $body = document.body;
   let $mq = window.matchMedia( "(min-width: 992px)" );
+  let $standardBlack = "#212529";
+  let $standardWhite = "#fff";
+  let $standardLessWhite = "#acb5bd";
 
   $("#toggleOff").on("click", () => {
     $("#toggleOn").show();
@@ -771,18 +774,20 @@ $(document).ready(() => {
     $("#moonMode").fadeIn();
     $("#sunMode").hide();
     $body.dataset.bsTheme = "dark";
-    $(".layer").css("border", "25px solid #212529");
-    $(".navbar-link").css("color", "#fff");
-    $(".navbar-dark-light-toggle").css("color", "#fff");
+    $(".layer").css("border", "25px solid" +  $standardBlack);
+    $(".navbar-link").css("color", $standardWhite);
+    $(".navbar-dark-light-toggle").css("color", $standardWhite);
     if ($mq.matches) {
       $(".navbar-collapse").css("background-color", "none");
     } else {
       $(".navbar-collapse").css("background-color", "rgba(33,37,41,0.7)");
     }
-    $("#whiteLogo").show()
-    $("#blackLogo").hide()
-    $("#companyTitleBoxMobile").css("color", "#acb5bd")
-    
+    $("#whiteLogo").show();
+    $("#blackLogo").hide();
+    $("#companyTitleBoxMobile").css("color", $standardLessWhite);
+    $(".bts-heading-texts").css("color", $standardLessWhite);
+    $(".white-layer").css("background-color", $standardBlack)
+    $("#footer").css("background-color", $standardLessWhite);
   })
   $("#toggleOn").on("click", () => {
     $("#toggleOff").show();
@@ -791,16 +796,17 @@ $(document).ready(() => {
     $("#moonMode").hide();
     $body.dataset.bsTheme = "light";
     $(".layer").css("border", "25px solid #fff");
-    $(".navbar-link").css("color", "#212529");
-    $(".navbar-dark-light-toggle").css("color", "#212529");
+    $(".navbar-link").css("color", $standardBlack);
+    $(".navbar-dark-light-toggle").css("color", $standardBlack);
     if ($mq.matches) {
       $(".navbar-collapse").css("background-color", "none");
     } else {
       $(".navbar-collapse").css("background-color", "rgba(255,255,255,0.7)");
     }
-    $("#blackLogo").show()
-    $("#whiteLogo").hide()
-    $("#companyTitleBoxMobile").css("color", "#212529")
+    $("#blackLogo").show();
+    $("#whiteLogo").hide();
+    $("#companyTitleBoxMobile").css("color", $standardBlack);
+    $(".bts-heading-texts").css("color", $standardBlack);
   })
 
   // hover navbar

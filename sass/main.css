@@ -181,7 +181,7 @@ body #landingPage #mainCarousel .layer {
   }
 }
 body #landingPage #mainCarousel #companyTitle {
-  color: #fff;
+  color: hsl(60, 0%, 100%);
   position: absolute;
   top: 60%;
   padding-inline: 65px;
@@ -227,7 +227,7 @@ body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h4 {
   }
 }
 body #landingPage #mainCarousel #companyTitleMobile {
-  color: #000;
+  color: #212529;
   display: flex;
   justify-content: start;
   position: absolute;
@@ -270,7 +270,7 @@ body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyTi
 body #landingPage #mainCarousel #companySloganMobile {
   width: 100vw;
   position: absolute;
-  color: #fff;
+  color: hsl(60, 0%, 100%);
   top: 5%;
   z-index: 1;
   padding-inline: 2rem;
@@ -407,8 +407,7 @@ body #bodyPage #btsCol #btsFirstChild .white-layer {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #fff;
-  border: #fff;
+  background-color: hsl(60, 0%, 100%);
 }
 @media screen and (max-width: 768px) {
   body #bodyPage #btsCol #btsFirstChild .white-layer {
@@ -478,6 +477,9 @@ body #bodyPage #btsCol #btsSecondChild {
 }
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
   width: 30vw;
+}
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-heading-texts {
+  color: #212529;
 }
 body #bodyPage #professionalHeadingCol {
   padding-inline: 10%;
@@ -563,7 +565,7 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
 }
 
 #footer {
-  background-color: #212529 !important;
+  background-color: #212529;
   color: #f8f9fa;
   width: 100vw;
   height: 35vh;
