@@ -568,16 +568,15 @@ body {
         display: flex;
         gap: 0.6rem;
         .btn {
-            &:hover {
-                background-color: $bootstrap-light;
-                transition-duration: 300ms;
-                .bi {
-                    fill: $bootstrap-dark;
-                }
-            }
+            // &:hover {
+            //     background-color: $bootstrap-light;
+            //     transition-duration: 300ms;
+            //     .bi {
+            //         fill: $bootstrap-dark;
+            //     }
+            // }
             border: 0.5px solid $bootstrap-light;
             border-radius:  50%;
-
             display: flex;
             justify-content: center;
             align-items: center;

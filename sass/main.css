@@ -585,13 +585,6 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
   width: 4.5rem;
   height: 4.5rem;
 }
-#footer #footerSocial .btn:hover {
-  background-color: #f8f9fa;
-  transition-duration: 300ms;
-}
-#footer #footerSocial .btn:hover .bi {
-  fill: #212529;
-}
 #footer #footerSocial .btn .bi {
   fill: #f8f9fa;
 }/*# sourceMappingURL=main.css.map */

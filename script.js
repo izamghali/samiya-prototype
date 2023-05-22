@@ -788,8 +788,12 @@ $(document).ready(() => {
     $("#companyTitleBoxMobile").css("color", $standardLessWhite);
     $(".bts-heading-texts").css("color", $standardLessWhite);
     $("#footer").css("background-color", $bootstrapLight);
+    $("#footerSocial .btn").css("border","0.5px solid" + $bootstrapDark);
+    $("#footerSocial .btn").css("background-color", $bootstrapLight);
+    $("#footerSocial .btn .bi").css("fill", $bootstrapDark);
+    $("#footerCol1").children().css("color", $bootstrapDark);
+    $(".white-layer").css("background-color", $bootstrapDark)
   })
-  $(".white-layer").css("background-color", $bootstrapDark)
   $("#toggleOn").on("click", () => {
     $("#toggleOff").show();
     $("#toggleOn").hide();
@@ -808,7 +812,68 @@ $(document).ready(() => {
     $("#whiteLogo").hide();
     $(".bts-heading-texts").css("color", $bootstrapDark);
     $("#footer").css("background-color", $bootstrapDark);
+    $("#footerSocial .btn").css("border","0.5px solid" + $bootstrapLight);
+    $("#footerSocial .btn").css("background-color", $bootstrapDark);
+    $("#footerSocial .btn .bi").css("fill", $bootstrapLight);
     $("#companyTitleBoxMobile").css("color", $bootstrapDark);
+    $("#footerCol1").children().css("color", $bootstrapLight);
+  })
+
+  gsap.registerEffect({
+    name: "footerHover",
+    effect: (targets, config) => {
+      return gsap.set(targets, {
+        duration: 3,
+        backgroundColor: config.backgroundColor,
+        fill: config.fill,
+        border: config.border
+      })
+    }
+  })
+
+  // hover on social btn when dark mode
+  $("#footerSocial .btn").on("mouseenter", (event) => {
+    if ($body.dataset.bsTheme === "dark") {
+      gsap.set($(event.currentTarget), {
+        backgroundColor: $bootstrapDark,
+        duration: "300ms",
+      })
+      gsap.set($(event.currentTarget).children(), {
+        fill: $bootstrapLight,
+        duration: "300ms",
+      })
+    } else {
+      gsap.set($(event.currentTarget), {
+        backgroundColor: $bootstrapLight,
+        duration: "300ms",
+      })
+      gsap.set($(event.currentTarget).children(), {
+        fill: $bootstrapDark,
+        duration: "300ms",
+      })
+    }
+  })
+  $("#footerSocial .btn").on("mouseleave", (event) => {
+    if ($body.dataset.bsTheme === "dark") {
+      gsap.set($(event.currentTarget), {
+        backgroundColor: $bootstrapLight,
+        duration: "300ms",
+      })
+      gsap.set($(event.currentTarget).children(), {
+        fill: $bootstrapDark,
+        duration: "300ms",
+      })
+    } else {
+      gsap.set($(event.currentTarget), {
+        border: "0.5 solid" + $bootstrapLight,
+        backgroundColor: $bootstrapDark,
+        duration: "300ms",
+      })
+      gsap.set($(event.currentTarget).children(), {
+        fill: $bootstrapLight,
+        duration: "300ms",
+      })
+    }
   })
 
   // hover navbar
