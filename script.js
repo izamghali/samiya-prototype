@@ -591,15 +591,10 @@ function zoomCarouselRegister() {
   })
 
 }
-zoomCarouselRegister();
-
-// GSAP matchMedia
-let mm = gsap.matchMedia()
-
 function footerSlide() {
   let footerTl = gsap.timeline();
 
-  footerTl.set("#footer", {
+  footerTl.set("footer", {
     position: "absolute",
     y: "-10%",
   });
@@ -608,7 +603,7 @@ function footerSlide() {
     height: "10rem",
   });
 
-  footerTl.to("#footer", {
+  footerTl.to("footer", {
     y: "-60%",
     scrollTrigger: {
       trigger: "#footerDummy",
@@ -618,6 +613,12 @@ function footerSlide() {
     }
   });
 }
+zoomCarouselRegister();
+
+// GSAP matchMedia
+let mm = gsap.matchMedia()
+
+
 function desktopSize() {
   mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
     // zoom carousel
@@ -629,6 +630,7 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 2}});
 
     whiteLayerFlash();
+    footerSlide();
   })
   mm.add("(max-width: 2000px) and (min-width: 1513px)", () => {
     // zoom carousel
@@ -640,6 +642,7 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 2}});
 
     whiteLayerFlash();
+    footerSlide();
   })
   mm.add("(max-width: 1512px) and (min-width: 1441px)", () => {
     // zoom carousel
@@ -652,6 +655,7 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 4}});
   
     whiteLayerFlash();
+    footerSlide();
   });
   mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
     // zoom carousel
@@ -664,6 +668,7 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: 4}});
 
     whiteLayerFlash();
+    footerSlide();
   });
   mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
     // zoom carousel
@@ -676,7 +681,7 @@ function desktopSize() {
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
 
     whiteLayerFlash();
-  
+    footerSlide();
   });
 
 }
@@ -689,6 +694,8 @@ function tabletSize() {
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 750, scrollTrigger: {scrub: 4}});
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "50%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
+
+    footerSlide();
   });
   mm.add("(max-width: 679px) and (min-width: 500px)", () => {
     // zoom carousel
@@ -699,6 +706,7 @@ function tabletSize() {
     gsap.effects.verticalScrollFrom("#btsBackImg1", {y: "20%", scrollTrigger: {scrub: 5}});
     gsap.effects.verticalScrollFrom("#btsBackImg2", {y: "50%", scrollTrigger: {scrub: true}});
   
+    footerSlide();
   });
 
 }
@@ -727,7 +735,6 @@ function mobileSize() {
   });
 }
 
-footerSlide();
 desktopSize();
 tabletSize();
 mobileSize();

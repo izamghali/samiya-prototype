@@ -14,7 +14,7 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
   border: none;
 }
 
-#footer #footerHouseLink:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3:hover, body #landingPage #mainNavbar .navbar-collapse li .dark-light-toggle:hover {
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3:hover, body #landingPage #mainNavbar .navbar-collapse li .dark-light-toggle:hover {
   cursor: pointer;
 }
 
@@ -564,19 +564,44 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
   }
 }
 
-#footer {
+footer {
   background-color: #212529;
   color: #f8f9fa;
   width: 100vw;
-  height: 35vh;
-  padding: 0;
+  height: -moz-max-content;
+  height: max-content;
   margin: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-inline: 10%;
 }
-#footer #footerSocial {
+@media (max-width: 425px) {
+  footer {
+    flex-direction: column;
+    padding-inline: 5%;
+    justify-content: center;
+  }
+}
+@media (max-width: 950px) {
+  footer {
+    padding: 5%;
+  }
+}
+footer #footerRight {
+  display: flex;
+  gap: 2.5rem;
+}
+@media (max-width: 425px) {
+  footer #footerRight {
+    flex-direction: column;
+  }
+}
+footer #footerRight #footerReachUs #footerSocial {
   display: flex;
   gap: 0.6rem;
 }
-#footer #footerSocial .btn {
+footer #footerRight #footerReachUs #footerSocial .btn {
   border: 0.5px solid #f8f9fa;
   border-radius: 50%;
   display: flex;
@@ -585,6 +610,10 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
   width: 4.5rem;
   height: 4.5rem;
 }
-#footer #footerSocial .btn .bi {
+footer #footerRight #footerReachUs #footerSocial .btn .bi {
   fill: #f8f9fa;
+}
+footer #footerRight #footerMap iframe {
+  border-radius: 20px;
+  width: 25vw;
 }/*# sourceMappingURL=main.css.map */

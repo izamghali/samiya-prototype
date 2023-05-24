@@ -191,11 +191,8 @@ body {
                                 letter-spacing: 0.4rem;
                             }
                         }
-
                     }
-                    
                 }
-
             }
 
             #companyTitleMobile {
@@ -259,7 +256,6 @@ body {
                     display: none;
                 }
             }
-
         }
     }
 
@@ -375,7 +371,6 @@ body {
                     @media screen and (max-width: 768px) {
                         display: none;
                     }
-
                 }
 
                 .bts-image-box {
@@ -396,14 +391,9 @@ body {
                     z-index: 2;
                     max-width: 20%;
                     min-width: 18%;
-                    @include larger-desktop {
-
-                        
-                    }
                     @include large-desktop {
                         min-width: 10%;
                         max-width: 20%;
-
                     }
                     @include desktop {
                         max-width: 30%;
@@ -413,16 +403,9 @@ body {
                         max-width: 35%;
                         left: 10%;
                     }
-                    @include tablet {
-                        
-                    }
-                    @include small-tablet {
-                        
-                    }
                     @include large-mobile {
                         max-width: 47%;
                         min-width: 45%;
-
                     }
                     @include small-mobile {
                         min-width: 50%;
@@ -556,41 +539,71 @@ body {
     
 }
 // footer
-#footer {
+footer {
     background-color: #212529;
     color: #f8f9fa;
     width: 100vw;
-    height: 35vh; 
-    padding: 0;
+    height: max-content; 
     margin: 0;
-
-    #footerSocial {
-        display: flex;
-        gap: 0.6rem;
-        .btn {
-            // &:hover {
-            //     background-color: $bootstrap-light;
-            //     transition-duration: 300ms;
-            //     .bi {
-            //         fill: $bootstrap-dark;
-            //     }
-            // }
-            border: 0.5px solid $bootstrap-light;
-            border-radius:  50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 4.5rem;
-            height: 4.5rem;
-
-            .bi {
-                fill: $bootstrap-light;
-            }
-        }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-inline: 10%;
+    @include large-mobile {
+        flex-direction: column;
+        padding-inline: 5%;
+        justify-content: center;
     }
 
-    #footerHouseLink {
-        @extend %cursor-pointer;
+    @include large-tablet {
+        padding: 5%;
+    }
+
+    #footerLeft {
+        // border: solid orange;
+    }
+    
+    #footerRight {
+        // border: solid blueviolet;
+        display: flex; 
+        gap: 2.5rem;
+
+        @include large-mobile {
+            flex-direction: column;
+        }
+
+        #footerReachUs {
+            #footerReachUsHeading {
+                // border: solid white;
+            }
+
+            #footerSocial {
+                display: flex;
+                gap: 0.6rem;
+                .btn {
+                    border: 0.5px solid $bootstrap-light;
+                    border-radius:  50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 4.5rem;
+                    height: 4.5rem;
+                    @include large-mobile {
+                        
+                    }
+        
+                    .bi {
+                        fill: $bootstrap-light;
+                    }
+                }
+            }
+        }
+        #footerMap {
+            iframe {
+                border-radius: $standard-border-radius;
+                width: 25vw;
+            }
+        }
     }
 }
 
