@@ -560,11 +560,9 @@ footer {
     }
 
     #footerLeft {
-        // border: solid orange;
     }
     
     #footerRight {
-        // border: solid blueviolet;
         display: flex; 
         gap: 2.5rem;
 
@@ -601,7 +599,7 @@ footer {
         #footerMap {
             iframe {
                 border-radius: $standard-border-radius;
-                width: 25vw;
+                width: 100%;
             }
         }
     }
