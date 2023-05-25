@@ -557,19 +557,23 @@ body {
         }
     }  
 
+    #galleryHeading {
+        // border: solid green;
+        text-align: center;
+        border-bottom: solid $standard-black-color;
+    }
+
     #galleryNavbar {
-        border: solid red;
         margin-left: 3%;
         // position: sticky;
         width: 20%;
         height: 50vh;
-        border-radius: 10px;
+        // border-radius: 10px;
+        border-right: solid $standard-black-color;
+        // border-left: solid $standard-black-color;
     }
     
-    #galleryHeading {
-        border: solid green;
-        text-align: center;
-    }
+    
 
 }
 // footer

@@ -585,16 +585,15 @@ body #bodyPage #arrowBox .bi-arrow-up-circle-fill:hover {
     width: 8%;
   }
 }
+body #galleryHeading {
+  text-align: center;
+  border-bottom: solid #212529;
+}
 body #galleryNavbar {
-  border: solid red;
   margin-left: 3%;
   width: 20%;
   height: 50vh;
-  border-radius: 10px;
-}
-body #galleryHeading {
-  border: solid green;
-  text-align: center;
+  border-right: solid #212529;
 }
 
 footer {
