@@ -98,6 +98,9 @@ body #landingPage #mainNavbar {
     border-bottom-right-radius: 20px;
   }
 }
+body #landingPage #mainNavbar .navbar-collapse .navbar-link, body #landingPage #mainNavbar .navbar-collapse li .navbar-dark-light-toggle {
+  color: hsl(60, 0%, 100%);
+}
 body #landingPage #mainNavbar .navbar-collapse .navbar-link:hover, body #landingPage #mainNavbar .navbar-collapse li .navbar-dark-light-toggle:hover {
   cursor: pointer;
 }
@@ -105,13 +108,28 @@ body #landingPage #mainNavbar .navbar-collapse li {
   margin-right: 3em;
   display: block;
 }
-body #landingPage #mainNavbar .navbar-collapse li .navbar-link, body #landingPage #mainNavbar .navbar-collapse li .navbar-dark-light-toggle {
-  color: #212529;
-}
 @media (max-width: 1440px) and (min-width: 1025px) {
   body #landingPage #mainNavbar .navbar-collapse li {
     margin-right: 2em;
   }
+}
+body #landingPage #mainNavbar .navbar-collapse #lightModeBtn {
+  border: solid hsl(60, 0%, 100%);
+  padding-inline: 2px;
+  width: 2.3rem;
+  height: 1.2rem;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+body #landingPage #mainNavbar .navbar-collapse #lightModeBtn #lightModeToggle {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: hsl(60, 0%, 100%);
+  border-radius: 10px;
 }
 body #landingPage #mainNavbar #aBrand {
   position: absolute;
@@ -591,6 +609,7 @@ body #galleryHeading {
 }
 body #galleryNavbar {
   margin-left: 3%;
+  position: sticky;
   width: 20%;
   height: 50vh;
   border-right: solid #212529;
