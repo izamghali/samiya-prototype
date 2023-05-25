@@ -599,18 +599,18 @@ function footerSlide() {
     y: "-10%",
   });
 
-  footerTl.set("#footerDummy", {
-    height: "10rem",
-  });
-
   footerTl.to("footer", {
     y: "-60%",
     scrollTrigger: {
-      trigger: "#footerDummy",
+      trigger: "#arrowBox",
       scrub: 1,
       start: "top 100%",
       end: "top 75%",
     }
+  });
+
+  footerTl.to(".bi-arrow-up-circle-fill", {
+    y: "-100%",
   });
 }
 zoomCarouselRegister();

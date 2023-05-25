@@ -535,6 +535,26 @@ body {
             }
         }
 
+        // arrow box
+        #arrowBox {
+            // border: solid orange;
+            display: flex;
+            align-items: start;
+            justify-content: end;
+            height: 20vh;
+            .bi-arrow-up-circle-fill {
+                width: 5%;
+                &:hover {
+                    cursor: pointer;
+                }
+                @include large-mobile {
+                    width: 18%;
+                }
+                @include large-tablet {
+                    width: 8%;
+                }
+            }
+        }
     }  
 
     #galleryNavbar {

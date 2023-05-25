@@ -563,6 +563,28 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
     display: block;
   }
 }
+body #bodyPage #arrowBox {
+  display: flex;
+  align-items: start;
+  justify-content: end;
+  height: 20vh;
+}
+body #bodyPage #arrowBox .bi-arrow-up-circle-fill {
+  width: 5%;
+}
+body #bodyPage #arrowBox .bi-arrow-up-circle-fill:hover {
+  cursor: pointer;
+}
+@media (max-width: 425px) {
+  body #bodyPage #arrowBox .bi-arrow-up-circle-fill {
+    width: 18%;
+  }
+}
+@media (max-width: 950px) {
+  body #bodyPage #arrowBox .bi-arrow-up-circle-fill {
+    width: 8%;
+  }
+}
 body #galleryNavbar {
   border: solid red;
   margin-left: 3%;
