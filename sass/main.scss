@@ -536,7 +536,21 @@ body {
         }
 
     }  
+
+    #galleryNavbar {
+        border: solid red;
+        margin-left: 3%;
+        // position: sticky;
+        width: 20%;
+        height: 50vh;
+        border-radius: 10px;
+    }
     
+    #galleryHeading {
+        border: solid green;
+        text-align: center;
+    }
+
 }
 // footer
 footer {
@@ -554,27 +568,16 @@ footer {
         padding-inline: 5%;
         justify-content: center;
     }
-
     @include large-tablet {
         padding: 5%;
     }
-
-    #footerLeft {
-    }
-    
     #footerRight {
         display: flex; 
         gap: 2.5rem;
-
         @include large-mobile {
             flex-direction: column;
         }
-
         #footerReachUs {
-            #footerReachUsHeading {
-                // border: solid white;
-            }
-
             #footerSocial {
                 display: flex;
                 gap: 0.6rem;
@@ -598,11 +601,9 @@ footer {
         }
         #footerMap {
             iframe {
-                border-radius: $standard-border-radius;
+                border-radius: 10px;
                 width: 100%;
             }
         }
     }
 }
-
-

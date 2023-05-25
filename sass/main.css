@@ -563,6 +563,17 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
     display: block;
   }
 }
+body #galleryNavbar {
+  border: solid red;
+  margin-left: 3%;
+  width: 20%;
+  height: 50vh;
+  border-radius: 10px;
+}
+body #galleryHeading {
+  border: solid green;
+  text-align: center;
+}
 
 footer {
   background-color: #212529;
@@ -614,6 +625,6 @@ footer #footerRight #footerReachUs #footerSocial .btn .bi {
   fill: #f8f9fa;
 }
 footer #footerRight #footerMap iframe {
-  border-radius: 20px;
+  border-radius: 10px;
   width: 100%;
 }/*# sourceMappingURL=main.css.map */
