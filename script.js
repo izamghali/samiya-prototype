@@ -2,17 +2,22 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(Flip);
 
-// toggle clicked
-let button = document.getElementById("lightModeBtn")
-let toggle = document.getElementById("lightModeToggle");
-
-lightModeBtn.addEventListener("click", () => {
-  let state = Flip.getState("#lightModeToggle");
-  toggle.style.transform = "translate(-100%, 0%)";
-  Flip.to(state, {
-    duration: 0.6,
-  })
-})
+// light mode toggle clicked
+function lightModeClicked() {
+  let toggleState = true;
+  const toggleAnimation = gsap.timeline({ paused: true });
+  toggleAnimation
+    .to("#lightModeToggle", { x: "100%", duration: 0.3, ease: "linear" });
+  lightModeBtn.addEventListener("click", () => {
+    if (toggleState) {
+      toggleAnimation.restart();
+    } else {
+      toggleAnimation.reverse();
+    }
+    toggleState = !toggleState;
+  });
+}
+lightModeClicked();
 
 // client slide
 function slideThreeImages() {
@@ -753,7 +758,7 @@ tabletSize();
 mobileSize();
 
 // jQuery
-$(document).ready(() => {
+$(document).ready(function() {
   
   // bts collapse
   $("#btsCollapse1").on("click", () => {
@@ -922,5 +927,5 @@ $(document).ready(() => {
   $("#navLinkBts").on("click", () => {
     gsap.effects.navbarScrollTo(window, {y: "#btsCol", offsetY: 110});
   })
-
+    
 });
