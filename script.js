@@ -1,5 +1,18 @@
 gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
+gsap.registerPlugin(Flip);
+
+// toggle clicked
+let button = document.getElementById("lightModeBtn")
+let toggle = document.getElementById("lightModeToggle");
+
+lightModeBtn.addEventListener("click", () => {
+  let state = Flip.getState("#lightModeToggle");
+  toggle.style.transform = "translate(-100%, 0%)";
+  Flip.to(state, {
+    duration: 0.6,
+  })
+})
 
 // client slide
 function slideThreeImages() {
