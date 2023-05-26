@@ -388,7 +388,6 @@ body {
                     position:absolute;
                     height: 100%;
                     width: 100%;
-                    background-color: $standard-white-color;
                     @media screen and (max-width: 768px) {
                         display: none;
                     }
@@ -466,8 +465,6 @@ body {
     
                 }
             }
-
-
         }
 
         // professional heading

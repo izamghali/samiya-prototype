@@ -46,6 +46,9 @@ body #ourServicesHeadingCol {
 body #ourServicesCol {
   color: #ADADAD;
 }
+body .white-layer {
+  background-color: #1C1C1C;
+}
 body #btsTextBoxCol hr {
   color: #ADADAD;
 }
@@ -473,7 +476,6 @@ body #bodyPage #btsCol #btsFirstChild .white-layer {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: hsl(60, 0%, 100%);
 }
 @media screen and (max-width: 768px) {
   body #bodyPage #btsCol #btsFirstChild .white-layer {

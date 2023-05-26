@@ -6,12 +6,15 @@ body {
     .layer {
         border: 25px solid $darkmode-bg;
     }
-    // color
     #ourServicesHeadingCol {
         color: $light-color;
     }
     #ourServicesCol {
         color: $light-color;
+    }
+
+    .white-layer {
+        background-color: $darkmode-bg;
     }
     
     #btsTextBoxCol {
