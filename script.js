@@ -11,8 +11,14 @@ function lightModeClicked() {
   lightModeBtn.addEventListener("click", () => {
     if (toggleState) {
       toggleAnimation.restart();
+      gsap.to("body", {backgroundColor: "#fff"})
+      gsap.to(".layer", {border: "25px solid #fff"})
+      
     } else {
       toggleAnimation.reverse();
+      gsap.to("body", {
+        backgroundColor: "#"
+      })
     }
     toggleState = !toggleState;
   });
