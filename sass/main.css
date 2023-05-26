@@ -35,6 +35,52 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1, body #bodyP
 }
 
 body {
+  background-color: #1C1C1C;
+}
+body .layer {
+  border: 25px solid #1C1C1C;
+}
+body #ourServicesHeadingCol {
+  color: #ADADAD;
+}
+body #ourServicesCol {
+  color: #ADADAD;
+}
+body #btsTextBoxCol hr {
+  color: #ADADAD;
+}
+body #btsTextBoxCol h3 {
+  color: #ADADAD;
+}
+body #btsTextBoxCol .bts-heading-texts {
+  color: #ADADAD;
+}
+body #btsTextBoxCol .bts-card-text {
+  background-color: #1C1C1C;
+  color: #ADADAD;
+}
+body #professionalHeadingCol {
+  color: #ADADAD;
+}
+body .professional-cards {
+  border: solid #ADADAD;
+  background-color: #1C1C1C;
+  color: #ADADAD;
+}
+body .professional-cards a {
+  color: #83FFE6;
+}
+body #mainClients {
+  color: #ADADAD;
+}
+body #mainClientsTablet {
+  color: #ADADAD;
+}
+body #arrowBox svg {
+  fill: #ADADAD;
+}
+
+body {
   padding: 0px;
   margin: 0px;
   overflow-x: hidden;
@@ -125,6 +171,9 @@ body #landingPage #mainNavbar .navbar-collapse #lightModeBtn {
   display: flex;
   align-items: center;
 }
+body #landingPage #mainNavbar .navbar-collapse #lightModeBtn:hover {
+  cursor: pointer;
+}
 body #landingPage #mainNavbar .navbar-collapse #lightModeBtn #lightModeToggle {
   width: 0.8rem;
   height: 0.8rem;
@@ -191,7 +240,6 @@ body #landingPage #mainCarousel .layer {
   width: 100%;
   border-radius: 35px;
   opacity: 1;
-  border: 25px solid white;
 }
 @media screen and (max-width: 768px) {
   body #landingPage #mainCarousel .layer {
@@ -495,9 +543,6 @@ body #bodyPage #btsCol #btsSecondChild {
 }
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
   width: 30vw;
-}
-body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-heading-texts {
-  color: #212529;
 }
 body #bodyPage #professionalHeadingCol {
   padding-inline: 10%;

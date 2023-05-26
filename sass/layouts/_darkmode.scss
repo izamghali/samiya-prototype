@@ -1,0 +1,58 @@
+
+// background
+body {
+    background-color: $darkmode-bg;
+
+    .layer {
+        border: 25px solid $darkmode-bg;
+    }
+    // color
+    #ourServicesHeadingCol {
+        color: $light-color;
+    }
+    #ourServicesCol {
+        color: $light-color;
+    }
+    
+    #btsTextBoxCol {
+        hr {
+            color: $light-color;
+        }
+        h3 {
+            color: $light-color;
+        }
+        .bts-heading-texts {
+            color: $light-color;
+        }
+        .bts-card-text {
+            background-color: $darkmode-bg;
+            color: $light-color;
+        }
+    }
+
+    #professionalHeadingCol {
+        color: $light-color;
+    }
+
+    .professional-cards {
+        border: solid $light-color;
+        background-color: $darkmode-bg;
+        color: $light-color;
+        a {
+            color: $hyperlink-color;
+        }
+    }
+    
+    #mainClients {
+        color: $light-color;
+    }
+    #mainClientsTablet {
+        color: $light-color;
+    }
+
+    #arrowBox {
+        svg {
+            fill: $light-color;
+        }
+    }
+}
