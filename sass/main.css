@@ -99,10 +99,7 @@ body #arrowBox svg {
 body #galleryHeading {
   color: #ADADAD;
 }
-body #galleryNavbar {
-  border-right: solid #ADADAD;
-}
-body #galleryNavbar a {
+body #galleryCheckBox p {
   color: #83FFE6;
 }
 
@@ -674,14 +671,26 @@ body #bodyPage #arrowBox .bi-arrow-up-circle-fill:hover {
   }
 }
 body #galleryHeading {
-  text-align: center;
-  border-bottom: solid #212529;
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 10%;
+  align-items: center;
 }
-body #galleryNavbar {
-  margin-left: 3%;
-  position: sticky;
-  width: 20%;
-  height: 50vh;
+body #galleryHeading div {
+  width: 5vw;
+}
+body #galleryHeading div img {
+  width: 100%;
+}
+body #galleryHeading button {
+  border-radius: 10px;
+  height: 3rem;
+}
+body #galleryCheckBox {
+  padding-inline: 10%;
+  display: flex;
+  justify-content: right;
+  gap: 3rem;
 }
 
 footer {

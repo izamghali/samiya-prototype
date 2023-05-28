@@ -567,19 +567,28 @@ body {
     }  
 
     #galleryHeading {
-        // border: solid green;
-        text-align: center;
-        border-bottom: solid $standard-black-color;
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 10%;
+        align-items: center;
+        div {
+            width: 5vw;
+            img {
+                width: 100%;
+            }
+        }
+
+        button {
+            border-radius: 10px;
+            height: 3rem;
+        }
     }
 
-    #galleryNavbar {
-        margin-left: 3%;
-        position: sticky;
-        width: 20%;
-        height: 50vh;
-        // border-radius: 10px;
-        // border-right: solid $standard-black-color;
-        // border-left: solid $standard-black-color;
+    #galleryCheckBox {
+        padding-inline: 10%;
+        display: flex;
+        justify-content: right;
+        gap: 3rem;
     }
     
 }
