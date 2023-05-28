@@ -83,10 +83,16 @@ body {
     #galleryHeading {
         color: $light-color;
 
+        button {
+            background-color: $darkmode-bg;
+            color: $light-color;
+            border: solid $light-color;
+        }
+
     }
 
     #galleryCheckBox {
-        p {
+        a {
             color: $hyperlink-color;
 
         }

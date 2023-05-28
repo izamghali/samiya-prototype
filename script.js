@@ -5,20 +5,58 @@ gsap.registerPlugin(Flip);
 // light mode toggle clicked
 function lightModeClicked() {
   let toggleState = true;
+  let standardBlackColor = "#212529";
+  let standardWhiteColor = "#adadad";
+  let standardGrayColor = "#c4c8cb";
+  let standardHyperlinkLight = "#0d6efd";
+
+  let standardBlackBg = "#1c1c1c";
+  let standardWhiteBg = "#fff";
+
   const toggleAnimation = gsap.timeline({ paused: true });
   toggleAnimation
-    .to("#lightModeToggle", { x: "100%", duration: 0.3, ease: "linear" });
+    .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
   lightModeBtn.addEventListener("click", () => {
     if (toggleState) {
       toggleAnimation.restart();
-      gsap.to("body", {backgroundColor: "#fff"})
-      gsap.to(".layer", {border: "25px solid #fff"})
+      gsap.to("body", {backgroundColor: standardWhiteBg})
+      gsap.to(".layer", {border: "25px solid " + standardWhiteBg})
+      gsap.to("#ourServicesHeadingCol h2", {color: standardBlackColor})
+      gsap.to(".our-services-box h1", {color: standardBlackColor})
+      gsap.to(".our-services-box h4", {color: standardBlackColor})
+      gsap.to("#btsTextBoxCol h3", {color: standardBlackColor})
+      gsap.to("#btsTextBoxCol span", {color: standardBlackColor})
+      gsap.to(".bts-heading-texts", {color: standardBlackColor})
+      gsap.to(".bts-card-text", {color: standardBlackColor, backgroundColor: standardWhiteBg})
+      gsap.to(".white-layer", {backgroundColor: standardWhiteBg})
+      gsap.to("#professionalHeadingCol h2", {color: standardBlackColor})
+      gsap.to(".professional-cards", {color: standardBlackColor, backgroundColor: standardWhiteBg, border: "solid" + standardGrayColor})
+      gsap.to(".professional-cards a", {color: standardHyperlinkLight})
+      gsap.to(".client-col h2", {color: standardBlackColor})
+      gsap.to(".client-col p", {color: standardBlackColor})
+      gsap.to("footer", {backgroundColor: standardBlackBg})
+      gsap.to("footer h4", {color: standardWhiteColor})
+      
       
     } else {
       toggleAnimation.reverse();
-      gsap.to("body", {
-        backgroundColor: "#"
-      })
+      gsap.to("body", {backgroundColor: standardBlackBg})
+      gsap.to(".layer", {border: "25px solid " + standardBlackBg})
+      gsap.to("#ourServicesHeadingCol h2", {color: standardWhiteColor})
+      gsap.to(".our-services-box h1", {color: standardWhiteColor})
+      gsap.to(".our-services-box h4", {color: standardWhiteColor})
+      gsap.to("#btsTextBoxCol h3", {color: standardWhiteColor})
+      gsap.to("#btsTextBoxCol span", {color: standardWhiteColor})
+      gsap.to(".bts-heading-texts", {color: standardWhiteColor})
+      gsap.to(".bts-card-text", {color: standardWhiteColor, backgroundColor: standardBlackBg})
+      gsap.to(".white-layer", {backgroundColor: standardBlackBg})
+      gsap.to("#professionalHeadingCol h2", {color: standardWhiteColor})
+      gsap.to(".professional-cards", {color: standardWhiteColor, backgroundColor: standardBlackBg, border: "solid" + standardGrayColor})
+      gsap.to(".professional-cards a", {color: standardHyperlinkLight})
+      gsap.to(".client-col h2", {color: standardWhiteColor})
+      gsap.to(".client-col p", {color: standardWhiteColor})
+      gsap.to("footer", {backgroundColor: standardWhiteBg})
+      gsap.to("footer h4", {color: standardBlackColor})
     }
     toggleState = !toggleState;
   });

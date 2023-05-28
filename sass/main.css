@@ -99,7 +99,12 @@ body #arrowBox svg {
 body #galleryHeading {
   color: #ADADAD;
 }
-body #galleryCheckBox p {
+body #galleryHeading button {
+  background-color: #1C1C1C;
+  color: #ADADAD;
+  border: solid #ADADAD;
+}
+body #galleryCheckBox a {
   color: #83FFE6;
 }
 
@@ -691,6 +696,9 @@ body #galleryCheckBox {
   display: flex;
   justify-content: right;
   gap: 3rem;
+}
+body #galleryCheckBox a:hover {
+  cursor: pointer;
 }
 
 footer {

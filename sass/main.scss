@@ -589,6 +589,11 @@ body {
         display: flex;
         justify-content: right;
         gap: 3rem;
+        a {
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
     
 }
