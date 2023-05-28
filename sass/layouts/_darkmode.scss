@@ -1,10 +1,31 @@
+// @import "./layouts/breakpoints";
+
 
 // background
 body {
     background-color: $darkmode-bg;
 
+    #aBrand {
+        color: $light-color;
+    }
+
+    #companyTitleBoxMobile {
+        color: $light-color;
+    }
+
+    #navbarToggler {
+        border: solid $light-color;
+    }
+    
+    .navbar-toggler-icon {
+        // border: solid $light-color;
+    }
+
     .layer {
         border: 25px solid $darkmode-bg;
+        @media screen and (max-width: 768px) {
+            border: 15px solid $darkmode-bg;
+        }
     }
     #ourServicesHeadingCol {
         color: $light-color;
@@ -56,6 +77,19 @@ body {
     #arrowBox {
         svg {
             fill: $light-color;
+        }
+    }
+
+    #galleryHeading {
+        color: $light-color;
+
+    }
+
+    #galleryNavbar {
+        border-right: solid $light-color;
+        a {
+            color: $hyperlink-color;
+
         }
     }
 }

@@ -163,10 +163,6 @@ body {
                 width: 100%;
                 border-radius: 35px;
                 opacity: 1;
-                @media screen and (max-width: 768px) {
-                    border: 15px solid white;
-                }
-
             }
 
             #companyTitle {
@@ -241,7 +237,7 @@ body {
                     gap: 0.6rem;
                     #companyImgBoxMobile {
                         width: 10vw;
-                        #whiteLogo {
+                        #blackLogo {
                             display: none;
                         }
                         img {
@@ -552,13 +548,16 @@ body {
             align-items: start;
             justify-content: end;
             height: 20vh;
+            @include large-mobile {
+                height: auto;
+            }
             .bi-arrow-up-circle-fill {
                 width: 5%;
                 &:hover {
                     cursor: pointer;
                 }
                 @include large-mobile {
-                    width: 18%;
+                    width: 16% !important;
                 }
                 @include large-tablet {
                     width: 8%;
@@ -579,7 +578,7 @@ body {
         width: 20%;
         height: 50vh;
         // border-radius: 10px;
-        border-right: solid $standard-black-color;
+        // border-right: solid $standard-black-color;
         // border-left: solid $standard-black-color;
     }
     

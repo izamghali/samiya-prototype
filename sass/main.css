@@ -37,8 +37,22 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1, body #bodyP
 body {
   background-color: #1C1C1C;
 }
+body #aBrand {
+  color: #ADADAD;
+}
+body #companyTitleBoxMobile {
+  color: #ADADAD;
+}
+body #navbarToggler {
+  border: solid #ADADAD;
+}
 body .layer {
   border: 25px solid #1C1C1C;
+}
+@media screen and (max-width: 768px) {
+  body .layer {
+    border: 15px solid #1C1C1C;
+  }
 }
 body #ourServicesHeadingCol {
   color: #ADADAD;
@@ -81,6 +95,15 @@ body #mainClientsTablet {
 }
 body #arrowBox svg {
   fill: #ADADAD;
+}
+body #galleryHeading {
+  color: #ADADAD;
+}
+body #galleryNavbar {
+  border-right: solid #ADADAD;
+}
+body #galleryNavbar a {
+  color: #83FFE6;
 }
 
 body {
@@ -244,11 +267,6 @@ body #landingPage #mainCarousel .layer {
   border-radius: 35px;
   opacity: 1;
 }
-@media screen and (max-width: 768px) {
-  body #landingPage #mainCarousel .layer {
-    border: 15px solid white;
-  }
-}
 body #landingPage #mainCarousel #companyTitle {
   color: hsl(60, 0%, 100%);
   position: absolute;
@@ -325,7 +343,7 @@ body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile {
 body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile {
   width: 10vw;
 }
-body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile #whiteLogo {
+body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile #blackLogo {
   display: none;
 }
 body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile img {
@@ -634,6 +652,11 @@ body #bodyPage #arrowBox {
   justify-content: end;
   height: 20vh;
 }
+@media (max-width: 425px) {
+  body #bodyPage #arrowBox {
+    height: auto;
+  }
+}
 body #bodyPage #arrowBox .bi-arrow-up-circle-fill {
   width: 5%;
 }
@@ -642,7 +665,7 @@ body #bodyPage #arrowBox .bi-arrow-up-circle-fill:hover {
 }
 @media (max-width: 425px) {
   body #bodyPage #arrowBox .bi-arrow-up-circle-fill {
-    width: 18%;
+    width: 16% !important;
   }
 }
 @media (max-width: 950px) {
@@ -659,7 +682,6 @@ body #galleryNavbar {
   position: sticky;
   width: 20%;
   height: 50vh;
-  border-right: solid #212529;
 }
 
 footer {

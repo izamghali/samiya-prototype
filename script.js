@@ -790,19 +790,6 @@ $(document).ready(function() {
     $(event.currentTarget).hide();
   });
 
-  $("#footerHouseFill").hide();
-
-  // footer house icon
-  $("#footerHouseLink").on("mouseenter", () => {
-    $("#footerHouseFill").show();
-    $("#footerHouseNoFill").hide();
-  });
-
-  $("#footerHouseLink").on("mouseleave", () => {
-    $("#footerHouseNoFill").show();
-    $("#footerHouseFill").hide();
-  });
-
   // dark/light mode toggle
   let $body = document.body;
   let $mq = window.matchMedia( "(min-width: 992px)" );
@@ -812,10 +799,6 @@ $(document).ready(function() {
   let $bootstrapLight = "#f8f9fa";
 
   $("#toggleOff").on("click", () => {
-    $("#toggleOn").show();
-    $("#toggleOff").hide();
-    $("#moonMode").fadeIn();
-    $("#sunMode").hide();
     $body.dataset.bsTheme = "dark";
     $(".navbar-link").css("color", $standardWhite);
     $(".navbar-dark-light-toggle").css("color", $standardWhite);
@@ -825,8 +808,6 @@ $(document).ready(function() {
     } else {
       $(".navbar-collapse").css("background-color", "rgba(33,37,41,0.7)");
     }
-    $("#whiteLogo").show();
-    $("#blackLogo").hide();
     $("#companyTitleBoxMobile").css("color", $standardLessWhite);
     $(".bts-heading-texts").css("color", $standardLessWhite);
     $("#footer").css("background-color", $bootstrapLight);
