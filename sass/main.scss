@@ -520,7 +520,6 @@ body {
                 .client-boxes {
                     @include always-square(0, 20%, 20%);
                     @extend %hidden-overflow;
-                    border: 0.95px solid $lightmode-bg;
                 }
             }
             

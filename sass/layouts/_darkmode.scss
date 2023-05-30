@@ -47,6 +47,10 @@ body {
         }
         .bts-heading-texts {
             color: $light-color;
+            transition: 300ms;
+            &:hover {
+                color: $hyperlink-color;
+            }
         }
         .bts-card-text {
             background-color: $darkmode-bg;
@@ -69,6 +73,12 @@ body {
     
     #mainClients {
         color: $light-color;
+        .client-rows {
+            .client-boxes {
+                background-color: $lightmode-bg;
+                border: 0.95px solid $light-color;
+            }
+        }
     }
     #mainClientsTablet {
         color: $light-color;

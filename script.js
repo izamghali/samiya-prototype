@@ -9,7 +9,7 @@ let standardGrayColor = "#c4c8cb";
 let standardHyperlinkLight = "#0d6efd";
 
 let standardBlackBg = "#1c1c1c";
-let standardWhiteBg = "hsl(0, 0%, 90%)";
+let standardWhiteBg = "hsl(0, 0%, 87%)";
 
 // light mode toggle clicked
 function lightModeClicked() {
@@ -35,7 +35,7 @@ function lightModeClicked() {
       gsap.to(".client-col h2", {color: standardBlackColor})
       gsap.to(".client-col p", {color: standardBlackColor})
       gsap.to("footer", {backgroundColor: standardBlackBg})
-      gsap.to("footer h4", {color: standardWhiteColor})
+      gsap.to("footer h4", {color: standardWhiteBg})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
       gsap.to("#footerSocial svg", {fill: standardWhiteBg})
     } else {

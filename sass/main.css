@@ -71,6 +71,10 @@ body #btsTextBoxCol h3 {
 }
 body #btsTextBoxCol .bts-heading-texts {
   color: #ADADAD;
+  transition: 300ms;
+}
+body #btsTextBoxCol .bts-heading-texts:hover {
+  color: #83FFE6;
 }
 body #btsTextBoxCol .bts-card-text {
   background-color: #1C1C1C;
@@ -89,6 +93,10 @@ body .professional-cards a {
 }
 body #mainClients {
   color: #ADADAD;
+}
+body #mainClients .client-rows .client-boxes {
+  background-color: hsl(0, 0%, 87%);
+  border: 0.95px solid #ADADAD;
 }
 body #mainClientsTablet {
   color: #ADADAD;
@@ -643,7 +651,6 @@ body #bodyPage #mainClients .client-rows .client-boxes {
   height: 0;
   width: 20%;
   padding-bottom: 20%;
-  border: 0.95px solid hsl(0, 0%, 87%);
 }
 body #bodyPage #mainClientsTablet .client-rows-tablet {
   padding-inline: 10%;
