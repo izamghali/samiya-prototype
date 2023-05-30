@@ -1,7 +1,3 @@
-// @import "./layouts/breakpoints";
-
-
-// background
 body {
     background-color: $darkmode-bg;
 
@@ -16,16 +12,28 @@ body {
     #navbarToggler {
         border: solid $light-color;
     }
+
+    #navbarNavDropdown {
+        @media screen and (max-width: 991px) {border: solid $standard-black-color;}
+    }
     
-    .navbar-toggler-icon {
-        // border: solid $light-color;
+    .nav-link {
+        color: $standard-white-color;
+        @media screen and (max-width: 991px) {color: $standard-black-color;}
+    }
+
+    #lightModeBtn {
+        border: solid $standard-white-color;
+        @media screen and (max-width: 991px) {border: solid $standard-black-color}
+    }
+
+    #lightModeToggle {
+        background-color: $standard-white-color;
+        @media screen and (max-width: 991px) {background-color: $standard-black-color;}
     }
 
     .layer {
         border: 25px solid $darkmode-bg;
-        @media screen and (max-width: 768px) {
-            border: 15px solid $darkmode-bg;
-        }
     }
     #ourServicesHeadingCol {
         color: $light-color;

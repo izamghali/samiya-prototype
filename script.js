@@ -8,13 +8,11 @@ let standardWhiteColor = "#adadad";
 let standardGrayColor = "#c4c8cb";
 let standardHyperlinkLight = "#0d6efd";
 
+let navbarWhite = "rgba(255,255,255,0.7)";
+let navbarBlack = "rgba(0,0,0,0.7)";
+
 let standardBlackBg = "#1c1c1c";
 let standardWhiteBg = "hsl(0, 0%, 87%)";
-
-let width991px = window.matchMedia("max-width: 991px");
-if (width991px) {
-  gsap.set(".navbar-link", {color: standardBlackColor})
-}
 
 // light mode toggle clicked
 function lightModeClicked() {
@@ -27,9 +25,7 @@ function lightModeClicked() {
       gsap.to("body", {backgroundColor: standardWhiteBg})
       gsap.to(".layer", {border: "25px solid " + standardWhiteBg})
       gsap.to("#aBrand", {color: standardBlackColor})
-      // if (width991px) {
-      //   gsap.to(".navbar-link", {color: standardBlackColor})
-      // }
+      gsap.to("#lighModeBtn", {border: "solid " + standardBlackColor})
       gsap.to("#ourServicesHeadingCol h2", {color: standardBlackColor})
       gsap.to(".our-services-box h1", {color: standardBlackColor})
       gsap.to(".our-services-box h4", {color: standardBlackColor})
@@ -47,6 +43,7 @@ function lightModeClicked() {
       gsap.to("footer h4", {color: standardWhiteBg})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
       gsap.to("#footerSocial svg", {fill: standardWhiteBg})
+
     } else {
       toggleAnimation.reverse();
       gsap.to("body", {backgroundColor: standardBlackBg})
@@ -934,39 +931,15 @@ $(document).ready(function() {
 
   // hover navbar
   $(".navbar-link").on("mouseenter", (event) => {
-    $(".navbar-link").not(event.currentTarget).fadeTo("100", 0.4);
-    if ($body.dataset.bsTheme === "dark") {
-      $("#toggleOn").fadeTo("100", 0.4);
-      $("#moonMode").fadeTo("100", 0.4);
-      $("#toggleOff").hide();
-      $("#sunMode").hide();
-    } else {
-      $("#toggleOff").fadeTo("100", 0.4);
-      $("#sunMode").fadeTo("100", 0.4);
-      $("#toggleOn").hide();
-      $("#moonMode").hide();
-      
-    }
+    $(".navbar-link").not(event.currentTarget).fadeTo("50", 0.4);
   }).on("mouseleave", (event) => {
-    $(".navbar-link").not(event.currentTarget).fadeTo("100", 1);
-    $(".navbar-dark-light-toggle").fadeTo("100", 1);
-    if ($body.dataset.bsTheme === "dark") {
-      $("#toggleOn").fadeTo("100", 1);
-      $("#moonMode").fadeTo("100", 1);
-      $("#toggleOff").hide();
-      $("#sunMode").hide();
-    } else {
-      $("#toggleOff").fadeTo("100", 1);
-      $("#sunMode").fadeTo("100", 1);
-      $("#toggleOn").hide();
-      $("#moonMode").hide();
-    }
+    $(".navbar-link").not(event.currentTarget).fadeTo("50", 1);
+    $(".navbar-dark-light-toggle").fadeTo("50", 1);
   })
-
   $(".navbar-dark-light-toggle").on("mouseenter", () => {
-    $(".navbar-link").fadeTo("100", 0.4);
+    $(".navbar-link").fadeTo("50", 0.4);
   }).on("mouseleave", () => {
-    $(".navbar-link").fadeTo("100", 1);
+    $(".navbar-link").fadeTo("50", 1);
   })
 
   // hover dropdown menu

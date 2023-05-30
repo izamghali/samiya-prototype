@@ -46,13 +46,37 @@ body #companyTitleBoxMobile {
 body #navbarToggler {
   border: solid #ADADAD;
 }
+@media screen and (max-width: 991px) {
+  body #navbarNavDropdown {
+    border: solid #212529;
+  }
+}
+body .nav-link {
+  color: hsl(60, 0%, 100%);
+}
+@media screen and (max-width: 991px) {
+  body .nav-link {
+    color: #212529;
+  }
+}
+body #lightModeBtn {
+  border: solid hsl(60, 0%, 100%);
+}
+@media screen and (max-width: 991px) {
+  body #lightModeBtn {
+    border: solid #212529;
+  }
+}
+body #lightModeToggle {
+  background-color: hsl(60, 0%, 100%);
+}
+@media screen and (max-width: 991px) {
+  body #lightModeToggle {
+    background-color: #212529;
+  }
+}
 body .layer {
   border: 25px solid #1C1C1C;
-}
-@media screen and (max-width: 768px) {
-  body .layer {
-    border: 15px solid #1C1C1C;
-  }
 }
 body #ourServicesHeadingCol {
   color: #ADADAD;
@@ -176,9 +200,6 @@ body #landingPage #mainNavbar {
     border-bottom-right-radius: 20px;
   }
 }
-body #landingPage #mainNavbar .navbar-collapse .navbar-link, body #landingPage #mainNavbar .navbar-collapse li .navbar-dark-light-toggle {
-  color: hsl(60, 0%, 100%);
-}
 body #landingPage #mainNavbar .navbar-collapse .navbar-link:hover, body #landingPage #mainNavbar .navbar-collapse li .navbar-dark-light-toggle:hover {
   cursor: pointer;
 }
@@ -192,7 +213,6 @@ body #landingPage #mainNavbar .navbar-collapse li {
   }
 }
 body #landingPage #mainNavbar .navbar-collapse #lightModeBtn {
-  border: solid hsl(60, 0%, 100%);
   padding-inline: 2px;
   width: 2.3rem;
   height: 1.2rem;
@@ -209,7 +229,6 @@ body #landingPage #mainNavbar .navbar-collapse #lightModeBtn:hover {
 body #landingPage #mainNavbar .navbar-collapse #lightModeBtn #lightModeToggle {
   width: 0.8rem;
   height: 0.8rem;
-  background-color: hsl(60, 0%, 100%);
   border-radius: 10px;
 }
 body #landingPage #mainNavbar #aBrand {
