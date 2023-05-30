@@ -12,7 +12,7 @@ let navbarWhite = "rgba(255,255,255,0.7)";
 let navbarBlack = "rgba(0,0,0,0.7)";
 
 let standardBlackBg = "#1c1c1c";
-let standardWhiteBg = "hsl(0, 0%, 87%)";
+let standardWhiteBg = "hsl(0, 0%, 90%)";
 
 // light mode toggle clicked
 function lightModeClicked() {
@@ -39,10 +39,12 @@ function lightModeClicked() {
       gsap.to(".professional-cards a", {color: standardHyperlinkLight})
       gsap.to(".client-col h2", {color: standardBlackColor})
       gsap.to(".client-col p", {color: standardBlackColor})
+      gsap.to("#mainClientsTablet", {color: standardBlackColor})
       gsap.to("footer", {backgroundColor: standardBlackBg})
       gsap.to("footer h4", {color: standardWhiteBg})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
       gsap.to("#footerSocial svg", {fill: standardWhiteBg})
+      gsap.to("#arrowBox svg", {fill: standardBlackBg})
       gsap.to("#companyTitleBoxMobile h1", {color: standardBlackColor})
       gsap.to("#whiteLogo", {opacity: 0, duration: 0.1})
       gsap.to("#whiteLogo", {display: "none"})
@@ -67,10 +69,12 @@ function lightModeClicked() {
       gsap.to(".professional-cards a", {color: standardHyperlinkLight})
       gsap.to(".client-col h2", {color: standardWhiteColor})
       gsap.to(".client-col p", {color: standardWhiteColor})
+      gsap.to("#mainClientsTablet", {color: standardWhiteColor})
       gsap.to("footer", {backgroundColor: standardWhiteBg})
       gsap.to("footer h4", {color: standardBlackColor})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardBlackBg, backgroundColor: standardWhiteBg})
       gsap.to("#footerSocial svg", {fill: standardBlackBg})
+      gsap.to("#arrowBox svg", {fill: standardWhiteBg})
       gsap.to("#companyTitleBoxMobile h1", {color: standardWhiteColor})
       gsap.to("#blackLogo", {opacity: 0, duration: 0.1})
       gsap.to("#blackLogo", {display: "none"})
@@ -486,11 +490,11 @@ const navbarScroll = gsap.registerEffect({
   name: "navbarScrollTo",
   effect: (targets, config) => {
     return gsap.to(window, {
-      duration: 0.1,
-      ease: "elastic.out(1, 0.3)",
+      duration: config.duration,
+      ease: config.ease,
       scrollTo: { y: config.y, offsetY: config.offsetY }
-    });
-  }
+    })
+  }, defaults: {ease: "elastic.out(1, 0.3)", duration: 0.1}
 });
 const verticalScroll = gsap.registerEffect({
   name: "verticalScrollFrom",
@@ -715,6 +719,12 @@ function footerSlide() {
   });
 }
 zoomCarouselRegister();
+
+// arrow up
+let arrowUp = document.getElementById("arrowBox");
+arrowUp.addEventListener("click", () => {
+  gsap.effects.navbarScrollTo(window, {y: "#landingPage", offsetY: 0});
+})
 
 // GSAP matchMedia
 let mm = gsap.matchMedia()

@@ -98,7 +98,7 @@ body #btsTextBoxCol .bts-heading-texts {
   transition: 300ms;
 }
 body #btsTextBoxCol .bts-heading-texts:hover {
-  color: #83FFE6;
+  color: hsl(168, 100%, 76%);
 }
 body #btsTextBoxCol .bts-card-text {
   background-color: #1C1C1C;
@@ -113,13 +113,13 @@ body .professional-cards {
   color: #ADADAD;
 }
 body .professional-cards a {
-  color: #83FFE6;
+  color: hsl(168, 100%, 76%);
 }
 body #mainClients {
   color: #ADADAD;
 }
 body #mainClients .client-rows .client-boxes {
-  background-color: hsl(0, 0%, 87%);
+  background-color: hsl(0, 0%, 90%);
   border: 0.95px solid #ADADAD;
 }
 body #mainClientsTablet {
@@ -127,10 +127,11 @@ body #mainClientsTablet {
 }
 body #arrowBox svg {
   fill: #ADADAD;
+  transition: 300ms;
 }
 body footer {
   color: #212529;
-  background-color: hsl(0, 0%, 87%);
+  background-color: hsl(0, 0%, 90%);
 }
 body footer #footerRight #footerReachUs #footerSocial .btn {
   border: 0.5px solid #1C1C1C;
@@ -147,7 +148,7 @@ body #galleryHeading button {
   border: solid #ADADAD;
 }
 body #galleryCheckBox a {
-  color: #83FFE6;
+  color: hsl(168, 100%, 76%);
 }
 
 body {
@@ -660,6 +661,7 @@ body #bodyPage #mainClients .client-rows .client-boxes {
   height: 0;
   width: 20%;
   padding-bottom: 20%;
+  background-color: hsl(0, 0%, 90%);
 }
 body #bodyPage #mainClientsTablet .client-rows-tablet {
   padding-inline: 10%;

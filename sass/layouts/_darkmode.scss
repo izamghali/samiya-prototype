@@ -95,6 +95,7 @@ body {
     #arrowBox {
         svg {
             fill: $light-color;
+            transition: 300ms;
         }
     }
 
@@ -131,7 +132,6 @@ body {
     #galleryCheckBox {
         a {
             color: $hyperlink-color;
-
         }
     }
 }
