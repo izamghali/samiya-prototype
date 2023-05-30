@@ -96,6 +96,16 @@ body #mainClientsTablet {
 body #arrowBox svg {
   fill: #ADADAD;
 }
+body footer {
+  color: #212529;
+  background-color: hsl(0, 0%, 87%);
+}
+body footer #footerRight #footerReachUs #footerSocial .btn {
+  border: 0.5px solid #1C1C1C;
+}
+body footer #footerRight #footerReachUs #footerSocial .btn .bi {
+  fill: #1C1C1C;
+}
 body #galleryHeading {
   color: #ADADAD;
 }
@@ -633,6 +643,7 @@ body #bodyPage #mainClients .client-rows .client-boxes {
   height: 0;
   width: 20%;
   padding-bottom: 20%;
+  border: 0.95px solid hsl(0, 0%, 87%);
 }
 body #bodyPage #mainClientsTablet .client-rows-tablet {
   padding-inline: 10%;
@@ -702,8 +713,6 @@ body #galleryCheckBox a:hover {
 }
 
 footer {
-  background-color: #212529;
-  color: #f8f9fa;
   width: 100vw;
   height: -moz-max-content;
   height: max-content;
@@ -739,16 +748,12 @@ footer #footerRight #footerReachUs #footerSocial {
   gap: 0.6rem;
 }
 footer #footerRight #footerReachUs #footerSocial .btn {
-  border: 0.5px solid #f8f9fa;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 4.5rem;
   height: 4.5rem;
-}
-footer #footerRight #footerReachUs #footerSocial .btn .bi {
-  fill: #f8f9fa;
 }
 footer #footerRight #footerMap iframe {
   border-radius: 10px;

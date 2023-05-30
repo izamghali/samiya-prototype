@@ -2,17 +2,17 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(Flip);
 
+let toggleState = true;
+let standardBlackColor = "#212529";
+let standardWhiteColor = "#adadad";
+let standardGrayColor = "#c4c8cb";
+let standardHyperlinkLight = "#0d6efd";
+
+let standardBlackBg = "#1c1c1c";
+let standardWhiteBg = "hsl(0, 0%, 87%)";
+
 // light mode toggle clicked
 function lightModeClicked() {
-  let toggleState = true;
-  let standardBlackColor = "#212529";
-  let standardWhiteColor = "#adadad";
-  let standardGrayColor = "#c4c8cb";
-  let standardHyperlinkLight = "#0d6efd";
-
-  let standardBlackBg = "#1c1c1c";
-  let standardWhiteBg = "#fff";
-
   const toggleAnimation = gsap.timeline({ paused: true });
   toggleAnimation
     .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
@@ -62,6 +62,24 @@ function lightModeClicked() {
   });
 }
 lightModeClicked();
+// hover social btn
+function socialMouseOver(x) {
+  if (document.body.style.backgroundColor === standardBlackBg) {
+    gsap.to(x, {backgroundColor: standardWhiteBg, duration: 0.1, ease: "power4.in"})
+  } else {
+    gsap.to(x, {backgroundColor: standardBlackBg, duration: 0.1, ease: "power4.in"})
+  }
+}
+
+function socialMouseOut(x) {
+  if (document.body.style.backgroundColor === standardBlackBg) {
+    gsap.to(x, {backgroundColor: standardBlackBg, duration: 0.1, ease: "power4.in"})
+    
+  } else {
+    gsap.to(x, {backgroundColor: standardWhiteBg, duration: 0.1, ease: "power4.in"})
+    
+  }
+}
 
 // client slide
 function slideThreeImages() {
@@ -881,24 +899,24 @@ $(document).ready(function() {
   })
 
   // hover on social btn when dark mode
-  $("#footerSocial .btn").on("mouseenter", (event) => {
-    if ($body.dataset.bsTheme === "dark") {
-      gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapDark})
-      gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapLight})
-    } else {
-      gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapLight})
-      gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapDark})
-    }
-  })
-  $("#footerSocial .btn").on("mouseleave", (event) => {
-    if ($body.dataset.bsTheme === "dark") {
-      gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapLight})
-      gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapDark})
-    } else {
-      gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapDark})
-      gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapLight})
-    }
-  })
+  // $("#footerSocial .btn").on("mouseenter", (event) => {
+  //   if ($body.dataset.bsTheme === "dark") {
+  //     gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapDark})
+  //     gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapLight})
+  //   } else {
+  //     gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapLight})
+  //     gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapDark})
+  //   }
+  // })
+  // $("#footerSocial .btn").on("mouseleave", (event) => {
+  //   if ($body.dataset.bsTheme === "dark") {
+  //     gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapLight})
+  //     gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapDark})
+  //   } else {
+  //     gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapDark})
+  //     gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapLight})
+  //   }
+  // })
 
   // hover navbar
   $(".navbar-link").on("mouseenter", (event) => {

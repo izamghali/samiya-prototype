@@ -80,6 +80,25 @@ body {
         }
     }
 
+    footer {
+        color: $standard-black-color;
+        background-color: $lightmode-bg;
+        #footerRight {
+            #footerReachUs {
+                #footerSocial {
+                    .btn {
+                        border: 0.5px solid $darkmode-bg;
+                        .bi {
+                            fill: $darkmode-bg;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+
     #galleryHeading {
         color: $light-color;
 
