@@ -9,7 +9,7 @@ let standardGrayColor = "#c4c8cb";
 let standardHyperlinkLight = "#0d6efd";
 
 let standardBlackBg = "#1c1c1c";
-let standardWhiteBg = "hsl(0, 0%, 87%)";
+let standardWhiteBg = "hsl(0, 0%, 90%)";
 
 // light mode toggle clicked
 function lightModeClicked() {
@@ -36,8 +36,8 @@ function lightModeClicked() {
       gsap.to(".client-col p", {color: standardBlackColor})
       gsap.to("footer", {backgroundColor: standardBlackBg})
       gsap.to("footer h4", {color: standardWhiteColor})
-      
-      
+      gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
+      gsap.to("#footerSocial svg", {fill: standardWhiteBg})
     } else {
       toggleAnimation.reverse();
       gsap.to("body", {backgroundColor: standardBlackBg})
@@ -57,27 +57,31 @@ function lightModeClicked() {
       gsap.to(".client-col p", {color: standardWhiteColor})
       gsap.to("footer", {backgroundColor: standardWhiteBg})
       gsap.to("footer h4", {color: standardBlackColor})
+      gsap.to("#footerSocial a", {border: "0.5px solid " + standardBlackBg, backgroundColor: standardWhiteBg})
+      gsap.to(socialSvg, {fill: standardWhiteBg})
     }
     toggleState = !toggleState;
   });
 }
 lightModeClicked();
 // hover social btn
-function socialMouseOver(x) {
-  if (document.body.style.backgroundColor === standardBlackBg) {
-    gsap.to(x, {backgroundColor: standardWhiteBg, duration: 0.1, ease: "power4.in"})
+let darkMode = document.body.style.backgroundColor === standardBlackBg;
+function socialMouseOver(a) {
+  if (darkMode) {
+    gsap.to(a, {backgroundColor: standardWhiteBg, duration: 0.1, ease: "expo.out"})
+    gsap.to(a.children, {fill: standardBlackBg, duration: 0.1, ease: "expo.in"})
   } else {
-    gsap.to(x, {backgroundColor: standardBlackBg, duration: 0.1, ease: "power4.in"})
+    gsap.to(a, {backgroundColor: standardBlackBg, duration: 0.1, ease: "expo.out"})
+    gsap.to(a.children, {fill: standardWhiteBg, duration: 0.1, ease: "expo.in"})
   }
 }
-
-function socialMouseOut(x) {
-  if (document.body.style.backgroundColor === standardBlackBg) {
-    gsap.to(x, {backgroundColor: standardBlackBg, duration: 0.1, ease: "power4.in"})
-    
+function socialMouseOut(a) {
+  if (darkMode) {
+    gsap.to(a, {backgroundColor: standardBlackBg, duration: 0.1, ease: "expo.out"})
+    gsap.to(a.children, {fill: standardWhiteBg, duration: 0.1, ease: "expo.in"})
   } else {
-    gsap.to(x, {backgroundColor: standardWhiteBg, duration: 0.1, ease: "power4.in"})
-    
+    gsap.to(a, {backgroundColor: standardWhiteBg, duration: 0.1, ease: "expo.out"})
+    gsap.to(a.children, {fill: standardBlackBg, duration: 0.1, ease: "expo.in"})
   }
 }
 
