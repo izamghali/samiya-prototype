@@ -33,23 +33,10 @@ body {
             }
 
             .navbar-collapse {
-                @include large-tablet {
+                @media screen and (max-width: 991px) {
                     position: absolute;
                     right: 0;
-                    top: 25%;
-                    z-index: -1;
-                    background-color: rgba(255,255,255,0.7);
-                    padding-block: 2rem;
-                    padding-left: 2rem;
-                    border-top-left-radius: $standard-border-radius;
-                    border-bottom-left-radius: $standard-border-radius;
-                    border-bottom-right-radius: $standard-border-radius;
-                }
-
-                @media screen and (max-width: 991px) and (min-width: 951px) {
-                    position: absolute;
-                    right: 0;
-                    top: 25%;
+                    top: 110%;
                     z-index: -1;
                     background-color: rgba(255,255,255,0.7);
                     padding-block: 2rem;

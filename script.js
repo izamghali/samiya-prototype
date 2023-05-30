@@ -11,6 +11,11 @@ let standardHyperlinkLight = "#0d6efd";
 let standardBlackBg = "#1c1c1c";
 let standardWhiteBg = "hsl(0, 0%, 87%)";
 
+let width991px = window.matchMedia("max-width: 991px");
+if (width991px) {
+  gsap.set(".navbar-link", {color: standardBlackColor})
+}
+
 // light mode toggle clicked
 function lightModeClicked() {
   const toggleAnimation = gsap.timeline({ paused: true });
@@ -21,6 +26,10 @@ function lightModeClicked() {
       toggleAnimation.restart();
       gsap.to("body", {backgroundColor: standardWhiteBg})
       gsap.to(".layer", {border: "25px solid " + standardWhiteBg})
+      gsap.to("#aBrand", {color: standardBlackColor})
+      // if (width991px) {
+      //   gsap.to(".navbar-link", {color: standardBlackColor})
+      // }
       gsap.to("#ourServicesHeadingCol h2", {color: standardBlackColor})
       gsap.to(".our-services-box h1", {color: standardBlackColor})
       gsap.to(".our-services-box h4", {color: standardBlackColor})
@@ -42,6 +51,7 @@ function lightModeClicked() {
       toggleAnimation.reverse();
       gsap.to("body", {backgroundColor: standardBlackBg})
       gsap.to(".layer", {border: "25px solid " + standardBlackBg})
+      gsap.to("#aBrand", {color: standardWhiteColor})
       gsap.to("#ourServicesHeadingCol h2", {color: standardWhiteColor})
       gsap.to(".our-services-box h1", {color: standardWhiteColor})
       gsap.to(".our-services-box h4", {color: standardWhiteColor})
