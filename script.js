@@ -43,6 +43,11 @@ function lightModeClicked() {
       gsap.to("footer h4", {color: standardWhiteBg})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
       gsap.to("#footerSocial svg", {fill: standardWhiteBg})
+      gsap.to("#companyTitleBoxMobile h1", {color: standardBlackColor})
+      gsap.to("#whiteLogo", {opacity: 0, duration: 0.1})
+      gsap.to("#whiteLogo", {display: "none"})
+      gsap.to("#blackLogo", {opacity: 0, display: "block", duration: 0})
+      gsap.to("#blackLogo", {opacity: 1, duration: 0.1, ease: "linear"}, "=+0.1")
 
     } else {
       toggleAnimation.reverse();
@@ -66,6 +71,11 @@ function lightModeClicked() {
       gsap.to("footer h4", {color: standardBlackColor})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardBlackBg, backgroundColor: standardWhiteBg})
       gsap.to("#footerSocial svg", {fill: standardBlackBg})
+      gsap.to("#companyTitleBoxMobile h1", {color: standardWhiteColor})
+      gsap.to("#blackLogo", {opacity: 0, duration: 0.1})
+      gsap.to("#blackLogo", {display: "none"})
+      gsap.to("#whiteLogo", {display: "block"}, "=+0.1")
+      gsap.to("#whiteLogo", {opacity: 1, duration: 0.1, ease: "linear"}, "=+0.1")
     }
     toggleState = !toggleState;
   });

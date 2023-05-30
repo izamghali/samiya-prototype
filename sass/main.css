@@ -370,6 +370,10 @@ body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyIm
 }
 body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile #blackLogo {
   display: none;
+  transition: 400ms;
+}
+body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile #whiteLogo {
+  transition: 400ms;
 }
 body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile img {
   width: 100%;

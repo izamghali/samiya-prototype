@@ -223,7 +223,13 @@ body {
                         width: 10vw;
                         #blackLogo {
                             display: none;
+                            transition: 400ms;
                         }
+                        
+                        #whiteLogo {
+                            transition: 400ms;
+                        }
+
                         img {
                             width: 100%;
                         }
