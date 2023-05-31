@@ -494,10 +494,17 @@ body {
         // clients
         #mainClients {
             padding-inline: 10%;
+            @media screen and (max-width: 768px) {
+                padding-inline: 5%;
+            }
+            @media screen and (max-width: 700px) {
+                padding-inline: 3%;
+            }
+
             @media screen and (max-width: 660px) {
                 display: none;
             }
-
+            
             .client-rows {
                 .client-col {
                     display: flex;
@@ -518,11 +525,10 @@ body {
 
         #mainClientsTablet {
             @extend %display-none;
-            
             .client-rows-tablet {
-                padding-inline: 10%;
+                padding-inline: 1%;
             }
-
+            
             .client-boxes-tablet {
                 @include always-square(0, 40%, 40%);
                 overflow: hidden;

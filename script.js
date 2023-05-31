@@ -52,7 +52,6 @@ function lightModeClicked() {
       gsap.to("#whiteLogo", {display: "none"})
       gsap.to("#blackLogo", {opacity: 0, display: "block", duration: 0})
       gsap.to("#blackLogo", {opacity: 1, duration: 0.1, ease: "linear"}, "=+0.1")
-
     } else {
       toggleAnimation.reverse();
       gsap.to("body", {backgroundColor: standardBlackBg})
@@ -87,6 +86,7 @@ function lightModeClicked() {
   });
 }
 lightModeClicked();
+
 // hover social btn
 let darkMode = document.body.style.backgroundColor === standardBlackBg;
 function socialMouseOver(a) {
