@@ -95,10 +95,6 @@ body #btsTextBoxCol h3 {
 }
 body #btsTextBoxCol .bts-heading-texts {
   color: #ADADAD;
-  transition: 300ms;
-}
-body #btsTextBoxCol .bts-heading-texts:hover {
-  color: hsl(168, 100%, 76%);
 }
 body #btsTextBoxCol .bts-card-text {
   background-color: #1C1C1C;

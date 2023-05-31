@@ -55,10 +55,6 @@ body {
         }
         .bts-heading-texts {
             color: $light-color;
-            transition: 300ms;
-            &:hover {
-                color: $hyperlink-color;
-            }
         }
         .bts-card-text {
             background-color: $darkmode-bg;

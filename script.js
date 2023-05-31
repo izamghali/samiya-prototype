@@ -6,13 +6,15 @@ let toggleState = true;
 let standardBlackColor = "#212529";
 let standardWhiteColor = "#adadad";
 let standardGrayColor = "#c4c8cb";
-let standardHyperlinkLight = "#0d6efd";
 
 let navbarWhite = "rgba(255,255,255,0.7)";
 let navbarBlack = "rgba(0,0,0,0.7)";
 
 let standardBlackBg = "#1c1c1c";
 let standardWhiteBg = "hsl(0, 0%, 90%)";
+
+let hyperlinkColor1 = "hsl(168, 100%, 76%)"
+let hyperlinkColor2 = "hsl(216, 98%, 52%)"
 
 // light mode toggle clicked
 function lightModeClicked() {
@@ -36,7 +38,7 @@ function lightModeClicked() {
       gsap.to(".white-layer", {backgroundColor: standardWhiteBg})
       gsap.to("#professionalHeadingCol h2", {color: standardBlackColor})
       gsap.to(".professional-cards", {color: standardBlackColor, backgroundColor: standardWhiteBg, border: "solid" + standardGrayColor})
-      gsap.to(".professional-cards a", {color: standardHyperlinkLight})
+      gsap.to(".professional-cards a", {color: hyperlinkColor2})
       gsap.to(".client-col h2", {color: standardBlackColor})
       gsap.to(".client-col p", {color: standardBlackColor})
       gsap.to("#mainClientsTablet", {color: standardBlackColor})
@@ -66,7 +68,7 @@ function lightModeClicked() {
       gsap.to(".white-layer", {backgroundColor: standardBlackBg})
       gsap.to("#professionalHeadingCol h2", {color: standardWhiteColor})
       gsap.to(".professional-cards", {color: standardWhiteColor, backgroundColor: standardBlackBg, border: "solid" + standardGrayColor})
-      gsap.to(".professional-cards a", {color: standardHyperlinkLight})
+      gsap.to(".professional-cards a", {color: hyperlinkColor1})
       gsap.to(".client-col h2", {color: standardWhiteColor})
       gsap.to(".client-col p", {color: standardWhiteColor})
       gsap.to("#mainClientsTablet", {color: standardWhiteColor})
@@ -876,78 +878,6 @@ $(document).ready(function() {
   $("#green").on("click", (event) => {
     $(event.currentTarget).hide();
   });
-
-  // dark/light mode toggle
-  let $body = document.body;
-  let $mq = window.matchMedia( "(min-width: 992px)" );
-  let $standardWhite = "#fff";
-  let $standardLessWhite = "#acb5bd";
-  let $bootstrapDark = "#212529";
-  let $bootstrapLight = "#f8f9fa";
-
-  $("#toggleOff").on("click", () => {
-    $body.dataset.bsTheme = "dark";
-    $(".navbar-link").css("color", $standardWhite);
-    $(".navbar-dark-light-toggle").css("color", $standardWhite);
-    $(".layer").css("border", "25px solid" +  $bootstrapDark);
-    if ($mq.matches) {
-      $(".navbar-collapse").css("background-color", "none");
-    } else {
-      $(".navbar-collapse").css("background-color", "rgba(33,37,41,0.7)");
-    }
-    $("#companyTitleBoxMobile").css("color", $standardLessWhite);
-    $(".bts-heading-texts").css("color", $standardLessWhite);
-    $("#footer").css("background-color", $bootstrapLight);
-    $("#footerSocial .btn").css("border","0.5px solid" + $bootstrapDark);
-    $("#footerSocial .btn").css("background-color", $bootstrapLight);
-    $("#footerSocial .btn .bi").css("fill", $bootstrapDark);
-    $("#footerCol1").children().css("color", $bootstrapDark);
-    $(".white-layer").css("background-color", $bootstrapDark)
-  })
-  $("#toggleOn").on("click", () => {
-    $("#toggleOff").show();
-    $("#toggleOn").hide();
-    $("#sunMode").fadeIn();
-    $("#moonMode").hide();
-    $body.dataset.bsTheme = "light";
-    $(".layer").css("border", "25px solid #fff");
-    $(".navbar-dark-light-toggle").css("color", $bootstrapDark);
-    if ($mq.matches) {
-      $(".navbar-link").css("color", $bootstrapDark);
-      $(".navbar-collapse").css("background-color", "none");
-    } else {
-      $(".navbar-collapse").css("background-color", "rgba(255,255,255,0.7)");
-    }
-    $("#blackLogo").show();
-    $("#whiteLogo").hide();
-    $(".bts-heading-texts").css("color", $bootstrapDark);
-    $("#footer").css("background-color", $bootstrapDark);
-    $("#footerSocial .btn").css("border","0.5px solid" + $bootstrapLight);
-    $("#footerSocial .btn").css("background-color", $bootstrapDark);
-    $("#footerSocial .btn .bi").css("fill", $bootstrapLight);
-    $("#companyTitleBoxMobile").css("color", $bootstrapDark);
-    $("#footerCol1").children().css("color", $bootstrapLight);
-  })
-
-  // hover on social btn when dark mode
-  // $("#footerSocial .btn").on("mouseenter", (event) => {
-  //   if ($body.dataset.bsTheme === "dark") {
-  //     gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapDark})
-  //     gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapLight})
-  //   } else {
-  //     gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapLight})
-  //     gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapDark})
-  //   }
-  // })
-  // $("#footerSocial .btn").on("mouseleave", (event) => {
-  //   if ($body.dataset.bsTheme === "dark") {
-  //     gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapLight})
-  //     gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapDark})
-  //   } else {
-  //     gsap.effects.footerHover($(event.currentTarget), {backgroundColor: $bootstrapDark})
-  //     gsap.effects.footerHover($(event.currentTarget).children(), {fill: $bootstrapLight})
-  //   }
-  // })
 
   // hover navbar
   $(".navbar-link").on("mouseenter", (event) => {
