@@ -729,11 +729,28 @@ body #galleryHeading button {
 body #galleryCheckBox {
   padding-inline: 10%;
   display: flex;
-  justify-content: right;
-  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
 }
-body #galleryCheckBox a:hover {
-  cursor: pointer;
+body #galleryCheckBox button {
+  border: solid red;
+  border-radius: 10px;
+  height: 10%;
+}
+body #galleryCheckBox #galleryCheckBoxFilter {
+  padding-inline: 10%;
+  border: solid purple;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+body #galleryCheckBox #galleryCheckBoxCategory {
+  padding-inline: 10%;
+  width: 100vw;
+  display: flex;
+  gap: 3rem;
+  justify-content: right;
 }
 
 footer {
