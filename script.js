@@ -13,8 +13,11 @@ let navbarBlack = "rgba(0,0,0,0.7)";
 let standardBlackBg = "#1c1c1c";
 let standardWhiteBg = "hsl(0, 0%, 90%)";
 
-let hyperlinkColor1 = "hsl(168, 100%, 76%)"
-let hyperlinkColor2 = "hsl(216, 98%, 52%)"
+let hyperlinkColor1 = "hsl(168, 100%, 76%)";
+let hyperlinkColor2 = "hsl(216, 98%, 52%)";
+
+let colorList = [standardBlackColor, standardWhiteColor, standardGrayColor, navbarWhite, navbarBlack, standardBlackBg, standardWhiteBg, hyperlinkColor1, hyperlinkColor2]
+export { standardBlackBg };
 
 // light mode toggle clicked
 function lightModeClicked() {
