@@ -121,6 +121,13 @@ body {
             background-color: $darkmode-bg;
             color: $light-color;
             border: solid $light-color;
+            transition: 300ms;
+            
+            &:hover {
+                border: solid $standard-black-color;
+                color: $standard-black-color;
+                background-color: $standard-white-color;
+            }
         }
 
     }

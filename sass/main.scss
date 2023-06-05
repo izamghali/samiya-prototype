@@ -615,7 +615,7 @@ body {
                     display: flex;
                     flex-direction: column;
                     position: absolute;
-                    // opacity: 0;
+                    opacity: 0;
                     border-bottom-right-radius: 10px;
                     border-bottom-left-radius: 10px;
                     padding: 0.3rem;
@@ -623,7 +623,7 @@ body {
                     background-color: $darkmode-bg;
                     
                     a {
-                        cursor: pointer;
+                        cursor:default;
                     }
                 }
             }

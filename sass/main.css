@@ -142,6 +142,12 @@ body #galleryHeading button {
   background-color: #1C1C1C;
   color: #ADADAD;
   border: solid #ADADAD;
+  transition: 300ms;
+}
+body #galleryHeading button:hover {
+  border: solid #212529;
+  color: #212529;
+  background-color: hsl(60, 0%, 100%);
 }
 body #galleryCheckBox a {
   color: hsl(168, 100%, 76%);
@@ -757,6 +763,7 @@ body #galleryCheckBox #galleryCheckBoxFilter .gallery-checkbox .gallery-checkbox
   display: flex;
   flex-direction: column;
   position: absolute;
+  opacity: 0;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   padding: 0.3rem;
@@ -764,7 +771,7 @@ body #galleryCheckBox #galleryCheckBoxFilter .gallery-checkbox .gallery-checkbox
   background-color: #1C1C1C;
 }
 body #galleryCheckBox #galleryCheckBoxFilter .gallery-checkbox .gallery-checkbox-list a {
-  cursor: pointer;
+  cursor: default;
 }
 body #galleryCheckBox #galleryCheckBoxCategory {
   padding-inline: 10%;
