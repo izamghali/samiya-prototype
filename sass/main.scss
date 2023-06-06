@@ -587,7 +587,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: end;
-        gap: 5rem;
+        gap: 3.5rem;
         
         #galleryCheckBoxFilter {
             padding-inline: 10%;
@@ -617,6 +617,9 @@ body {
             display: flex;
             gap: 3rem;
             justify-content: right;
+            a {
+                cursor: pointer;
+            }
         }
     }
     
