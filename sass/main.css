@@ -740,17 +740,6 @@ body #galleryCheckBox {
   align-items: end;
   gap: 5rem;
 }
-body #galleryCheckBox button {
-  border: solid #ADADAD;
-  border-radius: 5px;
-  height: 10%;
-  background-color: #1C1C1C;
-  color: #ADADAD;
-}
-body #galleryCheckBox a:not(#galleryCheckBoxCategory a) {
-  color: #ADADAD;
-  list-style: none;
-}
 body #galleryCheckBox #galleryCheckBoxFilter {
   padding-inline: 10%;
   display: flex;
@@ -758,20 +747,19 @@ body #galleryCheckBox #galleryCheckBoxFilter {
   align-items: start;
   gap: 1.5rem;
 }
-body #galleryCheckBox #galleryCheckBoxFilter .gallery-checkbox .gallery-checkbox-list {
-  margin-top: 0.3rem;
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  opacity: 0;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  padding: 0.3rem;
+body #galleryCheckBox #galleryCheckBoxFilter .gallery-select {
   border: solid #ADADAD;
+  border-radius: 5px;
+  height: 2rem;
   background-color: #1C1C1C;
+  color: #ADADAD;
+  transition: 300ms;
 }
-body #galleryCheckBox #galleryCheckBoxFilter .gallery-checkbox .gallery-checkbox-list a {
-  cursor: default;
+body #galleryCheckBox #galleryCheckBoxFilter .gallery-select:hover {
+  cursor: pointer;
+  background-color: hsl(0, 0%, 90%);
+  border: solid hsl(0, 0%, 90%);
+  color: #212529;
 }
 body #galleryCheckBox #galleryCheckBoxCategory {
   padding-inline: 10%;

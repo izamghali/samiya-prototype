@@ -28,24 +28,22 @@
     <div id="galleryCheckBox">
       <div id="galleryCheckBoxFilter">
 
-        <div class="gallery-checkbox" id="galleryCheckBoxOrientation">
-          <button id="galleryCheckBoxOrientationButton">Orientation: <span>All</span></button>
-          <div class="gallery-checkbox-list" id="galleryCheckBoxOrientationList">
-            <a>All</a>
-            <a>Landscape</a>
-            <a>Portrait</a>
+        <select name="orientations" class="gallery-select" id="orientationSelect">
+          <div>
+            <option class="checkbox-option" value="all">Orientation <span>All</span></option>
+            <option class="checkbox-option" value="landscape">Landscape</option>
+            <option class="checkbox-option" value="portrait">Portrait</option>
           </div>
-        </div>
+        </select>
 
-        <div class="gallery-checkbox" id="galleryCheckBoxSort">
-          <button>Sort by: <span>Relevance</span></button>
-          <div class="gallery-checkbox-list" id="galleryCheckBoxSortList">
-            <a>Relevance</a>
-            <a>Newest</a>
-            <a>Oldest</a>
+        <select name="sorts" class="gallery-select" id="sortSelect">
+          <div>
+            <option class="checkbox-option" value="">Sort by: <span>Relevance</span></option>
+            <option class="checkbox-option" value="relevance">Relevance</option>
+            <option class="checkbox-option" value="newest">Newest</option>
+            <option class="checkbox-option" value="oldest">Oldest</option>
           </div>
-
-        </div>
+        </select>
 
       </div>
       <div id="galleryCheckBoxCategory">
