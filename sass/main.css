@@ -720,7 +720,11 @@ body #galleryHeading {
   display: flex;
   justify-content: space-between;
   padding-inline: 10%;
+  padding-block: 1rem;
   align-items: center;
+}
+body #galleryHeading h1 {
+  font-family: "Inter";
 }
 body #galleryHeading div {
   width: 5vw;
@@ -731,6 +735,10 @@ body #galleryHeading div img {
 body #galleryHeading button {
   border-radius: 10px;
   height: 3rem;
+  font-size: 16px;
+}
+body #galleryHeading button:hover {
+  cursor: pointer;
 }
 body #galleryCheckBox {
   padding-inline: 10%;
@@ -740,6 +748,9 @@ body #galleryCheckBox {
   align-items: end;
   gap: 3.5rem;
 }
+body #galleryCheckBox a {
+  font-family: sans-serif;
+}
 body #galleryCheckBox #galleryCheckBoxFilter {
   padding-inline: 10%;
   display: flex;
@@ -748,6 +759,7 @@ body #galleryCheckBox #galleryCheckBoxFilter {
   gap: 1.5rem;
 }
 body #galleryCheckBox #galleryCheckBoxFilter .gallery-select {
+  font-size: 16px;
   border: solid #ADADAD;
   border-radius: 5px;
   height: 2rem;

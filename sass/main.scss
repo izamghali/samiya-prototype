@@ -97,7 +97,7 @@ body {
                 position: absolute;
                 left: -55%;
                 display: none;
-                font-family: 'Inter';
+                font-family: $default-font-family-1;
                 @include large-tablet {
                     display: block;
                     position: static;
@@ -179,8 +179,7 @@ body {
                         h1 {
                             font-size: 6.5vw;
                             font-weight: 700;
-                            font-family: 'Inter';
-                            // font-family: 'Montserrat';
+                            font-family: $default-font-family-1;
                         }
                         h4 {
                             margin-left: 2%;
@@ -239,8 +238,7 @@ body {
                         h1 {
                             font-size: 7vw;
                             font-weight: 900;
-                            font-family: 'Inter';
-                            // font-family: 'Montserrat';
+                            font-family: $default-font-family-1;
                         }
                         
                     }
@@ -567,7 +565,11 @@ body {
         display: flex;
         justify-content: space-between;
         padding-inline: 10%;
+        padding-block: 1rem;
         align-items: center;
+        h1 {
+            font-family: $default-font-family-1;
+        }
         div {
             width: 5vw;
             img {
@@ -578,6 +580,10 @@ body {
         button {
             border-radius: 10px;
             height: 3rem;
+            font-size: $default-font-size;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -588,7 +594,11 @@ body {
         justify-content: center;
         align-items: end;
         gap: 3.5rem;
-        
+
+        a {
+            font-family: sans-serif;
+        }
+
         #galleryCheckBoxFilter {
             padding-inline: 10%;
             display: flex;
@@ -596,6 +606,7 @@ body {
             align-items: start;
             gap: 1.5rem;
             .gallery-select {
+                font-size: $default-font-size;
                 border: solid $light-color;
                 border-radius: 5px;
                 height: 2rem;
