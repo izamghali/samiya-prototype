@@ -158,6 +158,9 @@ body {
   margin: 0px;
   overflow-x: hidden;
 }
+body p, body h3, body span {
+  font-family: sans-serif;
+}
 body #landingPage {
   padding-inline: 0px !important;
 }
@@ -741,18 +744,17 @@ body #galleryHeading button:hover {
   cursor: pointer;
 }
 body #galleryCheckBox {
-  padding-inline: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: end;
   gap: 3.5rem;
+  padding-inline: 10%;
 }
 body #galleryCheckBox a {
   font-family: sans-serif;
 }
 body #galleryCheckBox #galleryCheckBoxFilter {
-  padding-inline: 10%;
   display: flex;
   justify-content: right;
   align-items: start;
@@ -774,7 +776,6 @@ body #galleryCheckBox #galleryCheckBoxFilter .gallery-select:hover {
   color: #212529;
 }
 body #galleryCheckBox #galleryCheckBoxCategory {
-  padding-inline: 10%;
   width: 100vw;
   display: flex;
   gap: 3rem;
@@ -782,6 +783,26 @@ body #galleryCheckBox #galleryCheckBoxCategory {
 }
 body #galleryCheckBox #galleryCheckBoxCategory a {
   cursor: pointer;
+}
+body .grid {
+  margin-top: 1.5rem;
+  padding-inline: 10%;
+  display: grid;
+  border: solid red;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+body .grid .grid-blocks {
+  border-radius: 10px;
+  overflow: hidden;
+  border: solid green;
+}
+body .grid .grid-blocks .grid-info {
+  position: absolute;
+  opacity: 0;
+}
+body .grid .grid-blocks .grid-images {
+  width: 100%;
 }
 
 footer {
