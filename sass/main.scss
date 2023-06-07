@@ -635,7 +635,7 @@ body {
     }
 
     .grid-container {
-        margin-top: 1.5rem;
+        margin-block: 1.5rem;
         padding-inline: 10%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -653,6 +653,7 @@ body {
             .grid-info {
                 position: absolute;
                 opacity: 0;
+                // z-index: 1;
             }
             .grid-images {
                 width: 100%;
