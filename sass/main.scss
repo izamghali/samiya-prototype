@@ -634,27 +634,35 @@ body {
         }
     }
 
-    .grid {
+    .grid-container {
         margin-top: 1.5rem;
-        // background-color: aliceblue;
         padding-inline: 10%;
         display: grid;
-        border: solid red;
         grid-template-columns: 1fr 1fr 1fr;
-        // height: 50vh;
         gap: 1rem;
+        // background-color: aliceblue;
+        // border: solid red;
+        // height: 50vh;
 
         .grid-blocks {
-            // width: 10rem;
             border-radius: 10px;
             overflow: hidden;
-            border: solid green;
+            // width: 10rem;
+            // border: solid green;
+            
             .grid-info {
                 position: absolute;
                 opacity: 0;
             }
             .grid-images {
                 width: 100%;
+                transition: 300ms;
+                transform: scale(1.09);
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.02);
+                    filter: blur(2px);
+                }
                 
             }
         }
