@@ -206,6 +206,9 @@ body #landingPage #mainNavbar {
     border-bottom-right-radius: 20px;
   }
 }
+body #landingPage #mainNavbar .navbar-collapse .dropdown-menu li {
+  margin: 0;
+}
 body #landingPage #mainNavbar .navbar-collapse .navbar-link:hover, body #landingPage #mainNavbar .navbar-collapse li .navbar-dark-light-toggle:hover {
   cursor: pointer;
 }

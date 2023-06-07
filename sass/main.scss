@@ -49,6 +49,12 @@ body {
                     border-bottom-right-radius: $standard-border-radius;
                 }
 
+                .dropdown-menu {
+                    li {
+                        margin: 0;
+                    }
+                }
+
                 .navbar-link {
                     &:hover {
                         cursor: pointer;
