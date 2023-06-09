@@ -285,13 +285,13 @@ body #landingPage #mainCarousel .carousel-img {
   }
 }
 body #landingPage #mainCarousel #carousel1 {
-  background-image: url(../assets/carousel/1.jpg);
+  background-image: url(../test-img/Nasi\ Kulit\ Syuurga-202213389.jpg);
 }
 body #landingPage #mainCarousel #carousel2 {
-  background-image: url(../assets/carousel/2.jpg);
+  background-image: url(../test-img/FAP01384.jpg);
 }
 body #landingPage #mainCarousel #carousel3 {
-  background-image: url(../assets/carousel/3.jpg);
+  background-image: url(../test-img/DSCF8741.jpg);
 }
 body #landingPage #mainCarousel .layer {
   position: relative;
@@ -452,65 +452,6 @@ body #bodyPage #services #servicesRow2 {
 }
 body #bodyPage #services img {
   width: 100%;
-}
-body #bodyPage #ourServicesCol {
-  height: auto;
-  margin-bottom: 5%;
-  margin-top: 2%;
-}
-@media (max-width: 425px) {
-  body #bodyPage #ourServicesCol {
-    margin-bottom: 15%;
-  }
-}
-body #bodyPage #ourServicesCol #ourServicesRow1Col, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile, body #bodyPage #ourServicesCol #ourServicesRow2Col {
-  justify-content: center;
-}
-@media (max-width: 425px) {
-  body #bodyPage #ourServicesCol #ourServicesRow1Col, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile, body #bodyPage #ourServicesCol #ourServicesRow2Col {
-    flex-direction: column;
-  }
-}
-@media (max-width: 425px) {
-  body #bodyPage #ourServicesCol #ourServicesRow1Col img, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile img, body #bodyPage #ourServicesCol #ourServicesRow2Col img {
-    width: 100% !important;
-  }
-}
-body #bodyPage #ourServicesCol #ourServicesRow1Col .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2Col .our-services-box {
-  width: 15rem;
-}
-@media (max-width: 1024px) {
-  body #bodyPage #ourServicesCol #ourServicesRow1Col .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .our-services-box, body #bodyPage #ourServicesCol #ourServicesRow2Col .our-services-box {
-    width: 20%;
-  }
-}
-body #bodyPage #ourServicesCol #ourServicesRow1Col .box-test, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .box-test, body #bodyPage #ourServicesCol #ourServicesRow2Col .box-test {
-  padding-inline: 1rem;
-  padding-top: 1rem;
-}
-@media (max-width: 425px) {
-  body #bodyPage #ourServicesCol #ourServicesRow1Col .box-test, body #bodyPage #ourServicesCol #ourServicesRow2RowMobile .box-test, body #bodyPage #ourServicesCol #ourServicesRow2Col .box-test {
-    padding-inline: 0rem;
-    padding-top: 0rem;
-    margin-top: 1rem;
-  }
-}
-@media (max-width: 425px) {
-  body #bodyPage #ourServicesCol #ourServicesRow2Col {
-    display: none !important;
-  }
-}
-body #bodyPage #ourServicesCol #ourServicesRow2RowMobile {
-  display: none;
-}
-@media (max-width: 425px) {
-  body #bodyPage #ourServicesCol #ourServicesRow2RowMobile {
-    display: flex;
-  }
-}
-body #bodyPage #ourServicesCol #ourServicesRow2RowMobile #ourServicesRow2ColMobile {
-  justify-content: center;
-  flex-direction: column;
 }
 body #bodyPage #btsCol {
   flex-direction: row;

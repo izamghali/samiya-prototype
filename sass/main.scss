@@ -141,13 +141,13 @@ body {
                 }
             }
             #carousel1 {
-                background-image: url(../assets/carousel/1.jpg);
+                background-image: url(../test-img/Nasi\ Kulit\ Syuurga-202213389.jpg);
             }
             #carousel2 {
-                background-image: url(../assets/carousel/2.jpg);
+                background-image: url(../test-img/FAP01384.jpg);
             }
             #carousel3 {
-                background-image: url(../assets/carousel/3.jpg);
+                background-image: url(../test-img/DSCF8741.jpg);
             }
             .layer {
                 position: relative;
@@ -276,7 +276,6 @@ body {
     #bodyPage {
 
         #services {
-            // border: solid red;
             padding-inline: 10%;
             color: $light-color;
             margin-bottom: 2rem;
@@ -303,7 +302,6 @@ body {
             }
             
             #servicesRow2 {
-                // border: solid red;
                 column-count: 5;
                 color: $light-color;
                 margin: 0;
@@ -316,63 +314,6 @@ body {
                 width: 100%;
             }
 
-        }
-
-        
-        #ourServicesCol {
-            height: auto;
-            margin-bottom: 5%;
-            margin-top: 2%;
-            @include large-mobile {
-                margin-bottom: 15%;
-            }
-            #ourServicesRow1Col {
-                justify-content: center;
-                @include large-mobile {
-                    flex-direction: column;
-                }
-                img {
-                    @include large-mobile {
-                        width: 100% !important;
-                    }
-                }
-
-                .our-services-box {
-                    width: 15rem;
-                    @include desktop {
-                        width: 20%;
-                    }
-                }
-
-                .box-test {
-                    padding-inline: 1rem;
-                    padding-top: 1rem;
-                    @include large-mobile {
-                        padding-inline: 0rem;
-                        padding-top: 0rem;
-                        margin-top: 1rem;  
-                    }
-                }
-            }
-
-            #ourServicesRow2Col {
-                @extend #ourServicesRow1Col;
-                @include large-mobile {
-                    display: none !important;
-                }
-            }
-            
-            #ourServicesRow2RowMobile {
-                @extend #ourServicesRow1Col;
-                display: none;
-                @include large-mobile {
-                    display: flex;
-                }
-                #ourServicesRow2ColMobile {
-                    justify-content: center;
-                    flex-direction: column;
-                }
-            }
         }
         
         // bts
