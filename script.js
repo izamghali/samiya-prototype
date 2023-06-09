@@ -16,6 +16,26 @@ let standardWhiteBg = "hsl(0, 0%, 90%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
 
+// service heading switch
+function serviceHeadingMobile() {
+  if (window.matchMedia("(max-width: 425px)").matches) {
+    document.getElementById("serviceBlock5h1").innerHTML = "03";
+    document.getElementById("serviceBlock5h4").innerHTML = "Fashion Photography";
+    document.getElementById("serviceBlock7h1").innerHTML = "04";
+    document.getElementById("serviceBlock7h4").innerHTML = "Company Profile Photography";
+    document.getElementById("serviceBlock9h1").innerHTML = "05";
+    document.getElementById("serviceBlock9h4").innerHTML = "Architecture Photography";
+  } else {
+    document.getElementById("serviceBlock5h1").innerHTML = "05";
+    document.getElementById("serviceBlock5h4").innerHTML = "Architecture Photography";
+    document.getElementById("serviceBlock7h1").innerHTML = "03";
+    document.getElementById("serviceBlock7h4").innerHTML = "Fashion Photography";
+    document.getElementById("serviceBlock9h1").innerHTML = "04";
+    document.getElementById("serviceBlock9h4").innerHTML = "Company Profile Photography";
+  }
+}
+serviceHeadingMobile();
+
 // light mode toggle clicked
 function lightModeClicked() {
   const toggleAnimation = gsap.timeline({ paused: true });

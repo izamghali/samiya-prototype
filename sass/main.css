@@ -412,6 +412,12 @@ body #landingPage #mainCarousel #companySloganMobile {
 body #bodyPage #services {
   padding-inline: 10%;
   color: #ADADAD;
+  margin-bottom: 2rem;
+}
+@media (max-width: 425px) {
+  body #bodyPage #services {
+    padding-inline: 5%;
+  }
 }
 body #bodyPage #services #servicesHeading {
   margin-block: 2rem;
@@ -425,12 +431,24 @@ body #bodyPage #services #servicesRow1 {
   margin: 0;
   gap: 0;
 }
+@media screen and (max-width: 425px) {
+  body #bodyPage #services #servicesRow1 {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
+}
 body #bodyPage #services #servicesRow2 {
   -moz-column-count: 5;
        column-count: 5;
   color: #ADADAD;
   margin: 0;
   gap: 0;
+}
+@media screen and (max-width: 425px) {
+  body #bodyPage #services #servicesRow2 {
+    -moz-column-count: 1;
+         column-count: 1;
+  }
 }
 body #bodyPage #services img {
   width: 100%;
