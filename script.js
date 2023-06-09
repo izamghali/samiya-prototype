@@ -39,7 +39,7 @@ serviceHeadingMobile();
 // light mode toggle clicked
 function lightModeClicked() {
   const toggleAnimation = gsap.timeline({ paused: true });
-  let colorOnlyList = []
+  let colorChangeList = ["#aBrand", "#services, #services h1, #services h4", "#btsTextBoxCol h3, #btsTextBoxCol span", ".bts-heading-texts", "#professionalHeadingCol h2", ".client-col h2", ".client-col p", "#mainClientsTablet", "#companyTitleBoxMobile h1"]
   toggleAnimation
     .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
   lightModeBtn.addEventListener("click", () => {
@@ -47,25 +47,17 @@ function lightModeClicked() {
       toggleAnimation.restart();
       gsap.to("body", {backgroundColor: standardWhiteBg})
       gsap.to(".layer", {border: "25px solid " + standardWhiteBg})
-      gsap.to("#aBrand", {color: standardBlackColor})
+      gsap.to(colorChangeList, {color: standardBlackColor})
       gsap.to("#lighModeBtn", {border: "solid " + standardBlackColor})
-      gsap.to("#services, #services h1, #services h4", {color: standardBlackColor})
-      gsap.to("#btsTextBoxCol h3, #btsTextBoxCol span", {color: standardBlackColor})
-      gsap.to(".bts-heading-texts", {color: standardBlackColor})
       gsap.to(".bts-card-text", {color: standardBlackColor, backgroundColor: standardWhiteBg})
       gsap.to(".white-layer", {backgroundColor: standardWhiteBg})
-      gsap.to("#professionalHeadingCol h2", {color: standardBlackColor})
       gsap.to(".professional-cards", {color: standardBlackColor, backgroundColor: standardWhiteBg, border: "solid" + standardGrayColor})
       gsap.to(".professional-cards a", {color: hyperlinkColor2})
-      gsap.to(".client-col h2", {color: standardBlackColor})
-      gsap.to(".client-col p", {color: standardBlackColor})
-      gsap.to("#mainClientsTablet", {color: standardBlackColor})
       gsap.to("footer", {backgroundColor: standardBlackBg})
       gsap.to("footer h4", {color: standardWhiteBg})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
       gsap.to("#footerSocial svg", {fill: standardWhiteBg})
       gsap.to("#arrowBox svg", {fill: standardBlackBg})
-      gsap.to("#companyTitleBoxMobile h1", {color: standardBlackColor})
       gsap.to("#whiteLogo", {opacity: 0, duration: 0.1})
       gsap.to("#whiteLogo", {display: "none"})
       gsap.to("#blackLogo", {opacity: 0, display: "block", duration: 0})
@@ -74,24 +66,16 @@ function lightModeClicked() {
       toggleAnimation.reverse();
       gsap.to("body", {backgroundColor: standardBlackBg})
       gsap.to(".layer", {border: "25px solid " + standardBlackBg})
-      gsap.to("#aBrand", {color: standardWhiteColor})
-      gsap.to("#services, #services h1, #services h4", {color: standardWhiteColor})
-      gsap.to("#btsTextBoxCol h3, #btsTextBoxCol span", {color: standardWhiteColor})
-      gsap.to(".bts-heading-texts", {color: standardWhiteColor})
+      gsap.to(colorChangeList, {color: standardWhiteColor})
       gsap.to(".bts-card-text", {color: standardWhiteColor, backgroundColor: standardBlackBg})
       gsap.to(".white-layer", {backgroundColor: standardBlackBg})
-      gsap.to("#professionalHeadingCol h2", {color: standardWhiteColor})
       gsap.to(".professional-cards", {color: standardWhiteColor, backgroundColor: standardBlackBg, border: "solid" + standardGrayColor})
       gsap.to(".professional-cards a", {color: hyperlinkColor1})
-      gsap.to(".client-col h2", {color: standardWhiteColor})
-      gsap.to(".client-col p", {color: standardWhiteColor})
-      gsap.to("#mainClientsTablet", {color: standardWhiteColor})
       gsap.to("footer", {backgroundColor: standardWhiteBg})
       gsap.to("footer h4", {color: standardBlackColor})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardBlackBg, backgroundColor: standardWhiteBg})
       gsap.to("#footerSocial svg", {fill: standardBlackBg})
       gsap.to("#arrowBox svg", {fill: standardWhiteBg})
-      gsap.to("#companyTitleBoxMobile h1", {color: standardWhiteColor})
       gsap.to("#blackLogo", {opacity: 0, duration: 0.1})
       gsap.to("#blackLogo", {display: "none"})
       gsap.to("#whiteLogo", {display: "block"}, "=+0.1")
