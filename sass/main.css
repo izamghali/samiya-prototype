@@ -409,14 +409,31 @@ body #landingPage #mainCarousel #companySloganMobile {
     display: none;
   }
 }
-body #bodyPage #ourServicesHeadingCol {
+body #bodyPage #services {
   padding-inline: 10%;
-  margin-top: 5%;
+  color: #ADADAD;
 }
-@media (max-width: 425px) {
-  body #bodyPage #ourServicesHeadingCol {
-    margin-top: 15%;
-  }
+body #bodyPage #services #servicesHeading {
+  margin-block: 2rem;
+}
+body #bodyPage #services .service-texts {
+  padding: 0.7rem;
+}
+body #bodyPage #services #servicesRow1 {
+  -moz-column-count: 5;
+       column-count: 5;
+  margin: 0;
+  gap: 0;
+}
+body #bodyPage #services #servicesRow2 {
+  -moz-column-count: 5;
+       column-count: 5;
+  color: #ADADAD;
+  margin: 0;
+  gap: 0;
+}
+body #bodyPage #services img {
+  width: 100%;
 }
 body #bodyPage #ourServicesCol {
   height: auto;

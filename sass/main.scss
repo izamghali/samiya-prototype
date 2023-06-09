@@ -275,14 +275,53 @@ body {
 
     #bodyPage {
         // our services
-        #ourServicesHeadingCol {
+        // #ourServicesHeadingCol {
+        //     padding-inline: 10%;
+        //     margin-top: 5%;
+        //     @include large-mobile {
+        //         margin-top: 15%;
+        //     }
+        // }
+
+        #services {
+            // border: solid red;
             padding-inline: 10%;
-            margin-top: 5%;
-            @include large-mobile {
-                margin-top: 15%;
+            color: $light-color;
+            
+
+            #servicesHeading {
+                margin-block: 2rem;
             }
+
+            .service-texts {
+                padding: 0.7rem;
+            }
+
+            #servicesRow1 {
+                column-count: 5;
+                margin: 0;
+                gap: 0;
+                .service-blocks {
+                    // border: solid red;
+                    // width: 10rem;
+                }
+                
+            }
+            
+            #servicesRow2 {
+                // border: solid red;
+                column-count: 5;
+                color: $light-color;
+                margin: 0;
+                gap: 0;
+            }
+            img {
+                width: 100%;
+            }
+
         }
 
+        
         #ourServicesCol {
             height: auto;
             margin-bottom: 5%;
