@@ -35,11 +35,11 @@ body {
     .layer {
         border: 25px solid $darkmode-bg;
     }
-    #ourServicesHeadingCol {
+
+    #services {
         color: $light-color;
-    }
-    #ourServicesCol {
-        color: $light-color;
+        
+        h1, h4 {color: $light-color;}
     }
 
     .white-layer {

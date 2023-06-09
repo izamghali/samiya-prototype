@@ -39,6 +39,7 @@ serviceHeadingMobile();
 // light mode toggle clicked
 function lightModeClicked() {
   const toggleAnimation = gsap.timeline({ paused: true });
+  let colorOnlyList = []
   toggleAnimation
     .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
   lightModeBtn.addEventListener("click", () => {
@@ -48,11 +49,8 @@ function lightModeClicked() {
       gsap.to(".layer", {border: "25px solid " + standardWhiteBg})
       gsap.to("#aBrand", {color: standardBlackColor})
       gsap.to("#lighModeBtn", {border: "solid " + standardBlackColor})
-      gsap.to("#ourServicesHeadingCol h2", {color: standardBlackColor})
-      gsap.to(".our-services-box h1", {color: standardBlackColor})
-      gsap.to(".our-services-box h4", {color: standardBlackColor})
-      gsap.to("#btsTextBoxCol h3", {color: standardBlackColor})
-      gsap.to("#btsTextBoxCol span", {color: standardBlackColor})
+      gsap.to("#services, #services h1, #services h4", {color: standardBlackColor})
+      gsap.to("#btsTextBoxCol h3, #btsTextBoxCol span", {color: standardBlackColor})
       gsap.to(".bts-heading-texts", {color: standardBlackColor})
       gsap.to(".bts-card-text", {color: standardBlackColor, backgroundColor: standardWhiteBg})
       gsap.to(".white-layer", {backgroundColor: standardWhiteBg})
@@ -77,11 +75,8 @@ function lightModeClicked() {
       gsap.to("body", {backgroundColor: standardBlackBg})
       gsap.to(".layer", {border: "25px solid " + standardBlackBg})
       gsap.to("#aBrand", {color: standardWhiteColor})
-      gsap.to("#ourServicesHeadingCol h2", {color: standardWhiteColor})
-      gsap.to(".our-services-box h1", {color: standardWhiteColor})
-      gsap.to(".our-services-box h4", {color: standardWhiteColor})
-      gsap.to("#btsTextBoxCol h3", {color: standardWhiteColor})
-      gsap.to("#btsTextBoxCol span", {color: standardWhiteColor})
+      gsap.to("#services, #services h1, #services h4", {color: standardWhiteColor})
+      gsap.to("#btsTextBoxCol h3, #btsTextBoxCol span", {color: standardWhiteColor})
       gsap.to(".bts-heading-texts", {color: standardWhiteColor})
       gsap.to(".bts-card-text", {color: standardWhiteColor, backgroundColor: standardBlackBg})
       gsap.to(".white-layer", {backgroundColor: standardBlackBg})

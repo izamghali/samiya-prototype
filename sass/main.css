@@ -78,10 +78,10 @@ body #lightModeToggle {
 body .layer {
   border: 25px solid #1C1C1C;
 }
-body #ourServicesHeadingCol {
+body #services {
   color: #ADADAD;
 }
-body #ourServicesCol {
+body #services h1, body #services h4 {
   color: #ADADAD;
 }
 body .white-layer {
@@ -426,7 +426,6 @@ body #landingPage #mainCarousel #companySloganMobile {
 }
 body #bodyPage #services {
   padding-inline: 10%;
-  color: #ADADAD;
   margin-bottom: 2rem;
 }
 @media (max-width: 425px) {

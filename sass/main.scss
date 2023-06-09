@@ -286,11 +286,9 @@ body {
 
         #services {
             padding-inline: 10%;
-            color: $light-color;
             margin-bottom: 2rem;
             @include large-mobile {
                 padding-inline: 5%;
-
             }
 
             #servicesHeading {
