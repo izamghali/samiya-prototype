@@ -285,13 +285,23 @@ body #landingPage #mainCarousel .carousel-img {
   }
 }
 body #landingPage #mainCarousel #carousel1 {
-  background-image: url(../test-img/Nasi\ Kulit\ Syuurga-202213389.jpg);
+  background-image: url(../assets/carousel/1.webp);
 }
 body #landingPage #mainCarousel #carousel2 {
-  background-image: url(../test-img/FAP01384.jpg);
+  background-image: url(../assets/carousel/2.webp);
+}
+@media (max-width: 425px) {
+  body #landingPage #mainCarousel #carousel2 {
+    background-position: 61% 50%;
+  }
 }
 body #landingPage #mainCarousel #carousel3 {
-  background-image: url(../test-img/DSCF8741.jpg);
+  background-image: url(../assets/carousel/3.webp);
+}
+@media (max-width: 425px) {
+  body #landingPage #mainCarousel #carousel3 {
+    background-position: 43% 50%;
+  }
 }
 body #landingPage #mainCarousel .layer {
   position: relative;
@@ -300,6 +310,11 @@ body #landingPage #mainCarousel .layer {
   width: 100%;
   border-radius: 35px;
   opacity: 1;
+}
+@media (max-width: 425px) {
+  body #landingPage #mainCarousel .layer {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0% 60%, rgba(0, 0, 0, 0.8) 100% 0%);
+  }
 }
 body #landingPage #mainCarousel #companyTitle {
   color: hsl(60, 0%, 100%);

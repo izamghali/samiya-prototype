@@ -141,13 +141,19 @@ body {
                 }
             }
             #carousel1 {
-                background-image: url(../test-img/Nasi\ Kulit\ Syuurga-202213389.jpg);
+                background-image: url(../assets/carousel/1.webp);
             }
             #carousel2 {
-                background-image: url(../test-img/FAP01384.jpg);
+                background-image: url(../assets/carousel/2.webp);
+                @include large-mobile {
+                    background-position: 61% 50%;
+                }
             }
             #carousel3 {
-                background-image: url(../test-img/DSCF8741.jpg);
+                background-image: url(../assets/carousel/3.webp);
+                @include large-mobile {
+                    background-position: 43% 50%;
+                }
             }
             .layer {
                 position: relative;
@@ -156,6 +162,9 @@ body {
                 width: 100%;
                 border-radius: 35px;
                 opacity: 1;
+                @include large-mobile {
+                    background: linear-gradient(0deg, rgba(255,255,255, 0.1) 0% 60%, rgba(0,0,0,0.8) 100% 0%);
+                }
             }
 
             #companyTitle {
