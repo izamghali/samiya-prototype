@@ -439,6 +439,11 @@ body #bodyPage #services #servicesHeading {
 body #bodyPage #services .service-texts {
   padding: 0.7rem;
 }
+@media (max-width: 425px) {
+  body #bodyPage #services .service-texts {
+    padding-left: 0;
+  }
+}
 body #bodyPage #services #servicesRow1 {
   -moz-column-count: 5;
        column-count: 5;

@@ -26,15 +26,38 @@ $(document).ready(function() {
     $("#galleryCheckBoxCategory a").not("#categoryAll").on("click", (event) => {
         $("#galleryCheckBoxCategory a").not(event.currentTarget).fadeTo("50", 0.4);
         $(event.currentTarget).fadeTo("50", 1);
-        const $filterText = event.currentTarget.textContent;
-        // if ($filterText === "COMPANY") {
-
-        // }
     })
     $("#categoryAll").on("click", () => {
         $("#galleryCheckBoxCategory a").fadeTo("50", 1)
     })
-    
+
+    // show/hide images after category clicked
+    function showHideGalleryImages() {
+        $("#categoryFood").on("click", () => {
+            $(".grid-blocks").not(".grid-food-blocks").slideUp(1000);
+            $(".grid-food-blocks").slideDown(1000);
+        });
+        $("#categoryProduct").on("click", () => {
+            $(".grid-blocks").not(".grid-product-blocks").slideUp(1000);
+            $(".grid-product-blocks").slideDown(1000);
+        });
+        $("#categoryFashion").on("click", () => {
+            $(".grid-blocks").not(".grid-fashion-blocks").slideUp(1000);
+            $(".grid-fashion-blocks").slideDown(1000);
+        });
+        $("#categoryCompany").on("click", () => {
+            $(".grid-blocks").not(".grid-company-blocks").slideUp(1000);
+            $(".grid-company-blocks").slideDown(1000);
+        });
+        $("#categoryArchitecture").on("click", () => {
+            $(".grid-blocks").not(".grid-arch-blocks").slideUp(1000);
+            $(".grid-arch-blocks").slideDown(1000);
+        });
+        $("#categoryAll").on("click", () => {
+            $(".grid-blocks").slideDown(1000);
+        });
+    }
+    showHideGalleryImages();
 });
 
 

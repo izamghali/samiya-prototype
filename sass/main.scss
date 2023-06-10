@@ -297,6 +297,9 @@ body {
 
             .service-texts {
                 padding: 0.7rem;
+                @include large-mobile {
+                    padding-left: 0;
+                }
             }
 
             #servicesRow1 {
@@ -665,6 +668,9 @@ body {
                 
             }
         }
+
+        // #block6 {border: solid red}
+        // #block9 {border: solid red}
 
     }
     
