@@ -288,7 +288,7 @@ body #landingPage #mainCarousel #carousel1 {
   background-image: url(../assets/carousel/1.webp);
 }
 body #landingPage #mainCarousel #carousel2 {
-  background-image: url(../assets/carousel/2.webp);
+  background-image: url(../assets/gallery/company/1.webp);
 }
 @media (max-width: 425px) {
   body #landingPage #mainCarousel #carousel2 {
@@ -296,7 +296,7 @@ body #landingPage #mainCarousel #carousel2 {
   }
 }
 body #landingPage #mainCarousel #carousel3 {
-  background-image: url(../assets/carousel/3.webp);
+  background-image: url(../assets/gallery/architecture/4.webp);
 }
 @media (max-width: 425px) {
   body #landingPage #mainCarousel #carousel3 {
