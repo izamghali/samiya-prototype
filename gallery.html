@@ -56,7 +56,6 @@
       </div>
     </div>
 
-    
     <script id="gridContainerScript" type="text/x-handlebars-template">
 
       {{#each blocks_arch}}
@@ -89,6 +88,17 @@
           <span>fashion</span>
         </section>
           <img class="grid-images" src="./assets/gallery/fashion/{{this}}.webp" alt="">
+      </div>
+      {{/each}}
+
+      {{#each blocks_product}}
+      <div class="grid-blocks grid-product-blocks">
+        <section class="grid-info">
+          <h3>{{ title }}</h3>
+          <p>photo description</p>
+          <span>product</span>
+        </section>
+          <img class="grid-images" src="./assets/gallery/product/{{this}}.webp" alt="">
       </div>
       {{/each}}
 

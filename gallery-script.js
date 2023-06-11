@@ -24,6 +24,7 @@ var context = {
     blocks_arch: rangeArr(1, 8),
     blocks_company: rangeArr(1, 17),
     blocks_fashion: rangeArr(1, 21),
+    blocks_product: rangeArr(1, 13),
 };
 var compiledHtml = template(context);
 var fill = document.getElementById('gridContainer');
@@ -53,27 +54,27 @@ $(document).ready(function() {
     // show/hide images after category clicked
     function showHideGalleryImages() {
         $("#categoryFood").on("click", () => {
-            $(".grid-blocks").not(".grid-food-blocks").slideUp(1000);
-            $(".grid-food-blocks").slideDown(1000);
+            $(".grid-blocks").not(".grid-food-blocks").fadeOut(800);
+            $(".grid-food-blocks").fadeIn(800);
         });
         $("#categoryProduct").on("click", () => {
-            $(".grid-blocks").not(".grid-product-blocks").slideUp(1000);
-            $(".grid-product-blocks").slideDown(1000);
+            $(".grid-blocks").not(".grid-product-blocks").fadeOut(800);
+            $(".grid-product-blocks").fadeIn(800);
         });
         $("#categoryFashion").on("click", () => {
-            $(".grid-blocks").not(".grid-fashion-blocks").slideUp(1000);
-            $(".grid-fashion-blocks").slideDown(1000);
+            $(".grid-blocks").not(".grid-fashion-blocks").fadeOut(800);
+            $(".grid-fashion-blocks").fadeIn(800);
         });
         $("#categoryCompany").on("click", () => {
-            $(".grid-blocks").not(".grid-company-blocks").slideUp(1000);
-            $(".grid-company-blocks").slideDown(1000);
+            $(".grid-blocks").not(".grid-company-blocks").fadeOut(800);
+            $(".grid-company-blocks").fadeIn(800);
         });
         $("#categoryArchitecture").on("click", () => {
-            $(".grid-blocks").not(".grid-arch-blocks").slideUp(1000);
-            $(".grid-arch-blocks").slideDown(1000);
+            $(".grid-blocks").not(".grid-arch-blocks").fadeOut(800);
+            $(".grid-arch-blocks").fadeIn(800);
         });
         $("#categoryAll").on("click", () => {
-            $(".grid-blocks").slideDown(1000);
+            $(".grid-blocks").fadeIn(800);
         });
     }
     showHideGalleryImages();
