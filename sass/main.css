@@ -285,10 +285,10 @@ body #landingPage #mainCarousel .carousel-img {
   }
 }
 body #landingPage #mainCarousel #carousel1 {
-  background-image: url(../assets/carousel/1.webp);
+  background-image: url(../assets/gallery/food/food-84.webp);
 }
 body #landingPage #mainCarousel #carousel2 {
-  background-image: url(../assets/gallery/company/1.webp);
+  background-image: url(../assets/gallery/company/company-1.webp);
 }
 @media (max-width: 425px) {
   body #landingPage #mainCarousel #carousel2 {
@@ -296,7 +296,7 @@ body #landingPage #mainCarousel #carousel2 {
   }
 }
 body #landingPage #mainCarousel #carousel3 {
-  background-image: url(../assets/gallery/architecture/4.webp);
+  background-image: url(../assets/gallery/architecture/architecture-4.webp);
 }
 @media (max-width: 425px) {
   body #landingPage #mainCarousel #carousel3 {

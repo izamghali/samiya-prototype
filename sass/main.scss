@@ -142,16 +142,16 @@ body {
                 }
             }
             #carousel1 {
-                background-image: url(../assets/carousel/1.webp);
+                background-image: url(../assets/gallery/food/food-84.webp);
             }
             #carousel2 {
-                background-image: url(../assets/gallery/company/1.webp);
+                background-image: url(../assets/gallery/company/company-1.webp);
                 @include large-mobile {
                     background-position: 61% 50%;
                 }
             }
             #carousel3 {
-                background-image: url(../assets/gallery/architecture/4.webp);
+                background-image: url(../assets/gallery/architecture/architecture-4.webp);
                 @include large-mobile {
                     background-position: 43% 50%;
                 }
@@ -669,9 +669,6 @@ body {
                 
             }
         }
-
-        // #block6 {border: solid red}
-        // #block9 {border: solid red}
 
     }
     
