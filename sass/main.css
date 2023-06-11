@@ -839,6 +839,9 @@ body #gridContainer .grid-blocks .grid-images:hover {
   transform: scale(1.02);
   filter: blur(2px);
 }
+body #gridContainer .grid-product-blocks {
+  border: solid #ADADAD;
+}
 
 footer {
   width: 100vw;
