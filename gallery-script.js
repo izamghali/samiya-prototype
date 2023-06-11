@@ -7,7 +7,6 @@ function gridLoader() {
     gsap.from("#galleryHeading", { y: -100, delay: 0.2, opacity: 0 });
     gsap.from("#galleryCheckBox", { y: -100, delay: 0.2, opacity: 0 });
 }
-
 gridLoader();
 
 function rangeArr(start, end) {
@@ -17,7 +16,6 @@ function rangeArr(start, end) {
     }
     return arr;
 }
-
 // handlebars JS
 var source = document.getElementById('gridContainerScript').innerHTML;
 var template = Handlebars.compile(source); 
@@ -27,10 +25,8 @@ var context = {
     blocks_company: rangeArr(1, 17),
     blocks_fashion: rangeArr(1, 21),
 };
- 
 var compiledHtml = template(context);
 var fill = document.getElementById('gridContainer');
-
 fill.innerHTML = compiledHtml;
 
 $(document).ready(function() {
