@@ -56,100 +56,23 @@
       </div>
     </div>
 
-    <div class="grid-container">
+    
+    <script id="gridContainerScript" type="text/x-handlebars-template">
 
-      <div class="grid-blocks grid-company-blocks" id="block1">
+      {{#each blocks}}
+      <div class="grid-blocks grid-arch-blocks">
         <section class="grid-info">
-          <h3>photo title</h3>
+          <h3>{{ title }}</h3>
           <p>photo description</p>
           <span>fashion</span>
         </section>
-        <img class="grid-images" src="./test-img/ali-morshedlou-WMD64tMfc4k-unsplash.jpg" alt="">
+          <img class="grid-images" src="./assets/gallery/architecture/{{this}}.webp" alt="">
       </div>
-
-      <div class="grid-blocks grid-arch-blocks" id="block2">
-        <section class="grid-info">
-          <h3>photo title</h3>
-          <p>photo description</p>
-          <span>fashion</span>
-        </section>
-        <img class="grid-images" src="./test-img/kam-idris-_HqHX3LBN18-unsplash.jpg" alt="">
-      </div>
-
-      <div class="grid-blocks grid-product-blocks" id="block3">
-        <section class="grid-info">
-          <h3>photo title</h3>
-          <p>photo description</p>
-          <span>fashion</span>
-        </section>
-        <img class="grid-images" src="./test-img/ruslan-bardash-4kTbAMRAHtQ-unsplash.jpg" alt="">
-      </div>
-
-      <div class="grid-blocks grid-food-blocks" id="block4">
-        <section class="grid-info">
-          <h3>photo title</h3>
-          <p>photo description</p>
-          <span>fashion</span>
-        </section>
-        <img class="grid-images" src="./test-img/slashio-photography-ZG9ggI_pjFw-unsplash.jpg" alt="">
-      </div>
-
-      <div class="grid-blocks grid-food-blocks" id="block5">
-        <section class="grid-info">
-          <h3>photo title</h3>
-          <p>photo description</p>
-          <span>fashion</span>
-        </section>
-        <img class="grid-images" src="./test-img/lily-banse--YHSwy6uqvk-unsplash.jpg" alt="">
-      </div>
-
-      <div class="grid-blocks grid-arch-blocks" id="block6">
-        <section class="grid-info">
-          <h3>photo title</h3>
-          <p>photo description</p>
-          <span>fashion</span>
-        </section>
-        <img class="grid-images" src="./test-img/katie-luka-9KPExH1jioM-unsplash.jpg" alt="">
-      </div>
-
-      <div class="grid-blocks grid-fashion-blocks" id="block7">
-        <section class="grid-info">
-          <h3>photo title</h3>
-          <p>photo description</p>
-          <span>fashion</span>
-        </section>
-        <img class="grid-images" src="./test-img/judeus-samson-0UECcInuCR4-unsplash.jpg" alt="">
-      </div>
-
-      <div class="grid-blocks grid-company-blocks" id="block8">
-        <section class="grid-info">
-          <h3>photo title</h3>
-          <p>photo description</p>
-          <span>fashion</span>
-        </section>
-        <img class="grid-images" src="./test-img/campaign-creators-gMsnXqILjp4-unsplash.jpg" alt="">
-      </div>
-
-      <div class="grid-blocks grid-fashion-blocks" id="block9">
-        <section class="grid-info">
-          <h3>photo title</h3>
-          <p>photo description</p>
-          <span>fashion</span>
-        </section>
-        <img class="grid-images" src="./test-img/freestocks-_3Q3tsJ01nc-unsplash.jpg" alt="">
-      </div>
-
-    </div>
-
-    <script id="testScript" type="text/x-handlebars-template">
-      <h1 style="color: antiquewhite;" id="testText">{{ title }}</h1>
-      {{#each someArray}}
-        <!-- <p style="color: antiquewhite;">{{this}} is the current element!</p> -->
-        <img width="50%" src="./assets/gallery/architecture/{{this}}.webp" alt="">
       {{/each}}
+
     </script>
     
-    <div id="hello">
+    <div id="gridContainer">
       
     </div>
 

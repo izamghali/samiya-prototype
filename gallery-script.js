@@ -19,15 +19,15 @@ function rangeArr(start, end) {
 }
 
 // handlebars JS
-var source = document.getElementById('testScript').innerHTML;
+var source = document.getElementById('gridContainerScript').innerHTML;
 var template = Handlebars.compile(source); 
 var context = {
-  title: 'Hello World!',
-  someArray: rangeArr(1, 8),
+    title: "Photo Title",
+    blocks: rangeArr(1, 8),
 };
  
 var compiledHtml = template(context);
-var fill = document.getElementById('hello');
+var fill = document.getElementById('gridContainer');
 
 fill.innerHTML = compiledHtml;
 

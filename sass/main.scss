@@ -628,7 +628,7 @@ body {
         }
     }
 
-    .grid-container {
+    #gridContainer {
         margin-block: 1.5rem;
         padding-inline: 10%;
         column-count: 4;
@@ -673,12 +673,6 @@ body {
         // #block6 {border: solid red}
         // #block9 {border: solid red}
 
-    }
-
-    #testScript {
-        #testText {
-            border: solid red;
-        }
     }
     
 }
