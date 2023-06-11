@@ -23,7 +23,9 @@ var source = document.getElementById('gridContainerScript').innerHTML;
 var template = Handlebars.compile(source); 
 var context = {
     title: "Photo Title",
-    blocks: rangeArr(1, 8),
+    blocks_arch: rangeArr(1, 8),
+    blocks_company: rangeArr(1, 17),
+    blocks_fashion: rangeArr(1, 21),
 };
  
 var compiledHtml = template(context);

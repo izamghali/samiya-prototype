@@ -59,7 +59,7 @@
     
     <script id="gridContainerScript" type="text/x-handlebars-template">
 
-      {{#each blocks}}
+      {{#each blocks_arch}}
       <div class="grid-blocks grid-arch-blocks">
         <section class="grid-info">
           <h3>{{ title }}</h3>
@@ -70,11 +70,31 @@
       </div>
       {{/each}}
 
+      {{#each blocks_company}}
+      <div class="grid-blocks grid-company-blocks">
+        <section class="grid-info">
+          <h3>{{ title }}</h3>
+          <p>photo description</p>
+          <span>fashion</span>
+        </section>
+          <img class="grid-images" src="./assets/gallery/company/{{this}}.webp" alt="">
+      </div>
+      {{/each}}
+
+      {{#each blocks_fashion}}
+      <div class="grid-blocks grid-fashion-blocks">
+        <section class="grid-info">
+          <h3>{{ title }}</h3>
+          <p>photo description</p>
+          <span>fashion</span>
+        </section>
+          <img class="grid-images" src="./assets/gallery/fashion/{{this}}.webp" alt="">
+      </div>
+      {{/each}}
+
     </script>
     
-    <div id="gridContainer">
-      
-    </div>
+    <div id="gridContainer"></div>
 
     <!-- GSAP first, jQuery second, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
