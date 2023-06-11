@@ -10,6 +10,27 @@ function gridLoader() {
 
 gridLoader();
 
+function rangeArr(start, end) {
+    let arr = [];
+    for (let i = start; i <= end; i++) {
+        arr.push(i)
+    }
+    return arr;
+}
+
+// handlebars JS
+var source = document.getElementById('testScript').innerHTML;
+var template = Handlebars.compile(source); 
+var context = {
+  title: 'Hello World!',
+  someArray: rangeArr(1, 8),
+};
+ 
+var compiledHtml = template(context);
+var fill = document.getElementById('hello');
+
+fill.innerHTML = compiledHtml;
+
 $(document).ready(function() {
     
     // hover contact btn

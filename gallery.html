@@ -141,12 +141,24 @@
 
     </div>
 
+    <script id="testScript" type="text/x-handlebars-template">
+      <h1 style="color: antiquewhite;" id="testText">{{ title }}</h1>
+      {{#each someArray}}
+        <!-- <p style="color: antiquewhite;">{{this}} is the current element!</p> -->
+        <img width="50%" src="./assets/gallery/architecture/{{this}}.webp" alt="">
+      {{/each}}
+    </script>
+    
+    <div id="hello">
+      
+    </div>
+
     <!-- GSAP first, jQuery second, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 
   </body>
 </html>

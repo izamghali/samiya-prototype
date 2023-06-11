@@ -12,6 +12,7 @@ body {
     p, h3, span { 
         font-family: sans-serif;
     }
+
     #landingPage {
         padding-inline: 0px !important;
         // navbar
@@ -672,6 +673,12 @@ body {
         // #block6 {border: solid red}
         // #block9 {border: solid red}
 
+    }
+
+    #testScript {
+        #testText {
+            border: solid red;
+        }
     }
     
 }
