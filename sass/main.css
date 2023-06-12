@@ -762,13 +762,13 @@ body #galleryHeading button {
 body #galleryHeading button:hover {
   cursor: pointer;
 }
-body #galleryHeading #galleryContactButtonMobile {
-  display: none;
-}
 @media screen and (max-width: 425px) {
   body #galleryHeading #galleryContactButton {
     display: none;
   }
+}
+body #galleryHeading #galleryContactButtonMobile {
+  display: none;
 }
 body #galleryCheckBox {
   display: flex;
@@ -886,6 +886,19 @@ body #gridContainer .grid-blocks .grid-images:hover {
 }
 body #gridContainer .grid-product-blocks {
   border: solid #ADADAD;
+}
+body #arrowBoxGallery {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 5vw;
+  opacity: 0;
+}
+body #arrowBoxGallery svg {
+  fill: #ADADAD;
+}
+body #arrowBoxGallery svg:hover {
+  cursor: pointer;
 }
 
 footer {

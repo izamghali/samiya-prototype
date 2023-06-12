@@ -9,6 +9,16 @@ function gridLoader() {
 }
 gridLoader();
 
+function arrowAppearAfterScroll() {
+    if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        gsap.to("#arrowBoxGallery", {opacity: 1, duration: 0.4})
+    } else {
+        gsap.to("#arrowBoxGallery", {opacity: 0, duration: 0.4})
+    }
+}
+window.onscroll = function() {arrowAppearAfterScroll()};
+
+// handlebars JS
 function rangeArr(start, end) {
     let arr = [];
     for (let i = start; i <= end; i++) {
@@ -16,7 +26,6 @@ function rangeArr(start, end) {
     }
     return arr;
 }
-// handlebars JS
 var source = document.getElementById('gridContainerScript').innerHTML;
 var template = Handlebars.compile(source); 
 var context = {
@@ -34,6 +43,7 @@ var compiledHtml = template(context);
 var fill = document.getElementById('gridContainer');
 fill.innerHTML = compiledHtml;
 
+// jQuery
 $(document).ready(function() {
     
     // hover contact btn

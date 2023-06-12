@@ -601,13 +601,17 @@ body {
             }
 
         }
-        #galleryContactButtonMobile {
-            display: none;
-        }
-
+        
         #galleryContactButton {
             @media screen and (max-width: 425px) {
                 display: none;
+            }
+        }
+        
+        #galleryContactButtonMobile {
+            display: none;
+            @media screen and (max-width: 425px) {
+                // display: block;
             }
         }
     }
@@ -711,6 +715,20 @@ body {
 
         .grid-product-blocks { border: solid $light-color; }
 
+    }
+
+    #arrowBoxGallery {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        width: 5vw;
+        opacity: 0;
+        svg {
+            fill: $light-color;
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
     
 }
