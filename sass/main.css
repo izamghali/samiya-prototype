@@ -701,15 +701,14 @@ body #bodyPage #dummy {
 body #bodyPage #arrowBox {
   position: fixed;
   right: 2rem;
-  bottom: 10rem;
+  bottom: 15rem;
   width: 5vw;
   opacity: 0;
 }
 @media (max-width: 425px) {
   body #bodyPage #arrowBox {
     width: 12vw;
-    z-index: 1;
-    bottom: 5%;
+    right: 0.3rem;
   }
 }
 body #bodyPage #arrowBox svg {

@@ -546,16 +546,13 @@ body {
             // @extend #arrowBoxGallery;
             position: fixed;
             right: 2rem;
-            bottom: 10rem;
+            bottom: 15rem;
             width: 5vw;
             opacity: 0;
             @include large-mobile {
-                width: 12vw;
-                z-index: 1;
                 // position: sticky;
-                // top: 100%;
-                bottom: 5%;
-                // left: 100%;
+                width: 12vw;
+                right: 0.3rem;
             }
             svg {
                 fill: $light-color;

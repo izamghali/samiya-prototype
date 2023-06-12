@@ -738,8 +738,6 @@ arrowUp.addEventListener("click", () => {
 
 // GSAP matchMedia
 let mm = gsap.matchMedia()
-
-
 function desktopSize() {
   mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
     // zoom carousel
