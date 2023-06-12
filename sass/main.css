@@ -690,32 +690,33 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
     display: block;
   }
 }
+body #bodyPage #dummy {
+  height: 19vh;
+}
+@media (max-width: 425px) {
+  body #bodyPage #dummy {
+    height: 5vh;
+  }
+}
 body #bodyPage #arrowBox {
-  display: flex;
-  align-items: start;
-  justify-content: end;
-  height: 20vh;
+  position: fixed;
+  right: 2rem;
+  bottom: 10rem;
+  width: 5vw;
+  opacity: 0;
 }
 @media (max-width: 425px) {
   body #bodyPage #arrowBox {
-    height: auto;
+    width: 12vw;
+    z-index: 1;
+    bottom: 5%;
   }
 }
-body #bodyPage #arrowBox .bi-arrow-up-circle-fill {
-  width: 5%;
+body #bodyPage #arrowBox svg {
+  fill: #ADADAD;
 }
-body #bodyPage #arrowBox .bi-arrow-up-circle-fill:hover {
+body #bodyPage #arrowBox svg:hover {
   cursor: pointer;
-}
-@media (max-width: 425px) {
-  body #bodyPage #arrowBox .bi-arrow-up-circle-fill {
-    width: 16% !important;
-  }
-}
-@media (max-width: 950px) {
-  body #bodyPage #arrowBox .bi-arrow-up-circle-fill {
-    width: 8%;
-  }
 }
 body #galleryHeading {
   display: flex;
@@ -893,6 +894,11 @@ body #arrowBoxGallery {
   right: 2rem;
   width: 5vw;
   opacity: 0;
+}
+@media (max-width: 425px) {
+  body #arrowBoxGallery {
+    width: 12vw;
+  }
 }
 body #arrowBoxGallery svg {
   fill: #ADADAD;

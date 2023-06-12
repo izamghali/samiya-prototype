@@ -16,6 +16,15 @@ let standardWhiteBg = "hsl(0, 0%, 90%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
 
+function arrowAppearAfterScroll() {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+      gsap.to("#arrowBox", {opacity: 1, duration: 0.4})
+  } else {
+      gsap.to("#arrowBox", {opacity: 0, duration: 0.4})
+  }
+}
+window.onscroll = function() {arrowAppearAfterScroll()};
+
 // service heading switch
 function serviceHeadingMobile() {
   if (window.matchMedia("(max-width: 425px)").matches) {

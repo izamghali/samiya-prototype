@@ -534,25 +534,33 @@ body {
             }
         }
 
+        #dummy {
+            height: 19vh;
+            @include large-mobile {
+                height: 5vh;
+            }
+        }
+
         // arrow box
         #arrowBox {
-            display: flex;
-            align-items: start;
-            justify-content: end;
-            height: 20vh;
+            // @extend #arrowBoxGallery;
+            position: fixed;
+            right: 2rem;
+            bottom: 10rem;
+            width: 5vw;
+            opacity: 0;
             @include large-mobile {
-                height: auto;
+                width: 12vw;
+                z-index: 1;
+                // position: sticky;
+                // top: 100%;
+                bottom: 5%;
+                // left: 100%;
             }
-            .bi-arrow-up-circle-fill {
-                width: 5%;
+            svg {
+                fill: $light-color;
                 &:hover {
                     cursor: pointer;
-                }
-                @include large-mobile {
-                    width: 16% !important;
-                }
-                @include large-tablet {
-                    width: 8%;
                 }
             }
         }
@@ -723,6 +731,9 @@ body {
         right: 2rem;
         width: 5vw;
         opacity: 0;
+        @include large-mobile {
+            width: 12vw;
+        }
         svg {
             fill: $light-color;
             &:hover {

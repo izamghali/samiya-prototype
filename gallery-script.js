@@ -18,6 +18,17 @@ function arrowAppearAfterScroll() {
 }
 window.onscroll = function() {arrowAppearAfterScroll()};
 
+const scrollTo = gsap.registerEffect({
+    name: "scrollTo",
+    effect: (targets, config) => {
+      return gsap.to(window, {
+        duration: config.duration,
+        ease: config.ease,
+        scrollTo: { y: config.y, offsetY: config.offsetY }
+      })
+    }, defaults: {ease: "elastic.out(1, 0.3)", duration: 0.1}
+});
+
 // handlebars JS
 function rangeArr(start, end) {
     let arr = [];
@@ -92,6 +103,9 @@ $(document).ready(function() {
         });
     }
     showHideGalleryImages();
+
+    // arrow up scroll to the top
+    $("#arrowBoxGallery svg").on("click", () => {gsap.effects.scrollTo(window, {y: "#galleryHeading", offsetY: 0, duration: 3, ease: "expo.out"});})
 });
 
 
