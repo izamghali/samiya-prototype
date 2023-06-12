@@ -25,6 +25,10 @@ var context = {
     blocks_company: rangeArr(1, 17),
     blocks_fashion: rangeArr(1, 21),
     blocks_product: rangeArr(1, 13),
+    blocks_food_1: rangeArr(1, 34),
+    blocks_food_2: rangeArr(35, 68),
+    blocks_food_3: rangeArr(69, 103),
+    blocks_food_4: rangeArr(104, 135),
 };
 var compiledHtml = template(context);
 var fill = document.getElementById('gridContainer');

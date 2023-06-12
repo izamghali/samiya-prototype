@@ -58,14 +58,36 @@
 
     <script id="gridContainerScript" type="text/x-handlebars-template">
 
+      {{#each blocks_food_1}}
+      <div class="grid-blocks grid-food-blocks">
+        <section class="grid-info">
+          <h3>{{ title }}</h3>
+          <p>photo description</p>
+          <span>food</span>
+        </section>
+          <img class="grid-images" src="./assets/gallery/food/food-{{this}}.webp" alt="">
+      </div>
+      {{/each}}
+
       {{#each blocks_arch}}
       <div class="grid-blocks grid-arch-blocks">
         <section class="grid-info">
           <h3>{{ title }}</h3>
           <p>photo description</p>
-          <span>fashion</span>
+          <span>architecture</span>
         </section>
           <img class="grid-images" src="./assets/gallery/architecture/architecture-{{this}}.webp" alt="">
+      </div>
+      {{/each}}
+
+      {{#each blocks_food_2}}
+      <div class="grid-blocks grid-food-blocks">
+        <section class="grid-info">
+          <h3>{{ title }}</h3>
+          <p>photo description</p>
+          <span>food</span>
+        </section>
+          <img class="grid-images" src="./assets/gallery/food/food-{{this}}.webp" alt="">
       </div>
       {{/each}}
 
@@ -74,9 +96,20 @@
         <section class="grid-info">
           <h3>{{ title }}</h3>
           <p>photo description</p>
-          <span>fashion</span>
+          <span>company</span>
         </section>
           <img class="grid-images" src="./assets/gallery/company/company-{{this}}.webp" alt="">
+      </div>
+      {{/each}}
+
+      {{#each blocks_food_3}}
+      <div class="grid-blocks grid-food-blocks">
+        <section class="grid-info">
+          <h3>{{ title }}</h3>
+          <p>photo description</p>
+          <span>food</span>
+        </section>
+          <img class="grid-images" src="./assets/gallery/food/food-{{this}}.webp" alt="">
       </div>
       {{/each}}
 
@@ -88,6 +121,17 @@
           <span>fashion</span>
         </section>
           <img class="grid-images" src="./assets/gallery/fashion/fashion-{{this}}.webp" alt="">
+      </div>
+      {{/each}}
+
+      {{#each blocks_food_4}}
+      <div class="grid-blocks grid-food-blocks">
+        <section class="grid-info">
+          <h3>{{ title }}</h3>
+          <p>photo description</p>
+          <span>food</span>
+        </section>
+          <img class="grid-images" src="./assets/gallery/food/food-{{this}}.webp" alt="">
       </div>
       {{/each}}
 
