@@ -709,6 +709,7 @@ body #bodyPage #arrowBox {
   body #bodyPage #arrowBox {
     width: 12vw;
     right: 0.3rem;
+    bottom: 1rem;
   }
 }
 body #bodyPage #arrowBox svg {
