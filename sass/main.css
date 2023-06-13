@@ -135,6 +135,9 @@ body footer #footerRight #footerReachUs #footerSocial .btn {
 body footer #footerRight #footerReachUs #footerSocial .btn .bi {
   fill: #1C1C1C;
 }
+body footer iframe {
+  border: 0.6px solid #212529;
+}
 body #galleryHeading {
   color: #ADADAD;
 }
@@ -426,15 +429,16 @@ body #landingPage #mainCarousel #companySloganMobile {
 }
 body #bodyPage #services {
   padding-inline: 10%;
-  margin-bottom: 2rem;
+  margin-block: 6rem 0rem;
 }
 @media (max-width: 425px) {
   body #bodyPage #services {
     padding-inline: 5%;
+    margin-block: 2rem 0rem;
   }
 }
 body #bodyPage #services #servicesHeading {
-  margin-block: 2rem;
+  margin-bottom: 2rem;
 }
 body #bodyPage #services .service-texts {
   padding: 0.7rem;
@@ -476,7 +480,13 @@ body #bodyPage #btsCol {
   flex-direction: row;
   height: auto;
   padding-inline: 23%;
+  margin-block: 7rem 3rem;
   justify-content: space-around;
+}
+@media (max-width: 425px) {
+  body #bodyPage #btsCol {
+    margin-block: 7rem 0rem;
+  }
 }
 @media (max-width: 1024px) {
   body #bodyPage #btsCol {
@@ -600,8 +610,13 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
 body #bodyPage #professionalHeadingCol {
   padding-inline: 10%;
 }
+@media (max-width: 425px) {
+  body #bodyPage #professionalHeadingCol {
+    text-align: center;
+  }
+}
 body #bodyPage #professionalCardsCol {
-  padding-inline: 10%;
+  padding: 1rem 10% 8rem;
   justify-content: space-between;
 }
 @media (max-width: 1024px) {
@@ -612,6 +627,11 @@ body #bodyPage #professionalCardsCol {
 @media (max-width: 950px) {
   body #bodyPage #professionalCardsCol {
     padding-inline: 5%;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #professionalCardsCol {
+    padding: 1rem 5% 4rem;
   }
 }
 body #bodyPage #professionalCardsCol .professional-cards {
@@ -645,7 +665,7 @@ body #bodyPage #professionalCardsCol .professional-cards {
   }
 }
 body #bodyPage #mainClients {
-  padding-inline: 10%;
+  padding: 0 10% 7rem;
 }
 @media screen and (max-width: 768px) {
   body #bodyPage #mainClients {
@@ -701,7 +721,7 @@ body #bodyPage #dummy {
 body #bodyPage #arrowBox {
   position: fixed;
   right: 2rem;
-  bottom: 15rem;
+  bottom: 10rem;
   width: 5vw;
   opacity: 0;
 }
@@ -915,7 +935,7 @@ footer {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding-inline: 10%;
+  padding: 8rem 10%;
 }
 @media (max-width: 425px) {
   footer {
@@ -928,6 +948,10 @@ footer {
   footer {
     padding: 5%;
   }
+}
+footer #footerLeft p {
+  font-style: italic;
+  letter-spacing: 0.1rem;
 }
 footer #footerRight {
   display: flex;

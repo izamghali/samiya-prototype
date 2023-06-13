@@ -287,13 +287,14 @@ body {
 
         #services {
             padding-inline: 10%;
-            margin-bottom: 2rem;
+            margin-block: 6rem 0rem;
             @include large-mobile {
                 padding-inline: 5%;
+                margin-block: 2rem 0rem;
             }
 
             #servicesHeading {
-                margin-block: 2rem;
+                margin-bottom: 2rem;
             }
 
             .service-texts {
@@ -332,7 +333,11 @@ body {
             flex-direction: row;
             height: auto;
             padding-inline: 23%;
-            justify-content: space-around;  
+            margin-block: 7rem 3rem;
+            justify-content: space-around; 
+            @include large-mobile {
+                margin-block: 7rem 0rem;
+            } 
             @include desktop {
                 justify-content: space-around;
                 padding-inline: 30%;
@@ -451,17 +456,23 @@ body {
         // professional heading
         #professionalHeadingCol {
             padding-inline: 10%;
+            @include large-mobile {
+                text-align: center;
+            }
         }
 
         // professional cards
         #professionalCardsCol {
-            padding-inline: 10%;
+            padding: 1rem 10% 8rem;
             justify-content: space-between;
             @include desktop {
                 justify-content: space-around;
             }
             @include large-tablet {
                 padding-inline: 5%;
+            }
+            @include large-mobile {
+                padding: 1rem 5% 4rem;
             }
 
             .professional-cards {
@@ -488,14 +499,13 @@ body {
         
         // clients
         #mainClients {
-            padding-inline: 10%;
+            padding: 0 10% 7rem;
             @media screen and (max-width: 768px) {
                 padding-inline: 5%;
             }
             @media screen and (max-width: 700px) {
                 padding-inline: 3%;
             }
-
             @media screen and (max-width: 660px) {
                 display: none;
             }
@@ -543,10 +553,9 @@ body {
 
         // arrow box
         #arrowBox {
-            // @extend #arrowBoxGallery;
             position: fixed;
             right: 2rem;
-            bottom: 15rem;
+            bottom: 10rem;
             width: 5vw;
             opacity: 0;
             @include large-mobile {
@@ -749,7 +758,7 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-inline: 10%;
+    padding: 8rem 10%;
     @include large-mobile {
         flex-direction: column;
         padding-inline: 5%;
@@ -758,6 +767,13 @@ footer {
     @include large-tablet {
         padding: 5%;
     }
+    #footerLeft {
+        p {
+            font-style: italic;
+            letter-spacing: 0.1rem;
+        }
+    }
+
     #footerRight {
         display: flex; 
         gap: 2.5rem;
