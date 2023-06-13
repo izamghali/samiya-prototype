@@ -266,6 +266,23 @@ body #landingPage #mainNavbar #aBrand {
     visibility: hidden;
   }
 }
+@media screen and (min-width: 992px) {
+  body #landingPage #mainNavbar #navContactBtn {
+    border: solid #fff;
+    padding: 0.2rem 1.5rem;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight: 600;
+    transition: 400ms;
+  }
+  body #landingPage #mainNavbar #navContactBtn:hover {
+    background-color: #fff;
+    cursor: pointer;
+  }
+  body #landingPage #mainNavbar #navContactBtn:hover a {
+    color: #212529;
+  }
+}
 body #landingPage #mainCarousel {
   z-index: 0;
 }
