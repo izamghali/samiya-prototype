@@ -22,6 +22,18 @@ body {
             top: 4%;
             right: 10%;
             padding-bottom: 0;
+
+            #navbarToggler {
+                border: solid $light-color;
+                .navbar-toggler-stripes {
+                    background-color: $light-color;
+                    width: 1rem;
+                    height: 0.1rem;
+                    margin-block: 4px;
+                    border-radius: 10px;
+                }
+            }
+
             @media screen and (max-width: 991px) and (min-width: 951px){
                 position: relative;
             }

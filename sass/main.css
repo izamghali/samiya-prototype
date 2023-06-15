@@ -43,9 +43,6 @@ body #aBrand {
 body #companyTitleBoxMobile {
   color: #ADADAD;
 }
-body #navbarToggler {
-  border: solid #ADADAD;
-}
 @media screen and (max-width: 991px) {
   body #navbarNavDropdown {
     border: solid #212529;
@@ -173,6 +170,16 @@ body #landingPage #mainNavbar {
   top: 4%;
   right: 10%;
   padding-bottom: 0;
+}
+body #landingPage #mainNavbar #navbarToggler {
+  border: solid #ADADAD;
+}
+body #landingPage #mainNavbar #navbarToggler .navbar-toggler-stripes {
+  background-color: #ADADAD;
+  width: 1rem;
+  height: 0.1rem;
+  margin-block: 4px;
+  border-radius: 10px;
 }
 @media screen and (max-width: 991px) and (min-width: 951px) {
   body #landingPage #mainNavbar {
