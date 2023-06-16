@@ -171,9 +171,6 @@ body #landingPage #mainNavbar {
   right: 10%;
   padding-bottom: 0;
 }
-body #landingPage #mainNavbar #navbarToggler {
-  border: solid #ADADAD;
-}
 body #landingPage #mainNavbar #navbarToggler .navbar-toggler-stripes {
   background-color: #ADADAD;
   width: 1rem;

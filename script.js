@@ -16,6 +16,22 @@ let standardWhiteBg = "hsl(0, 0%, 90%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
 
+let navbarToggler = document.getElementById('navbarToggler');
+let toggleClicked = true;
+
+navbarToggler.addEventListener('click', () => {
+  let clickedTl = gsap.timeline()
+  clickedTl.to('#stripe3', {opacity: 0})
+  // clickedTl.to('#stripe3', {display: 'none'})
+
+  // gsap.to("#navbarToggler", {width: "2rem", height: "2rem", padding: "5%"})
+
+  gsap.to('#stripe1', { position: "sticky" , rotate: 135, y: "5"})
+  gsap.to('#stripe2', { position: "sticky" , rotate: 45, y: "0"})
+
+  return toggleClicked = !toggleClicked;
+})
+
 function arrowAppearAfterScroll() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
       gsap.to("#arrowBox", {opacity: 1, duration: 0.4})
