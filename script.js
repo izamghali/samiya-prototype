@@ -2,7 +2,6 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.registerPlugin(ScrollToPlugin);
 gsap.registerPlugin(Flip);
 
-let toggleState = true;
 let standardBlackColor = "#212529";
 let standardWhiteColor = "#adadad";
 let standardGrayColor = "#c4c8cb";
@@ -16,21 +15,21 @@ let standardWhiteBg = "hsl(0, 0%, 90%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
 
-let navbarToggler = document.getElementById('navbarToggler');
-let toggleClicked = true;
+function navbarTogglerClicked() {
+  let togglerState = true;
+  let togglerButton = document.getElementById('navbarToggler');
+  const togglerAnimation = gsap.timeline({ paused: true });
+  togglerAnimation
+  .to('#stripe3', { opacity: 0 })
+  .to('#stripe1', { position: "sticky", rotate: 135, y: "5" }, "<")
+  .to('#stripe2', { position: "sticky", rotate: 45, y: "0" }, "<");
+  togglerButton.addEventListener("click", () => {
+    if (togglerState) {togglerAnimation.restart()} else {togglerAnimation.reverse()}
+    togglerState = !togglerState;
+  })
 
-navbarToggler.addEventListener('click', () => {
-  let clickedTl = gsap.timeline()
-  clickedTl.to('#stripe3', {opacity: 0})
-  // clickedTl.to('#stripe3', {display: 'none'})
-
-  // gsap.to("#navbarToggler", {width: "2rem", height: "2rem", padding: "5%"})
-
-  gsap.to('#stripe1', { position: "sticky" , rotate: 135, y: "5"})
-  gsap.to('#stripe2', { position: "sticky" , rotate: 45, y: "0"})
-
-  return toggleClicked = !toggleClicked;
-})
+}
+navbarTogglerClicked();
 
 function arrowAppearAfterScroll() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
@@ -63,6 +62,7 @@ serviceHeadingMobile();
 
 // light mode toggle clicked
 function lightModeClicked() {
+  let toggleState = true;
   const toggleAnimation = gsap.timeline({ paused: true });
   let colorChangeList = ["#aBrand", "#services, #services h1, #services h4", "#btsTextBoxCol h3, #btsTextBoxCol span", ".bts-heading-texts", "#professionalHeadingCol h2", ".client-col h2", ".client-col p", "#mainClientsTablet", "#companyTitleBoxMobile h1"]
   toggleAnimation
