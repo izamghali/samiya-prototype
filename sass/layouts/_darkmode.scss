@@ -10,7 +10,10 @@ body {
     }
 
     #navbarToggler {
-        // border: solid $light-color;
+        border: solid $light-color;
+        .navbar-toggler-stripes {
+            background-color: $light-color;
+        }
     }
 
     #navbarNavDropdown {
