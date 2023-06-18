@@ -42,7 +42,7 @@ window.onscroll = function() {arrowAppearAfterScroll()};
 
 // service heading switch
 function serviceHeadingMobile() {
-  if (window.matchMedia("(max-width: 425px)").matches) {
+  if (window.matchMedia("(max-width: 500px)").matches) {
     document.getElementById("serviceBlock5h1").innerHTML = "03";
     document.getElementById("serviceBlock5h4").innerHTML = "Fashion Photography";
     document.getElementById("serviceBlock7h1").innerHTML = "04";
@@ -65,6 +65,7 @@ function lightModeClicked() {
   let toggleState = true;
   const toggleAnimation = gsap.timeline({ paused: true });
   let colorChangeList = ["#aBrand", "#services, #services h1, #services h4", "#btsTextBoxCol h3, #btsTextBoxCol span", ".bts-heading-texts", "#professionalHeadingCol h2", ".client-col h2", ".client-col p", "#mainClientsTablet", "#companyTitleBoxMobile h1"]
+  let backgroundColorChangeList = [".navbar-toggler-stripes"]
   toggleAnimation
     .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
   lightModeBtn.addEventListener("click", () => {
@@ -73,6 +74,8 @@ function lightModeClicked() {
       gsap.to("body", {backgroundColor: standardWhiteBg})
       gsap.to(".layer", {border: "25px solid " + standardWhiteBg})
       gsap.to(colorChangeList, {color: standardBlackColor})
+      gsap.to(backgroundColorChangeList, {backgroundColor: standardBlackColor})
+      gsap.to("#navbarToggler", {border: "solid " + standardBlackColor})
       gsap.to("#lighModeBtn", {border: "solid " + standardBlackColor})
       gsap.to(".bts-card-text", {color: standardBlackColor, backgroundColor: standardWhiteBg})
       gsap.to(".white-layer", {backgroundColor: standardWhiteBg})
@@ -82,6 +85,7 @@ function lightModeClicked() {
       gsap.to("footer h4", {color: standardWhiteBg})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
       gsap.to("#footerSocial svg", {fill: standardWhiteBg})
+      gsap.to("#footerLeft p", {color: standardWhiteBg})
       gsap.to("#arrowBox svg", {fill: standardBlackBg})
       gsap.to("#whiteLogo", {opacity: 0, duration: 0.1})
       gsap.to("#whiteLogo", {display: "none"})
@@ -92,6 +96,8 @@ function lightModeClicked() {
       gsap.to("body", {backgroundColor: standardBlackBg})
       gsap.to(".layer", {border: "25px solid " + standardBlackBg})
       gsap.to(colorChangeList, {color: standardWhiteColor})
+      gsap.to(backgroundColorChangeList, {backgroundColor: standardWhiteColor})
+      gsap.to("#navbarToggler", {border: "solid " + standardWhiteColor})
       gsap.to(".bts-card-text", {color: standardWhiteColor, backgroundColor: standardBlackBg})
       gsap.to(".white-layer", {backgroundColor: standardBlackBg})
       gsap.to(".professional-cards", {color: standardWhiteColor, backgroundColor: standardBlackBg, border: "solid" + standardGrayColor})
@@ -100,6 +106,7 @@ function lightModeClicked() {
       gsap.to("footer h4", {color: standardBlackColor})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardBlackBg, backgroundColor: standardWhiteBg})
       gsap.to("#footerSocial svg", {fill: standardBlackBg})
+      gsap.to("#footerLeft p", {color: standardBlackBg})
       gsap.to("#arrowBox svg", {fill: standardWhiteBg})
       gsap.to("#blackLogo", {opacity: 0, duration: 0.1})
       gsap.to("#blackLogo", {display: "none"})
