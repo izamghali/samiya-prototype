@@ -458,7 +458,7 @@ body #bodyPage #services {
   padding-inline: 10%;
   margin-block: 6rem 0rem;
 }
-@media (max-width: 425px) {
+@media screen and (max-width: 500px) {
   body #bodyPage #services {
     padding-inline: 5%;
     margin-block: 2rem 0rem;
@@ -481,7 +481,7 @@ body #bodyPage #services #servicesRow1 {
   margin: 0;
   gap: 0;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
   body #bodyPage #services #servicesRow1 {
     -moz-column-count: 1;
          column-count: 1;
@@ -494,7 +494,7 @@ body #bodyPage #services #servicesRow2 {
   margin: 0;
   gap: 0;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
   body #bodyPage #services #servicesRow2 {
     -moz-column-count: 1;
          column-count: 1;
@@ -637,7 +637,7 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
 body #bodyPage #professionalHeadingCol {
   padding-inline: 10%;
 }
-@media (max-width: 425px) {
+@media screen and (max-height: 768px) {
   body #bodyPage #professionalHeadingCol {
     text-align: center;
   }

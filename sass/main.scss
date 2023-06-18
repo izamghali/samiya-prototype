@@ -318,7 +318,8 @@ body {
         #services {
             padding-inline: 10%;
             margin-block: 6rem 0rem;
-            @include large-mobile {
+
+            @media screen and (max-width: 500px) {
                 padding-inline: 5%;
                 margin-block: 2rem 0rem;
             }
@@ -338,7 +339,7 @@ body {
                 column-count: 5;
                 margin: 0;
                 gap: 0;
-                @media screen and (max-width: 425px) {
+                @media screen and (max-width: 500px) {
                     column-count: 1;
                 }
             }
@@ -348,7 +349,8 @@ body {
                 color: $light-color;
                 margin: 0;
                 gap: 0;
-                @media screen and (max-width: 425px) {
+
+                @media screen and (max-width: 500px) {
                     column-count: 1;
                 }
             }
@@ -486,7 +488,7 @@ body {
         // professional heading
         #professionalHeadingCol {
             padding-inline: 10%;
-            @include large-mobile {
+            @media screen and (max-height: 768px) {
                 text-align: center;
             }
         }
