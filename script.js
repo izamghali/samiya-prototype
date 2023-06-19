@@ -33,9 +33,9 @@ navbarTogglerClicked();
 
 function arrowAppearAfterScroll() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-      gsap.to("#arrowBox", {opacity: 1, duration: 0.4})
+      gsap.to("#arrowBox", {opacity: 1, duration: 0.4, display: 'block'})
   } else {
-      gsap.to("#arrowBox", {opacity: 0, duration: 0.4})
+      gsap.to("#arrowBox", {opacity: 0, duration: 0.4, display: 'none'})
   }
 }
 window.onscroll = function() {arrowAppearAfterScroll()};

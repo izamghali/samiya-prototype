@@ -590,6 +590,7 @@ body {
             bottom: 10rem;
             width: 5vw;
             opacity: 0;
+            display: none;
             @include large-mobile {
                 // position: sticky;
                 width: 12vw;

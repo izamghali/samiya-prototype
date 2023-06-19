@@ -751,6 +751,7 @@ body #bodyPage #arrowBox {
   bottom: 10rem;
   width: 5vw;
   opacity: 0;
+  display: none;
 }
 @media (max-width: 425px) {
   body #bodyPage #arrowBox {
