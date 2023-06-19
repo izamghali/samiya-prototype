@@ -591,8 +591,7 @@ body {
             width: 5vw;
             opacity: 0;
             display: none;
-            @include large-mobile {
-                // position: sticky;
+            @media screen and (max-width: 500px) {
                 width: 12vw;
                 right: 0.3rem;
                 bottom: 1rem;
