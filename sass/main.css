@@ -454,6 +454,34 @@ body #landingPage #mainCarousel #companySloganMobile {
     display: none;
   }
 }
+body #landingPage #contactUsPage {
+  border: solid #212529;
+  position: fixed;
+  z-index: 1;
+  top: 13%;
+  right: 0;
+  background-color: whitesmoke;
+  width: 25vw;
+  height: 50vh;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+body #landingPage #contactUsPage #contactUsSocial a {
+  border: solid #212529;
+}
+body #landingPage #contactUsPage #contactUsMap {
+  border: solid #212529;
+  border-radius: 10px;
+}
+body #landingPage #contactUsPage #contactUsMap iframe {
+  border-radius: 10px;
+}
 body #bodyPage #services {
   padding-inline: 10%;
   margin-block: 6rem 0rem;
@@ -748,7 +776,7 @@ body #bodyPage #dummy {
 body #bodyPage #arrowBox {
   position: fixed;
   right: 2rem;
-  bottom: 10rem;
+  bottom: 9rem;
   width: 5vw;
   opacity: 0;
   display: none;
