@@ -962,6 +962,7 @@ $(document).ready(function() {
     gsap.effects.navbarScrollTo(window, {y: "#btsCol", offsetY: 110});
   })
   
+  // clicked contact us mini page
   $('#navContactBtn').on('click', () => {
     gsap.to('#contactUsPage', { x:0 })
     gsap.to('#contactUsHiddenLayer', {display: 'block'})

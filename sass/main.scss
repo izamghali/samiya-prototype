@@ -3,6 +3,7 @@
 @import "./layouts/breakpoints";
 @import "./helpers/variables";
 @import "./layouts/darkmode";
+@import "./helpers/buttons";
 
 
 body {
@@ -28,7 +29,7 @@ body {
                     width: 1rem;
                     height: 0.1rem;
                     margin-block: 4px;
-                    border-radius: 10px;
+                    border-radius: $standard-border-radius-10px;
                 }
             }
 
@@ -56,9 +57,9 @@ body {
                     background-color: rgba(255,255,255,0.7);
                     padding-block: 2rem;
                     padding-left: 2rem;
-                    border-top-left-radius: $standard-border-radius;
-                    border-bottom-left-radius: $standard-border-radius;
-                    border-bottom-right-radius: $standard-border-radius;
+                    border-top-left-radius: $standard-border-radius-20px;
+                    border-bottom-left-radius: $standard-border-radius-20px;
+                    border-bottom-right-radius: $standard-border-radius-20px;
                 }
 
                 .dropdown-menu {
@@ -108,7 +109,7 @@ body {
                     #lightModeToggle {
                         width: 0.8rem;
                         height: 0.8rem;
-                        border-radius: 10px;
+                        border-radius: $standard-border-radius-10px;
                     }
 
                 }
@@ -199,7 +200,7 @@ body {
             }
 
             #companyTitle {
-                color: $standard-white-color;
+                color: whitesmoke;
                 position: absolute;
                 top: 60%;
                 padding-inline: 65px;
@@ -298,7 +299,7 @@ body {
             #companySloganMobile {
                 width: 100vw;
                 position: absolute;
-                color: $standard-white-color;
+                color: whitesmoke;
                 top: 5%;
                 z-index: 1;
                 padding-inline: 2rem;
@@ -333,16 +334,15 @@ body {
             transform: translateX(100%);
 
             #contactUsSocial {
-                a {
-                    border: solid $standard-black-color;
-                }
+                display: flex;
+                gap: 0.5rem;
             }
 
             #contactUsMap {
                 border: solid $standard-black-color;
-                border-radius: 10px;
+                border-radius: $standard-border-radius-10px;
                 iframe {
-                    border-radius: 10px;
+                    border-radius: $standard-border-radius-10px;
                     
                 }
             }
@@ -553,7 +553,7 @@ body {
             }
 
             .professional-cards {
-                border-radius: $standard-border-radius;
+                border-radius: $standard-border-radius-20px;
                 overflow-x: hidden;
                 max-width: 25%;
                 @include large-desktop {
@@ -774,7 +774,7 @@ body {
         @media screen and (max-width: 425px) {column-count: 1;}
         
         .grid-blocks {
-            border-radius: 10px;
+            border-radius: $standard-border-radius-10px;
             overflow: hidden;
             display: inline-block;
             margin: 0;
@@ -861,19 +861,11 @@ footer {
             #footerSocial {
                 display: flex;
                 gap: 0.6rem;
-                .btn {
-                    border-radius:  50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 4.5rem;
-                    height: 4.5rem;
-                }
             }
         }
         #footerMap {
             iframe {
-                border-radius: 10px;
+                border-radius: $standard-border-radius-10px;
                 width: 100%;
             }
         }

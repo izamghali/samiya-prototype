@@ -1,0 +1,14 @@
+.social-btn {
+    border-radius:  50%;
+    border: 0.99px solid $standard-black-color;
+    width: 3.8rem;
+    height: 3.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    svg {
+        fill: $standard-black-color;
+    }
+}
+
+

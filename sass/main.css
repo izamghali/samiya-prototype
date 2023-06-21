@@ -159,6 +159,19 @@ body #galleryCheckBox a {
   color: hsl(168, 100%, 76%);
 }
 
+.social-btn {
+  border-radius: 50%;
+  border: 0.99px solid #212529;
+  width: 3.8rem;
+  height: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-btn svg {
+  fill: #212529;
+}
+
 body {
   padding: 0px;
   margin: 0px;
@@ -347,7 +360,7 @@ body #landingPage #mainCarousel .layer {
   }
 }
 body #landingPage #mainCarousel #companyTitle {
-  color: hsl(60, 0%, 100%);
+  color: whitesmoke;
   position: absolute;
   top: 60%;
   padding-inline: 65px;
@@ -440,7 +453,7 @@ body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyTi
 body #landingPage #mainCarousel #companySloganMobile {
   width: 100vw;
   position: absolute;
-  color: hsl(60, 0%, 100%);
+  color: whitesmoke;
   top: 5%;
   z-index: 1;
   padding-inline: 2rem;
@@ -473,8 +486,9 @@ body #landingPage #contactUsPage {
   justify-content: space-around;
   transform: translateX(100%);
 }
-body #landingPage #contactUsPage #contactUsSocial a {
-  border: solid #212529;
+body #landingPage #contactUsPage #contactUsSocial {
+  display: flex;
+  gap: 0.5rem;
 }
 body #landingPage #contactUsPage #contactUsMap {
   border: solid #212529;
@@ -1030,14 +1044,6 @@ footer #footerRight {
 footer #footerRight #footerReachUs #footerSocial {
   display: flex;
   gap: 0.6rem;
-}
-footer #footerRight #footerReachUs #footerSocial .btn {
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 4.5rem;
-  height: 4.5rem;
 }
 footer #footerRight #footerMap iframe {
   border-radius: 10px;
