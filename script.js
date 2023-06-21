@@ -15,31 +15,6 @@ let standardWhiteBg = "hsl(0, 0%, 90%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
 
-
-function contactPageAppear() {
-  // let btnState = true;
-  // let navContactBtn = document.getElementById('navContactBtn');
-  // let exceptContactPage = document.not('#contactUsPage');
-  // let slideAnimation = gsap.timeline({ paused: true })
-  // slideAnimation.to('#contactUsPage', { x: 0, });
-  // let theBody = document.body;
-
-  // if (btnState) {
-  //   navContactBtn.addEventListener('click', () => {
-  //     slideAnimation.restart()
-  //   })
-  // } else {
-  //   theBody.addEventListener('click', () => {
-  //     slideAnimation.reverse()
-  //   })
-  //   btnState = !btnState;
-  // }    
-    
-  
-
-}
-contactPageAppear();
-
 function navbarTogglerClicked() {
   let togglerState = true;
   let togglerButton = document.getElementById('navbarToggler');
@@ -52,7 +27,6 @@ function navbarTogglerClicked() {
     if (togglerState) {togglerAnimation.restart()} else {togglerAnimation.reverse()}
     togglerState = !togglerState;
   })
-
 }
 navbarTogglerClicked();
 
@@ -552,7 +526,7 @@ const navbarScroll = gsap.registerEffect({
       ease: config.ease,
       scrollTo: { y: config.y, offsetY: config.offsetY }
     })
-  }, defaults: {ease: "elastic.out(1, 0.3)", duration: 0.1}
+  }, defaults: {ease: "elastic.out(1, 0.3)", duration: 0.1, scrollTo: {offsetY: 0}}
 });
 const verticalScroll = gsap.registerEffect({
   name: "verticalScrollFrom",
@@ -956,20 +930,24 @@ $(document).ready(function() {
 
   // clicked navbar list
   $("#navLinkOurServices").on("click", () => {
-    gsap.effects.navbarScrollTo(window, {y: "#ourServicesHeadingCol", offsetY: 10});
+    gsap.effects.navbarScrollTo(window, {y: "#servicesHeading", offsetY: 10});
   })
   $("#navLinkBts").on("click", () => {
     gsap.effects.navbarScrollTo(window, {y: "#btsCol", offsetY: 110});
   })
   
   // clicked contact us mini page
-  $('#navContactBtn').on('click', () => {
-    gsap.to('#contactUsPage', { x:0 })
-    gsap.to('#contactUsHiddenLayer', {display: 'block'})
-  })
-  $('#contactUsHiddenLayer').on('click', () => {
-    gsap.to('#contactUsPage', { x:"100%" })
-    gsap.to('#contactUsHiddenLayer', {display: 'none'})
-  })
-    
+  if (window.matchMedia("(min-width:992px)").matches) {
+    $('#navContactBtn').on('click', () => {
+      gsap.to('#contactUsPage', { x:0 })
+      gsap.to('#contactUsHiddenLayer', {display: 'block'})
+    })
+    $('#contactUsHiddenLayer').on('click', () => {
+      gsap.to('#contactUsPage', { x:"100%" })
+      gsap.to('#contactUsHiddenLayer', {display: 'none'})
+    })
+  } else {
+    $('#navContactBtn').on('click', () => {gsap.effects.navbarScrollTo(window, {y: "#footerSocial", offsetY: 0});})
+  }
+
 });
