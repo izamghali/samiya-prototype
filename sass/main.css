@@ -2,7 +2,7 @@ body #bodyPage #mainClients .client-rows .client-boxes {
   overflow: hidden;
 }
 
-body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3, body #landingPage #mainNavbar .navbar-collapse li #toggleOn, body #landingPage #mainNavbar .navbar-collapse li #moonMode {
+body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3, body #landingPage #mainNavbar #navbarList li #toggleOn, body #landingPage #mainNavbar #navbarList li #moonMode {
   display: none;
 }
 
@@ -14,7 +14,7 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
   border: none;
 }
 
-body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3:hover, body #landingPage #mainNavbar .navbar-collapse li .dark-light-toggle:hover {
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2:hover, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3:hover, body #landingPage #mainNavbar #navbarList li .dark-light-toggle:hover {
   cursor: pointer;
 }
 
@@ -34,131 +34,6 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1, body #bodyP
   border: solid blue;
 }
 
-body {
-  background-color: #1C1C1C;
-}
-body #aBrand {
-  color: #ADADAD;
-}
-body #companyTitleBoxMobile {
-  color: #ADADAD;
-}
-body #navbarToggler {
-  border: solid #ADADAD;
-}
-body #navbarToggler .navbar-toggler-stripes {
-  background-color: #ADADAD;
-}
-@media screen and (max-width: 991px) {
-  body #navbarNavDropdown {
-    border: solid #212529;
-  }
-}
-body .nav-link {
-  color: hsl(60, 0%, 100%);
-}
-@media screen and (max-width: 991px) {
-  body .nav-link {
-    color: #212529;
-  }
-}
-body #lightModeBtn {
-  border: solid hsl(60, 0%, 100%);
-}
-@media screen and (max-width: 991px) {
-  body #lightModeBtn {
-    border: solid #212529;
-  }
-}
-body #lightModeToggle {
-  background-color: hsl(60, 0%, 100%);
-}
-@media screen and (max-width: 991px) {
-  body #lightModeToggle {
-    background-color: #212529;
-  }
-}
-body .layer {
-  border: 25px solid #1C1C1C;
-}
-body #services {
-  color: #ADADAD;
-}
-body #services h1, body #services h4 {
-  color: #ADADAD;
-}
-body .white-layer {
-  background-color: #1C1C1C;
-}
-body #btsTextBoxCol hr {
-  color: #ADADAD;
-}
-body #btsTextBoxCol h3 {
-  color: #ADADAD;
-}
-body #btsTextBoxCol .bts-heading-texts {
-  color: #ADADAD;
-}
-body #btsTextBoxCol .bts-card-text {
-  background-color: #1C1C1C;
-  color: #ADADAD;
-}
-body #professionalHeadingCol {
-  color: #ADADAD;
-}
-body .professional-cards {
-  border: solid #ADADAD;
-  background-color: #1C1C1C;
-  color: #ADADAD;
-}
-body .professional-cards a {
-  color: hsl(168, 100%, 76%);
-}
-body #mainClients {
-  color: #ADADAD;
-}
-body #mainClients .client-rows .client-boxes {
-  background-color: hsl(0, 0%, 90%);
-  border: 0.95px solid #ADADAD;
-}
-body #mainClientsTablet {
-  color: #ADADAD;
-}
-body #arrowBox svg {
-  fill: #ADADAD;
-  transition: 300ms;
-}
-body footer {
-  color: #212529;
-  background-color: hsl(0, 0%, 90%);
-}
-body footer #footerRight #footerReachUs #footerSocial .btn {
-  border: 0.5px solid #1C1C1C;
-}
-body footer #footerRight #footerReachUs #footerSocial .btn .bi {
-  fill: #1C1C1C;
-}
-body footer iframe {
-  border: 0.6px solid #212529;
-}
-body #galleryHeading {
-  color: #ADADAD;
-}
-body #galleryHeading button {
-  background-color: #1C1C1C;
-  color: #ADADAD;
-  border: solid #ADADAD;
-  transition: 300ms;
-}
-body #galleryHeading button:hover {
-  border: solid #212529;
-  color: #212529;
-  background-color: hsl(60, 0%, 100%);
-}
-body #galleryCheckBox a {
-  color: hsl(168, 100%, 76%);
-}
-
 .social-btn {
   border-radius: 50%;
   border: 0.99px solid #212529;
@@ -176,6 +51,7 @@ body {
   padding: 0px;
   margin: 0px;
   overflow-x: hidden;
+  background-color: #1C1C1C;
 }
 body p, body h3, body span {
   font-family: sans-serif;
@@ -190,7 +66,11 @@ body #landingPage #mainNavbar {
   right: 10%;
   padding-bottom: 0;
 }
+body #landingPage #mainNavbar #navbarToggler {
+  border: solid #ADADAD;
+}
 body #landingPage #mainNavbar #navbarToggler .navbar-toggler-stripes {
+  background-color: #ADADAD;
   width: 1rem;
   height: 0.1rem;
   margin-block: 4px;
@@ -219,7 +99,12 @@ body #landingPage #mainNavbar #navbarToggler .navbar-toggler-stripes {
   }
 }
 @media screen and (max-width: 991px) {
-  body #landingPage #mainNavbar .navbar-collapse {
+  body #landingPage #mainNavbar #navbarList {
+    border: solid #212529;
+  }
+}
+@media screen and (max-width: 991px) {
+  body #landingPage #mainNavbar #navbarList {
     position: absolute;
     right: 0;
     top: 110%;
@@ -232,22 +117,30 @@ body #landingPage #mainNavbar #navbarToggler .navbar-toggler-stripes {
     border-bottom-right-radius: 20px;
   }
 }
-body #landingPage #mainNavbar .navbar-collapse .dropdown-menu li {
+body #landingPage #mainNavbar #navbarList .dropdown-menu li {
   margin: 0;
 }
-body #landingPage #mainNavbar .navbar-collapse .navbar-link:hover, body #landingPage #mainNavbar .navbar-collapse li .navbar-dark-light-toggle:hover {
+body #landingPage #mainNavbar #navbarList .navbar-link, body #landingPage #mainNavbar #navbarList li .navbar-dark-light-toggle {
+  color: hsl(60, 0%, 100%);
+}
+@media screen and (max-width: 991px) {
+  body #landingPage #mainNavbar #navbarList .navbar-link, body #landingPage #mainNavbar #navbarList li .navbar-dark-light-toggle {
+    color: #212529;
+  }
+}
+body #landingPage #mainNavbar #navbarList .navbar-link:hover, body #landingPage #mainNavbar #navbarList li .navbar-dark-light-toggle:hover {
   cursor: pointer;
 }
-body #landingPage #mainNavbar .navbar-collapse li {
+body #landingPage #mainNavbar #navbarList li {
   margin-right: 3em;
   display: block;
 }
 @media (max-width: 1440px) and (min-width: 1025px) {
-  body #landingPage #mainNavbar .navbar-collapse li {
+  body #landingPage #mainNavbar #navbarList li {
     margin-right: 2em;
   }
 }
-body #landingPage #mainNavbar .navbar-collapse #lightModeBtn {
+body #landingPage #mainNavbar #navbarList #lightModeBtn {
   padding-inline: 2px;
   width: 2.3rem;
   height: 1.2rem;
@@ -257,16 +150,29 @@ body #landingPage #mainNavbar .navbar-collapse #lightModeBtn {
   border-bottom-left-radius: 10px;
   display: flex;
   align-items: center;
+  border: solid hsl(60, 0%, 100%);
 }
-body #landingPage #mainNavbar .navbar-collapse #lightModeBtn:hover {
+@media screen and (max-width: 991px) {
+  body #landingPage #mainNavbar #navbarList #lightModeBtn {
+    border: solid #212529;
+  }
+}
+body #landingPage #mainNavbar #navbarList #lightModeBtn:hover {
   cursor: pointer;
 }
-body #landingPage #mainNavbar .navbar-collapse #lightModeBtn #lightModeToggle {
+body #landingPage #mainNavbar #navbarList #lightModeBtn #lightModeToggle {
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 10px;
+  background-color: hsl(60, 0%, 100%);
+}
+@media screen and (max-width: 991px) {
+  body #landingPage #mainNavbar #navbarList #lightModeBtn #lightModeToggle {
+    background-color: #212529;
+  }
 }
 body #landingPage #mainNavbar #aBrand {
+  color: #ADADAD;
   position: absolute;
   left: -55%;
   display: none;
@@ -347,6 +253,7 @@ body #landingPage #mainCarousel #carousel3 {
   }
 }
 body #landingPage #mainCarousel .layer {
+  border: 25px solid #1C1C1C;
   position: relative;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0% 22%, rgba(255, 255, 255, 0.1) 80% 100%);
   height: 100%;
@@ -446,6 +353,7 @@ body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyIm
   width: 100%;
 }
 body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyTitleBoxMobile h1 {
+  color: #ADADAD;
   font-size: 7vw;
   font-weight: 900;
   font-family: "Inter";
@@ -515,6 +423,10 @@ body #landingPage #contactUsHiddenLayer {
 body #bodyPage #services {
   padding-inline: 10%;
   margin-block: 6rem 0rem;
+  color: #ADADAD;
+}
+body #bodyPage #services h1, body #bodyPage #services h4 {
+  color: #ADADAD;
 }
 @media screen and (max-width: 500px) {
   body #bodyPage #services {
@@ -622,6 +534,7 @@ body #bodyPage #btsCol #btsFirstChild .white-layer {
   position: absolute;
   height: 100%;
   width: 100%;
+  background-color: #1C1C1C;
 }
 @media screen and (max-width: 768px) {
   body #bodyPage #btsCol #btsFirstChild .white-layer {
@@ -692,7 +605,21 @@ body #bodyPage #btsCol #btsSecondChild {
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
   width: 30vw;
 }
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol hr {
+  color: #ADADAD;
+}
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol h3 {
+  color: #ADADAD;
+}
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-heading-texts {
+  color: #ADADAD;
+}
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
+  background-color: #1C1C1C;
+  color: #ADADAD;
+}
 body #bodyPage #professionalHeadingCol {
+  color: #ADADAD;
   padding-inline: 10%;
 }
 @media screen and (max-height: 768px) {
@@ -723,6 +650,9 @@ body #bodyPage #professionalCardsCol .professional-cards {
   border-radius: 20px;
   overflow-x: hidden;
   max-width: 25%;
+  border: solid #ADADAD;
+  background-color: #1C1C1C;
+  color: #ADADAD;
 }
 @media (max-width: 1440px) and (min-width: 1025px) {
   body #bodyPage #professionalCardsCol .professional-cards {
@@ -749,8 +679,12 @@ body #bodyPage #professionalCardsCol .professional-cards {
     max-width: 80%;
   }
 }
+body #bodyPage #professionalCardsCol .professional-cards a {
+  color: hsl(168, 100%, 76%);
+}
 body #bodyPage #mainClients {
   padding: 0 10% 7rem;
+  color: #ADADAD;
 }
 @media screen and (max-width: 768px) {
   body #bodyPage #mainClients {
@@ -776,10 +710,15 @@ body #bodyPage #mainClients .client-rows .client-col {
   }
 }
 body #bodyPage #mainClients .client-rows .client-boxes {
+  background-color: hsl(0, 0%, 90%);
+  border: 0.95px solid #ADADAD;
   height: 0;
   width: 20%;
   padding-bottom: 20%;
   background-color: hsl(0, 0%, 90%);
+}
+body #bodyPage #mainClientsTablet {
+  color: #ADADAD;
 }
 body #bodyPage #mainClientsTablet .client-rows-tablet {
   padding-inline: 1%;
@@ -820,6 +759,7 @@ body #bodyPage #arrowBox {
 }
 body #bodyPage #arrowBox svg {
   fill: #ADADAD;
+  transition: 300ms;
 }
 body #bodyPage #arrowBox svg:hover {
   cursor: pointer;
@@ -830,6 +770,7 @@ body #galleryHeading {
   padding-inline: 10%;
   padding-block: 1rem;
   align-items: center;
+  color: #ADADAD;
 }
 @media screen and (max-width: 768px) {
   body #galleryHeading {
@@ -865,9 +806,16 @@ body #galleryHeading button {
   border-radius: 7px;
   height: 3rem;
   font-size: 16px;
+  background-color: #1C1C1C;
+  color: #ADADAD;
+  border: solid #ADADAD;
+  transition: 300ms;
 }
 body #galleryHeading button:hover {
   cursor: pointer;
+  border: solid #212529;
+  color: #212529;
+  background-color: hsl(60, 0%, 100%);
 }
 @media screen and (max-width: 425px) {
   body #galleryHeading #galleryContactButton {
@@ -892,6 +840,7 @@ body #galleryCheckBox {
   }
 }
 body #galleryCheckBox a {
+  color: hsl(168, 100%, 76%);
   font-family: sans-serif;
 }
 body #galleryCheckBox #galleryCheckBoxFilter {
@@ -1007,13 +956,15 @@ body #arrowBoxGallery {
   }
 }
 body #arrowBoxGallery svg {
-  fill: #ADADAD;
+  fill: hsl(60, 0%, 100%);
 }
 body #arrowBoxGallery svg:hover {
   cursor: pointer;
 }
 
 footer {
+  color: #212529;
+  background-color: hsl(0, 0%, 90%);
   width: 100vw;
   height: -moz-max-content;
   height: max-content;
@@ -1052,7 +1003,14 @@ footer #footerRight #footerReachUs #footerSocial {
   display: flex;
   gap: 0.6rem;
 }
+footer #footerRight #footerReachUs #footerSocial .btn {
+  border: 0.5px solid #1C1C1C;
+}
+footer #footerRight #footerReachUs #footerSocial .btn .bi {
+  fill: #1C1C1C;
+}
 footer #footerRight #footerMap iframe {
+  border: 0.6px solid #212529;
   border-radius: 10px;
   width: 100%;
 }/*# sourceMappingURL=main.css.map */

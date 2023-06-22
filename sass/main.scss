@@ -3,13 +3,14 @@
 @import "./layouts/breakpoints";
 @import "./helpers/variables";
 @import "./layouts/darkmode";
-@import "./helpers/buttons";
+@import "./helpers/components";
 
 
 body {
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
+    background-color: $darkmode-bg;
     p, h3, span { 
         font-family: sans-serif;
     }
@@ -25,7 +26,9 @@ body {
             padding-bottom: 0;
 
             #navbarToggler {
+                border: solid $light-color;
                 .navbar-toggler-stripes {
+                    background-color: $light-color;
                     width: 1rem;
                     height: 0.1rem;
                     margin-block: 4px;
@@ -47,8 +50,9 @@ body {
                 padding-top: 1.2rem;
                 margin-top: 1rem;
             }
-
-            .navbar-collapse {
+            
+            #navbarList {
+                @media screen and (max-width: 991px) {border: solid $standard-black-color;}
                 @media screen and (max-width: 991px) {
                     position: absolute;
                     right: 0;
@@ -69,6 +73,8 @@ body {
                 }
 
                 .navbar-link {
+                    color: $standard-white-color;
+                    @media screen and (max-width: 991px) {color: $standard-black-color;}
                     &:hover {
                         cursor: pointer;
                     }
@@ -102,6 +108,8 @@ body {
                     border-bottom-left-radius: 10px;
                     display: flex;
                     align-items: center;
+                    border: solid $standard-white-color;
+                    @media screen and (max-width: 991px) {border: solid $standard-black-color}
                     &:hover {
                         cursor: pointer;
                     }
@@ -110,16 +118,19 @@ body {
                         width: 0.8rem;
                         height: 0.8rem;
                         border-radius: $standard-border-radius-10px;
+                        background-color: $standard-white-color;
+                        @media screen and (max-width: 991px) {background-color: $standard-black-color;}
                     }
 
                 }
             }
 
             #aBrand {
+                color: $light-color;
                 position: absolute;
                 left: -55%;
                 display: none;
-                font-family: $default-font-family-1;
+                font-family: $standard-font-family-1;
                 @include large-tablet {
                     display: block;
                     position: static;
@@ -188,6 +199,7 @@ body {
                 }
             }
             .layer {
+                border: 25px solid $darkmode-bg;
                 position: relative;
                 background: linear-gradient(0deg, rgba(0,0,0,0.8) 0% 22%, rgba(255,255,255, 0.1) 80% 100%);
                 height: 100%;
@@ -229,7 +241,7 @@ body {
                         h1 {
                             font-size: 6.5vw;
                             font-weight: 700;
-                            font-family: $default-font-family-1;
+                            font-family: $standard-font-family-1;
                         }
                         h4 {
                             margin-left: 2%;
@@ -286,9 +298,10 @@ body {
 
                     #companyTitleBoxMobile {
                         h1 {
+                            color: $light-color;
                             font-size: 7vw;
                             font-weight: 900;
-                            font-family: $default-font-family-1;
+                            font-family: $standard-font-family-1;
                         }
                         
                     }
@@ -368,6 +381,9 @@ body {
         #services {
             padding-inline: 10%;
             margin-block: 6rem 0rem;
+            color: $light-color;
+
+            h1, h4 {color: $light-color;}
 
             @media screen and (max-width: 500px) {
                 padding-inline: 5%;
@@ -456,6 +472,7 @@ body {
                     position:absolute;
                     height: 100%;
                     width: 100%;
+                    background-color: $darkmode-bg;
                     @media screen and (max-width: 768px) {
                         display: none;
                     }
@@ -517,6 +534,20 @@ body {
                 
                 #btsTextBoxCol {
                     width: 30vw;
+
+                    hr {
+                        color: $light-color;
+                    }
+                    h3 {
+                        color: $light-color;
+                    }
+                    .bts-heading-texts {
+                        color: $light-color;
+                    }
+                    .bts-card-text {
+                        background-color: $darkmode-bg;
+                        color: $light-color;
+                    }
         
                     #btsCollapse1, #btsCollapse2, #btsCollapse3 {
                         @extend %cursor-pointer;
@@ -537,6 +568,7 @@ body {
 
         // professional heading
         #professionalHeadingCol {
+            color: $light-color;
             padding-inline: 10%;
             @media screen and (max-height: 768px) {
                 text-align: center;
@@ -561,6 +593,10 @@ body {
                 border-radius: $standard-border-radius-20px;
                 overflow-x: hidden;
                 max-width: 25%;
+                border: solid $light-color;
+                background-color: $darkmode-bg;
+                color: $light-color;
+
                 @include large-desktop {
                     max-width: 28%;
                 }
@@ -576,12 +612,18 @@ body {
                 @include large-mobile {
                     max-width: 80%;
                 }  
+
+                a {
+                    color: $hyperlink-color;
+                }
+
             }
         }
         
         // clients
         #mainClients {
             padding: 0 10% 7rem;
+            color: $light-color;
             @media screen and (max-width: 768px) {
                 padding-inline: 5%;
             }
@@ -602,6 +644,8 @@ body {
                 }
 
                 .client-boxes {
+                    background-color: $lightmode-bg;
+                    border: 0.95px solid $light-color;
                     @include always-square(0, 20%, 20%);
                     @extend %hidden-overflow;
                     background-color: $lightmode-bg;
@@ -612,6 +656,7 @@ body {
 
         #mainClientsTablet {
             @extend %display-none;
+            color: $light-color;
             .client-rows-tablet {
                 padding-inline: 1%;
             }
@@ -648,6 +693,7 @@ body {
             }
             svg {
                 fill: $light-color;
+                transition: 300ms;
                 &:hover {
                     cursor: pointer;
                 }
@@ -661,6 +707,7 @@ body {
         padding-inline: 10%;
         padding-block: 1rem;
         align-items: center;
+        color: $light-color;
         @media screen and (max-width: 768px) {
             padding-block: 0.8rem;
             padding-inline: 5%;
@@ -672,7 +719,7 @@ body {
         }
 
         h1 {
-            font-family: $default-font-family-1;
+            font-family: $standard-font-family-1;
         }
         div {
             width: 5vw;
@@ -692,9 +739,19 @@ body {
         button {
             border-radius: 7px;
             height: 3rem;
-            font-size: $default-font-size;
+            font-size: $standard-font-size;
+
+            background-color: $darkmode-bg;
+            color: $light-color;
+            border: solid $light-color;
+            transition: 300ms;
+
             &:hover {
                 cursor: pointer;
+
+                border: solid $standard-black-color;
+                color: $standard-black-color;
+                background-color: $standard-white-color;
             }
 
         }
@@ -725,6 +782,7 @@ body {
             padding-inline: 5%;
         }
         a {
+            color: $hyperlink-color;
             font-family: sans-serif;
         }
         
@@ -734,7 +792,7 @@ body {
             align-items: start;
             gap: 1.5rem;
             .gallery-select {
-                font-size: $default-font-size;
+                font-size: $standard-font-size;
                 border: solid $light-color;
                 border-radius: 5px;
                 height: 2rem;
@@ -824,7 +882,7 @@ body {
             width: 12vw;
         }
         svg {
-            fill: $light-color;
+            fill: $standard-white-color;
             &:hover {
                 cursor: pointer;
             }
@@ -834,6 +892,9 @@ body {
 }
 // footer
 footer {
+    color: $standard-black-color;
+    background-color: $lightmode-bg;
+
     width: 100vw;
     height: max-content; 
     margin: 0;
@@ -866,10 +927,17 @@ footer {
             #footerSocial {
                 display: flex;
                 gap: 0.6rem;
+                .btn {
+                    border: 0.5px solid $darkmode-bg;
+                    .bi {
+                        fill: $darkmode-bg;
+                    }
+                }
             }
         }
         #footerMap {
             iframe {
+                border: 0.6px solid $standard-black-color;
                 border-radius: $standard-border-radius-10px;
                 width: 100%;
             }
