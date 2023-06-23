@@ -939,12 +939,12 @@ $(document).ready(function() {
   // clicked contact us mini page
   if (window.matchMedia("(min-width:992px)").matches) {
     $('#navContactBtn').on('click', () => {
-      gsap.to('#contactUsPage', { x:0 })
-      gsap.to('#contactUsHiddenLayer', {display: 'block'})
+      gsap.to('.contact-us-page', { x:0 })
+      gsap.to('.contact-us-hidden-layer', {display: 'block'})
     })
-    $('#contactUsHiddenLayer').on('click', () => {
-      gsap.to('#contactUsPage', { x:"100%" })
-      gsap.to('#contactUsHiddenLayer', {display: 'none'})
+    $('.contact-us-hidden-layer').on('click', () => {
+      gsap.to('.contact-us-page', { x:"100%" })
+      gsap.to('.contact-us-hidden-layer', {display: 'none'})
     })
   } else {
     $('#navContactBtn').on('click', () => {gsap.effects.navbarScrollTo(window, {y: "#footerSocial", offsetY: 0});})

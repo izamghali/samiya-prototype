@@ -3,14 +3,13 @@
 @import "./helpers/variables";
 @import "./helpers/components";
 @import "./layouts/breakpoints";
-@import "./layouts/darkmode";
 
 
 body {
     padding: 0px;
     margin: 0px;
     overflow-x: hidden;
-    background-color: $darkmode-bg;
+    background-color: $standard-black-bg-color;
     p, h3, span { 
         font-family: sans-serif;
     }
@@ -26,9 +25,9 @@ body {
             padding-bottom: 0;
 
             #navbarToggler {
-                border: solid $light-color;
+                border: solid $standard-grey-color;
                 .navbar-toggler-stripes {
-                    background-color: $light-color;
+                    background-color: $standard-grey-color;
                     width: 1rem;
                     height: 0.1rem;
                     margin-block: 4px;
@@ -52,8 +51,8 @@ body {
             }
             
             #navbarList {
-                @media screen and (max-width: 991px) {border: solid $standard-black-color;}
                 @media screen and (max-width: 991px) {
+                    border: solid $standard-black-color;
                     position: absolute;
                     right: 0;
                     top: 110%;
@@ -126,7 +125,7 @@ body {
             }
 
             #aBrand {
-                color: $light-color;
+                color: $standard-grey-color;
                 position: absolute;
                 left: -55%;
                 display: none;
@@ -199,7 +198,7 @@ body {
                 }
             }
             .layer {
-                border: 25px solid $darkmode-bg;
+                border: 25px solid $standard-black-bg-color;
                 position: relative;
                 background: linear-gradient(0deg, rgba(0,0,0,0.8) 0% 22%, rgba(255,255,255, 0.1) 80% 100%);
                 height: 100%;
@@ -298,7 +297,7 @@ body {
 
                     #companyTitleBoxMobile {
                         h1 {
-                            color: $light-color;
+                            color: $standard-grey-color;
                             font-size: 7vw;
                             font-weight: 900;
                             font-family: $standard-font-family-1;
@@ -326,6 +325,12 @@ body {
             }
         }
 
+        .contact-us-page {
+            @include desktop {
+            width: 30vw;
+            height: 60vh;}
+        }
+
     }
 
     #bodyPage {
@@ -333,9 +338,9 @@ body {
         #services {
             padding-inline: 10%;
             margin-block: 6rem 0rem;
-            color: $light-color;
+            color: $standard-grey-color;
 
-            h1, h4 {color: $light-color;}
+            h1, h4 {color: $standard-grey-color;}
 
             @media screen and (max-width: 500px) {
                 padding-inline: 5%;
@@ -364,7 +369,7 @@ body {
             
             #servicesRow2 {
                 column-count: 5;
-                color: $light-color;
+                color: $standard-grey-color;
                 margin: 0;
                 gap: 0;
 
@@ -424,7 +429,7 @@ body {
                     position:absolute;
                     height: 100%;
                     width: 100%;
-                    background-color: $darkmode-bg;
+                    background-color: $standard-black-bg-color;
                     @media screen and (max-width: 768px) {
                         display: none;
                     }
@@ -488,17 +493,17 @@ body {
                     width: 30vw;
 
                     hr {
-                        color: $light-color;
+                        color: $standard-grey-color;
                     }
                     h3 {
-                        color: $light-color;
+                        color: $standard-grey-color;
                     }
                     .bts-heading-texts {
-                        color: $light-color;
+                        color: $standard-grey-color;
                     }
                     .bts-card-text {
-                        background-color: $darkmode-bg;
-                        color: $light-color;
+                        background-color: $standard-black-bg-color;
+                        color: $standard-grey-color;
                     }
         
                     #btsCollapse1, #btsCollapse2, #btsCollapse3 {
@@ -520,7 +525,7 @@ body {
 
         // professional heading
         #professionalHeadingCol {
-            color: $light-color;
+            color: $standard-grey-color;
             padding-inline: 10%;
             @media screen and (max-height: 768px) {
                 text-align: center;
@@ -545,9 +550,9 @@ body {
                 border-radius: $standard-border-radius-20px;
                 overflow-x: hidden;
                 max-width: 25%;
-                border: solid $light-color;
-                background-color: $darkmode-bg;
-                color: $light-color;
+                border: solid $standard-grey-color;
+                background-color: $standard-black-bg-color;
+                color: $standard-grey-color;
 
                 @include large-desktop {
                     max-width: 28%;
@@ -566,7 +571,7 @@ body {
                 }  
 
                 a {
-                    color: $hyperlink-color;
+                    color: $standard-hyperlink-color;
                 }
 
             }
@@ -575,7 +580,7 @@ body {
         // clients
         #mainClients {
             padding: 0 10% 7rem;
-            color: $light-color;
+            color: $standard-grey-color;
             @media screen and (max-width: 768px) {
                 padding-inline: 5%;
             }
@@ -596,11 +601,11 @@ body {
                 }
 
                 .client-boxes {
-                    background-color: $lightmode-bg;
-                    border: 0.95px solid $light-color;
+                    background-color: $standard-white-bg-color;
+                    border: 0.95px solid $standard-grey-color;
                     @include always-square(0, 20%, 20%);
                     @extend %hidden-overflow;
-                    background-color: $lightmode-bg;
+                    background-color: $standard-white-bg-color;
                 }
             }
             
@@ -608,7 +613,7 @@ body {
 
         #mainClientsTablet {
             @extend %display-none;
-            color: $light-color;
+            color: $standard-grey-color;
             .client-rows-tablet {
                 padding-inline: 1%;
             }
@@ -644,7 +649,7 @@ body {
                 bottom: 1rem;
             }
             svg {
-                fill: $light-color;
+                fill: $standard-grey-color;
                 transition: 300ms;
                 &:hover {
                     cursor: pointer;
@@ -659,7 +664,7 @@ body {
         padding-inline: 10%;
         padding-block: 1rem;
         align-items: center;
-        color: $light-color;
+        color: $standard-grey-color;
         @media screen and (max-width: 768px) {
             padding-block: 0.8rem;
             padding-inline: 5%;
@@ -693,9 +698,9 @@ body {
             height: 3rem;
             font-size: $standard-font-size;
 
-            background-color: $darkmode-bg;
-            color: $light-color;
-            border: solid $light-color;
+            background-color: $standard-black-bg-color;
+            color: $standard-grey-color;
+            border: solid $standard-grey-color;
             transition: 300ms;
 
             &:hover {
@@ -734,7 +739,7 @@ body {
             padding-inline: 5%;
         }
         a {
-            color: $hyperlink-color;
+            color: $standard-hyperlink-color;
             font-family: sans-serif;
         }
         
@@ -745,16 +750,16 @@ body {
             gap: 1.5rem;
             .gallery-select {
                 font-size: $standard-font-size;
-                border: solid $light-color;
+                border: solid $standard-grey-color;
                 border-radius: 5px;
                 height: 2rem;
-                background-color: $darkmode-bg;
-                color: $light-color;
+                background-color: $standard-black-bg-color;
+                color: $standard-grey-color;
                 transition: 300ms;
                 &:hover {
                     cursor: pointer;
-                    background-color: $lightmode-bg;
-                    border: solid $lightmode-bg;
+                    background-color: $standard-white-bg-color;
+                    border: solid $standard-white-bg-color;
                     color: $standard-black-color;
                 }
             }
@@ -820,7 +825,7 @@ body {
             }
         }
 
-        .grid-product-blocks { border: solid $light-color; }
+        .grid-product-blocks { border: solid $standard-grey-color; }
 
     }
 
@@ -845,7 +850,7 @@ body {
 // footer
 footer {
     color: $standard-black-color;
-    background-color: $lightmode-bg;
+    background-color: $standard-white-bg-color;
 
     width: 100vw;
     height: max-content; 
@@ -880,9 +885,9 @@ footer {
                 display: flex;
                 gap: 0.6rem;
                 .btn {
-                    border: 0.5px solid $darkmode-bg;
+                    border: 0.5px solid $standard-black-bg-color;
                     .bi {
-                        fill: $darkmode-bg;
+                        fill: $standard-black-bg-color;
                     }
                 }
             }

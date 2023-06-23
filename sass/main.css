@@ -47,6 +47,47 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1, body #bodyP
   fill: #212529;
 }
 
+.contact-us-page {
+  border: solid #212529;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 13%;
+  right: 0;
+  z-index: 2;
+  width: 25vw;
+  height: 50vh;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transform: translateX(100%);
+}
+.contact-us-page .contact-us-social {
+  display: flex;
+  gap: 0.5rem;
+}
+.contact-us-page .contact-us-map {
+  border: solid #212529;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.contact-us-page .contact-us-map iframe {
+  border-radius: 10px;
+}
+
+.contact-us-hidden-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100vh;
+  display: none;
+}
+
 body {
   padding: 0px;
   margin: 0px;
@@ -101,10 +142,6 @@ body #landingPage #mainNavbar #navbarToggler .navbar-toggler-stripes {
 @media screen and (max-width: 991px) {
   body #landingPage #mainNavbar #navbarList {
     border: solid #212529;
-  }
-}
-@media screen and (max-width: 991px) {
-  body #landingPage #mainNavbar #navbarList {
     position: absolute;
     right: 0;
     top: 110%;
@@ -375,50 +412,11 @@ body #landingPage #mainCarousel #companySloganMobile {
     display: none;
   }
 }
-body #landingPage #contactUsPage {
-  border: solid #212529;
-  background-color: whitesmoke;
-  position: fixed;
-  top: 13%;
-  right: 0;
-  z-index: 2;
-  width: 25vw;
-  height: 50vh;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  padding-top: 1rem;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  transform: translateX(100%);
-}
 @media (max-width: 1024px) {
-  body #landingPage #contactUsPage {
+  body #landingPage .contact-us-page {
     width: 30vw;
     height: 60vh;
   }
-}
-body #landingPage #contactUsPage #contactUsSocial {
-  display: flex;
-  gap: 0.5rem;
-}
-body #landingPage #contactUsPage #contactUsMap {
-  border: solid #212529;
-  border-radius: 10px;
-  overflow: hidden;
-}
-body #landingPage #contactUsPage #contactUsMap iframe {
-  border-radius: 10px;
-}
-body #landingPage #contactUsHiddenLayer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  height: 100vh;
-  display: none;
 }
 body #bodyPage #services {
   padding-inline: 10%;
