@@ -107,6 +107,20 @@ $(document).ready(function() {
 
     // arrow up scroll to the top
     $("#arrowBoxGallery svg").on("click", () => {gsap.effects.scrollTo(window, {y: "#galleryHeading", offsetY: 0, duration: 3, ease: "expo.out"});})
+
+      // clicked contact us mini page
+    if (window.matchMedia("(min-width:992px)").matches) {
+        $('#galleryContactButton').on('click', () => {
+            gsap.to('.contact-us-page', { x:0 })
+            gsap.to('.contact-us-hidden-layer', {display: 'block'})
+        })
+        $('.contact-us-hidden-layer').on('click', () => {
+            gsap.to('.contact-us-page', { x:"100%" })
+            gsap.to('.contact-us-hidden-layer', {display: 'none'})
+        })
+    } else {
+        $('#galleryContactButton').on('click', () => {gsap.effects.navbarScrollTo(window, {y: "#footerSocial", offsetY: 0});})
+    }
 });
 
 
