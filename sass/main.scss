@@ -10,9 +10,7 @@ body {
     margin: 0px;
     overflow-x: hidden;
     background-color: $standard-black-bg-color;
-    p, h3, span { 
-        font-family: sans-serif;
-    }
+    p, h3, span { font-family: sans-serif;}
 
     #landingPage {
         padding-inline: 0px !important;
@@ -24,6 +22,18 @@ body {
             right: 10%;
             padding-bottom: 0;
 
+            @media screen and (max-width: 991px) and (min-width: 951px){
+                position: relative;
+            }
+            @include desktop { top: 4%; right: 0%; }
+
+            @include large-tablet { position: relative; }
+
+            @include large-mobile {
+                padding-top: 1.2rem;
+                margin-top: 1rem;
+            }
+
             #navbarToggler {
                 border: solid $standard-grey-color;
                 .navbar-toggler-stripes {
@@ -33,21 +43,6 @@ body {
                     margin-block: 4px;
                     border-radius: $standard-border-radius-10px;
                 }
-            }
-
-            @media screen and (max-width: 991px) and (min-width: 951px){
-                position: relative;
-            }
-            @include desktop {
-                top: 4%;
-                right: 0%;
-            }
-            @include large-tablet {
-                position: relative;
-            }
-            @include large-mobile {
-                padding-top: 1.2rem;
-                margin-top: 1rem;
             }
             
             #navbarList {
@@ -266,13 +261,8 @@ body {
                 width: 100vw;
                 height: 9%;
                 z-index: 1;
-                // border: solid red;
-                @media screen and (min-width: 426px) {
-                    display: none;
-                }
-                @media screen and (max-width: 425px) and (min-width: 376px) {
-                    padding-top: 15%;
-                }
+                @media screen and (min-width: 426px) { display: none; }
+                @media screen and (max-width: 425px) and (min-width: 376px) { padding-top: 15%; }
 
                 #companyRowMobile {
                     display: flex;
@@ -319,17 +309,11 @@ body {
                 font-style: italic;
                 font-weight: 100;
                 font-size: 2rem;
-                @media screen and (min-width: 426px) {
-                    display: none;
-                }
+                @media screen and (min-width: 426px) { display: none; }
             }
         }
 
-        .contact-us-page {
-            @include desktop {
-            width: 30vw;
-            height: 60vh;}
-        }
+        .contact-us-page { @include desktop { width: 30vw; height: 60vh; } }
 
     }
 
