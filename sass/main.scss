@@ -14,7 +14,7 @@ body {
 
     #landingPage {
         padding-inline: 0px !important;
-        // navbar
+        
         #mainNavbar {
             z-index: 1;
             position: absolute;
@@ -22,17 +22,9 @@ body {
             right: 10%;
             padding-bottom: 0;
 
-            @media screen and (max-width: 991px) and (min-width: 951px){
-                position: relative;
-            }
             @include desktop { top: 4%; right: 0%; }
-
-            @include large-tablet { position: relative; }
-
-            @include large-mobile {
-                padding-top: 1.2rem;
-                margin-top: 1rem;
-            }
+            @media screen and (max-width: 991px) { position: relative; }
+            @include large-mobile { padding-top: 1.2rem; margin-top: 1rem; }
 
             #navbarToggler {
                 border: solid $standard-grey-color;
@@ -47,75 +39,54 @@ body {
             
             #navbarList {
                 @media screen and (max-width: 991px) {
-                    border: solid $standard-black-color;
                     position: absolute;
                     right: 0;
                     top: 110%;
                     z-index: -1;
                     background-color: rgba(255,255,255,0.7);
-                    padding-block: 2rem;
-                    padding-left: 2rem;
-                    border-top-left-radius: $standard-border-radius-20px;
-                    border-bottom-left-radius: $standard-border-radius-20px;
-                    border-bottom-right-radius: $standard-border-radius-20px;
-                }
-
-                .dropdown-menu {
-                    li {
-                        margin: 0;
+                    padding : { block: 2rem; left: 2rem; }
+                    border: solid $standard-black-color {
+                        top-left-radius: $standard-border-radius-20px;
+                        bottom-left-radius: $standard-border-radius-20px;
+                        bottom-right-radius: $standard-border-radius-20px;
                     }
                 }
+
+                .dropdown-menu { li { margin: 0; } }
+                
+                li {
+                    margin-right: 3em;
+                    display: block;
+                    @include large-desktop { margin-right: 2em; } 
+                }       
 
                 .navbar-link {
                     color: $standard-white-color;
                     @media screen and (max-width: 991px) {color: $standard-black-color;}
-                    &:hover {
-                        cursor: pointer;
-                    }
+                    &:hover { cursor: pointer; }
                 }
                 
-                li {
-                margin-right: 3em;
-                display: block;
-                
-                .navbar-dark-light-toggle {
-                    @extend .navbar-link;
-                }
-                @include large-desktop {
-                    margin-right: 2em;
-                }
-                .dark-light-toggle {
-                    @extend %cursor-pointer;
-                }
-                #toggleOn, #moonMode {
-                    @extend %display-none;
-                }
-                }
-
                 #lightModeBtn {
                     padding-inline: 2px;
                     width: 2.3rem;
                     height: 1.2rem;
-                    border-bottom-right-radius: 10px;
-                    border-top-right-radius: 10px;
-                    border-top-left-radius: 10px;
-                    border-bottom-left-radius: 10px;
+                    border: solid $standard-white-color {
+                        bottom-right-radius: 10px;
+                        bottom-left-radius: 10px;
+                        top-right-radius: 10px;
+                        top-left-radius: 10px;}
                     display: flex;
                     align-items: center;
-                    border: solid $standard-white-color;
+                    &:hover { cursor: pointer; }
                     @media screen and (max-width: 991px) {border: solid $standard-black-color}
-                    &:hover {
-                        cursor: pointer;
-                    }
 
                     #lightModeToggle {
                         width: 0.8rem;
                         height: 0.8rem;
                         border-radius: $standard-border-radius-10px;
                         background-color: $standard-white-color;
-                        @media screen and (max-width: 991px) {background-color: $standard-black-color;}
+                        @media screen and (max-width: 991px) {background-color: $standard-black-color;} 
                     }
-
                 }
             }
 
@@ -125,25 +96,15 @@ body {
                 left: -55%;
                 display: none;
                 font-family: $standard-font-family-1;
-                @include large-tablet {
-                    display: block;
-                    position: static;
-                }
 
-                @media screen and (max-width: 991px) {
-                    display: block;
-                    position: static;
-                }
-
-                @include large-mobile {
-                    visibility: hidden;
-                }
+                @media screen and (max-width: 991px) { display: block; position: static; }
+                @include large-mobile { visibility: hidden; }
             }
             
             #navContactBtn {
                 @media screen and (min-width:992px) {
-                    border: solid #fff;
                     padding: 0.2rem 1.5rem;
+                    border: solid #fff;
                     border-radius: 8px;
                     background-color: rgba(0,0,0,0);
                     font-weight: 600;
@@ -151,69 +112,52 @@ body {
                     &:hover {
                         background-color: #fff;
                         cursor: pointer; 
-                        a {
-                            color: $standard-black-color;
-                        }
+                        a { color: $standard-black-color; }
                     }
                 }
             }
 
         }
 
-        // carousel
         #mainCarousel {
             z-index: 0;
             .carousel-img {
                 width: 100vw;
                 height: 100vh;
-                background-size: cover;
-                background-repeat: no-repeat;
+                background: { size: cover; repeat: no-repeat; position: 50% 50%; }
                 border-radius: 40px;
-                background-position: 50% 50%;
-                @include desktop {
-                    height: 80vh;
-                }
-                @include large-mobile {
-                    height: 90vh;
-                }
+                @include desktop { height: 80vh; }
+                @include large-mobile { height: 90vh; }
             }
             #carousel1 {
                 background-image: url(../assets/gallery/food/food-84.webp);
             }
             #carousel2 {
                 background-image: url(../assets/gallery/company/company-1.webp);
-                @include large-mobile {
-                    background-position: 61% 50%;
-                }
+                @include large-mobile { background-position: 61% 50%; }
             }
             #carousel3 {
                 background-image: url(../assets/gallery/architecture/architecture-4.webp);
-                @include large-mobile {
-                    background-position: 43% 50%;
-                }
+                @include large-mobile { background-position: 43% 50% }
             }
             .layer {
                 border: 25px solid $standard-black-bg-color;
+                border-radius: 35px;
                 position: relative;
                 background: linear-gradient(0deg, rgba(0,0,0,0.8) 0% 22%, rgba(255,255,255, 0.1) 80% 100%);
                 height: 100%;
                 width: 100%;
-                border-radius: 35px;
                 opacity: 1;
-                @include large-mobile {
-                    background: linear-gradient(0deg, rgba(255,255,255, 0.1) 0% 60%, rgba(0,0,0,0.8) 100% 0%);
-                }
+                @include large-mobile { background: linear-gradient(0deg, rgba(255,255,255, 0.1) 0% 60%, rgba(0,0,0,0.8) 100% 0%); }
             }
 
             #companyTitle {
-                color: whitesmoke;
+                color: $standard-white-bg-color;
                 position: absolute;
                 top: 60%;
-                padding-inline: 65px;
                 z-index: 1;
-                @include large-mobile {
-                    display: none;
-                }
+                padding-inline: 65px;
+                @include large-mobile { display: none; }
 
                 #companyRow {
                     display: flex;
@@ -223,29 +167,17 @@ body {
                     
                     #companyImgBox {
                         max-width: 10vw;
-                        @include tablet {
-                            max-width: 15vw;
-                        }
-                        img {
-                            width: 100%;
-                        }
+                        @include tablet { max-width: 15vw; }
+                        img { width: 100%; }
                     }
 
                     #companyTitleBox {
-                        h1 {
-                            font-size: 6.5vw;
-                            font-weight: 700;
-                            font-family: $standard-font-family-1;
-                        }
+                        h1 { font : { size: 6.5vw; weight: 700; family: $standard-font-family-1; } }
                         h4 {
                             margin-left: 2%;
-                            font-style: italic;
                             letter-spacing: 0.8rem;
-                            font-weight: 100;
-                            font-size: 2rem;
-                            @media screen and (max-width: 560px) {
-                                letter-spacing: 0.4rem;
-                            }
+                            font: { style: italic; weight: 100; size: 2rem; }
+                            @media screen and (max-width: 560px) { letter-spacing: 0.4rem; }
                         }
                     }
                 }
@@ -271,26 +203,19 @@ body {
                     gap: 0.6rem;
                     #companyImgBoxMobile {
                         width: 10vw;
-                        #blackLogo {
-                            display: none;
-                            transition: 400ms;
-                        }
-                        
-                        #whiteLogo {
-                            transition: 400ms;
-                        }
-
-                        img {
-                            width: 100%;
-                        }
+                        #blackLogo { display: none; transition: 400ms; }
+                        #whiteLogo { transition: 400ms; }
+                        img { width: 100%; }
                     }
 
                     #companyTitleBoxMobile {
                         h1 {
                             color: $standard-grey-color;
-                            font-size: 7vw;
-                            font-weight: 900;
-                            font-family: $standard-font-family-1;
+                            font : {
+                                size: 7vw;
+                                weight: 900;
+                                family: $standard-font-family-1;
+                            }
                         }
                         
                     }
@@ -299,22 +224,19 @@ body {
             }
 
             #companySloganMobile {
-                width: 100vw;
                 position: absolute;
-                color: whitesmoke;
                 top: 5%;
                 z-index: 1;
+                width: 100vw;
+                color: $standard-white-bg-color;
                 padding-inline: 2rem;
                 letter-spacing: 0.1rem;
-                font-style: italic;
-                font-weight: 100;
-                font-size: 2rem;
+                font : { style: italic; weight: 100; size: 2rem; }
                 @media screen and (min-width: 426px) { display: none; }
             }
         }
 
         .contact-us-page { @include desktop { width: 30vw; height: 60vh; } }
-
     }
 
     #bodyPage {
@@ -331,24 +253,18 @@ body {
                 margin-block: 2rem 0rem;
             }
 
-            #servicesHeading {
-                margin-bottom: 2rem;
-            }
+            #servicesHeading { margin-bottom: 2rem; }
 
             .service-texts {
                 padding: 0.7rem;
-                @include large-mobile {
-                    padding-left: 0;
-                }
+                @include large-mobile { padding-left: 0; }
             }
 
             #servicesRow1 {
                 column-count: 5;
                 margin: 0;
                 gap: 0;
-                @media screen and (max-width: 500px) {
-                    column-count: 1;
-                }
+                @media screen and (max-width: 500px) { column-count: 1; }
             }
             
             #servicesRow2 {
@@ -357,26 +273,19 @@ body {
                 margin: 0;
                 gap: 0;
 
-                @media screen and (max-width: 500px) {
-                    column-count: 1;
-                }
-            }
-            img {
-                width: 100%;
+                @media screen and (max-width: 500px) { column-count: 1; }
             }
 
+            img { width: 100%; }
         }
         
-        // bts
         #btsCol {
             flex-direction: row;
             height: auto;
             padding-inline: 23%;
             margin-block: 7rem 3rem;
             justify-content: space-around; 
-            @include large-mobile {
-                margin-block: 7rem 0rem;
-            } 
+            @include large-mobile { margin-block: 7rem 0rem; } 
             @include desktop {
                 justify-content: space-around;
                 padding-inline: 30%;
