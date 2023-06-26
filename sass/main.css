@@ -6,10 +6,6 @@ body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTe
   display: none;
 }
 
-.visibility-hidden {
-  visibility: hidden;
-}
-
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
   border: none;
 }
@@ -20,18 +16,6 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1:hover, body 
 
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse1, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapse3 {
   text-decoration: none;
-}
-
-.debug-border-one {
-  border: solid red;
-}
-
-.debug-border-two {
-  border: solid green;
-}
-
-.debug-border-three {
-  border: solid blue;
 }
 
 .social-btn {
@@ -291,7 +275,7 @@ body #landingPage #mainCarousel #carousel3 {
     background-position: 43% 50%;
   }
 }
-body #landingPage #mainCarousel .layer {
+body #landingPage #mainCarousel .carousel-layer {
   border: 25px solid #1C1C1C;
   border-radius: 35px;
   position: relative;
@@ -301,7 +285,7 @@ body #landingPage #mainCarousel .layer {
   opacity: 1;
 }
 @media (max-width: 425px) {
-  body #landingPage #mainCarousel .layer {
+  body #landingPage #mainCarousel .carousel-layer {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0% 60%, rgba(0, 0, 0, 0.8) 100% 0%);
   }
 }
@@ -425,14 +409,14 @@ body #bodyPage #services {
   margin-block: 6rem 0rem;
   color: #ADADAD;
 }
-body #bodyPage #services h1, body #bodyPage #services h4 {
-  color: #ADADAD;
-}
 @media screen and (max-width: 500px) {
   body #bodyPage #services {
     padding-inline: 5%;
     margin-block: 2rem 0rem;
   }
+}
+body #bodyPage #services h1, body #bodyPage #services h4 {
+  color: #ADADAD;
 }
 body #bodyPage #services #servicesHeading {
   margin-bottom: 2rem;
@@ -480,11 +464,6 @@ body #bodyPage #btsCol {
   margin-block: 7rem 3rem;
   justify-content: space-around;
 }
-@media (max-width: 425px) {
-  body #bodyPage #btsCol {
-    margin-block: 7rem 0rem;
-  }
-}
 @media (max-width: 1024px) {
   body #bodyPage #btsCol {
     justify-content: space-around;
@@ -500,6 +479,11 @@ body #bodyPage #btsCol {
   body #bodyPage #btsCol {
     flex-direction: column;
     padding-inline: 3%;
+  }
+}
+@media (max-width: 425px) {
+  body #bodyPage #btsCol {
+    margin-block: 7rem 0rem;
   }
 }
 body #bodyPage #btsCol #btsFirstChild {
@@ -605,18 +589,11 @@ body #bodyPage #btsCol #btsSecondChild {
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol {
   width: 30vw;
 }
-body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol hr {
-  color: #ADADAD;
-}
-body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol h3 {
-  color: #ADADAD;
-}
-body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-heading-texts {
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol hr, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol h3, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-heading-texts, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
   color: #ADADAD;
 }
 body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
   background-color: #1C1C1C;
-  color: #ADADAD;
 }
 body #bodyPage #professionalHeadingCol {
   color: #ADADAD;

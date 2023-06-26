@@ -6,10 +6,6 @@
     display: none;
 }
 
-.visibility-hidden {
-    visibility: hidden;
-}
-
 %no-border {
     border: none;
 }
@@ -26,14 +22,4 @@
 
 %no-underline {
     text-decoration: none;
-}
-
-.debug-border-one {
-    border: solid red;
-}
-.debug-border-two {
-    border: solid green;
-}
-.debug-border-three {
-    border: solid blue;
 }
