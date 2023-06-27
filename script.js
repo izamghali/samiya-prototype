@@ -71,7 +71,7 @@ function lightModeClicked() {
     if (toggleState) {
       toggleAnimation.restart();
       gsap.to("body", {backgroundColor: standardWhiteBg})
-      gsap.to(".layer", {border: "25px solid " + standardWhiteBg})
+      gsap.to(".carousel-layer", {border: "25px solid " + standardWhiteBg})
       gsap.to(colorChangeList, {color: standardBlackColor})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardBlackColor})
       gsap.to("#navbarToggler", {border: "solid " + standardBlackColor})
@@ -93,7 +93,7 @@ function lightModeClicked() {
     } else {
       toggleAnimation.reverse();
       gsap.to("body", {backgroundColor: standardBlackBg})
-      gsap.to(".layer", {border: "25px solid " + standardBlackBg})
+      gsap.to(".carousel-layer", {border: "25px solid " + standardBlackBg})
       gsap.to(colorChangeList, {color: standardWhiteColor})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardWhiteColor})
       gsap.to("#navbarToggler", {border: "solid " + standardWhiteColor})

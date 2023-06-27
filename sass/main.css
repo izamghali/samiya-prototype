@@ -1,7 +1,3 @@
-body #bodyPage #mainClients .client-rows .client-boxes {
-  overflow: hidden;
-}
-
 body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3 {
   display: none;
 }
@@ -625,11 +621,11 @@ body #bodyPage #professionalCardsCol {
 }
 body #bodyPage #professionalCardsCol .professional-cards {
   border-radius: 20px;
+  border: solid #ADADAD;
   overflow-x: hidden;
   max-width: 25%;
-  border: solid #ADADAD;
-  background-color: #1C1C1C;
   color: #ADADAD;
+  background-color: #1C1C1C;
 }
 @media (max-width: 1440px) and (min-width: 1025px) {
   body #bodyPage #professionalCardsCol .professional-cards {
@@ -678,24 +674,29 @@ body #bodyPage #mainClients {
     display: none;
   }
 }
-body #bodyPage #mainClients .client-rows .client-col {
-  display: flex;
-}
 @media (max-width: 767px) {
   body #bodyPage #mainClients .client-rows {
     padding-inline: 5%;
   }
 }
+body #bodyPage #mainClients .client-rows .client-col {
+  display: flex;
+}
 body #bodyPage #mainClients .client-rows .client-boxes {
-  background-color: hsl(0, 0%, 96%);
-  border: 0.95px solid #ADADAD;
   height: 0;
   width: 20%;
   padding-bottom: 20%;
+  overflow: hidden;
+  border: 0.95px solid #ADADAD;
   background-color: hsl(0, 0%, 96%);
 }
 body #bodyPage #mainClientsTablet {
   color: #ADADAD;
+}
+@media screen and (max-width: 660px) {
+  body #bodyPage #mainClientsTablet {
+    display: block;
+  }
 }
 body #bodyPage #mainClientsTablet .client-rows-tablet {
   padding-inline: 1%;
@@ -705,11 +706,6 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
   width: 40%;
   padding-bottom: 40%;
   overflow: hidden;
-}
-@media screen and (max-width: 660px) {
-  body #bodyPage #mainClientsTablet {
-    display: block;
-  }
 }
 body #bodyPage #dummy {
   height: 19vh;
@@ -780,11 +776,11 @@ body #galleryHeading div img {
   width: 100%;
 }
 body #galleryHeading button {
-  border-radius: 7px;
   height: 3rem;
   font-size: 16px;
   background-color: #1C1C1C;
   color: #ADADAD;
+  border-radius: 7px;
   border: solid #ADADAD;
   transition: 300ms;
 }
