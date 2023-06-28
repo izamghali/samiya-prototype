@@ -19,7 +19,6 @@ body {
             z-index: 1;
             padding: 0 1.5rem;
             margin-top: 1.5rem;
-            // padding-inline: 0.938rem;
 
             #mainNavbarFirstChild {
                 padding: 0;
@@ -61,7 +60,8 @@ body {
                         right: 0;
                         top: 110%;
                         z-index: 1;
-                        width: 40%;
+                        width: auto;
+                        padding: 2rem;
                         justify-content: start;
                         background-color: rgba(255,255,255,0.7);
                         padding : { block: 2rem; left: 2rem; }
@@ -75,13 +75,13 @@ body {
                     #navbarListFirstChild {
                         display: flex;
                         z-index: 1;
-                        // gap: 3rem;
-                        // @media screen and (max-width: 1440px) { gap: 2rem; }
-                        // @media screen and (max-width: 1024px) { gap: 1rem; }
+                        @media screen and (min-width: 1441px) { gap: 3rem; }
+                        @media screen and (max-width:1440px) and (min-width: 1024px) { gap: 2rem; }
+                        @media screen and (max-width: 1024px) and (min-width: 992px) { gap: 1rem }
 
                         .dropdown-menu { li { margin: 0; } }
                         
-                        li { display: inline-block; }       
+                        li { display: block; }       
         
                         .navbar-link {
                             color: $standard-white-color;
@@ -128,6 +128,7 @@ body {
                             }
                         }
                     }
+
                     #navbarHiddenLayer {
                         position: fixed;
                         top: 0;

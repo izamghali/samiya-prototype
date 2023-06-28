@@ -887,7 +887,7 @@ $(document).ready(function() {
   })
 
   // hover dropdown menu
-  $("#galleryDropDown").on("mouseenter", () => {
+  $("#galleryDropDownBtn").on("mouseenter", () => {
     $(".dropdown-menu").slideDown();
   })
   $(".dropdown-area-leave").on("mouseleave", () => {

@@ -139,7 +139,8 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
     right: 0;
     top: 110%;
     z-index: 1;
-    width: 40%;
+    width: auto;
+    padding: 2rem;
     justify-content: start;
     background-color: rgba(255, 255, 255, 0.7);
     padding-block: 2rem;
@@ -154,11 +155,26 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
   display: flex;
   z-index: 1;
 }
+@media screen and (min-width: 1441px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 1440px) and (min-width: 1024px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
+    gap: 2rem;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 992px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
+    gap: 1rem;
+  }
+}
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .dropdown-menu li {
   margin: 0;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild li {
-  display: inline-block;
+  display: block;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .navbar-link {
   color: hsl(60, 0%, 100%);
