@@ -138,7 +138,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
     position: absolute;
     right: 0;
     top: 110%;
-    z-index: -1;
+    z-index: 1;
     width: 40%;
     justify-content: start;
     background-color: rgba(255, 255, 255, 0.7);
@@ -152,6 +152,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
   display: flex;
+  z-index: 1;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .dropdown-menu li {
   margin: 0;
@@ -222,7 +223,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarHiddenLay
   position: fixed;
   top: 0;
   left: 0;
-  border: solid red;
+  z-index: 0;
   display: none;
   width: 100vw;
   height: 100vh;

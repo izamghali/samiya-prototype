@@ -916,7 +916,6 @@ $(document).ready(function() {
     $('#navContactBtn').on('click', () => {gsap.effects.navbarScrollTo(window, {y: "#footerSocial", offsetY: 0});})
   }
 
-
   // navbar toggle click
   $('#navbarList').hide()
   let $togglerState = true;
@@ -933,18 +932,14 @@ $(document).ready(function() {
         $togglerAnimation.restart()
         $('#navbarList').slideDown()
         gsap.to('#navbarHiddenLayer', {display: 'block'})
-      } else {
       }
-      togglerState = !togglerState;
+      $togglerState = false;
     })
-    
     $('#navbarHiddenLayer').on('click', ()=> {
       $togglerAnimation.reverse()
       $('#navbarList').slideUp()
-      
+      $togglerState = true;
     })
 
   }
-
-
 });
