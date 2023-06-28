@@ -363,6 +363,7 @@ body {
         }
 
         #professionalHeadingCol {
+            margin-top: 8rem;
             color: $standard-grey-color;
             padding-inline: 10%;
             @media screen and (max-height: 768px) { text-align: center; }

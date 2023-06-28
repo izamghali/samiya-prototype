@@ -726,7 +726,6 @@ function zoomCarouselRegister() {
         duration: config.duration})
     }
   })
-
 }
 function footerSlide() {
   let footerTl = gsap.timeline();
@@ -762,8 +761,6 @@ arrowUp.addEventListener("click", () => {
 let mm = gsap.matchMedia()
 function desktopSize() {
   mm.add("(max-width: 2560px) and (min-width: 2001px)", () => {
-    // zoom carousel
-    gsap.effects.zoomSuperDuperLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "135%"});
   
     gsap.set("#btsFrontImg", {x: "60%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "270%", scrollTrigger: {scrub: 1}});
@@ -774,8 +771,6 @@ function desktopSize() {
     footerSlide();
   })
   mm.add("(max-width: 2000px) and (min-width: 1513px)", () => {
-    // zoom carousel
-    gsap.effects.zoomSuperLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "133%"});
 
     gsap.set("#btsFrontImg", {x: "60%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "240%", scrollTrigger: {scrub: 1}});
@@ -786,8 +781,6 @@ function desktopSize() {
     footerSlide();
   })
   mm.add("(max-width: 1512px) and (min-width: 1441px)", () => {
-    // zoom carousel
-    gsap.effects.zoomLargeDesktop(".carousel-img", {duration: 5, backgroundSize: "130%"});
   
     // bts vertical slide
     gsap.set("#btsFrontImg", {x: "60%"})
@@ -799,8 +792,6 @@ function desktopSize() {
     footerSlide();
   });
   mm.add("(max-width: 1440px) and (min-width: 1025px)", () => {
-    // zoom carousel
-    gsap.effects.zoomMediumDesktop(".carousel-img", {duration: 5, backgroundSize: "148%"});
   
     // bts vertical slide
     gsap.set("#btsFrontImg", {x: "30%"})
@@ -812,8 +803,6 @@ function desktopSize() {
     footerSlide();
   });
   mm.add("(max-width: 1024px) and (min-width: 769px)", () => {
-    // zoom carousel
-    gsap.effects.zoomSmallDesktop(".carousel-img", {duration: 4.8, backgroundSize: "160%"});
     
     // bts vertical slide
     gsap.set("#btsFrontImg", {x: "-5%", zIndex: -1})
@@ -828,8 +817,6 @@ function desktopSize() {
 }
 function tabletSize() {
   mm.add("(max-width: 768px) and (min-width: 680px)", () => {
-    // zoom carousel
-    gsap.effects.zoomLargeTablet(".carousel-img", {duration: 5, backgroundSize: "160%"});
   
     gsap.set("#btsFrontImg", {x: "0%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 750, scrollTrigger: {scrub: 4}});
@@ -839,8 +826,6 @@ function tabletSize() {
     footerSlide();
   });
   mm.add("(max-width: 679px) and (min-width: 500px)", () => {
-    // zoom carousel
-    gsap.effects.zoomSmallTablet(".carousel-img", {duration: 4.8, backgroundSize: "220%"});
     
     gsap.set("#btsFrontImg", {x: "0%"})
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: 490, scrollTrigger: {scrub: 4}});
@@ -853,8 +838,6 @@ function tabletSize() {
 }
 function mobileSize() {
   mm.add("(max-width: 499px) and (min-width: 375px)", () => {
-    // zoom carousel
-    gsap.effects.zoomLargeMobile(".carousel-img", {duration: 5, backgroundSize: "335%"});
   
     // bts vertical slide
     gsap.set("#btsFrontImg", {x: "0%"})
@@ -865,8 +848,6 @@ function mobileSize() {
    
   });
   mm.add("(max-width: 374px)", () => {
-    // zoom carousel
-    gsap.effects.zoomSmallMobile(".carousel-img", {duration: 5, backgroundSize: "450%"});
   
     // bts vertical slide
     gsap.effects.verticalScrollFrom("#btsFrontImg", {y: "315%", scrollTrigger: {scrub: 4}});
