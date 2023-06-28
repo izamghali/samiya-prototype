@@ -10,7 +10,7 @@ let navbarWhite = "rgba(255,255,255,0.7)";
 let navbarBlack = "rgba(0,0,0,0.7)";
 
 let standardBlackBg = "#1c1c1c";
-let standardWhiteBg = "hsl(0, 0%, 90%)";
+let standardWhiteBg = "hsl(0, 0%, 96%)";
 
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
