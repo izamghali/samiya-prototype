@@ -15,21 +15,6 @@ let standardWhiteBg = "hsl(0, 0%, 96%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
 
-function navbarTogglerClicked() {
-  let togglerState = true;
-  let togglerButton = document.getElementById('navbarToggler');
-  const togglerAnimation = gsap.timeline({ paused: true });
-  togglerAnimation
-  .to('#stripe3', { opacity: 0 })
-  .to('#stripe1', { position: "sticky", rotate: 135, y: "5" }, "<")
-  .to('#stripe2', { position: "sticky", rotate: 45, y: "0" }, "<");
-  togglerButton.addEventListener("click", () => {
-    if (togglerState) {togglerAnimation.restart()} else {togglerAnimation.reverse()}
-    togglerState = !togglerState;
-  })
-}
-navbarTogglerClicked();
-
 function arrowAppearAfterScroll() {
   if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
       gsap.to("#arrowBox", {opacity: 1, duration: 0.4, display: 'block'})
@@ -930,5 +915,36 @@ $(document).ready(function() {
   } else {
     $('#navContactBtn').on('click', () => {gsap.effects.navbarScrollTo(window, {y: "#footerSocial", offsetY: 0});})
   }
+
+
+  // navbar toggle click
+  $('#navbarList').hide()
+  let $togglerState = true;
+  let $togglerButton = document.getElementById('navbarToggler');
+  let $togglerAnimation = gsap.timeline({ paused: true });
+  $togglerAnimation
+  .to('#stripe3', { opacity: 0 })
+  .to('#stripe1', { position: "sticky", rotate: 135, y: "5" }, "<")
+  .to('#stripe2', { position: "sticky", rotate: 45, y: "0" }, "<");
+
+  if (window.matchMedia("(max-width:991px)").matches) {
+    $('#navbarToggler').on("click", () => {
+      if ($togglerState) {
+        $togglerAnimation.restart()
+        $('#navbarList').slideDown()
+        gsap.to('#navbarHiddenLayer', {display: 'block'})
+      } else {
+      }
+      togglerState = !togglerState;
+    })
+    
+    $('#navbarHiddenLayer').on('click', ()=> {
+      $togglerAnimation.reverse()
+      $('#navbarList').slideUp()
+      
+    })
+
+  }
+
 
 });

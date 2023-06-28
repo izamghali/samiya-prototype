@@ -24,15 +24,21 @@
 
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg bg-transparent" id="mainNavbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" id="aBrand" href="#">SAMIYA STUDIO</a>
-          <button class="navbar-toggler" id="navbarToggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container-fluid" id="mainNavbarFirstChild">
+
+          <a class="navbar-brand" id="aBrand" href="#">
+            <div><img src="./assets/logo/Png/Asset 7.png" alt=""></div>
+            SAMIYA STUDIO
+          </a>
+
+          <button class="navbar-toggler" id="navbarToggler" type="button" data-bs-toggle="" data-bs-target="#navbarList" aria-controls="navbarList" aria-expanded="false" aria-label="Toggle navigation">
             <div class="navbar-toggler-stripes" id="stripe1"></div>
             <div class="navbar-toggler-stripes" id="stripe2"></div>
             <div class="navbar-toggler-stripes" id="stripe3"></div>
           </button>
-          <div class="collapse navbar-collapse" id="navbarList">
-            <ul class="navbar-nav d-flex align-items-center">
+
+          <div class="navbar-collapse" id="navbarList">
+            <ul class="navbar-nav d-flex align-items-center" id="navbarListFirstChild">
               <!-- Home -->
               <li class="nav-item">
                 <a class="nav-link navbar-link" aria-current="page" href="#">Home</a>
@@ -75,13 +81,15 @@
               </li>
               
             </ul>
+
+            <div id="navbarHiddenLayer"></div>
           </div>
+
         </div>
       </nav>
 
       <!-- carousel -->
       <div class="carousel slide carousel-fade" data-bs-pause="false" id="mainCarousel" data-bs-ride="carousel">
-
         <div class="carousel-inner">
 
           <!-- 1# slide -->
@@ -100,32 +108,6 @@
           </div>
           
         </div>
-
-        <div class="" id="companyTitle">
-          <div id="companyRow">
-            <div class="" id="companyImgBox">
-              <img src="./assets/logo/Png/Asset 7.png" alt="">
-            </div>
-            <div class="" id="companyTitleBox">
-              <h1>SAMIYA STUDIO</h1>
-              <h4>Capture the perfect one!</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="" id="companyTitleMobile">
-          <div id="companyRowMobile">
-            <div class="" id="companyImgBoxMobile">
-              <img id="blackLogo" src="./assets/logo/Png/Asset 8.png" alt="">
-              <img id="whiteLogo" src="./assets/logo/Png/Asset 7.png" alt="">
-            </div>
-            <div class="" id="companyTitleBoxMobile">
-              <h1>SAMIYA STUDIO</h1>
-            </div>
-          </div>
-        </div>
-        
-        <h4 id="companySloganMobile">Capture the perfect one!</h4>
       </div>
     
       <!-- contact us page -->

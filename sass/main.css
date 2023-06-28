@@ -95,44 +95,52 @@ body #landingPage {
 }
 body #landingPage #mainNavbar {
   z-index: 1;
-  position: absolute;
-  top: 4%;
-  right: 10%;
-  padding-bottom: 0;
+  padding: 0 1.5rem;
+  margin-top: 1.5rem;
 }
-@media (max-width: 1024px) {
-  body #landingPage #mainNavbar {
-    top: 4%;
-    right: 0%;
+body #landingPage #mainNavbar #mainNavbarFirstChild {
+  padding: 0;
+}
+body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
+  color: hsl(60, 0%, 100%);
+  font-family: "Inter";
+  gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+}
+@media screen and (max-width: 500px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
+    display: inline-flex;
   }
 }
-@media screen and (max-width: 991px) {
-  body #landingPage #mainNavbar {
-    position: relative;
-  }
+body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
+  width: 2rem;
 }
-@media (max-width: 425px) {
-  body #landingPage #mainNavbar {
-    padding-top: 1.2rem;
-    margin-top: 1rem;
-  }
+body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div img {
+  width: 100%;
 }
-body #landingPage #mainNavbar #navbarToggler {
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarToggler {
   border: solid #ADADAD;
 }
-body #landingPage #mainNavbar #navbarToggler .navbar-toggler-stripes {
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarToggler .navbar-toggler-stripes {
   background-color: #ADADAD;
   width: 1rem;
   height: 0.1rem;
   margin-block: 4px;
   border-radius: 10px;
 }
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
+  display: flex;
+  justify-content: end;
+}
 @media screen and (max-width: 991px) {
-  body #landingPage #mainNavbar #navbarList {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
     position: absolute;
     right: 0;
     top: 110%;
     z-index: -1;
+    width: 40%;
+    justify-content: start;
     background-color: rgba(255, 255, 255, 0.7);
     padding-block: 2rem;
     padding-left: 2rem;
@@ -142,30 +150,27 @@ body #landingPage #mainNavbar #navbarToggler .navbar-toggler-stripes {
     border-bottom-right-radius: 20px;
   }
 }
-body #landingPage #mainNavbar #navbarList .dropdown-menu li {
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
+  display: flex;
+}
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .dropdown-menu li {
   margin: 0;
 }
-body #landingPage #mainNavbar #navbarList li {
-  margin-right: 3em;
-  display: block;
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild li {
+  display: inline-block;
 }
-@media (max-width: 1440px) and (min-width: 1025px) {
-  body #landingPage #mainNavbar #navbarList li {
-    margin-right: 2em;
-  }
-}
-body #landingPage #mainNavbar #navbarList .navbar-link {
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .navbar-link {
   color: hsl(60, 0%, 100%);
 }
 @media screen and (max-width: 991px) {
-  body #landingPage #mainNavbar #navbarList .navbar-link {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .navbar-link {
     color: #212529;
   }
 }
-body #landingPage #mainNavbar #navbarList .navbar-link:hover {
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .navbar-link:hover {
   cursor: pointer;
 }
-body #landingPage #mainNavbar #navbarList #lightModeBtn {
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #lightModeBtn {
   padding-inline: 2px;
   width: 2.3rem;
   height: 1.2rem;
@@ -177,45 +182,27 @@ body #landingPage #mainNavbar #navbarList #lightModeBtn {
   display: flex;
   align-items: center;
 }
-body #landingPage #mainNavbar #navbarList #lightModeBtn:hover {
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #lightModeBtn:hover {
   cursor: pointer;
 }
 @media screen and (max-width: 991px) {
-  body #landingPage #mainNavbar #navbarList #lightModeBtn {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #lightModeBtn {
     border: solid #212529;
   }
 }
-body #landingPage #mainNavbar #navbarList #lightModeBtn #lightModeToggle {
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #lightModeBtn #lightModeToggle {
   width: 0.8rem;
   height: 0.8rem;
   border-radius: 10px;
   background-color: hsl(60, 0%, 100%);
 }
 @media screen and (max-width: 991px) {
-  body #landingPage #mainNavbar #navbarList #lightModeBtn #lightModeToggle {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #lightModeBtn #lightModeToggle {
     background-color: #212529;
   }
 }
-body #landingPage #mainNavbar #aBrand {
-  color: #ADADAD;
-  position: absolute;
-  left: -55%;
-  display: none;
-  font-family: "Inter";
-}
-@media screen and (max-width: 991px) {
-  body #landingPage #mainNavbar #aBrand {
-    display: block;
-    position: static;
-  }
-}
-@media (max-width: 425px) {
-  body #landingPage #mainNavbar #aBrand {
-    visibility: hidden;
-  }
-}
 @media screen and (min-width: 992px) {
-  body #landingPage #mainNavbar #navContactBtn {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn {
     padding: 0.2rem 1.5rem;
     border: solid #fff;
     border-radius: 8px;
@@ -223,20 +210,29 @@ body #landingPage #mainNavbar #aBrand {
     font-weight: 600;
     transition: 400ms;
   }
-  body #landingPage #mainNavbar #navContactBtn:hover {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn:hover {
     background-color: #fff;
     cursor: pointer;
   }
-  body #landingPage #mainNavbar #navContactBtn:hover a {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn:hover a {
     color: #212529;
   }
+}
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarHiddenLayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border: solid red;
+  display: none;
+  width: 100vw;
+  height: 100vh;
 }
 body #landingPage #mainCarousel {
   z-index: 0;
 }
 body #landingPage #mainCarousel .carousel-img {
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -272,10 +268,9 @@ body #landingPage #mainCarousel #carousel3 {
   }
 }
 body #landingPage #mainCarousel .carousel-layer {
-  border: 25px solid #1C1C1C;
+  border: 1.5rem solid #1C1C1C;
   border-radius: 35px;
   position: relative;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0% 22%, rgba(255, 255, 255, 0.1) 80% 100%);
   height: 100%;
   width: 100%;
   opacity: 1;
