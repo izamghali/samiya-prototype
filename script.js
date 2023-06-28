@@ -48,8 +48,8 @@ serviceHeadingMobile();
 function lightModeClicked() {
   let toggleState = true;
   const toggleAnimation = gsap.timeline({ paused: true });
-  let colorChangeList = ["#aBrand", "#services, #services h1, #services h4", "#btsTextBoxCol h3, #btsTextBoxCol span", ".bts-heading-texts", "#professionalHeadingCol h2", ".client-col h2", ".client-col p", "#mainClientsTablet", "#companyTitleBoxMobile h1"]
-  let backgroundColorChangeList = [".navbar-toggler-stripes"]
+  let colorChangeList = ["#aBrand", "#services, #services h1, #services h4", "#btsTextBoxCol h3, #btsTextBoxCol span", ".bts-heading-texts", "#professionalHeadingCol h2", ".client-col h2", ".client-col p", "#mainClientsTablet", "#companyTitleBoxMobile h1", ".navbar-link"]
+  let backgroundColorChangeList = [".navbar-toggler-stripes", "#lightModeToggle"]
   toggleAnimation
     .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
   lightModeBtn.addEventListener("click", () => {
@@ -60,7 +60,8 @@ function lightModeClicked() {
       gsap.to(colorChangeList, {color: standardBlackColor})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardBlackColor})
       gsap.to("#navbarToggler", {border: "solid " + standardBlackColor})
-      gsap.to("#lighModeBtn", {border: "solid " + standardBlackColor})
+      gsap.to("#navContactBtn", {border: "solid " + standardBlackColor})
+      gsap.to("#lightModeBtn", {border: "solid " + standardBlackBg})
       gsap.to(".bts-card-text", {color: standardBlackColor, backgroundColor: standardWhiteBg})
       gsap.to(".white-layer", {backgroundColor: standardWhiteBg})
       gsap.to(".professional-cards", {color: standardBlackColor, backgroundColor: standardWhiteBg, border: "solid" + standardGrayColor})
@@ -79,9 +80,11 @@ function lightModeClicked() {
       toggleAnimation.reverse();
       gsap.to("body", {backgroundColor: standardBlackBg})
       gsap.to(".carousel-layer", {border: "25px solid " + standardBlackBg})
-      gsap.to(colorChangeList, {color: standardWhiteColor})
-      gsap.to(backgroundColorChangeList, {backgroundColor: standardWhiteColor})
+      gsap.to(colorChangeList, {color: standardWhiteBg})
+      gsap.to(backgroundColorChangeList, {backgroundColor: standardWhiteBg})
       gsap.to("#navbarToggler", {border: "solid " + standardWhiteColor})
+      gsap.to("#navContactBtn", {border: "solid " + standardWhiteColor})
+      gsap.to("#lightModeBtn", {border: "solid " + standardWhiteBg})
       gsap.to(".bts-card-text", {color: standardWhiteColor, backgroundColor: standardBlackBg})
       gsap.to(".white-layer", {backgroundColor: standardBlackBg})
       gsap.to(".professional-cards", {color: standardWhiteColor, backgroundColor: standardBlackBg, border: "solid" + standardGrayColor})
