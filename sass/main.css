@@ -657,7 +657,7 @@ body #bodyPage #professionalCardsCol {
   }
 }
 body #bodyPage #professionalCardsCol .professional-cards {
-  border-radius: 20px;
+  border-radius: 0;
   border: solid #ADADAD;
   overflow-x: hidden;
   max-width: 25%;
@@ -688,6 +688,9 @@ body #bodyPage #professionalCardsCol .professional-cards {
   body #bodyPage #professionalCardsCol .professional-cards {
     max-width: 80%;
   }
+}
+body #bodyPage #professionalCardsCol .professional-cards img {
+  border-radius: 0;
 }
 body #bodyPage #professionalCardsCol .professional-cards a {
   color: hsl(168, 100%, 76%);
