@@ -958,7 +958,7 @@ function rangeArr(start, end) {
 var source = document.getElementById('clientsContainerScript').innerHTML;
 var template = Handlebars.compile(source); 
 var context = {
-  clients: rangeArr(1, 22),
+  clients: rangeArr(1, 24),
 };
 var compiledHtml = template(context);
 var fill = document.getElementById('clientsGrid');
