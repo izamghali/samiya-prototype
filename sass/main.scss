@@ -10,7 +10,7 @@ body {
     margin: 0px;
     overflow-x: hidden;
     background-color: $standard-black-bg-color;
-    p, h3, span { font-family: sans-serif;}
+    p, h2, h3, h5, span { font-family: sans-serif; color: $standard-white-color;}
 
     #landingPage {
         padding-inline: 0px !important;
@@ -272,7 +272,7 @@ body {
             @media screen and (max-width: 768px) { padding-inline: 5%; }
             @media screen and (max-width: 500px) { margin-block: 2rem 0rem; }
 
-            h1, h4 { color: $standard-grey-color; }
+            h1, h4 { color: $standard-white-color; }
 
             h1 {
                 font-size: clamp(1.2rem, 4vw, 3.5rem);
@@ -415,53 +415,33 @@ body {
                 a { color: $standard-hyperlink-color; }
             }
         }
-        
-        #mainClients {
-            padding: 0 10% 7rem;
-            color: $standard-grey-color;
-            @media screen and (max-width: 768px) { padding-inline: 5%; }
-            @media screen and (max-width: 700px) { padding-inline: 3%; }
-            @media screen and (max-width: 660px) { display: none; }
-            
-            .client-rows {
-                @include tablet { padding-inline: 5%; }
-                .client-col { display: flex; }
-                .client-boxes {
-                    @include always-square(0, 20%, 20%);
-                    overflow: hidden;
-                    border: 0.95px solid $standard-grey-color;
-                    background-color: $standard-white-bg-color;
-                }
-            }
-            
-        }
 
-        #mainClientsTablet {
-            color: $standard-grey-color;
-            @extend %display-none;
-            @media screen and (max-width: 660px) { display: block; }
-
-            .client-rows-tablet { padding-inline: 1%; }
-            .client-boxes-tablet {
-                @include always-square(0, 40%, 40%);
-                overflow: hidden;
-            }
-        }
-
-        #clientsGrid {
-            column-count: 5;
+        #clientContainer {
             padding-inline: 10%;
-            gap: 0;
-            height: auto;
+            margin-bottom: 5rem;
 
-            .client-blocks {
-                border: solid whitesmoke;
-                background-color: whitesmoke;
-                border-radius: $standard-border-radius-10px;
-                margin: 0.5rem;
-                width: auto;
-                display: inline-block;
-                img { width: 100%;}
+            #clientsGrid {
+                column-count: 6;
+                gap: 0.5rem;
+                height: auto;
+                
+                @media screen and (max-width: 768px) {
+                    column-count: 4;
+                }
+                
+                @media screen and (max-width: 500px) {
+                    column-count: 3;
+                }
+    
+                .client-blocks {
+                    border: solid $standard-white-color;
+                    background-color: $standard-white-color;
+                    border-radius: $standard-border-radius-10px;
+                    margin-top: 0.5rem;
+                    width: auto;
+                    display: inline-block;
+                    img { width: 100%;}
+                }
             }
         }
 
@@ -652,7 +632,6 @@ body {
 footer {
     color: $standard-black-color;
     background-color: $standard-white-bg-color;
-
     width: 100vw;
     height: max-content; 
     margin: 0;
@@ -670,6 +649,7 @@ footer {
     }
     #footerLeft {
         p {
+            color: $standard-black-color;
             font-style: italic;
             letter-spacing: 0.1rem;
         }

@@ -1,4 +1,4 @@
-body #bodyPage #mainClientsTablet, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3 {
+body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText2, body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol #btsCollapseText3 {
   display: none;
 }
 
@@ -87,8 +87,9 @@ body {
   overflow-x: hidden;
   background-color: #1C1C1C;
 }
-body p, body h3, body span {
+body p, body h2, body h3, body h5, body span {
   font-family: sans-serif;
+  color: hsl(60, 0%, 100%);
 }
 body #landingPage {
   padding-inline: 0px !important;
@@ -428,7 +429,7 @@ body #bodyPage #services {
   }
 }
 body #bodyPage #services h1, body #bodyPage #services h4 {
-  color: #ADADAD;
+  color: hsl(60, 0%, 100%);
 }
 body #bodyPage #services h1 {
   font-size: clamp(1.2rem, 4vw, 3.5rem);
@@ -695,74 +696,37 @@ body #bodyPage #professionalCardsCol .professional-cards {
 body #bodyPage #professionalCardsCol .professional-cards a {
   color: hsl(168, 100%, 76%);
 }
-body #bodyPage #mainClients {
-  padding: 0 10% 7rem;
-  color: #ADADAD;
-}
-@media screen and (max-width: 768px) {
-  body #bodyPage #mainClients {
-    padding-inline: 5%;
-  }
-}
-@media screen and (max-width: 700px) {
-  body #bodyPage #mainClients {
-    padding-inline: 3%;
-  }
-}
-@media screen and (max-width: 660px) {
-  body #bodyPage #mainClients {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  body #bodyPage #mainClients .client-rows {
-    padding-inline: 5%;
-  }
-}
-body #bodyPage #mainClients .client-rows .client-col {
-  display: flex;
-}
-body #bodyPage #mainClients .client-rows .client-boxes {
-  height: 0;
-  width: 20%;
-  padding-bottom: 20%;
-  overflow: hidden;
-  border: 0.95px solid #ADADAD;
-  background-color: hsl(0, 0%, 96%);
-}
-body #bodyPage #mainClientsTablet {
-  color: #ADADAD;
-}
-@media screen and (max-width: 660px) {
-  body #bodyPage #mainClientsTablet {
-    display: block;
-  }
-}
-body #bodyPage #mainClientsTablet .client-rows-tablet {
-  padding-inline: 1%;
-}
-body #bodyPage #mainClientsTablet .client-boxes-tablet {
-  height: 0;
-  width: 40%;
-  padding-bottom: 40%;
-  overflow: hidden;
-}
-body #bodyPage #clientsGrid {
-  -moz-column-count: 5;
-       column-count: 5;
+body #bodyPage #clientContainer {
   padding-inline: 10%;
-  gap: 0;
+  margin-bottom: 5rem;
+}
+body #bodyPage #clientContainer #clientsGrid {
+  -moz-column-count: 6;
+       column-count: 6;
+  gap: 0.5rem;
   height: auto;
 }
-body #bodyPage #clientsGrid .client-blocks {
-  border: solid whitesmoke;
-  background-color: whitesmoke;
+@media screen and (max-width: 768px) {
+  body #bodyPage #clientContainer #clientsGrid {
+    -moz-column-count: 4;
+         column-count: 4;
+  }
+}
+@media screen and (max-width: 500px) {
+  body #bodyPage #clientContainer #clientsGrid {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
+}
+body #bodyPage #clientContainer #clientsGrid .client-blocks {
+  border: solid hsl(60, 0%, 100%);
+  background-color: hsl(60, 0%, 100%);
   border-radius: 10px;
-  margin: 0.5rem;
+  margin-top: 0.5rem;
   width: auto;
   display: inline-block;
 }
-body #bodyPage #clientsGrid .client-blocks img {
+body #bodyPage #clientContainer #clientsGrid .client-blocks img {
   width: 100%;
 }
 body #bodyPage #dummy {
@@ -1014,6 +978,7 @@ footer {
   }
 }
 footer #footerLeft p {
+  color: #212529;
   font-style: italic;
   letter-spacing: 0.1rem;
 }
