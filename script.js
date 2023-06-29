@@ -946,3 +946,20 @@ $(document).ready(function() {
 
   }
 });
+
+// handlebars JS
+function rangeArr(start, end) {
+  let arr = [];
+  for (let i = start; i <= end; i++) {
+      arr.push(i)
+  }
+  return arr;
+}
+var source = document.getElementById('clientsContainerScript').innerHTML;
+var template = Handlebars.compile(source); 
+var context = {
+  clients: rangeArr(1, 22),
+};
+var compiledHtml = template(context);
+var fill = document.getElementById('clientsGrid');
+fill.innerHTML = compiledHtml;

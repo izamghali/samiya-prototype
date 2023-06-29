@@ -312,157 +312,20 @@
         </div>
       </div>
 
-      <!-- clients -->
-      <div class="container-fluid" id="mainClients">
-
-        <!-- 1# row -->
-        <div class="row client-rows">
-          <div class="col client-col justify-content-end align-items-center tablet-justify-center">
-            
-            <!-- heading -->
-            <div class="col">
-              <h2>We Satisfy 20+ Clients</h2>
-              <p>And Still Counting</p>
-            </div>
-
-            <!-- style 1 -->
-            <div class="card client-boxes">
-              <img class="style-1-img-one" alt="..." src="./assets/clients/company/1.png">
-              <img class="style-1-img-two" alt="..." src="./assets/clients/fnb/1.png">
-              <img class="style-1-img-three" alt="..." src="./assets/clients/product/1.png">
-            </div>
-  
-            <!-- style 4 -->
-            <div class="card client-boxes">
-              <img class="style-4-img-one" alt="..." src="./assets/clients/company/2.png">
-              <img class="style-4-img-two" alt="..." src="./assets/clients/fnb/2.png">
-              <img class="style-4-img-three" alt="..." src="./assets/clients/product/2.png">
-              <img class="style-4-img-four" alt="..." src="./assets/clients/fnb/14.png">
-            </div>
-  
-            <!-- style 3 -->
-            <div class="card client-boxes">
-              <img class="style-3-img-one" alt="..." src="./assets/clients/company/3.png">
-              <img class="style-3-img-two" alt="..." src="./assets/clients/fnb/3.png">
-              <img class="style-3-img-three" alt="..." src="./assets/clients/product/3.png">
-              <img class="style-3-img-four" alt="..." src="./assets/clients/fnb/13.png">
-            </div>
-  
+      <div>
+        <!-- <h2></h2> -->
+        
+        <script id="clientsContainerScript" type="text/x-handlebars-template">
+          {{#each clients}}
+          <div class="client-blocks">
+            <img class="client-images" src="./assets/clients/{{this}}.png" alt="">
           </div>
-        </div>
-
-        <!-- 2# row -->
-        <div class="row client-rows">
-          <div class="col client-col justify-content-center align-items-center tablet-justify-center">
+          {{/each}}
+        </script>
   
-            <!-- style 5 -->
-            <div class="card client-boxes">
-              <img class="style-5-img-one" alt="..." src="./assets/clients/fnb/4.png">
-              <img class="style-5-img-two" alt="..." src="./assets/clients/fnb/5.png">
-              <img class="style-5-img-three" alt="..." src="./assets/clients/product/4.png">
-              <img class="style-5-img-four" alt="..." src="./assets/clients/fnb/12.png">
-            </div>
-
-            <!-- style 6 -->
-            <div class="card client-boxes">
-              <img class="style-6-img-one" alt="..." src="./assets/clients/fnb/6.png">
-              <img class="style-6-img-two" alt="..." src="./assets/clients/fnb/7.png">
-              <img class="style-6-img-three" alt="..." src="./assets/clients/product/5.png">
-              <img class="style-6-img-four" alt="..." src="./assets/clients/fnb/8.png">
-            </div>
-  
-            <!-- style 2 -->
-            <div class="card client-boxes">
-              <img class="style-2-img-one" alt="..." src="./assets/clients/fnb/9.png">
-              <img class="style-2-img-two" alt="..." src="./assets/clients/fnb/10.png">
-              <img class="style-2-img-three" alt="..." src="./assets/clients/fnb/11.png">
-            </div>
-  
-          </div>
-        </div>
-  
+        <div id="clientsGrid"></div>
       </div>
 
-      <!-- clients tablet -->
-      <div class="container-fluid py-5" id="mainClientsTablet">
-
-        <!-- 1# row -->
-        <div class="row client-rows-tablet">
-
-          <!-- heading -->
-          <div class="col d-flex-inline justify-content-start align-items-end">
-            <h2 class="text-center">We Satisfy 20+ Clients</h2>
-            <p class="text-center">And still counting</p>
-          </div>
-
-          <div class="col d-flex justify-content-center align-items-center">
-  
-            <!-- style 1 -->
-            <div class="card client-boxes-tablet">
-              <img class="style-1-img-one" alt="..." src="./assets/clients/company/1.png">
-              <img class="style-1-img-two" alt="..." src="./assets/clients/fnb/1.png">
-              <img class="style-1-img-three" alt="..." src="./assets/clients/product/1.png">
-            </div>
-  
-            <!-- style 4 -->
-            <div class="card client-boxes-tablet">
-              <img class="style-4-img-one" alt="..." src="./assets/clients/company/2.png">
-              <img class="style-4-img-two" alt="..." src="./assets/clients/fnb/2.png">
-              <img class="style-4-img-three" alt="..." src="./assets/clients/product/2.png">
-              <img class="style-4-img-four" alt="..." src="./assets/clients/fnb/14.png">
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- 2# row -->
-        <div class="row client-rows-tablet">
-          <div class="col d-flex justify-content-center align-items-center">
-  
-            <!-- style 3 -->
-            <div class="card client-boxes-tablet">
-              <img class="style-3-img-one" alt="..." src="./assets/clients/company/3.png">
-              <img class="style-3-img-two" alt="..." src="./assets/clients/fnb/3.png">
-              <img class="style-3-img-three" alt="..." src="./assets/clients/product/3.png">
-              <img class="style-3-img-four" alt="..." src="./assets/clients/fnb/13.png">
-            </div>
-
-            <!-- style 5 -->
-            <div class="card client-boxes-tablet">
-              <img class="style-5-img-one" alt="..." src="./assets/clients/fnb/4.png">
-              <img class="style-5-img-two" alt="..." src="./assets/clients/fnb/5.png">
-              <img class="style-5-img-three" alt="..." src="./assets/clients/product/4.png">
-              <img class="style-5-img-four" alt="..." src="./assets/clients/fnb/12.png">
-            </div>
-
-          </div>
-        </div>
-
-        <!-- 3# row -->
-        <div class="row client-rows-tablet">
-          <div class="col d-flex justify-content-center align-items-center">
-
-              <!-- style 6 -->
-            <div class="card client-boxes-tablet">
-              <img class="style-6-img-one" alt="..." src="./assets/clients/fnb/6.png">
-              <img class="style-6-img-two" alt="..." src="./assets/clients/fnb/7.png">
-              <img class="style-6-img-three" alt="..." src="./assets/clients/product/5.png">
-              <img class="style-6-img-four" alt="..." src="./assets/clients/fnb/8.png">
-            </div>
-  
-            <!-- style 2 -->
-            <div class="card client-boxes-tablet">
-              <img class="style-2-img-one" alt="..." src="./assets/clients/fnb/9.png">
-              <img class="style-2-img-two" alt="..." src="./assets/clients/fnb/10.png">
-              <img class="style-2-img-three" alt="..." src="./assets/clients/fnb/11.png">
-            </div>
-
-          </div>
-        </div>
-  
-  
-      </div>
 
       <div id="dummy"></div>
 
@@ -523,6 +386,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollToPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Flip.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     
     <!-- Main JavaScript -->
     <script src="./script.js"></script>

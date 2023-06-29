@@ -747,6 +747,24 @@ body #bodyPage #mainClientsTablet .client-boxes-tablet {
   padding-bottom: 40%;
   overflow: hidden;
 }
+body #bodyPage #clientsGrid {
+  -moz-column-count: 5;
+       column-count: 5;
+  padding-inline: 10%;
+  gap: 0;
+  height: auto;
+}
+body #bodyPage #clientsGrid .client-blocks {
+  border: solid whitesmoke;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  margin: 0.5rem;
+  width: auto;
+  display: inline-block;
+}
+body #bodyPage #clientsGrid .client-blocks img {
+  width: 100%;
+}
 body #bodyPage #dummy {
   height: 19vh;
 }
@@ -899,11 +917,6 @@ body #gridContainer {
   -moz-column-gap: 2rem;
        column-gap: 2rem;
 }
-@media screen and (max-width: 768px) {
-  body #gridContainer {
-    padding-inline: 5%;
-  }
-}
 @media screen and (max-width: 1024px) {
   body #gridContainer {
     -moz-column-count: 3;
@@ -916,6 +929,7 @@ body #gridContainer {
          column-count: 2;
     -moz-column-gap: 1rem;
          column-gap: 1rem;
+    padding-inline: 5%;
   }
 }
 @media screen and (max-width: 425px) {
