@@ -87,8 +87,12 @@ body {
   overflow-x: hidden;
   background-color: #1C1C1C;
 }
-body p, body h2, body h3, body h5, body span {
-  font-family: sans-serif;
+body p, body h3, body h5, body span {
+  font-family: "Inter";
+  color: hsl(60, 0%, 100%);
+}
+body h2 {
+  font-family: "Montserrat";
   color: hsl(60, 0%, 100%);
 }
 body #landingPage {
@@ -104,7 +108,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild {
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
   color: hsl(60, 0%, 100%);
-  font-family: "Inter";
+  font-family: "Montserrat";
   gap: 0.5rem;
   display: inline-flex;
   align-items: center;
@@ -296,115 +300,6 @@ body #landingPage #mainCarousel .carousel-layer {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0% 60%, rgba(0, 0, 0, 0.8) 100% 0%);
   }
 }
-body #landingPage #mainCarousel #companyTitle {
-  color: hsl(0, 0%, 96%);
-  position: absolute;
-  top: 60%;
-  z-index: 1;
-  padding-inline: 65px;
-}
-@media (max-width: 425px) {
-  body #landingPage #mainCarousel #companyTitle {
-    display: none;
-  }
-}
-body #landingPage #mainCarousel #companyTitle #companyRow {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-body #landingPage #mainCarousel #companyTitle #companyRow #companyImgBox {
-  max-width: 10vw;
-}
-@media (max-width: 767px) {
-  body #landingPage #mainCarousel #companyTitle #companyRow #companyImgBox {
-    max-width: 15vw;
-  }
-}
-body #landingPage #mainCarousel #companyTitle #companyRow #companyImgBox img {
-  width: 100%;
-}
-body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h1 {
-  font-size: 6.5vw;
-  font-weight: 700;
-  font-family: "Inter";
-}
-body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h4 {
-  margin-left: 2%;
-  letter-spacing: 0.8rem;
-  font-style: italic;
-  font-weight: 100;
-  font-size: 2rem;
-}
-@media screen and (max-width: 560px) {
-  body #landingPage #mainCarousel #companyTitle #companyRow #companyTitleBox h4 {
-    letter-spacing: 0.4rem;
-  }
-}
-body #landingPage #mainCarousel #companyTitleMobile {
-  color: #212529;
-  display: flex;
-  justify-content: start;
-  position: absolute;
-  top: -4rem;
-  padding-left: 1.5rem;
-  width: 100vw;
-  height: 9%;
-  z-index: 1;
-}
-@media screen and (min-width: 426px) {
-  body #landingPage #mainCarousel #companyTitleMobile {
-    display: none;
-  }
-}
-@media screen and (max-width: 425px) and (min-width: 376px) {
-  body #landingPage #mainCarousel #companyTitleMobile {
-    padding-top: 15%;
-  }
-}
-body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 0.6rem;
-}
-body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile {
-  width: 10vw;
-}
-body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile #blackLogo {
-  display: none;
-  transition: 400ms;
-}
-body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile #whiteLogo {
-  transition: 400ms;
-}
-body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyImgBoxMobile img {
-  width: 100%;
-}
-body #landingPage #mainCarousel #companyTitleMobile #companyRowMobile #companyTitleBoxMobile h1 {
-  color: #ADADAD;
-  font-size: 7vw;
-  font-weight: 900;
-  font-family: "Inter";
-}
-body #landingPage #mainCarousel #companySloganMobile {
-  position: absolute;
-  top: 5%;
-  z-index: 1;
-  width: 100vw;
-  color: hsl(0, 0%, 96%);
-  padding-inline: 2rem;
-  letter-spacing: 0.1rem;
-  font-style: italic;
-  font-weight: 100;
-  font-size: 2rem;
-}
-@media screen and (min-width: 426px) {
-  body #landingPage #mainCarousel #companySloganMobile {
-    display: none;
-  }
-}
 @media (max-width: 1024px) {
   body #landingPage .contact-us-page {
     width: 30vw;
@@ -414,7 +309,6 @@ body #landingPage #mainCarousel #companySloganMobile {
 body #bodyPage #services {
   padding-inline: 10%;
   margin-block: 6rem 0rem;
-  color: #ADADAD;
 }
 @media screen and (max-width: 768px) {
   body #bodyPage #services {
@@ -638,7 +532,7 @@ body #bodyPage #btsCol #btsSecondChild #btsTextBoxCol .bts-card-text {
 }
 body #bodyPage #professionalHeadingCol {
   margin-top: 8rem;
-  color: #ADADAD;
+  color: hsl(60, 0%, 100%);
   padding-inline: 10%;
   text-align: center;
 }
@@ -782,7 +676,7 @@ body #galleryHeading {
   }
 }
 body #galleryHeading h1 {
-  font-family: "Inter";
+  font-family: "Montserrat";
 }
 body #galleryHeading div {
   width: 5vw;
