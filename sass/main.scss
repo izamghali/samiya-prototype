@@ -10,7 +10,7 @@ body {
     margin: 0px;
     overflow-x: hidden;
     background-color: $standard-black-bg-color;
-    p, h3, h5, span { font-family: $standard-font-family-1; color: $standard-white-color;}
+    p, h3, h4, h5, span { font-family: $standard-font-family-1; color: $standard-white-color;}
     h2 { font-family: $standard-font-family-2; color: $standard-white-color; }
 
     #landingPage {
@@ -243,76 +243,25 @@ body {
             img { width: 100%; }
         }
         
-        #btsCol {
-            flex-direction: row;
-            height: auto;
-            padding-inline: 23%;
-            margin-block: 7rem 3rem;
-            justify-content: space-around; 
-            @include desktop { justify-content: space-around; padding-inline: 30%; }
-            @include large-tablet { padding-inline: 27%; }
-            @include tablet { flex-direction: column; padding-inline: 3%; }
-            @include large-mobile { margin-block: 7rem 0rem; } 
-            
-            #btsFirstChild {
-                min-width: 100%;
-                min-height: 75vh;
-                max-height: 80vh;
-                justify-content: space-between;
-                @include desktop { min-height: 75vh; max-height: 80vh; }
-                @include tablet { min-height: 35rem; }
-                @include small-tablet { min-height: 70vh; }
-                @include large-mobile { min-height: 55vh; max-height: 60vh; }
-
-                .white-layer {
-                    position:absolute;
-                    height: 100%;
-                    width: 100%;
-                    background-color: $standard-black-bg-color;
-                    @media screen and (max-width: 768px) { display: none; }
-                }
-
-                .bts-image-box { overflow-x: hidden; }
-
-                .bts-back-images {
-                    width: 40%;
-                    transform: translate(0%, -20%);
-                    @include large-tablet { width: 45%; z-index: 1; }
-                }
-
-                #btsFrontImg {
-                    position: absolute;
-                    z-index: 2;
-                    max-width: 20%;
-                    min-width: 18%;
-                    @include large-desktop { min-width: 10%; max-width: 20%; }
-                    @include desktop { max-width: 30%; left: 13%; }
-                    @include large-tablet { max-width: 35%; left: 10%; }
-                    @include large-mobile { max-width: 47%; min-width: 45%; }
-                    @include small-mobile { min-width: 50%; }
-                }
-
-                #btsBackImg2 { @include larger-desktop { z-index: 1; } }
-            }
-
-            #btsSecondChild {
-                max-width: 100%;
-                @include desktop { min-width: 100%; }
-                
-                #btsTextBoxCol {
-                    width: 30vw;
-
-                    hr, h3, .bts-heading-texts, .bts-card-text { color: $standard-grey-color; }
-                    .bts-card-text { background-color: $standard-black-bg-color; }
-        
-                    #btsCollapse1, #btsCollapse2, #btsCollapse3 {
-                        @extend %cursor-pointer;
-                        @extend %no-underline;
+        #projects {
+            padding: 0;
+            margin-top: 8rem;
+            .project-blocks {
+                display: flex;
+                height: 100vh;
+                overflow: hidden;
+                .project-img-blocks {
+                    width: 50%;
+                    position: relative;
+                    img {
+                        width: 100%;
+                        transform: translateY(-20%);
                     }
-        
-                    .bts-card-text { @extend %no-border; }
-                    
-                    #btsCollapseText2, #btsCollapseText3 { @extend %display-none; }
+                }
+                .project-text-blocks {
+                    padding-inline: 10rem;
+                    display: flex;
+                    align-items: center;
                 }
             }
         }
@@ -574,6 +523,7 @@ footer {
         padding: 5%;
     }
     #footerLeft {
+        h4 { color: $standard-black-color; }
         p {
             color: $standard-black-color;
             font-style: italic;
