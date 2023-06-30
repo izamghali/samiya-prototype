@@ -337,7 +337,6 @@ body #bodyPage #about #aboutTextBlock .read-more-btn:hover, body #bodyPage #abou
 }
 body #bodyPage #services {
   padding-inline: 10%;
-  margin-block: 0rem 10rem;
 }
 @media screen and (max-width: 768px) {
   body #bodyPage #services {
@@ -356,19 +355,9 @@ body #bodyPage #services h1 {
   font-size: clamp(1.2rem, 4vw, 3.5rem);
   font-weight: 600;
 }
-@media screen and (max-width: 500px) {
-  body #bodyPage #services h1 {
-    font-size: 2.5rem;
-  }
-}
 body #bodyPage #services h4 {
   font-size: clamp(0.65rem, 2vw, 1.75rem);
   font-weight: 300;
-}
-@media screen and (max-width: 500px) {
-  body #bodyPage #services h4 {
-    font-size: 1.7rem;
-  }
 }
 body #bodyPage #services #servicesHeading {
   margin-bottom: 2rem;
@@ -376,14 +365,9 @@ body #bodyPage #services #servicesHeading {
 body #bodyPage #services .service-texts {
   padding: 1rem;
 }
-@media screen and (max-width: 768px) {
-  body #bodyPage #services .service-texts {
-    padding: 0.5rem;
-  }
-}
 @media screen and (max-width: 500px) {
   body #bodyPage #services .service-texts {
-    padding-left: 0;
+    padding-left: 0.2rem;
   }
 }
 body #bodyPage #services .service-texts .service-headings-a {
@@ -399,24 +383,12 @@ body #bodyPage #services #servicesRow1 {
   margin: 0;
   gap: 0;
 }
-@media screen and (max-width: 500px) {
-  body #bodyPage #services #servicesRow1 {
-    -moz-column-count: 1;
-         column-count: 1;
-  }
-}
 body #bodyPage #services #servicesRow2 {
   -moz-column-count: 5;
        column-count: 5;
   color: #ADADAD;
   margin: 0;
   gap: 0;
-}
-@media screen and (max-width: 500px) {
-  body #bodyPage #services #servicesRow2 {
-    -moz-column-count: 1;
-         column-count: 1;
-  }
 }
 body #bodyPage #services img {
   width: 100%;
@@ -756,7 +728,6 @@ body #gridContainer {
   }
 }
 body #gridContainer .grid-blocks {
-  border-radius: 10px;
   overflow: hidden;
   display: inline-block;
   margin: 0;

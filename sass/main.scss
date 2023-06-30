@@ -224,7 +224,6 @@ body {
 
         #services {
             padding-inline: 10%;
-            margin-block: 0rem 10rem;
             @media screen and (max-width: 768px) { padding-inline: 5%; }
             @media screen and (max-width: 500px) { margin-block: 2rem 0rem; }
 
@@ -233,21 +232,21 @@ body {
             h1 {
                 font-size: clamp(1.2rem, 4vw, 3.5rem);
                 font-weight: 600;
-                @media screen and (max-width: 500px) { font-size: 2.5rem; }
+                // @media screen and (max-width: 500px) { font-size: 2.5rem; }
             }
 
             h4 {
                 font-size: clamp(0.65rem, 2vw, 1.75rem);
                 font-weight: 300;
-                @media screen and (max-width: 500px) { font-size: 1.7rem; }
+                // @media screen and (max-width: 500px) { font-size: 1.7rem; }
             }
 
             #servicesHeading { margin-bottom: 2rem;}
 
             .service-texts {
                 padding: 1rem;
-                @media screen and (max-width:768px) { padding: 0.5rem; }
-                @media screen and (max-width: 500px) { padding-left: 0; }
+                // @media screen and (max-width:768px) { padding: 0.5rem; }
+                @media screen and (max-width: 500px) { padding-left: 0.2rem; }
 
                 .service-headings-a {
                     text-decoration: none;
@@ -260,7 +259,7 @@ body {
                 column-count: 5;
                 margin: 0;
                 gap: 0;
-                @media screen and (max-width: 500px) { column-count: 1; }
+                // @media screen and (max-width: 500px) { column-count: 1; }
             }
             
             #servicesRow2 {
@@ -268,7 +267,7 @@ body {
                 color: $standard-grey-color;
                 margin: 0;
                 gap: 0;
-                @media screen and (max-width: 500px) { column-count: 1; }
+                // @media screen and (max-width: 500px) { column-count: 1; }
             }
 
             img { width: 100%; }
@@ -507,7 +506,6 @@ body {
         @media screen and (max-width: 425px) {column-count: 1;}
         
         .grid-blocks {
-            border-radius: $standard-border-radius-10px;
             overflow: hidden;
             display: inline-block;
             margin: 0;
