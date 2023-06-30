@@ -304,15 +304,26 @@ body #bodyPage {
 }
 body #bodyPage #about {
   padding-inline: 10%;
-  height: auto;
   padding-block: 8rem;
+  height: auto;
   display: flex;
   justify-content: left;
   align-items: center;
   gap: 4rem;
 }
+@media screen and (max-width: 500px) {
+  body #bodyPage #about {
+    padding-block: 2rem;
+    gap: 1rem;
+  }
+}
 body #bodyPage #about #aboutImgBlock {
   width: 20rem;
+}
+@media screen and (max-width: 500px) {
+  body #bodyPage #about #aboutImgBlock {
+    width: 40rem;
+  }
 }
 body #bodyPage #about #aboutImgBlock img {
   width: 100%;
@@ -410,23 +421,70 @@ body #bodyPage #services #servicesRow2 {
 body #bodyPage #services img {
   width: 100%;
 }
+body #bodyPage #projects {
+  margin-top: 10rem;
+}
 body #bodyPage #projects .project-blocks {
   display: flex;
   height: 100vh;
   overflow: hidden;
 }
+@media screen and (max-width: 1440px) {
+  body #bodyPage #projects .project-blocks {
+    height: auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  body #bodyPage #projects .project-blocks {
+    display: inline-block;
+    padding-inline: 5%;
+  }
+}
 body #bodyPage #projects .project-blocks .project-img-blocks {
   width: 50%;
   position: relative;
 }
+@media screen and (max-width: 500px) {
+  body #bodyPage #projects .project-blocks .project-img-blocks {
+    width: 100%;
+  }
+}
 body #bodyPage #projects .project-blocks .project-img-blocks img {
   width: 100%;
-  transform: translateY(-20%);
+}
+@media screen and (min-width: 1441px) {
+  body #bodyPage #projects .project-blocks .project-img-blocks img {
+    transform: translateY(-20%);
+  }
 }
 body #bodyPage #projects .project-blocks .project-text-blocks {
+  width: 50%;
   padding-inline: 10rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1024px) {
+  body #bodyPage #projects .project-blocks .project-text-blocks {
+    padding-inline: 10%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body #bodyPage #projects .project-blocks .project-text-blocks {
+    padding-inline: 3%;
+  }
+}
+@media screen and (max-width: 580px) {
+  body #bodyPage #projects .project-blocks .project-text-blocks {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  body #bodyPage #projects .project-blocks .project-text-blocks {
+    border-top: solid whitesmoke;
+    padding: 0.5rem 0;
+    transform: translateY(-100%);
+  }
 }
 body #bodyPage #professionalHeadingCol {
   margin-top: 8rem;

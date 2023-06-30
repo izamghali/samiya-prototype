@@ -194,22 +194,23 @@ body {
         padding: 0;
 
         #about {
-            // border: solid orange;
             padding-inline: 10%;
-            height: auto;
             padding-block: 8rem;
+            height: auto;
             display: flex;
             justify-content: left;
             align-items: center;
             gap: 4rem;
+            @media screen and (max-width:500px) {
+                padding-block: 2rem;
+                gap: 1rem;
+            }
             #aboutImgBlock {
-                width:20rem;
-                // border: solid green;
+                width: 20rem;
+                @media screen and (max-width:500px) { width: 40rem;    }
                 img { width: 100%; }
             }
             #aboutTextBlock {
-                // border: solid red;
-
                 .read-more-btn {
                     color: $standard-hyperlink-color;
                     &:hover {
@@ -274,22 +275,48 @@ body {
         }
         
         #projects {
+            margin-top: 10rem;
             .project-blocks {
                 display: flex;
                 height: 100vh;
                 overflow: hidden;
+                @media screen and (max-width:1440px) {
+                    height: auto;
+                }
+                @media screen and (max-width:500px) {
+                    display: inline-block;
+                    padding-inline: 5%;
+                }
                 .project-img-blocks {
                     width: 50%;
                     position: relative;
+                    @media screen and (max-width:500px) { width: 100%; }
                     img {
                         width: 100%;
-                        transform: translateY(-20%);
+                        @media screen and (min-width:1441px) { transform: translateY(-20%); }
                     }
                 }
                 .project-text-blocks {
+                    width: 50%;
                     padding-inline: 10rem;
-                    display: flex;
+                    display: inline-flex;
                     align-items: center;
+                    flex-wrap: wrap;
+                    @media screen and (max-width:1024px) {
+                        padding-inline: 10%;
+                    }
+                    @media screen and (max-width:1024px) {
+                        padding-inline: clamp(2%, 3%, 5%);
+                    }
+                    
+                    @media screen and (max-width:580px) {
+                        width: 100%;
+                    }
+                    @media screen and (max-width:500px) {
+                        border-top: solid whitesmoke;
+                        padding: 0.5rem 0;
+                        transform: translateY(-100%);
+                    }
                 }
             }
         }

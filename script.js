@@ -960,7 +960,7 @@ $(document).ready(function() {
 
   }
 
-  // read more btn on about section
+  // read more/less btn on about section
   $('.read-more-btn').on('click', (event)=> {
     $(event.currentTarget).parent().next().slideDown();
     $('.read-more-btn').hide(500);
