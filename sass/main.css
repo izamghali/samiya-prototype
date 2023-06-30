@@ -102,6 +102,7 @@ body #landingPage #mainNavbar {
   z-index: 1;
   padding: 0 1.5rem;
   margin-top: 1.5rem;
+  top: 0;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild {
   padding: 0;
@@ -109,17 +110,14 @@ body #landingPage #mainNavbar #mainNavbarFirstChild {
 body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
   color: hsl(60, 0%, 100%);
   font-family: "Montserrat";
-  gap: 0.5rem;
-  display: inline-flex;
-  align-items: center;
-}
-@media screen and (max-width: 500px) {
-  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
-    display: inline-flex;
-  }
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
-  width: 2rem;
+  width: 10rem;
+}
+@media screen and (max-width: 500px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
+    width: 8rem;
+  }
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div img {
   width: 100%;
@@ -281,11 +279,27 @@ body #landingPage #mainCarousel #carousel2 {
   }
 }
 body #landingPage #mainCarousel #carousel3 {
-  background-image: url(../assets/gallery/architecture/architecture-4.webp);
+  background-image: url(../assets/gallery/food/food-135.webp);
 }
 @media (max-width: 425px) {
   body #landingPage #mainCarousel #carousel3 {
+    background-position: 51% 50%;
+  }
+}
+body #landingPage #mainCarousel #carousel4 {
+  background-image: url(../assets/gallery/architecture/architecture-4.webp);
+}
+@media (max-width: 425px) {
+  body #landingPage #mainCarousel #carousel4 {
     background-position: 43% 50%;
+  }
+}
+body #landingPage #mainCarousel #carousel5 {
+  background-image: url(../assets/gallery/food/food-57.webp);
+}
+@media (max-width: 425px) {
+  body #landingPage #mainCarousel #carousel5 {
+    background-position: 50% 50%;
   }
 }
 body #landingPage #mainCarousel .carousel-layer {
@@ -294,11 +308,6 @@ body #landingPage #mainCarousel .carousel-layer {
   height: 100%;
   width: 100%;
   opacity: 1;
-}
-@media (max-width: 425px) {
-  body #landingPage #mainCarousel .carousel-layer {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.1) 0% 60%, rgba(0, 0, 0, 0.8) 100% 0%);
-  }
 }
 @media (max-width: 1024px) {
   body #landingPage .contact-us-page {

@@ -15,11 +15,25 @@ let standardWhiteBg = "hsl(0, 0%, 96%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
 
-function arrowAppearAfterScroll() {
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
-      gsap.to("#arrowBox", {opacity: 1, duration: 0.4, display: 'block'})
+// border bottm & nav size change after scroll
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    gsap.to("nav", {borderBottom: "2px solid #D9D9D9", duration: 0.4})
+    // document.getElementById('#mainNavbar').style.borderBottom = 'solid #D9D9D9';
+    // document.getElementById('#mainNavbar').style.marginTop = '0';
   } else {
-      gsap.to("#arrowBox", {opacity: 0, duration: 0.4, display: 'none'})
+    // gsap.to("nav", {borderBottom: "2px solid white", duration: 0.4})
+  }
+}
+// window.onscroll = function() {scrollFunction()};
+
+function arrowAppearAfterScroll() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    gsap.to("#arrowBox", {opacity: 1, duration: 0.4, display: 'block'})
+    // document.getElementById('#mainNavbar').style.marginTop = '0';
+    gsap.to('#mainNavbar', { backgroundColor: '' })
+  } else {
+    gsap.to("#arrowBox", {opacity: 0, duration: 0.4, display: 'none'})
   }
 }
 window.onscroll = function() {arrowAppearAfterScroll()};
