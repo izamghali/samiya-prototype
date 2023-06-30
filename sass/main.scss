@@ -201,7 +201,7 @@ body {
             display: flex;
             justify-content: left;
             align-items: center;
-            gap: 2rem;
+            gap: 4rem;
             #aboutImgBlock {
                 width:20rem;
                 // border: solid green;
@@ -209,6 +209,15 @@ body {
             }
             #aboutTextBlock {
                 // border: solid red;
+
+                .read-more-btn {
+                    color: $standard-hyperlink-color;
+                    &:hover {
+                        cursor: pointer;
+                        text-decoration: underline;
+                    }
+                }
+                .read-less-btn { @extend .read-more-btn; }
             }
         }
 
@@ -557,6 +566,7 @@ footer {
             flex-direction: column;
         }
         #footerReachUs {
+            h4 { color: $standard-black-color; }
             #footerSocial {
                 display: flex;
                 gap: 0.6rem;
