@@ -64,9 +64,9 @@ function lightModeClicked() {
   const toggleAnimation = gsap.timeline({ paused: true });
   let navbarLogoTl = gsap.timeline()
   let aboutLogoTl = gsap.timeline()
-  let colorChangeList = ["#aBrand", ".navbar-link","#aboutTextBlock h1", "#aboutTextBlock p", "#servicesHeading","#services, #services h1, #services h4", ".project-texts h2", ".project-texts h4", ".project-texts p","#professionalHeadingCol h2", ".card-body h5", ".card-body p", "#clientContainer h2", "#clientContainer p"]
+  let colorChangeList = ["#aBrand","#aboutTextBlock h1", "#aboutTextBlock p", "#servicesHeading","#services, #services h1, #services h4", ".project-texts h2", ".project-texts h4", ".project-texts p","#professionalHeadingCol h2", ".card-body h5", ".card-body p", "#clientContainer h2", "#clientContainer p"]
   let backgroundColorChangeList = [".navbar-toggler-stripes", "#lightModeToggle"]
-  let borderChangeList = ["#navbarToggler", "#navContactBtn"]
+  let borderChangeList = ["#navContactBtn"]
   let hyperlinkColorChangeList = ["#aboutTextBlock span", ".professional-cards a"]
   toggleAnimation
     .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
@@ -78,11 +78,11 @@ function lightModeClicked() {
       gsap.to(colorChangeList, {color: standardBlackColor})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardBlackColor})
       gsap.to(hyperlinkColorChangeList, {color: hyperlinkColor2})
-      gsap.to(borderChangeList, {border: "solid " + standardBlackColor})
+      if (window.matchMedia("(min-width:992px)").matches) { gsap.to(borderChangeList, {border: "solid " + standardBlackColor}) }
+      gsap.to("#navbarToggler", {border: "solid " + standardBlackColor})
       gsap.to("#lightModeBtn", {border: "solid " + standardBlackColor})
       navbarLogoTl.to("#aBrandDark", { opacity: 0}).to("#aBrandDark", { display: 'none'}).to("#aBrandLight", { display: 'block'}).to("#aBrandLight", { opacity: 1})
       aboutLogoTl.to("#aboutImgDark", { opacity: 0}).to("#aboutImgDark", { display: 'none'}).to("#aboutImgLight", { display: 'block'}).to("#aboutImgLight", { opacity: 1})
-
       gsap.to(".professional-cards", {color: standardBlackColor, backgroundColor: standardWhiteBg, border: "solid" + standardGrayColor})
       gsap.to("footer", {backgroundColor: standardBlackBg})
       gsap.to("footer h4", {color: standardWhiteBg})
@@ -97,14 +97,12 @@ function lightModeClicked() {
       gsap.to(colorChangeList, {color: standardWhiteBg})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardWhiteBg})
       gsap.to(hyperlinkColorChangeList, {color: hyperlinkColor1})
-      gsap.to(borderChangeList, {border: "solid " + standardWhiteColor})
+      if (window.matchMedia("(min-width:992px)").matches) { gsap.to(borderChangeList, {border: "solid " + standardWhiteColor}) }
+      gsap.to("#navbarToggler", {border: "solid " + standardWhiteBg})
       gsap.to("#lightModeBtn", {border: "solid " + standardWhiteBg})
       navbarLogoTl.to("#aBrandLight", { opacity: 0}).to("#aBrandLight", { display: 'none'}).to("#aBrandDark", { display: 'block'}).to("#aBrandDark", { opacity: 1})
       aboutLogoTl.to("#aboutImgLight", { opacity: 0}).to("#aboutImgLight", { display: 'none'}).to("#aboutImgDark", { display: 'block'}).to("#aboutImgDark", { opacity: 1})
-      
-
       gsap.to(".professional-cards", {color: standardWhiteColor, backgroundColor: standardBlackBg, border: "solid" + standardGrayColor})
-
       gsap.to("footer", {backgroundColor: standardWhiteBg})
       gsap.to("footer h4", {color: standardBlackColor})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardBlackBg, backgroundColor: standardWhiteBg})
