@@ -62,8 +62,12 @@ serviceHeadingMobile();
 function lightModeClicked() {
   let toggleState = true;
   const toggleAnimation = gsap.timeline({ paused: true });
-  let colorChangeList = ["#aBrand", "#services, #services h1, #services h4", "#btsTextBoxCol h3, #btsTextBoxCol span", ".bts-heading-texts", "#professionalHeadingCol h2", ".client-col h2", ".client-col p", "#mainClientsTablet", "#companyTitleBoxMobile h1", ".navbar-link"]
+  let navbarLogoTl = gsap.timeline()
+  let aboutLogoTl = gsap.timeline()
+  let colorChangeList = ["#aBrand", ".navbar-link","#aboutTextBlock h1", "#aboutTextBlock p", "#servicesHeading","#services, #services h1, #services h4", ".project-texts h2", ".project-texts h4", ".project-texts p","#professionalHeadingCol h2", ".card-body h5", ".card-body p", "#clientContainer h2", "#clientContainer p"]
   let backgroundColorChangeList = [".navbar-toggler-stripes", "#lightModeToggle"]
+  let borderChangeList = ["#navbarToggler", "#navContactBtn"]
+  let hyperlinkColorChangeList = ["#aboutTextBlock span", ".professional-cards a"]
   toggleAnimation
     .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
   lightModeBtn.addEventListener("click", () => {
@@ -73,46 +77,40 @@ function lightModeClicked() {
       gsap.to(".carousel-layer", {border: "25px solid " + standardWhiteBg})
       gsap.to(colorChangeList, {color: standardBlackColor})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardBlackColor})
-      gsap.to("#navbarToggler", {border: "solid " + standardBlackColor})
-      gsap.to("#navContactBtn", {border: "solid " + standardBlackColor})
-      gsap.to("#lightModeBtn", {border: "solid " + standardBlackBg})
-      gsap.to(".bts-card-text", {color: standardBlackColor, backgroundColor: standardWhiteBg})
-      gsap.to(".white-layer", {backgroundColor: standardWhiteBg})
+      gsap.to(hyperlinkColorChangeList, {color: hyperlinkColor2})
+      gsap.to(borderChangeList, {border: "solid " + standardBlackColor})
+      gsap.to("#lightModeBtn", {border: "solid " + standardBlackColor})
+      navbarLogoTl.to("#aBrandDark", { opacity: 0}).to("#aBrandDark", { display: 'none'}).to("#aBrandLight", { display: 'block'}).to("#aBrandLight", { opacity: 1})
+      aboutLogoTl.to("#aboutImgDark", { opacity: 0}).to("#aboutImgDark", { display: 'none'}).to("#aboutImgLight", { display: 'block'}).to("#aboutImgLight", { opacity: 1})
+
       gsap.to(".professional-cards", {color: standardBlackColor, backgroundColor: standardWhiteBg, border: "solid" + standardGrayColor})
-      gsap.to(".professional-cards a", {color: hyperlinkColor2})
       gsap.to("footer", {backgroundColor: standardBlackBg})
       gsap.to("footer h4", {color: standardWhiteBg})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
       gsap.to("#footerSocial svg", {fill: standardWhiteBg})
       gsap.to("#footerLeft p", {color: standardWhiteBg})
       gsap.to("#arrowBox svg", {fill: standardBlackBg})
-      gsap.to("#whiteLogo", {opacity: 0, duration: 0.1})
-      gsap.to("#whiteLogo", {display: "none"})
-      gsap.to("#blackLogo", {opacity: 0, display: "block", duration: 0})
-      gsap.to("#blackLogo", {opacity: 1, duration: 0.1, ease: "linear"}, "=+0.1")
     } else {
       toggleAnimation.reverse();
       gsap.to("body", {backgroundColor: standardBlackBg})
       gsap.to(".carousel-layer", {border: "25px solid " + standardBlackBg})
       gsap.to(colorChangeList, {color: standardWhiteBg})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardWhiteBg})
-      gsap.to("#navbarToggler", {border: "solid " + standardWhiteColor})
-      gsap.to("#navContactBtn", {border: "solid " + standardWhiteColor})
+      gsap.to(hyperlinkColorChangeList, {color: hyperlinkColor1})
+      gsap.to(borderChangeList, {border: "solid " + standardWhiteColor})
       gsap.to("#lightModeBtn", {border: "solid " + standardWhiteBg})
-      gsap.to(".bts-card-text", {color: standardWhiteColor, backgroundColor: standardBlackBg})
-      gsap.to(".white-layer", {backgroundColor: standardBlackBg})
+      navbarLogoTl.to("#aBrandLight", { opacity: 0}).to("#aBrandLight", { display: 'none'}).to("#aBrandDark", { display: 'block'}).to("#aBrandDark", { opacity: 1})
+      aboutLogoTl.to("#aboutImgLight", { opacity: 0}).to("#aboutImgLight", { display: 'none'}).to("#aboutImgDark", { display: 'block'}).to("#aboutImgDark", { opacity: 1})
+      
+
       gsap.to(".professional-cards", {color: standardWhiteColor, backgroundColor: standardBlackBg, border: "solid" + standardGrayColor})
-      gsap.to(".professional-cards a", {color: hyperlinkColor1})
+
       gsap.to("footer", {backgroundColor: standardWhiteBg})
       gsap.to("footer h4", {color: standardBlackColor})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardBlackBg, backgroundColor: standardWhiteBg})
       gsap.to("#footerSocial svg", {fill: standardBlackBg})
       gsap.to("#footerLeft p", {color: standardBlackBg})
       gsap.to("#arrowBox svg", {fill: standardWhiteBg})
-      gsap.to("#blackLogo", {opacity: 0, duration: 0.1})
-      gsap.to("#blackLogo", {display: "none"})
-      gsap.to("#whiteLogo", {display: "block"}, "=+0.1")
-      gsap.to("#whiteLogo", {opacity: 1, duration: 0.1, ease: "linear"}, "=+0.1")
     }
     toggleState = !toggleState;
   });

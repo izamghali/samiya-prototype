@@ -20,25 +20,28 @@ body {
             z-index: 1;
             padding: 0 1.5rem;
             margin-top: 1.5rem;
-            // position: fixed;
-            // width: 100%;
-            // background-color: $standard-black-bg-color !important;
-            // border: solid orange;
-            top: 0;
 
             #mainNavbarFirstChild {
                 padding: 0;
 
                 #aBrand {
-                    color: $standard-white-color;
-                    font-family: $standard-font-family-2;
-                    // @media screen and (max-width: 991px) { display: block; position: static; }
-
+                    @media screen and (min-width: 1440px) {
+                        margin: 0;
+                        width: 25rem;
+                        display: flex;
+                        justify-content: center;
+                    }
 
                     div {
                         width: 10rem;
                         @media screen and (max-width:500px) { width: 8rem; }
-                        img { width: 100%; }
+                        img {
+                            width: 100%;
+                            &:nth-child(2) {
+                                display: none;
+                                opacity: 0;
+                            }
+                        }
                     }
                 }
     
@@ -116,8 +119,8 @@ body {
                         
                         #navContactBtn {
                             @media screen and (min-width:992px) {
-                                padding: 0.2rem 1.5rem;
-                                border: solid #fff;
+                                padding: 0.2rem 0.5rem;
+                                border: solid $standard-white-color;
                                 background-color: rgba(0,0,0,0);
                                 font-weight: 600;
                                 transition: 400ms;
@@ -156,15 +159,15 @@ body {
                 @include large-mobile { height: 90vh; }
             }
             #carousel1 {
-                background-image: url(../assets/gallery/food/food-84.webp);
+                background-image: url(../assets/gallery/food/food-100.webp);
             }
             #carousel2 {
                 background-image: url(../assets/gallery/company/company-1.webp);
                 @include large-mobile { background-position: 61% 50%; }
             }
             #carousel3 {
-                background-image: url(../assets/gallery/food/food-135.webp);
-                @include large-mobile { background-position: 51% 50%; }
+                background-image: url(../assets/gallery/food/food-75.webp);
+                @include large-mobile { background-position: 55% 50%; }
             }
             #carousel4 {
                 background-image: url(../assets/gallery/architecture/architecture-4.webp);
@@ -186,7 +189,11 @@ body {
             }
         }
 
-        .contact-us-page { @include desktop { width: 30vw; height: 60vh; } }
+        .contact-us-page {
+            h2 { color: $standard-black-color;}
+            @include desktop { width: 30vw; height: 60vh; }
+        }
+
     }
 
     #bodyPage {
@@ -208,7 +215,10 @@ body {
             #aboutImgBlock {
                 width: 20rem;
                 @media screen and (max-width:500px) { width: 40rem;    }
-                img { width: 100%; }
+                img {
+                    width: 100%;
+                    &:nth-child(2) { display: none; opacity: 0;}
+                }
             }
             #aboutTextBlock {
                 .read-more-btn {

@@ -86,14 +86,17 @@ body #landingPage #mainNavbar {
   z-index: 1;
   padding: 0 1.5rem;
   margin-top: 1.5rem;
-  top: 0;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild {
   padding: 0;
 }
-body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
-  color: hsl(60, 0%, 100%);
-  font-family: "Montserrat";
+@media screen and (min-width: 1440px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
+    margin: 0;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+  }
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
   width: 10rem;
@@ -105,6 +108,10 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div img {
   width: 100%;
+}
+body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div img:nth-child(2) {
+  display: none;
+  opacity: 0;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarToggler {
   border: solid #ADADAD;
@@ -207,8 +214,8 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
 }
 @media screen and (min-width: 992px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn {
-    padding: 0.2rem 1.5rem;
-    border: solid #fff;
+    padding: 0.2rem 0.5rem;
+    border: solid hsl(60, 0%, 100%);
     background-color: rgba(0, 0, 0, 0);
     font-weight: 600;
     transition: 400ms;
@@ -252,7 +259,7 @@ body #landingPage #mainCarousel .carousel-img {
   }
 }
 body #landingPage #mainCarousel #carousel1 {
-  background-image: url(../assets/gallery/food/food-84.webp);
+  background-image: url(../assets/gallery/food/food-100.webp);
 }
 body #landingPage #mainCarousel #carousel2 {
   background-image: url(../assets/gallery/company/company-1.webp);
@@ -263,11 +270,11 @@ body #landingPage #mainCarousel #carousel2 {
   }
 }
 body #landingPage #mainCarousel #carousel3 {
-  background-image: url(../assets/gallery/food/food-135.webp);
+  background-image: url(../assets/gallery/food/food-75.webp);
 }
 @media (max-width: 425px) {
   body #landingPage #mainCarousel #carousel3 {
-    background-position: 51% 50%;
+    background-position: 55% 50%;
   }
 }
 body #landingPage #mainCarousel #carousel4 {
@@ -292,6 +299,9 @@ body #landingPage #mainCarousel .carousel-layer {
   height: 100%;
   width: 100%;
   opacity: 1;
+}
+body #landingPage .contact-us-page h2 {
+  color: #212529;
 }
 @media (max-width: 1024px) {
   body #landingPage .contact-us-page {
@@ -327,6 +337,10 @@ body #bodyPage #about #aboutImgBlock {
 }
 body #bodyPage #about #aboutImgBlock img {
   width: 100%;
+}
+body #bodyPage #about #aboutImgBlock img:nth-child(2) {
+  display: none;
+  opacity: 0;
 }
 body #bodyPage #about #aboutTextBlock .read-more-btn, body #bodyPage #about #aboutTextBlock .read-less-btn {
   color: hsl(168, 100%, 76%);
