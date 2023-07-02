@@ -12,14 +12,19 @@ body {
     background-color: $standard-black-bg-color;
     p, h3, h4, h5, span { font-family: $standard-font-family-1; color: $standard-white-color;}
     h1, h2 { font-family: $standard-font-family-2; color: $standard-white-color; }
-
+    
     #landingPage {
         padding-inline: 0px !important;
+        margin-top: 4.5rem;
         
         #mainNavbar {
             z-index: 1;
             padding: 0 1.5rem;
             margin-top: 1.5rem;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            background-color: $standard-black-bg-color;
 
             #mainNavbarFirstChild {
                 padding: 0;
@@ -148,8 +153,6 @@ body {
 
         #mainCarousel {
             z-index: 0;
-            // padding-top: 5rem;
-            // border: solid green;
             .carousel-img {
                 width: 100vw;
                 height: 90vh;

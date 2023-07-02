@@ -15,28 +15,22 @@ let standardWhiteBg = "hsl(0, 0%, 96%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 52%)";
 
-// border bottm & nav size change after scroll
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    gsap.to("nav", {borderBottom: "2px solid #D9D9D9", duration: 0.4})
-    // document.getElementById('#mainNavbar').style.borderBottom = 'solid #D9D9D9';
-    // document.getElementById('#mainNavbar').style.marginTop = '0';
-  } else {
-    // gsap.to("nav", {borderBottom: "2px solid white", duration: 0.4})
-  }
-}
-// window.onscroll = function() {scrollFunction()};
 
-function arrowAppearAfterScroll() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+function effectAfterScroll() {
+  if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
     gsap.to("#arrowBox", {opacity: 1, duration: 0.4, display: 'block'})
-    // document.getElementById('#mainNavbar').style.marginTop = '0';
-    gsap.to('#mainNavbar', { backgroundColor: '' })
   } else {
     gsap.to("#arrowBox", {opacity: 0, duration: 0.4, display: 'none'})
   }
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
+    gsap.to("#mainNavbar", { duration: 0.2, marginTop: 0, paddingBlock: '0.4rem', borderBottom: "solid " + standardGrayColor,
+    })
+  } else {
+    gsap.to("#mainNavbar", { duration: 0.2, marginTop: '1.5rem',  paddingBlock: '0rem', borderBottom: 'none',
+    })
+  }
 }
-window.onscroll = function() {arrowAppearAfterScroll()};
+window.onscroll = function() {effectAfterScroll()};
 
 // service heading switch
 function serviceHeadingMobile() {
@@ -66,6 +60,7 @@ function lightModeClicked() {
   let aboutLogoTl = gsap.timeline()
   let colorChangeList = ["#aBrand","#aboutTextBlock h1", "#aboutTextBlock p", "#servicesHeading","#services, #services h1, #services h4", ".project-texts h2", ".project-texts h4", ".project-texts p","#professionalHeadingCol h2", ".card-body h5", ".card-body p", "#clientContainer h2", "#clientContainer p"]
   let backgroundColorChangeList = [".navbar-toggler-stripes", "#lightModeToggle"]
+  let backgroundColorChangeListTwo = ["body", "#mainNavbar"]
   let borderChangeList = ["#navContactBtn"]
   let hyperlinkColorChangeList = ["#aboutTextBlock span", ".professional-cards a"]
   toggleAnimation
@@ -73,7 +68,7 @@ function lightModeClicked() {
   lightModeBtn.addEventListener("click", () => {
     if (toggleState) {
       toggleAnimation.restart();
-      gsap.to("body", {backgroundColor: standardWhiteBg})
+      gsap.to(backgroundColorChangeListTwo, {backgroundColor: standardWhiteBg})
       gsap.to(".carousel-layer", {border: "25px solid " + standardWhiteBg})
       gsap.to(colorChangeList, {color: standardBlackColor})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardBlackColor})
@@ -95,7 +90,7 @@ function lightModeClicked() {
       gsap.to("#arrowBox svg", {fill: standardBlackBg})
     } else {
       toggleAnimation.reverse();
-      gsap.to("body", {backgroundColor: standardBlackBg})
+      gsap.to(backgroundColorChangeListTwo, {backgroundColor: standardBlackBg})
       gsap.to(".carousel-layer", {border: "25px solid " + standardBlackBg})
       gsap.to(colorChangeList, {color: standardWhiteBg})
       gsap.to(backgroundColorChangeList, {backgroundColor: standardWhiteBg})
