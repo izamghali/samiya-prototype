@@ -197,30 +197,6 @@ function mobileSize() {
 
 // jQuery
 $(document).ready(function() {
-  
-  // bts collapse
-  $("#btsCollapse1").on("click", () => {
-    // $('#btsCollapseText1').css("display", "block");
-    $("#btsCollapseText1").slideToggle(250);
-    $("#btsCollapseText2").slideUp(250);
-    $("#btsCollapseText3").slideUp(250);
-  });
-
-  $("#btsCollapse2").on("click", () => {
-    $("#btsCollapseText2").slideToggle(250);
-    $("#btsCollapseText1").slideUp(250);
-    $("#btsCollapseText3").slideUp(250);
-  });
-
-  $("#btsCollapse3").on("click", () => {
-    $("#btsCollapseText3").slideToggle(250);
-    $("#btsCollapseText1").slideUp(250);
-    $("#btsCollapseText2").slideUp(250);
-  });
-
-  $("#green").on("click", (event) => {
-    $(event.currentTarget).hide();
-  });
 
   // hover navbar
   $(".navbar-link").on("mouseenter", (event) => {
@@ -248,7 +224,10 @@ $(document).ready(function() {
     gsap.effects.navbarScrollTo(window, {y: "#servicesHeading", offsetY: 10});
   })
   $("#navLinkBts").on("click", () => {
-    gsap.effects.navbarScrollTo(window, {y: "#btsCol", offsetY: 110});
+    gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 0});
+  })
+  $("#navLinkHowWeWork").on("click", () => {
+    gsap.effects.navbarScrollTo(window, {y: "#projectBlockHowWeWork", offsetY: 0});
   })
   
   // clicked contact us mini page
