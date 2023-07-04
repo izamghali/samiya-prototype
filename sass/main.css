@@ -246,21 +246,26 @@ body #landingPage #mainCarousel {
   z-index: 0;
 }
 body #landingPage #mainCarousel .carousel-img {
-  width: 100vw;
+  width: 100%;
   height: 90vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  border-radius: 40px;
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   body #landingPage #mainCarousel .carousel-img {
-    height: 80vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 50vh;
   }
 }
-@media (max-width: 425px) {
+@media screen and (max-width: 500px) {
   body #landingPage #mainCarousel .carousel-img {
-    height: 90vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 30vh;
   }
 }
 body #landingPage #mainCarousel #carousel1 {
@@ -303,7 +308,6 @@ body #landingPage #mainCarousel .carousel-layer {
   position: relative;
   height: 100%;
   width: 100%;
-  opacity: 1;
 }
 body #landingPage .contact-us-page h2 {
   color: #212529;
