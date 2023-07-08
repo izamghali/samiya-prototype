@@ -274,34 +274,14 @@ body #landingPage #mainCarousel #carousel1 {
 body #landingPage #mainCarousel #carousel2 {
   background-image: url(../assets/gallery/company/company-1.webp);
 }
-@media (max-width: 425px) {
-  body #landingPage #mainCarousel #carousel2 {
-    background-position: 61% 50%;
-  }
-}
 body #landingPage #mainCarousel #carousel3 {
   background-image: url(../assets/gallery/food/food-75.webp);
-}
-@media (max-width: 425px) {
-  body #landingPage #mainCarousel #carousel3 {
-    background-position: 55% 50%;
-  }
 }
 body #landingPage #mainCarousel #carousel4 {
   background-image: url(../assets/gallery/architecture/architecture-4.webp);
 }
-@media (max-width: 425px) {
-  body #landingPage #mainCarousel #carousel4 {
-    background-position: 43% 50%;
-  }
-}
 body #landingPage #mainCarousel #carousel5 {
   background-image: url(../assets/gallery/food/food-57.webp);
-}
-@media (max-width: 425px) {
-  body #landingPage #mainCarousel #carousel5 {
-    background-position: 50% 50%;
-  }
 }
 body #landingPage #mainCarousel .carousel-layer {
   border: 1.5rem solid #1C1C1C;

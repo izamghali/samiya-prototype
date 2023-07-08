@@ -13,7 +13,7 @@ let standardBlackBg = "#1c1c1c";
 let standardWhiteBg = "hsl(0, 0%, 96%)";
 
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
-let hyperlinkColor2 = "hsl(216, 98%, 52%)";
+let hyperlinkColor2 = "hsl(216, 98%, 36%)";
 
 
 function effectAfterScroll() {

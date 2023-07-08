@@ -18,10 +18,18 @@
     <link rel="stylesheet" href="./sass/main.css">
   </head>
   <body>
+    <!-- review: add role attr to add context -->
+    <!-- review: add presentation role to skip unnecessary element to screen readers to hear -->
+    <!-- review: add alt attr to the image/ logo image with <a> + no more than 150 char -->
+
+    <!-- review: add aria-label to give additional info about things that connected -->
+    <!-- <img src="#" alt="A painting of the Shenandoah Valley"/> -->
+    <!-- <p aria-label="Artist">Armand Cabrera, 2010</p> -->
 
     <!-- navbar & carousel -->
     <div class="container-fluid" id="landingPage">
 
+      <!-- review: wrap navbar in heaeder -->
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg" id="mainNavbar">
         <div class="container-fluid" id="mainNavbarFirstChild">
@@ -202,7 +210,8 @@
 
             <div class="service-blocks service-texts" id="serviceBlock1">
               <a href="./gallery.html" class="service-headings-a">
-                <h1>01</h1>
+                <!-- review: don't skip heading, change h1 to h3 -->
+                <h1>01</h1> 
                 <h4>Food Photography</h4>
               </a>
             </div>
@@ -213,6 +222,7 @@
   
             <div class="service-blocks service-texts" id="serviceBlock3">
               <a href="./gallery.html" class="service-headings-a">
+                <!-- review: don't skip heading, change h1 to h3 -->
                 <h1>02</h1>
                 <h4>Product Photography</h4>
               </a>
@@ -224,6 +234,7 @@
 
             <div class="service-blocks service-texts" id="serviceBlock5">
               <a href="./gallery.html" class="service-headings-a">
+                <!-- review: don't skip heading, change h1 to h3 -->
                 <h1 id="serviceBlock5h1">05</h1>
                 <h4 id="serviceBlock5h4">Architecture Photography</h4>
               </a>
@@ -240,6 +251,7 @@
 
             <div class="service-blocks service-texts" id="serviceBlock7">
               <a href="./gallery.html" class="service-headings-a">
+                <!-- review: don't skip heading, change h1 to h3 -->
                 <h1 id="serviceBlock7h1">03</h1>
                 <h4 id="serviceBlock7h4">Fashion Photography</h4>
               </a>
@@ -251,6 +263,7 @@
 
             <div class="service-blocks service-texts" id="serviceBlock9">
               <a href="./gallery.html" class="service-headings-a">
+                <!-- review: don't skip heading, change h1 to h3 -->
                 <h1 id="serviceBlock9h1">04</h1>
                 <h4 id="serviceBlock9h4">Company Profile Photography</h4>
               </a>
@@ -269,6 +282,8 @@
       <div class="row">
         <div class="col" id="projects">
 
+          <!-- review: for mobile screensize, add overlay to contrast the text color -->
+
           <!-- project block #1 -->
           <div class="project-blocks" id="projectBlockBts">
 
@@ -279,6 +294,7 @@
             <div class="project-text-blocks">
               <div class="project-texts">
                 <h2>Behind The Scenes</h2>
+                <!-- review: don't skip heading, change h4 to h3 -->
                 <h4>Title Subheading</h4>
                 <p>Some text</p>
               </div>
@@ -295,6 +311,7 @@
 
             <div class="project-text-blocks">
               <div class="project-texts">
+                <!-- review: don't skip heading, change h4 to h3 -->
                 <h2>Workshops/Projects</h2>
                 <h4>Title Subheading</h4>
                 <p>Some text</p>
@@ -312,6 +329,7 @@
 
             <div class="project-text-blocks">
               <div class="project-texts">
+                <!-- review: don't skip heading, change h4 to h3 -->
                 <h2>How we work</h2>
                 <h4>Title Subheading</h4>
                 <p>Some text</p>
@@ -338,6 +356,7 @@
           <div class="card professional-cards mb-3">
             <img src="./assets/professionals/1.webp" class="card-img-top" alt="...">
             <div class="card-body">
+              <!-- review: consider to change h5 to h3 -->
               <h5>Febriansyah
                 Aditya Pratama</h5>
               <p class="card-text">Photografer/Videografer</p>
@@ -361,6 +380,7 @@
           <div class="card professional-cards mb-3">
             <img src="./assets/professionals/2.webp" class="card-img-top" alt="...">
             <div class="card-body">
+              <!-- review: consider to change h5 to h3 -->
               <h5>Nurman Adi Tama</h5>
               <p class="card-text">Director/Editor</p>
               <a href="https://www.instagram.com/nurman_tama" target="_blank" class="card-link">
@@ -382,8 +402,8 @@
           <div class="card professional-cards mb-3">
             <img src="./assets/professionals/3.webp" class="card-img-top" alt="...">
             <div class="card-body">
-              <h5>Muhammad
-                Harits Fadhli</h5>
+              <!-- review: consider to change h5 to h3 -->
+              <h5>Muhammad Harits Fadhli</h5>
               <p class="card-text">Photografer/Editor</p>
               <a href="https://www.instagram.com/haritsfadhli/" target="_blank" class="card-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
@@ -432,6 +452,7 @@
     <!-- footer -->
     <footer class="py-4">
       <div class="footer-box" id="footerLeft">
+        <!-- review: consider to change h4 to h2/h3 -->
         <h4>Samiya Studio</h4>
         <p>Capture the perfect one!</p>
       </div>
@@ -439,6 +460,7 @@
         <!-- reach us heading -->
         <div id="footerReachUs">
           <div id="footerReachUsHeading">
+            <!-- review: consider to change h4 to h2/h3 -->
             <h4>Reach Us</h4>
           </div>
           <div id="footerSocial">
