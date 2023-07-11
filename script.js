@@ -50,7 +50,7 @@ function serviceHeadingMobile() {
     document.getElementById("serviceBlock9h4").innerHTML = "Company Profile Photography";
   }
 }
-serviceHeadingMobile();
+// serviceHeadingMobile();
 
 // light mode toggle clicked
 function lightModeClicked() {
@@ -216,11 +216,17 @@ $(document).ready(function() {
 
   // clicked navbar list
   $("#navLinkOurServices").on("click", () => {
-    gsap.effects.navbarScrollTo(window, {y: "#servicesHeading", offsetY: 10});
+    gsap.effects.navbarScrollTo(window, {y: "#servicesHeading", offsetY: 80});
   })
-  $("#navLinkBts").on("click", () => {
-    gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 0});
-  })
+  if (window.matchMedia("(max-width:500px)").matches) {
+    $("#navLinkBts").on("click", () => {
+      gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 80});
+    })
+  } else {
+    $("#navLinkBts").on("click", () => {
+      gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 0});
+    })
+  }
   $("#navLinkHowWeWork").on("click", () => {
     gsap.effects.navbarScrollTo(window, {y: "#projectBlockHowWeWork", offsetY: 0});
   })

@@ -313,7 +313,7 @@ body #bodyPage #about {
 @media screen and (max-width: 500px) {
   body #bodyPage #about {
     font-size: 10px;
-    padding-block: 2rem;
+    padding-block: 1rem;
     gap: 1rem;
   }
 }
