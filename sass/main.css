@@ -44,6 +44,7 @@ body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-contai
   font-weight: 500;
   font-size: xx-large;
   line-height: 1.2;
+  color: #212529;
   margin: 0;
 }
 .contact-us-page .contact-us-social {
@@ -479,21 +480,43 @@ body #bodyPage #howWeWork {
   align-items: center;
   gap: 1.5rem;
 }
+@media screen and (max-width: 500px) {
+  body #bodyPage #howWeWork {
+    justify-content: center;
+  }
+}
 body #bodyPage #howWeWork .how-we-work-img-div {
   max-width: 26rem;
 }
 body #bodyPage #howWeWork .how-we-work-img-div img {
   width: 100%;
 }
+@media screen and (max-width: 991px) {
+  body #bodyPage #howWeWork .how-we-work-img-div {
+    display: none;
+  }
+}
 body #bodyPage #howWeWork .how-we-work-outer-container {
   padding-right: 1.5rem;
   justify-content: space-between;
   min-height: 100%;
 }
+@media screen and (max-width: 500px) {
+  body #bodyPage #howWeWork .how-we-work-outer-container {
+    padding-inline: 4%;
+    gap: 2rem;
+  }
+}
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container {
   display: flex;
   gap: 2.5rem;
   justify-content: space-between;
+}
+@media screen and (max-width: 500px) {
+  body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 }
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-block-icons {
   background-color: whitesmoke;
@@ -512,11 +535,22 @@ body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-contai
   align-items: center;
   gap: 4.5rem;
 }
+@media screen and (max-width: 500px) {
+  body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks {
+    width: 15rem;
+    gap: 2rem;
+  }
+}
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body {
   gap: 4.5rem;
 }
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body p {
   margin: 0;
+}
+@media screen and (max-width: 500px) {
+  body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body {
+    gap: 2.5rem;
+  }
 }
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body div {
   height: 10rem;

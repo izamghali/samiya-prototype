@@ -220,15 +220,15 @@ $(document).ready(function() {
   $("#navLinkOurServices").on("click", () => {
     gsap.effects.navbarScrollTo(window, {y: "#servicesHeading", offsetY: 80});
   })
-  if (window.matchMedia("(max-width:500px)").matches) {
-    $("#navLinkBts").on("click", () => {
-      gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 80});
-    })
-  } else {
-    $("#navLinkBts").on("click", () => {
-      gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 0});
-    })
-  }
+  // if (window.matchMedia("(max-width:500px)").matches) {
+  //   $("#navLinkBts").on("click", () => {
+  //     gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 80});
+  //   })
+  // } else {
+  //   $("#navLinkBts").on("click", () => {
+  //     gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 0});
+  //   })
+  // }
   $("#navLinkHowWeWork").on("click", () => {
     gsap.effects.navbarScrollTo(window, {y: "#howWeWork", offsetY: 150});
   })
