@@ -341,6 +341,57 @@ body {
             }
         }
 
+        #howWeWork {
+            margin-top: 8rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            .how-we-work-img-div {
+                width: 30rem;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .how-we-work-outer-container {
+
+                .how-we-work-inner-container {
+                    display: flex;
+                    gap: 2.5rem;
+                    
+                    .how-we-work-block-icons {
+                        background-color: whitesmoke;
+                        width: 8rem;
+                        height: 8rem;
+                        border-radius: 50%;
+                        @extend %flex-justify-align-center;
+                        svg {
+                            width: 4.5rem;
+                            height: 4.5rem;
+                        }
+                    }
+    
+                    .how-we-work-blocks {
+                        padding: 1.2rem;
+                        border: solid $standard-white-color;
+                        width: 15rem;
+                        @extend %flex-col-direction;
+                        align-items: center;
+                        gap: 4.5rem;
+                        
+                        .how-we-work-block-body {
+                            text-align: start;
+                            p { margin: 0; }
+                            @extend %flex-col-direction;
+                            gap: 4.5rem;
+                        }
+                    }
+                }
+
+            }
+            
+        }
+
         #professionalHeadingCol {
             margin-top: 8rem;
             color: $standard-white-color;

@@ -15,3 +15,14 @@
 %no-underline {
     text-decoration: none;
 }
+
+%flex-justify-align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-col-direction {
+    display: flex;
+    flex-direction: column;
+}
