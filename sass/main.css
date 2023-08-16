@@ -4,7 +4,7 @@ body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-contai
   align-items: center;
 }
 
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body, body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks {
+body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body, body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks, body #bodyPage #howWeWork .how-we-work-outer-container {
   display: flex;
   flex-direction: column;
 }
@@ -230,7 +230,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
 }
 @media screen and (min-width: 992px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn {
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 1rem;
     border: solid hsl(60, 0%, 100%);
     background-color: rgba(0, 0, 0, 0);
     font-weight: 600;
@@ -477,17 +477,23 @@ body #bodyPage #howWeWork {
   margin-top: 8rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 body #bodyPage #howWeWork .how-we-work-img-div {
-  width: 30rem;
+  max-width: 30rem;
+  height: auto;
 }
 body #bodyPage #howWeWork .how-we-work-img-div img {
   width: 100%;
 }
+body #bodyPage #howWeWork .how-we-work-outer-container {
+  padding-right: 1.5rem;
+  gap: 2rem;
+}
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container {
   display: flex;
   gap: 2.5rem;
+  justify-content: space-between;
 }
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-block-icons {
   background-color: whitesmoke;
@@ -502,16 +508,18 @@ body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-contai
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks {
   padding: 1.2rem;
   border: solid hsl(60, 0%, 100%);
-  width: 15rem;
+  width: 25%;
   align-items: center;
   gap: 4.5rem;
 }
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body {
-  text-align: start;
   gap: 4.5rem;
 }
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body p {
   margin: 0;
+}
+body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body div {
+  height: 10rem;
 }
 body #bodyPage #professionalHeadingCol {
   margin-top: 8rem;
