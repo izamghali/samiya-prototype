@@ -480,15 +480,15 @@ body #bodyPage #howWeWork {
   gap: 1.5rem;
 }
 body #bodyPage #howWeWork .how-we-work-img-div {
-  max-width: 30rem;
-  height: auto;
+  max-width: 26rem;
 }
 body #bodyPage #howWeWork .how-we-work-img-div img {
   width: 100%;
 }
 body #bodyPage #howWeWork .how-we-work-outer-container {
   padding-right: 1.5rem;
-  gap: 2rem;
+  justify-content: space-between;
+  min-height: 100%;
 }
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container {
   display: flex;
@@ -508,7 +508,7 @@ body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-contai
 body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks {
   padding: 1.2rem;
   border: solid hsl(60, 0%, 100%);
-  width: 25%;
+  width: 14rem;
   align-items: center;
   gap: 4.5rem;
 }

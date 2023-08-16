@@ -58,11 +58,13 @@ function lightModeClicked() {
   const toggleAnimation = gsap.timeline({ paused: true });
   let navbarLogoTl = gsap.timeline()
   let aboutLogoTl = gsap.timeline()
-  let colorChangeList = ["#aBrand","#aboutTextBlock h1", "#aboutTextBlock p", "#servicesHeading","#services, #services h1, #services h4", ".project-texts h2", ".project-texts h4", ".project-texts p","#professionalHeadingCol h2", ".card-body h5", ".card-body p", "#clientContainer h2", "#clientContainer p"]
-  let backgroundColorChangeList = [".navbar-toggler-stripes", "#lightModeToggle"]
+  let colorChangeList = ["#aBrand","#aboutTextBlock h1", "#aboutTextBlock p", "#servicesHeading","#services, #services h1, #services h4", ".project-texts h2", ".project-texts h4", ".project-texts p","#professionalHeadingCol h2", ".card-body h5", ".card-body p", "#clientContainer h2", "#clientContainer p", ".how-we-work-block-body h4, span, p", ".how-we-work-outer-container h2"]
+  let backgroundColorChangeList = [".navbar-toggler-stripes", "#lightModeToggle", ".how-we-work-block-icons"]
   let backgroundColorChangeListTwo = ["body", "#mainNavbar"]
-  let borderChangeList = ["#navContactBtn"]
+  let borderChangeList = ["#navContactBtn", ".how-we-work-blocks"]
   let hyperlinkColorChangeList = ["#aboutTextBlock span", ".professional-cards a"]
+  let fillChangeListOne = [".how-we-work-block-icons svg", "#footerSocial svg"]
+  let fillChangeListTwo = ["#arrowBox svg"]
   toggleAnimation
     .to("#lightModeToggle", { x: "115%", duration: 0.3, ease: "linear" });
   lightModeBtn.addEventListener("click", () => {
@@ -85,9 +87,9 @@ function lightModeClicked() {
       gsap.to("footer", {backgroundColor: standardBlackBg})
       gsap.to("footer h4", {color: standardWhiteBg})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardWhiteBg, backgroundColor: standardBlackBg})
-      gsap.to("#footerSocial svg", {fill: standardWhiteBg})
       gsap.to("#footerLeft p", {color: standardWhiteBg})
-      gsap.to("#arrowBox svg", {fill: standardBlackBg})
+      gsap.to(fillChangeListOne, {fill: standardWhiteBg})
+      gsap.to(fillChangeListTwo, {fill: standardBlackBg})
     } else {
       toggleAnimation.reverse();
       gsap.to(backgroundColorChangeListTwo, {backgroundColor: standardBlackBg})
@@ -107,9 +109,9 @@ function lightModeClicked() {
       gsap.to("footer", {backgroundColor: standardWhiteBg})
       gsap.to("footer h4", {color: standardBlackColor})
       gsap.to("#footerSocial a", {border: "0.5px solid " + standardBlackBg, backgroundColor: standardWhiteBg})
-      gsap.to("#footerSocial svg", {fill: standardBlackBg})
       gsap.to("#footerLeft p", {color: standardBlackBg})
-      gsap.to("#arrowBox svg", {fill: standardWhiteBg})
+      gsap.to(fillChangeListOne, {fill: standardBlackBg})
+      gsap.to(fillChangeListTwo, {fill: standardWhiteBg})
     }
     toggleState = !toggleState;
   });
@@ -228,7 +230,7 @@ $(document).ready(function() {
     })
   }
   $("#navLinkHowWeWork").on("click", () => {
-    gsap.effects.navbarScrollTo(window, {y: "#projectBlockHowWeWork", offsetY: 0});
+    gsap.effects.navbarScrollTo(window, {y: "#howWeWork", offsetY: 150});
   })
   
   // clicked contact us mini page
