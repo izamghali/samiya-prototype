@@ -23,11 +23,11 @@ function effectAfterScroll() {
     gsap.to("#arrowBox", {opacity: 0, duration: 0.4, display: 'none'})
   }
   if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-    gsap.to("#mainNavbar", { duration: 0.2, marginTop: 0, paddingBlock: '0.4rem', borderBottom: "solid " + standardGrayColor,
-    })
+    gsap.to("#mainNavbar", { duration: 0.2, marginTop: 0, paddingBlock: '0.4rem', borderBottom: "solid " + standardGrayColor })
+    gsap.to("#navContactBtn", { padding: "0px 1rem" })
   } else {
-    gsap.to("#mainNavbar", { duration: 0.2, marginTop: '1.5rem',  paddingBlock: '0rem', borderBottom: 'none',
-    })
+    gsap.to("#mainNavbar", { duration: 0.2, marginTop: '1.5rem',  paddingBlock: '0rem', borderBottom: 'none' })
+    gsap.to("#navContactBtn", { padding: "0.2rem 1rem" })
   }
 }
 window.onscroll = function() {effectAfterScroll()};
