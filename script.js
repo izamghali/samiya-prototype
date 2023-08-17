@@ -58,7 +58,7 @@ function lightModeClicked() {
   const toggleAnimation = gsap.timeline({ paused: true });
   let navbarLogoTl = gsap.timeline()
   let aboutLogoTl = gsap.timeline()
-  let colorChangeList = ["#aBrand","#aboutTextBlock h1", "#aboutTextBlock p", "#servicesHeading","#services, #services h1, #services h4", ".project-texts h2", ".project-texts h4", ".project-texts p","#professionalHeadingCol h2", ".card-body h5", ".card-body p", "#clientContainer h2", "#clientContainer p", ".how-we-work-block-body h4, span, p", ".how-we-work-outer-container h2"]
+  let colorChangeList = ["#aBrand","#aboutTextBlock h2", "#aboutTextBlock p", "#servicesHeading","#services, #services h1, #services h4", ".project-texts h2", ".project-texts h4", ".project-texts p","#professionalHeadingCol h2", ".card-body h5", ".card-body p", "#clientContainer h2", "#clientContainer p", ".how-we-work-block-body h4, span, p", ".how-we-work-outer-container h2", "#aboutImgBlock h2"]
   let backgroundColorChangeList = [".navbar-toggler-stripes", "#lightModeToggle", ".how-we-work-block-icons"]
   let backgroundColorChangeListTwo = ["body", "#mainNavbar"]
   let borderChangeList = ["#navContactBtn", ".how-we-work-blocks"]
@@ -231,6 +231,9 @@ $(document).ready(function() {
   // }
   $("#navLinkHowWeWork").on("click", () => {
     gsap.effects.navbarScrollTo(window, {y: "#howWeWork", offsetY: 150});
+  })
+  $("#navLinkAbout").on("click", () => {
+    gsap.effects.navbarScrollTo(window, {y: "#about", offsetY: 100});
   })
   
   // clicked contact us mini page
