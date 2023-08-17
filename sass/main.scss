@@ -390,91 +390,23 @@ body {
         }
 
         #howWeWork {
-            margin-top: 8rem;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem; // same as in .how-we-work-outer-container
-            @media screen and (max-width: 500px) {
-                justify-content: center;
+            @media screen and (min-width: 901px) {
+                margin-top: 8rem;
             }
-            .how-we-work-img-div {
-                max-width: 26rem;
-                img { width: 100%; }
-                @media screen and (max-width: 991px) {
+
+            @media screen and (max-width: 900px) {
+                margin-top: 6rem;
+            }
+
+            #howWeWorkCarousel {
+                width: 45%;
+                @media screen and (max-width: 680px) {
                     display: none;
                 }
-            }
-
-            .how-we-work-outer-container {
-                padding-right: 1.5rem; // same as gap in #howWeWork
-                @extend %flex-col-direction;
-                justify-content: space-between;
-                min-height: 100%;
-                @media screen and (max-width: 500px) {
-                    padding-inline: 4%;
-                    gap: 2rem;
+                img {
+                    width: 100%;
                 }
-
-                
-                .how-we-work-inner-container {
-                    display: flex;
-                    gap: 2.5rem;
-                    justify-content: space-between;
-
-                    @media screen and (max-width: 768px) {
-                        
-                    }
-                    
-                    @media screen and (max-width: 500px) {
-                        flex-direction: column;
-                        gap: 1.5rem;
-                    }
-                    
-                    .how-we-work-block-icons {
-                        background-color: whitesmoke;
-                        width: 8rem;
-                        height: 8rem;
-                        border-radius: 50%;
-                        @extend %flex-justify-align-center;
-                        svg {
-                            width: 4.5rem;
-                            height: 4.5rem;
-                        }
-                    }
-    
-                    .how-we-work-blocks {
-                        padding: 1.2rem;
-                        border: solid $standard-white-color;
-                        width: 14rem;
-                        @extend %flex-col-direction;
-                        align-items: center;
-                        gap: 4.5rem;
-
-                        @media screen and (max-width: 768px) {
-
-                        }
-
-                        @media screen and (max-width: 500px) {
-                            width: 15rem;
-                            gap: 2rem;
-                        }
-                        
-                        .how-we-work-block-body {
-                            p { margin: 0; }
-                            @extend %flex-col-direction;
-                            gap: 4.5rem;
-                            @media screen and (max-width: 500px) {
-                                gap: 2.5rem;
-                            }
-                            div {
-                                height: 10rem;
-                            }
-                        }
-                    }
-                }
-
             }
-            
         }
 
         #professionalHeadingCol {

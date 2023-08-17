@@ -1,14 +1,3 @@
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-block-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body, body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks, body #bodyPage #howWeWork .how-we-work-outer-container {
-  display: flex;
-  flex-direction: column;
-}
-
 .social-btn {
   border-radius: 50%;
   border: 0.99px solid #212529;
@@ -548,86 +537,26 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
     transform: translateY(-100%);
   }
 }
-body #bodyPage #howWeWork {
-  margin-top: 8rem;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 901px) {
   body #bodyPage #howWeWork {
-    justify-content: center;
+    margin-top: 8rem;
   }
 }
-body #bodyPage #howWeWork .how-we-work-img-div {
-  max-width: 26rem;
+@media screen and (max-width: 900px) {
+  body #bodyPage #howWeWork {
+    margin-top: 6rem;
+  }
 }
-body #bodyPage #howWeWork .how-we-work-img-div img {
-  width: 100%;
+body #bodyPage #howWeWork #howWeWorkCarousel {
+  width: 45%;
 }
-@media screen and (max-width: 991px) {
-  body #bodyPage #howWeWork .how-we-work-img-div {
+@media screen and (max-width: 680px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel {
     display: none;
   }
 }
-body #bodyPage #howWeWork .how-we-work-outer-container {
-  padding-right: 1.5rem;
-  justify-content: space-between;
-  min-height: 100%;
-}
-@media screen and (max-width: 500px) {
-  body #bodyPage #howWeWork .how-we-work-outer-container {
-    padding-inline: 4%;
-    gap: 2rem;
-  }
-}
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container {
-  display: flex;
-  gap: 2.5rem;
-  justify-content: space-between;
-}
-@media screen and (max-width: 500px) {
-  body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-}
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-block-icons {
-  background-color: whitesmoke;
-  width: 8rem;
-  height: 8rem;
-  border-radius: 50%;
-}
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-block-icons svg {
-  width: 4.5rem;
-  height: 4.5rem;
-}
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks {
-  padding: 1.2rem;
-  border: solid hsl(60, 0%, 100%);
-  width: 14rem;
-  align-items: center;
-  gap: 4.5rem;
-}
-@media screen and (max-width: 500px) {
-  body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks {
-    width: 15rem;
-    gap: 2rem;
-  }
-}
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body {
-  gap: 4.5rem;
-}
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body p {
-  margin: 0;
-}
-@media screen and (max-width: 500px) {
-  body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body {
-    gap: 2.5rem;
-  }
-}
-body #bodyPage #howWeWork .how-we-work-outer-container .how-we-work-inner-container .how-we-work-blocks .how-we-work-block-body div {
-  height: 10rem;
+body #bodyPage #howWeWork #howWeWorkCarousel img {
+  width: 100%;
 }
 body #bodyPage #professionalHeadingCol {
   margin-top: 8rem;
