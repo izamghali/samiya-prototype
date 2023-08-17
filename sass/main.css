@@ -314,6 +314,7 @@ body #bodyPage {
   padding: 0;
 }
 body #bodyPage #about {
+  border: solid red;
   padding-inline: 10%;
   padding-block: 8rem;
   height: auto;
@@ -322,6 +323,11 @@ body #bodyPage #about {
   align-items: center;
   gap: 4rem;
 }
+@media screen and (max-width: 900px) {
+  body #bodyPage #about {
+    display: block;
+  }
+}
 @media screen and (max-width: 500px) {
   body #bodyPage #about {
     font-size: 10px;
@@ -329,12 +335,27 @@ body #bodyPage #about {
     gap: 1rem;
   }
 }
-body #bodyPage #about #aboutImgBlock {
-  width: 20rem;
+@media screen and (min-width: 901px) {
+  body #bodyPage #about #aboutImgBlock {
+    width: 40rem;
+    border: solid whitesmoke;
+  }
+}
+@media screen and (max-width: 900px) {
+  body #bodyPage #about #aboutImgBlock {
+    border: solid greenyellow;
+    display: flex;
+    width: 7rem;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
 }
 @media screen and (max-width: 500px) {
   body #bodyPage #about #aboutImgBlock {
-    width: 40rem;
+    border: solid pink;
+    width: 4rem;
+    gap: 1.5rem;
   }
 }
 body #bodyPage #about #aboutImgBlock img {
@@ -343,6 +364,25 @@ body #bodyPage #about #aboutImgBlock img {
 body #bodyPage #about #aboutImgBlock img:nth-child(2) {
   display: none;
   opacity: 0;
+}
+@media screen and (max-width: 900px) {
+  body #bodyPage #about #aboutImgBlock h1 {
+    display: block;
+    border: solid whitesmoke;
+  }
+}
+@media screen and (min-width: 901px) {
+  body #bodyPage #about #aboutImgBlock h1 {
+    display: none;
+  }
+}
+body #bodyPage #about #aboutTextBlock {
+  border: solid dodgerblue;
+}
+@media screen and (max-width: 900px) {
+  body #bodyPage #about #aboutTextBlock h1 {
+    display: none;
+  }
 }
 body #bodyPage #about #aboutTextBlock .read-more-btn, body #bodyPage #about #aboutTextBlock .read-less-btn {
   color: hsl(168, 100%, 76%);

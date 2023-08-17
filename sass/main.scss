@@ -211,6 +211,7 @@ body {
         padding: 0;
 
         #about {
+            border: solid red;
             padding-inline: 10%;
             padding-block: 8rem;
             height: auto;
@@ -218,20 +219,59 @@ body {
             justify-content: left;
             align-items: center;
             gap: 4rem;
+            @media screen and (max-width:900px) {
+                display: block;
+            }
             @media screen and (max-width:500px) {
                 font-size: 10px;
                 padding-block: 1rem;
                 gap: 1rem;
             }
+            
             #aboutImgBlock {
-                width: 20rem;
-                @media screen and (max-width:500px) { width: 40rem;    }
+                
+                @media screen and (min-width: 901px) {
+                    width: 40rem;
+                    border: solid whitesmoke;
+                    
+                }
+                
+                @media screen and (max-width:900px) {
+                    border: solid greenyellow;
+                    display: flex;
+                    width: 7rem;
+                    align-items: center;
+                    gap: 2rem;
+                    margin-bottom: 2rem;
+                }
+                @media screen and (max-width:500px) {
+                    border: solid pink;
+                    width: 4rem;
+                    gap: 1.5rem;
+                }
+
                 img {
                     width: 100%;
                     &:nth-child(2) { display: none; opacity: 0;}
                 }
+                h1 {
+                    @media screen and (max-width: 900px) {
+                        display: block;
+                        border: solid whitesmoke;
+                    }
+                    @media screen and (min-width: 901px) {
+                        display: none;
+                    }
+
+                }
             }
             #aboutTextBlock {
+                border: solid dodgerblue;
+                h1 {
+                    @media screen and (max-width: 900px) {
+                        display: none;
+                    }
+                }
                 .read-more-btn {
                     color: $standard-hyperlink-color;
                     &:hover {
