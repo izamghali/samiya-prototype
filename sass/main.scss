@@ -390,19 +390,28 @@ body {
         }
 
         #howWeWork {
-            border: solid dodgerblue;
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            @media screen and (max-width: 680px) {
+            @extend %flex-align-center;
+            gap: 3%;
+            padding-right: 3%;
+            @media screen and (max-width: 800px) {
+                gap: 0;
                 display: block;
                 padding-inline: 5%;
             }
 
             #howWeWorkCarousel {
                 width: 45%;
-                @media screen and (max-width: 680px) {
+                @media screen and (max-width: 800px) {
                     display: none;
+                }
+                .carousel-inner {
+                    .carousel-item {
+                        img {
+                            @media screen and (max-width: 970px) {
+                                width: 25rem !important;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -413,14 +422,18 @@ body {
 
                 .how-we-work-block-container {
                     @extend %flex-col-direction;
-                    gap: 1rem;
+                    gap: 1.5rem; // gap between blocks
 
                     .how-we-work-blocks {
                         display: flex;
                         align-items: start;
-                        border: solid greenyellow;
+                        border: solid whitesmoke;
+                        gap: 1rem;
+                        padding: 0.6rem;
+                        @media screen and (max-width: 500px) {
+                            max-height: 15rem;
+                        }
                         .how-we-work-block-icon-outer {
-                            border: solid orange;
                             .how-we-work-block-icon-inner {
                                 border: solid whitesmoke;
                                 padding: 1rem;
@@ -439,12 +452,15 @@ body {
                         }
 
                         .how-we-work-block-body {
+                            width: 100%;
+                            
                             .how-we-work-block-heading {
-                                h4 {
-                                    margin: 0;
-                                }
-                                border: solid pink;
+                                margin-bottom: 0.5rem;
                                 @extend %flex-align-center-justify-between;
+                                @media screen and (max-width: 500px) {
+                                    display: block;
+                                }
+                                h4 { margin: 0; }
                             }
                         }
                     }

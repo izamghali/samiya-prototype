@@ -9,6 +9,11 @@ body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how
   justify-content: space-between;
 }
 
+body #bodyPage #howWeWork {
+  display: flex;
+  align-items: center;
+}
+
 .social-btn {
   border-radius: 50%;
   border: 0.99px solid #212529;
@@ -549,13 +554,12 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
   }
 }
 body #bodyPage #howWeWork {
-  border: solid dodgerblue;
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 3%;
+  padding-right: 3%;
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
   body #bodyPage #howWeWork {
+    gap: 0;
     display: block;
     padding-inline: 5%;
   }
@@ -563,24 +567,33 @@ body #bodyPage #howWeWork {
 body #bodyPage #howWeWork #howWeWorkCarousel {
   width: 45%;
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 800px) {
   body #bodyPage #howWeWork #howWeWorkCarousel {
     display: none;
+  }
+}
+@media screen and (max-width: 970px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item img {
+    width: 25rem !important;
   }
 }
 body #bodyPage #howWeWork .how-we-work-content h2 {
   margin-bottom: 2rem;
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container {
-  gap: 1rem;
+  gap: 1.5rem;
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks {
   display: flex;
   align-items: start;
-  border: solid greenyellow;
+  border: solid whitesmoke;
+  gap: 1rem;
+  padding: 0.6rem;
 }
-body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-icon-outer {
-  border: solid orange;
+@media screen and (max-width: 500px) {
+  body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks {
+    max-height: 15rem;
+  }
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-icon-outer .how-we-work-block-icon-inner {
   border: solid whitesmoke;
@@ -599,8 +612,16 @@ body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how
     transform: scale(1);
   }
 }
+body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body {
+  width: 100%;
+}
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body .how-we-work-block-heading {
-  border: solid pink;
+  margin-bottom: 0.5rem;
+}
+@media screen and (max-width: 500px) {
+  body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body .how-we-work-block-heading {
+    display: block;
+  }
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body .how-we-work-block-heading h4 {
   margin: 0;
