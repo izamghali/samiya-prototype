@@ -290,9 +290,9 @@ body {
 
         #services {
             padding-inline: 10%;
-            margin-block: 8rem 0rem;
+            margin-block: 8rem 8rem;
             @media screen and (max-width: 768px) { padding-inline: 5%; }
-            @media screen and (max-width: 500px) { margin-block: 6rem 0rem; }
+            @media screen and (max-width: 500px) { margin-block: 6rem 6rem; }
 
             h1, h4 { color: $standard-white-color; }
 
@@ -390,12 +390,13 @@ body {
         }
 
         #howWeWork {
-            @media screen and (min-width: 901px) {
-                margin-top: 8rem;
-            }
-
-            @media screen and (max-width: 900px) {
-                margin-top: 6rem;
+            border: solid dodgerblue;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            @media screen and (max-width: 680px) {
+                display: block;
+                padding-inline: 5%;
             }
 
             #howWeWorkCarousel {
@@ -403,10 +404,53 @@ body {
                 @media screen and (max-width: 680px) {
                     display: none;
                 }
-                img {
-                    width: 100%;
+            }
+
+            .how-we-work-content {
+                h2 {
+                    margin-bottom: 2rem;
+                }
+
+                .how-we-work-block-container {
+                    @extend %flex-col-direction;
+                    gap: 1rem;
+
+                    .how-we-work-blocks {
+                        display: flex;
+                        align-items: start;
+                        border: solid greenyellow;
+                        .how-we-work-block-icon-outer {
+                            border: solid orange;
+                            .how-we-work-block-icon-inner {
+                                border: solid whitesmoke;
+                                padding: 1rem;
+                                border-radius: 50%;
+                                transform: scale(0.85);
+                                svg {
+                                    transform: scale(1);
+                                    fill: whitesmoke;
+                                    min-width: 1.6rem;
+                                    min-height: 1.6rem;
+                                    @media screen and (max-width: 320px) {
+                                        transform: scale(1);
+                                    }
+                                }
+                            }
+                        }
+
+                        .how-we-work-block-body {
+                            .how-we-work-block-heading {
+                                h4 {
+                                    margin: 0;
+                                }
+                                border: solid pink;
+                                @extend %flex-align-center-justify-between;
+                            }
+                        }
+                    }
                 }
             }
+
         }
 
         #professionalHeadingCol {

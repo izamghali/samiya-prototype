@@ -26,3 +26,9 @@
     display: flex;
     flex-direction: column;
 }
+
+%flex-align-center-justify-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
