@@ -229,9 +229,21 @@ $(document).ready(function() {
   //     gsap.effects.navbarScrollTo(window, {y: "#projectBlockBts", offsetY: 0});
   //   })
   // }
-  $("#navLinkHowWeWork").on("click", () => {
-    gsap.effects.navbarScrollTo(window, {y: "#howWeWork", offsetY: -50});
-  })
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    $("#navLinkHowWeWork").on("click", () => {
+      gsap.effects.navbarScrollTo(window, {y: "#howWeWork", offsetY: 100});
+    })
+  } else if (window.matchMedia("(min-width: 1500px)").matches) {
+    $("#navLinkHowWeWork").on("click", () => {
+      gsap.effects.navbarScrollTo(window, {y: "#howWeWork", offsetY: -50});
+    })
+
+  } else {
+    $("#navLinkHowWeWork").on("click", () => {
+      gsap.effects.navbarScrollTo(window, {y: "#howWeWork", offsetY: 100});
+    })
+  }
+
   $("#navLinkAbout").on("click", () => {
     gsap.effects.navbarScrollTo(window, {y: "#about", offsetY: 100});
   })
