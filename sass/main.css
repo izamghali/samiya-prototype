@@ -429,11 +429,23 @@ body #bodyPage #services .service-heading {
 body #bodyPage #services .service-heading h2, body #bodyPage #services .service-heading p {
   text-align: center;
 }
+@media screen and (max-width: 500px) {
+  body #bodyPage #services .service-heading {
+    margin-bottom: 2rem;
+  }
+}
 body #bodyPage #services .service-card-container {
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 2%;
   transition-duration: 300ms;
+}
+@media screen and (max-width: 860px) {
+  body #bodyPage #services .service-card-container {
+    gap: 2rem;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 body #bodyPage #services .service-card-container .service-cards {
   border: 1.5px solid #ADADAD;
@@ -445,8 +457,9 @@ body #bodyPage #services .service-card-container .service-cards {
   transition-duration: 300ms;
 }
 body #bodyPage #services .service-card-container .service-cards .service-card-img-container {
-  width: 100%;
+  width: 15rem;
   height: 15rem;
+  margin-inline: auto;
 }
 body #bodyPage #services .service-card-container .service-cards .service-card-img-container img {
   -o-object-fit: cover;
