@@ -359,8 +359,8 @@ body {
                             margin-block: 0.5rem;
                         }
                     }
-
-                    .service-card-btn {
+                    
+                    a {
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -375,26 +375,20 @@ body {
                             cursor: pointer;
                             border: 2px solid $standard-white-bg-color;
                             background-color: transparent;
-                            a {
-                                color: $standard-white-color;
-                            }
+                            color: $standard-white-color;
                             svg {
                                 fill: $standard-white-color;
                             }
                         }
-                        
-                        a {
-                            color: $standard-black-color;
-                            text-decoration: none;
-                        }
 
+                        color: $standard-black-color;
+                        text-decoration: none;
                         svg {
                             width: 0.9rem;
                             height: 0.9rem;
                             fill: $standard-black-color;
                         }
                     }
-
                 }
             }
         }

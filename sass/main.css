@@ -488,7 +488,7 @@ body #bodyPage #services .service-card-container .service-cards .service-card-co
   color: #ADADAD;
   margin-block: 0.5rem;
 }
-body #bodyPage #services .service-card-container .service-cards .service-card-btn {
+body #bodyPage #services .service-card-container .service-cards a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -498,23 +498,19 @@ body #bodyPage #services .service-card-container .service-cards .service-card-bt
   padding: 1rem;
   border-radius: 12px;
   transition-duration: 300ms;
-}
-body #bodyPage #services .service-card-container .service-cards .service-card-btn:hover {
-  cursor: pointer;
-  border: 2px solid hsl(0, 0%, 96%);
-  background-color: transparent;
-}
-body #bodyPage #services .service-card-container .service-cards .service-card-btn:hover a {
-  color: hsl(60, 0%, 100%);
-}
-body #bodyPage #services .service-card-container .service-cards .service-card-btn:hover svg {
-  fill: hsl(60, 0%, 100%);
-}
-body #bodyPage #services .service-card-container .service-cards .service-card-btn a {
   color: #212529;
   text-decoration: none;
 }
-body #bodyPage #services .service-card-container .service-cards .service-card-btn svg {
+body #bodyPage #services .service-card-container .service-cards a:hover {
+  cursor: pointer;
+  border: 2px solid hsl(0, 0%, 96%);
+  background-color: transparent;
+  color: hsl(60, 0%, 100%);
+}
+body #bodyPage #services .service-card-container .service-cards a:hover svg {
+  fill: hsl(60, 0%, 100%);
+}
+body #bodyPage #services .service-card-container .service-cards a svg {
   width: 0.9rem;
   height: 0.9rem;
   fill: #212529;
