@@ -1,16 +1,55 @@
-body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container {
+body #bodyPage #howWeWork, body #bodyPage #about, body #galleryHeading, body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body .how-we-work-block-heading, body #bodyPage #services .service-card-container .service-cards a {
+  display: flex;
+  align-items: center;
+}
+
+body #bodyPage #services .service-card-container {
+  display: flex;
+  justify-content: center;
+}
+
+body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks, body #galleryCheckBox #galleryCheckBoxFilter {
+  display: flex;
+  align-items: start;
+}
+
+body #galleryCheckBox #galleryCheckBoxCategory {
+  display: flex;
+  justify-content: right;
+}
+
+body #galleryCheckBox #galleryCheckBoxFilter {
+  justify-content: right;
+}
+
+body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container, body #bodyPage #services .service-card-container .service-cards, body #galleryCheckBox {
   display: flex;
   flex-direction: column;
 }
 
-body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body .how-we-work-block-heading {
+body #galleryCheckBox {
+  justify-content: center;
+}
+
+body #bodyPage #services .service-card-container .service-cards a {
+  justify-content: center;
+}
+
+footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 
-body #bodyPage #howWeWork {
-  display: flex;
+body #galleryHeading, body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body .how-we-work-block-heading {
+  justify-content: space-between;
+}
+
+body #bodyPage #about {
+  justify-content: left;
+}
+
+body #bodyPage #projects .project-blocks .project-text-blocks {
+  display: inline-flex;
   align-items: center;
 }
 
@@ -322,9 +361,6 @@ body #bodyPage #about {
   padding-inline: 10%;
   margin-top: 6rem;
   height: auto;
-  display: flex;
-  justify-content: left;
-  align-items: center;
   gap: 4rem;
 }
 @media screen and (max-width: 900px) {
@@ -347,8 +383,8 @@ body #bodyPage #about {
 @media screen and (max-width: 900px) {
   body #bodyPage #about #aboutImgBlock {
     display: flex;
-    width: 3.5rem;
     align-items: center;
+    width: 3.5rem;
     gap: 2rem;
     margin-bottom: 2rem;
   }
@@ -435,8 +471,6 @@ body #bodyPage #services .service-heading h2, body #bodyPage #services .service-
   }
 }
 body #bodyPage #services .service-card-container {
-  display: flex;
-  justify-content: center;
   gap: 2%;
   transition-duration: 300ms;
 }
@@ -451,8 +485,6 @@ body #bodyPage #services .service-card-container .service-cards {
   border: 1.5px solid #ADADAD;
   width: 18rem;
   padding: 1rem;
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
   transition-duration: 300ms;
 }
@@ -489,17 +521,17 @@ body #bodyPage #services .service-card-container .service-cards .service-card-co
   margin-block: 0.5rem;
 }
 body #bodyPage #services .service-card-container .service-cards a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 0.5rem;
   background-color: hsl(0, 0%, 96%);
   border: 2px solid hsl(0, 0%, 96%);
-  padding: 1rem;
   border-radius: 12px;
+  padding: 1rem;
   transition-duration: 300ms;
   color: #212529;
   text-decoration: none;
+  font-family: "Inter";
+  font-weight: 900;
+  font-size: 22px;
 }
 body #bodyPage #services .service-card-container .service-cards a:hover {
   cursor: pointer;
@@ -554,8 +586,6 @@ body #bodyPage #projects .project-blocks .project-img-blocks img {
 body #bodyPage #projects .project-blocks .project-text-blocks {
   width: 50%;
   padding-inline: 10rem;
-  display: inline-flex;
-  align-items: center;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1024px) {
@@ -611,8 +641,6 @@ body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container {
   gap: 1.5rem;
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks {
-  display: flex;
-  align-items: start;
   border: 2px solid whitesmoke;
   gap: 1rem;
   padding: 0.6rem;
@@ -791,11 +819,8 @@ body #bodyPage #arrowBox svg:hover {
   cursor: pointer;
 }
 body #galleryHeading {
-  display: flex;
-  justify-content: space-between;
   padding-inline: 10%;
   padding-block: 1rem;
-  align-items: center;
   color: #ADADAD;
 }
 @media screen and (max-width: 768px) {
@@ -852,9 +877,6 @@ body #galleryHeading #galleryContactButtonMobile {
   display: none;
 }
 body #galleryCheckBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: end;
   gap: 3.5rem;
   padding-inline: 10%;
@@ -870,9 +892,6 @@ body #galleryCheckBox a {
   font-family: sans-serif;
 }
 body #galleryCheckBox #galleryCheckBoxFilter {
-  display: flex;
-  justify-content: right;
-  align-items: start;
   gap: 1.5rem;
 }
 body #galleryCheckBox #galleryCheckBoxFilter .gallery-select {
@@ -891,9 +910,7 @@ body #galleryCheckBox #galleryCheckBoxFilter .gallery-select:hover {
   color: #212529;
 }
 body #galleryCheckBox #galleryCheckBoxCategory {
-  display: flex;
   gap: 3rem;
-  justify-content: right;
 }
 @media screen and (max-width: 768px) {
   body #galleryCheckBox #galleryCheckBoxCategory {
@@ -990,8 +1007,6 @@ footer {
   height: -moz-max-content;
   height: max-content;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   padding: 8rem 10%;
 }
