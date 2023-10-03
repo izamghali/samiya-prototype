@@ -76,7 +76,7 @@ function lightModeClicked() {
       gsap.to(backgroundColorChangeList, {backgroundColor: standardBlackColor})
       gsap.to(hyperlinkColorChangeList, {color: hyperlinkColor2})
       if (window.matchMedia("(min-width:992px)").matches) {
-        gsap.to(borderChangeList, {border: "solid " + standardBlackColor})
+        gsap.to(borderChangeList, {border: "2px solid " + standardBlackColor})
         gsap.to(".nav-link", { color: standardBlackColor})
       }
       gsap.to("#navbarToggler", {border: "solid " + standardBlackColor})
@@ -98,7 +98,7 @@ function lightModeClicked() {
       gsap.to(backgroundColorChangeList, {backgroundColor: standardWhiteBg})
       gsap.to(hyperlinkColorChangeList, {color: hyperlinkColor1})
       if (window.matchMedia("(min-width:992px)").matches) {
-        gsap.to(borderChangeList, {border: "solid " + standardWhiteColor})
+        gsap.to(borderChangeList, {border: "2px solid " + standardWhiteColor})
         gsap.to(".nav-link", { color: standardWhiteBg})
       }
       gsap.to("#navbarToggler", {border: "solid " + standardWhiteBg})

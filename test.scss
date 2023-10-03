@@ -1,0 +1,45 @@
+// services
+h1, h4 { color: $standard-white-color; }
+
+h1 {
+    font-size: clamp(1.2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    @media screen and (max-width: 375px) { font-size: 1rem; }
+    @media screen and (max-width: 320px) { font-size: 0.8rem; }
+}
+
+h4 {
+    font-size: clamp(0.65rem, 2vw, 1.75rem);
+    font-weight: 300;
+    @media screen and (max-width: 375px) { font-size: 0.60rem; }
+    @media screen and (max-width: 320px) { font-size: 0.50rem; }
+}
+
+#servicesHeading { margin-bottom: 0.5rem;}
+
+.service-texts {
+    padding: 1rem;
+    // @media screen and (max-width:768px) { padding: 0.5rem; }
+    @media screen and (max-width: 500px) { padding-left: 0.2rem; }
+
+    .service-headings-a {
+        text-decoration: none;
+        color: whitesmoke;
+        &:hover {  text-decoration: underline; }
+    }
+}
+
+#servicesRow1 {
+    column-count: 5;
+    margin: 0;
+    gap: 0;
+    // @media screen and (max-width: 500px) { column-count: 1; }
+}
+
+#servicesRow2 {
+    column-count: 5;
+    color: $standard-grey-color;
+    margin: 0;
+    gap: 0;
+    // @media screen and (max-width: 500px) { column-count: 1; }
+}
