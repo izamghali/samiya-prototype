@@ -80,7 +80,7 @@ function lightModeClicked() {
         gsap.to(".nav-link", { color: standardBlackColor})
       }
       gsap.to("#navbarToggler", {border: "solid " + standardBlackColor})
-      gsap.to("#lightModeBtn", {border: "solid " + standardBlackColor})
+      gsap.to("#lightModeBtn", {border: "1.5px solid " + standardBlackColor})
       navbarLogoTl.to("#aBrandDark", { opacity: 0}).to("#aBrandDark", { display: 'none'}).to("#aBrandLight", { display: 'block'}).to("#aBrandLight", { opacity: 1})
       aboutLogoTl.to("#aboutImgDark", { opacity: 0}).to("#aboutImgDark", { display: 'none'}).to("#aboutImgLight", { display: 'block'}).to("#aboutImgLight", { opacity: 1})
       gsap.to(".professional-cards", {color: standardBlackColor, backgroundColor: standardWhiteBg, border: "solid" + standardGrayColor})
@@ -102,7 +102,7 @@ function lightModeClicked() {
         gsap.to(".nav-link", { color: standardWhiteBg})
       }
       gsap.to("#navbarToggler", {border: "solid " + standardWhiteBg})
-      gsap.to("#lightModeBtn", {border: "solid " + standardWhiteBg})
+      gsap.to("#lightModeBtn", {border: "1.5px solid " + standardWhiteBg})
       navbarLogoTl.to("#aBrandLight", { opacity: 0}).to("#aBrandLight", { display: 'none'}).to("#aBrandDark", { display: 'block'}).to("#aBrandDark", { opacity: 1})
       aboutLogoTl.to("#aboutImgLight", { opacity: 0}).to("#aboutImgLight", { display: 'none'}).to("#aboutImgDark", { display: 'block'}).to("#aboutImgDark", { opacity: 1})
       gsap.to(".professional-cards", {color: standardWhiteColor, backgroundColor: standardBlackBg, border: "solid" + standardGrayColor})

@@ -207,7 +207,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
   padding-inline: 2px;
   width: 2.3rem;
   height: 1.2rem;
-  border: solid hsl(60, 0%, 100%);
+  border: 1.5px solid hsl(60, 0%, 100%);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -692,42 +692,53 @@ body #bodyPage #professionalCardsCol .professional-cards a {
 }
 body #bodyPage #clientContainer {
   padding-inline: 10%;
-  margin-bottom: 5rem;
+  padding-block: 8rem;
+  background-color: #fff;
+}
+@media screen and (max-width: 768px) {
+  body #bodyPage #clientContainer {
+    padding-block: 6rem;
+  }
+}
+body #bodyPage #clientContainer h2 {
+  color: #212529;
 }
 body #bodyPage #clientContainer #clientsGrid {
   -moz-column-count: 6;
        column-count: 6;
-  gap: 0.5rem;
+  gap: 3rem;
   height: auto;
 }
 @media screen and (max-width: 768px) {
   body #bodyPage #clientContainer #clientsGrid {
     -moz-column-count: 4;
          column-count: 4;
+    gap: 2rem;
   }
 }
 @media screen and (max-width: 500px) {
   body #bodyPage #clientContainer #clientsGrid {
     -moz-column-count: 3;
          column-count: 3;
+    gap: 1.5rem;
   }
 }
 body #bodyPage #clientContainer #clientsGrid .client-blocks {
-  border: solid hsl(60, 0%, 100%);
-  background-color: hsl(60, 0%, 100%);
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   width: auto;
   display: inline-block;
 }
 body #bodyPage #clientContainer #clientsGrid .client-blocks img {
   width: 100%;
 }
-body #bodyPage #dummy {
-  height: 19vh;
+@media screen and (max-width: 768px) {
+  body #bodyPage #clientContainer #clientsGrid .client-blocks {
+    margin-top: 1.3rem;
+  }
 }
-@media (max-width: 425px) {
-  body #bodyPage #dummy {
-    height: 5vh;
+@media screen and (max-width: 500px) {
+  body #bodyPage #clientContainer #clientsGrid .client-blocks {
+    margin-top: 1rem;
   }
 }
 body #bodyPage #arrowBox {
