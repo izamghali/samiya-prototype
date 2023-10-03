@@ -485,6 +485,7 @@ body #bodyPage #services .service-card-container .service-cards .service-card-co
   margin-block: 0rem;
 }
 body #bodyPage #services .service-card-container .service-cards .service-card-content p {
+  color: #ADADAD;
   margin-block: 0.5rem;
 }
 body #bodyPage #services .service-card-container .service-cards .service-card-btn {
