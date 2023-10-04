@@ -167,22 +167,32 @@ body {
                 // @include large-mobile { height: 90vh; }
             }
             #carousel1 {
-                background-image: url(../assets/gallery/food/food-100.webp);
+                background-image: url(../assets/carousel/1.webp);
+                // background-image: url(../assets/gallery/food/food-100.webp);
             }
             #carousel2 {
-                background-image: url(../assets/gallery/company/company-1.webp);
+                background-image: url(../assets/carousel/2.webp);
+                // background-image: url(../assets/gallery/company/company-1.webp);
                 // @include large-mobile { background-position: 61% 50%; }
             }
             #carousel3 {
-                background-image: url(../assets/gallery/food/food-75.webp);
+                background-image: url(../assets/carousel/3.webp);
+                // background-image: url(../assets/gallery/food/food-75.webp);
                 // @include large-mobile { background-position: 55% 50%; }
             }
             #carousel4 {
-                background-image: url(../assets/gallery/architecture/architecture-4.webp);
+                background-image: url(../assets/carousel/4.webp);
+                // background-image: url(../assets/gallery/architecture/architecture-4.webp);
                 // @include large-mobile { background-position: 43% 50% }
             }
             #carousel5 {
-                background-image: url(../assets/gallery/food/food-57.webp);
+                background-image: url(../assets/carousel/5.webp);
+                // background-image: url(../assets/gallery/food/food-57.webp);
+                // @include large-mobile { background-position: 50% 50% }
+            }
+            #carousel6 {
+                background-image: url(../assets/carousel/6.webp);
+                // background-image: url(../assets/gallery/food/food-57.webp);
                 // @include large-mobile { background-position: 50% 50% }
             }
             .carousel-layer {
@@ -213,6 +223,7 @@ body {
 
         #about {
             @extend %flex-justify-left-align-center;
+            background-color: whitesmoke;
             padding-inline: $standard-padding-inline-desktop;
             margin-top: 6rem;
             height: auto;
@@ -439,6 +450,7 @@ body {
 
         #howWeWork {
             @extend %flex-align-center;
+            background-color: whitesmoke;
             gap: 3%;
             padding-right: 3%;
             @media screen and (max-width: 800px) {
@@ -549,7 +561,7 @@ body {
 
         #clientContainer {
             padding-inline: $standard-padding-inline-desktop;
-            padding-block: 4rem;
+            padding-block: 6rem;
             background-color: #fff;
             @media screen and (max-width: 768px) {
                 padding-inline: $standard-padding-inline-tablet;

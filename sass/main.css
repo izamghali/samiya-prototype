@@ -22,7 +22,7 @@ body #galleryCheckBox #galleryCheckBoxFilter {
   justify-content: right;
 }
 
-body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container, body #bodyPage #services .service-card-container .service-cards, body #galleryCheckBox {
+body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container, body #bodyPage #services .service-card-container .service-cards, .contact-us-page .contact-content form, .contact-us-page, body #galleryCheckBox {
   display: flex;
   flex-direction: column;
 }
@@ -35,7 +35,7 @@ body #bodyPage #services .service-card-container .service-cards a {
   justify-content: center;
 }
 
-footer {
+footer, .contact-us-page .contact-content form .contact-content-form-name-email, .contact-us-page .contact-content {
   display: flex;
   justify-content: space-between;
 }
@@ -77,8 +77,6 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
   height: 100vh;
   padding-inline: 8%;
   padding-block: 3%;
-  display: flex;
-  flex-direction: column;
   gap: 2rem;
   transform: translateX(100%);
 }
@@ -88,9 +86,17 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
 }
 .contact-us-page h2 {
   font-weight: 500;
-  font-size: xx-large;
+  font-size: 79px;
   line-height: 1.2;
   margin: 0;
+}
+.contact-us-page .contact-x-btn {
+  display: flex;
+  justify-content: end;
+}
+.contact-us-page .contact-x-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .contact-us-page .contact-us-map {
   border: 1.5px solid #212529;
@@ -105,9 +111,7 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
   height: 100%;
 }
 .contact-us-page .contact-content {
-  display: flex;
   gap: 3rem;
-  justify-content: space-between;
 }
 .contact-us-page .contact-content .contact-content-info {
   display: flex;
@@ -130,8 +134,6 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
 }
 .contact-us-page .contact-content form {
   width: 50%;
-  display: flex;
-  flex-direction: column;
   gap: 2rem;
 }
 .contact-us-page .contact-content form .contact-form-padding {
@@ -144,8 +146,6 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
   border: none;
 }
 .contact-us-page .contact-content form .contact-content-form-name-email {
-  display: flex;
-  justify-content: space-between;
   gap: 1rem;
 }
 .contact-us-page .contact-content form .contact-content-form-name-email input {
@@ -374,19 +374,22 @@ body #landingPage #mainCarousel .carousel-img {
   }
 }
 body #landingPage #mainCarousel #carousel1 {
-  background-image: url(../assets/gallery/food/food-100.webp);
+  background-image: url(../assets/carousel/1.webp);
 }
 body #landingPage #mainCarousel #carousel2 {
-  background-image: url(../assets/gallery/company/company-1.webp);
+  background-image: url(../assets/carousel/2.webp);
 }
 body #landingPage #mainCarousel #carousel3 {
-  background-image: url(../assets/gallery/food/food-75.webp);
+  background-image: url(../assets/carousel/3.webp);
 }
 body #landingPage #mainCarousel #carousel4 {
-  background-image: url(../assets/gallery/architecture/architecture-4.webp);
+  background-image: url(../assets/carousel/4.webp);
 }
 body #landingPage #mainCarousel #carousel5 {
-  background-image: url(../assets/gallery/food/food-57.webp);
+  background-image: url(../assets/carousel/5.webp);
+}
+body #landingPage #mainCarousel #carousel6 {
+  background-image: url(../assets/carousel/6.webp);
 }
 body #landingPage #mainCarousel .carousel-layer {
   border: 1.5rem solid #1C1C1C;
@@ -407,6 +410,7 @@ body #bodyPage {
   padding: 0;
 }
 body #bodyPage #about {
+  background-color: whitesmoke;
   padding-inline: 8%;
   margin-top: 6rem;
   height: auto;
@@ -660,6 +664,7 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
   }
 }
 body #bodyPage #howWeWork {
+  background-color: whitesmoke;
   gap: 3%;
   padding-right: 3%;
 }
@@ -796,7 +801,7 @@ body #bodyPage #professionalCardsCol .professional-cards a {
 }
 body #bodyPage #clientContainer {
   padding-inline: 8%;
-  padding-block: 4rem;
+  padding-block: 6rem;
   background-color: #fff;
 }
 @media screen and (max-width: 768px) {
