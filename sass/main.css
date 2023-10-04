@@ -68,15 +68,13 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
 
 .contact-us-page {
   border: solid #212529;
-  background-color: whitesmoke;
+  background-color: #fff;
   position: fixed;
-  top: 0%;
+  bottom: 0;
   right: 0;
   z-index: 2;
-  width: 90vw;
+  width: 100vw;
   height: 100vh;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
   padding-inline: 8%;
   padding-block: 3%;
   display: flex;
@@ -108,24 +106,58 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
 }
 .contact-us-page .contact-content {
   display: flex;
+  gap: 3rem;
   justify-content: space-between;
 }
-.contact-us-page .contact-content .contact-content-form {
-  border: solid orange;
-  width: 50%;
+.contact-us-page .contact-content .contact-content-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.contact-us-page .contact-content .contact-content-form form {
+.contact-us-page .contact-content .contact-content-info .contact-content-info-heading h2 {
+  margin: 0;
+  font-weight: 800;
+}
+.contact-us-page .contact-content .contact-content-info .contact-content-info-text h4 {
+  font-weight: 600;
+}
+.contact-us-page .contact-content .contact-content-info .contact-content-info-text p {
+  margin: 0;
+}
+.contact-us-page .contact-content .contact-content-info .contact-content-info-social {
+  display: flex;
+  gap: 0.5rem;
+}
+.contact-us-page .contact-content form {
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.contact-us-page .contact-content .contact-content-form form .contact-content-form-name-email {
+.contact-us-page .contact-content form .contact-form-padding {
+  padding: 1rem;
+}
+.contact-us-page .contact-content form .contact-form-bg {
+  background-color: whitesmoke;
+}
+.contact-us-page .contact-content form input, .contact-us-page .contact-content form textarea {
+  border: none;
+}
+.contact-us-page .contact-content form .contact-content-form-name-email {
   display: flex;
+  justify-content: space-between;
   gap: 1rem;
 }
-.contact-us-page .contact-us-social {
-  display: flex;
-  gap: 0.5rem;
+.contact-us-page .contact-content form .contact-content-form-name-email input {
+  width: 100%;
+}
+.contact-us-page .contact-content form .contact-form-submit {
+  display: inline-flex;
+}
+.contact-us-page .contact-content form .contact-form-submit input {
+  padding-inline: 3rem;
+  color: hsl(60, 0%, 100%);
+  background-color: #1C1C1C;
 }
 
 .contact-us-hidden-layer {
