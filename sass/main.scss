@@ -200,7 +200,10 @@ body {
 
         .contact-us-page {
             h2 { color: $standard-black-color;}
-            @include desktop { width: 30vw; height: 60vh; }
+            @include desktop {
+                width: 30vw; 
+                height: 60vh;
+            }
         }
 
     }
