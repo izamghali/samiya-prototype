@@ -25,10 +25,9 @@
     // border-bottom-left-radius: 15px;
     width: 100vw;
     height: 100vh;
-    padding-inline: 8%;
-    padding-block: 3%;
+    padding: 3% 8%;
     @extend %flex-col-direction;
-    gap: 2rem;
+    gap: 1rem;
     transform: translateX(100%);
 
     h2, h4, p {
@@ -46,6 +45,11 @@
     .contact-x-btn {
         display: flex;
         justify-content: end;
+
+        &:hover {
+            cursor: pointer;
+        }
+
         svg {
             width: 1.5rem;
             height: 1.5rem;
@@ -100,6 +104,7 @@
             .contact-form-bg { background-color: whitesmoke; }
             input, textarea {
                 border: none;
+                outline: none;
             }
 
             .contact-content-form-name-email {
@@ -128,16 +133,16 @@
     }
 }
 
-.contact-us-hidden-layer {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    display: none;
-    height: 100vh;
-}
+// .contact-us-hidden-layer {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+//     display: none;
+//     height: 100vh;
+// }
 
-#contactUsHiddenLayer {
-    height: 99.7%;
-    width: 99.8%;
-}
+// #contactUsHiddenLayer {
+//     height: 99.7%;
+//     width: 99.8%;
+// }

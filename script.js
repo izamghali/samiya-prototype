@@ -251,12 +251,12 @@ $(document).ready(function() {
   // clicked contact us mini page
   if (window.matchMedia("(min-width:992px)").matches) {
     $('#navContactBtn').on('click', () => {
-      gsap.to('.contact-us-page', { x:0 })
-      gsap.to('.contact-us-hidden-layer', {display: 'block'})
+      gsap.to('.contact-us-page', { duration: 0.8, x:0 })
+      // gsap.to('.contact-us-hidden-layer', {display: 'block'})
     })
-    $('.contact-us-hidden-layer').on('click', () => {
-      gsap.to('.contact-us-page', { x:"100%" })
-      gsap.to('.contact-us-hidden-layer', {display: 'none'})
+    $('.contact-x-btn').on('click', () => {
+      gsap.to('.contact-us-page', { duration: 0.8, x:"100%" })
+      // gsap.to('.contact-us-hidden-layer', {display: 'none'})
     })
   } else {
     $('#navContactBtn').on('click', () => {gsap.effects.navbarScrollTo(window, {y: "#footerSocial", offsetY: 0});})

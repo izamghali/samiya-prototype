@@ -75,9 +75,8 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
   z-index: 2;
   width: 100vw;
   height: 100vh;
-  padding-inline: 8%;
-  padding-block: 3%;
-  gap: 2rem;
+  padding: 3% 8%;
+  gap: 1rem;
   transform: translateX(100%);
 }
 .contact-us-page h2, .contact-us-page h4, .contact-us-page p {
@@ -93,6 +92,9 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
 .contact-us-page .contact-x-btn {
   display: flex;
   justify-content: end;
+}
+.contact-us-page .contact-x-btn:hover {
+  cursor: pointer;
 }
 .contact-us-page .contact-x-btn svg {
   width: 1.5rem;
@@ -144,6 +146,7 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
 }
 .contact-us-page .contact-content form input, .contact-us-page .contact-content form textarea {
   border: none;
+  outline: none;
 }
 .contact-us-page .contact-content form .contact-content-form-name-email {
   gap: 1rem;
@@ -158,20 +161,6 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
   padding-inline: 3rem;
   color: hsl(60, 0%, 100%);
   background-color: #1C1C1C;
-}
-
-.contact-us-hidden-layer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: none;
-  height: 100vh;
-}
-
-#contactUsHiddenLayer {
-  height: 99.7%;
-  width: 99.8%;
 }
 
 body {
@@ -411,7 +400,7 @@ body #bodyPage {
 }
 body #bodyPage #about {
   background-color: whitesmoke;
-  padding-inline: 8%;
+  padding: 6rem 8%;
   margin-top: 6rem;
   height: auto;
   gap: 4rem;
@@ -455,10 +444,13 @@ body #bodyPage #about {
     gap: 1.2rem;
   }
 }
-body #bodyPage #about #aboutImgBlock img {
+body #bodyPage #about #aboutImgBlock .about-img-container {
+  width: 5.5rem;
+}
+body #bodyPage #about #aboutImgBlock .about-img-container img {
   width: 100%;
 }
-body #bodyPage #about #aboutImgBlock img:nth-child(2) {
+body #bodyPage #about #aboutImgBlock .about-img-container img:nth-child(1) {
   display: none;
   opacity: 0;
 }
@@ -481,6 +473,9 @@ body #bodyPage #about #aboutImgBlock img:nth-child(2) {
   body #bodyPage #about #aboutImgBlock h2 {
     font-size: 1.2rem;
   }
+}
+body #bodyPage #about #aboutTextBlock h2, body #bodyPage #about #aboutTextBlock p {
+  color: #212529;
 }
 @media screen and (min-width: 901px) {
   body #bodyPage #about #aboutTextBlock h2 {
@@ -672,7 +667,7 @@ body #bodyPage #howWeWork {
   body #bodyPage #howWeWork {
     gap: 0;
     display: block;
-    padding-inline: 5%;
+    padding: 4rem 5%;
   }
 }
 body #bodyPage #howWeWork #howWeWorkCarousel {
@@ -688,6 +683,9 @@ body #bodyPage #howWeWork #howWeWorkCarousel {
     width: 25rem !important;
   }
 }
+body #bodyPage #howWeWork .how-we-work-content h2, body #bodyPage #howWeWork .how-we-work-content h4, body #bodyPage #howWeWork .how-we-work-content span {
+  color: #212529;
+}
 body #bodyPage #howWeWork .how-we-work-content h2 {
   margin-bottom: 2rem;
 }
@@ -695,7 +693,7 @@ body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container {
   gap: 1.5rem;
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks {
-  border: 2px solid whitesmoke;
+  border: 2px solid #212529;
   gap: 1rem;
   padding: 0.6rem;
 }
@@ -705,14 +703,14 @@ body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how
   }
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-icon-outer .how-we-work-block-icon-inner {
-  border: 2px solid whitesmoke;
+  border: 2px solid #212529;
   padding: 1rem;
   border-radius: 50%;
   transform: scale(0.85);
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-icon-outer .how-we-work-block-icon-inner svg {
   transform: scale(1);
-  fill: whitesmoke;
+  fill: #212529;
   min-width: 1.6rem;
   min-height: 1.6rem;
 }
@@ -735,28 +733,20 @@ body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body .how-we-work-block-heading h4 {
   margin: 0;
 }
-body #bodyPage #professionalHeadingCol {
-  margin-top: 8rem;
-  color: hsl(60, 0%, 100%);
-  padding-inline: 8%;
-  text-align: center;
-}
 body #bodyPage #professionalCardsCol {
-  padding: 1rem 10% 8rem;
-  justify-content: space-around;
+  padding: 6rem 8%;
+  justify-content: center;
+  gap: 2%;
 }
-@media (max-width: 1024px) {
+@media screen and (max-width: 768px) {
   body #bodyPage #professionalCardsCol {
-    justify-content: space-around;
+    gap: 2rem;
+    padding-inline: 4rem;
   }
 }
-@media (max-width: 950px) {
+@media screen and (max-width: 500px) {
   body #bodyPage #professionalCardsCol {
-    padding-inline: 5%;
-  }
-}
-@media (max-width: 425px) {
-  body #bodyPage #professionalCardsCol {
+    gap: 1rem;
     padding: 1rem 5% 4rem;
   }
 }
@@ -796,8 +786,34 @@ body #bodyPage #professionalCardsCol .professional-cards {
 body #bodyPage #professionalCardsCol .professional-cards img {
   border-radius: 0;
 }
-body #bodyPage #professionalCardsCol .professional-cards a {
-  color: hsl(168, 100%, 76%);
+body #bodyPage #professionalCardsCol .professional-cards .card-body h5, body #bodyPage #professionalCardsCol .professional-cards .card-body p {
+  height: 3rem;
+}
+body #bodyPage #professionalCardsCol .professional-cards .card-body p {
+  color: #ADADAD;
+}
+body #bodyPage #professionalCardsCol .professional-cards .card-body h5 {
+  margin-bottom: 0.5rem;
+}
+body #bodyPage #professionalCardsCol .professional-cards .card-body .card-title {
+  display: flex;
+  justify-content: start;
+  height: 3rem;
+}
+@media screen and (max-width: 860px) {
+  body #bodyPage #professionalCardsCol .professional-cards .card-body .card-title {
+    flex-direction: column;
+  }
+}
+body #bodyPage #professionalCardsCol .professional-cards .card-body .card-title p {
+  margin: 0;
+}
+body #bodyPage #professionalCardsCol .professional-cards .card-body a {
+  color: #fff;
+  transition-duration: 300ms;
+}
+body #bodyPage #professionalCardsCol .professional-cards .card-body a:hover {
+  color: #ADADAD;
 }
 body #bodyPage #clientContainer {
   padding-inline: 8%;

@@ -224,7 +224,7 @@ body {
         #about {
             @extend %flex-justify-left-align-center;
             background-color: whitesmoke;
-            padding-inline: $standard-padding-inline-desktop;
+            padding: $standard-padding-block-desktop $standard-padding-inline-desktop;
             margin-top: 6rem;
             height: auto;
             gap: 4rem;
@@ -258,9 +258,14 @@ body {
                     gap: 1.2rem;
                 }
 
-                img {
-                    width: 100%;
-                    &:nth-child(2) { display: none; opacity: 0;}
+                .about-img-container {
+                    // border: 1px solid orange;
+                    width: 5.5rem;
+
+                    img {
+                        width: 100%;
+                        &:nth-child(1) { display: none; opacity: 0;}
+                    }
                 }
                 h2 {
                     @media screen and (min-width: 901px) {
@@ -278,7 +283,10 @@ body {
 
                 }
             }
+
             #aboutTextBlock {
+                h2, p { color: $standard-black-color; }
+                
                 h2 {
                     @media screen and (min-width:901px) {
                         margin-bottom: 2rem;
@@ -287,6 +295,7 @@ body {
                         display: none;
                     }
                 }
+
                 .read-more-btn {
                     color: $standard-hyperlink-color;
                     &:hover {
@@ -456,7 +465,7 @@ body {
             @media screen and (max-width: 800px) {
                 gap: 0;
                 display: block;
-                padding-inline: $standard-padding-inline-tablet;
+                padding: $standard-padding-block-tablet $standard-padding-inline-tablet;
             }
 
             #howWeWorkCarousel {
@@ -476,6 +485,10 @@ body {
             }
 
             .how-we-work-content {
+                h2, h4, span {
+                    color: $standard-black-color;
+                }
+
                 h2 {
                     margin-bottom: 2rem;
                 }
@@ -486,7 +499,7 @@ body {
 
                     .how-we-work-blocks {
                         @extend %flex-align-start;
-                        border: 2px solid whitesmoke;
+                        border: 2px solid $standard-black-color;
                         gap: 1rem;
                         padding: 0.6rem;
                         @media screen and (max-width: 500px) {
@@ -494,13 +507,13 @@ body {
                         }
                         .how-we-work-block-icon-outer {
                             .how-we-work-block-icon-inner {
-                                border: 2px solid whitesmoke;
+                                border: 2px solid $standard-black-color;
                                 padding: 1rem;
                                 border-radius: 50%;
                                 transform: scale(0.85);
                                 svg {
                                     transform: scale(1);
-                                    fill: whitesmoke;
+                                    fill: $standard-black-color;
                                     min-width: 1.6rem;
                                     min-height: 1.6rem;
                                     @media screen and (max-width: 320px) {
@@ -528,19 +541,29 @@ body {
 
         }
 
-        #professionalHeadingCol {
-            margin-top: 8rem;
-            color: $standard-white-color;
-            padding-inline: $standard-padding-inline-desktop;
-            text-align: center;
-        }
+        // #professionalHeadingCol {
+        //     margin-top: 8rem;
+        //     color: $standard-white-color;
+        //     padding-inline: $standard-padding-inline-desktop;
+        //     text-align: center;
+        // }
 
         #professionalCardsCol {
-            padding: 1rem 10% 8rem;
-            justify-content: space-around;
-            @include desktop { justify-content: space-around; }
-            @include large-tablet { padding-inline: $standard-padding-inline-tablet; }
-            @include large-mobile { padding: 1rem 5% 4rem; }
+            // padding: 1rem 10% 8rem;
+            padding: $standard-padding-block-desktop $standard-padding-inline-desktop;
+            justify-content: center;
+            gap: 2%;
+            @media screen and (max-width: 768px) {
+                gap: 2rem;
+                padding-inline: $standard-padding-block-tablet;
+            }
+            @media screen and (max-width: 500px) {
+                gap: 1rem;
+                padding: 1rem 5% 4rem;
+            }
+            
+            // @include large-tablet { padding-inline: $standard-padding-inline-tablet; }
+            // @include large-mobile { padding: 1rem 5% 4rem; }
 
             .professional-cards {
                 border-radius: 0;
@@ -555,7 +578,34 @@ body {
                 @include tablet { max-width: 70%; }
                 @include large-mobile { max-width: 80%; }  
                 img { border-radius: 0; }
-                a { color: $standard-hyperlink-color; }
+                
+                .card-body {
+
+                    h5, p { height: 3rem; }
+
+                    p { color: $standard-grey-color; }
+
+                    h5 { margin-bottom: 0.5rem; }
+
+                    .card-title {
+                        display: flex;
+                        justify-content: start;
+                        height: 3rem;
+
+                        @media screen and (max-width: 860px) {
+                            flex-direction: column;
+                        }
+
+                        p { margin: 0; }
+                    }
+
+                    a {
+                        color: #fff;
+                        transition-duration: 300ms;
+                        
+                        &:hover { color: $standard-grey-color; }
+                    }
+                }
             }
         }
 
