@@ -10,8 +10,7 @@ body {
     margin: 0px;
     overflow-x: hidden;
     background-color: $standard-black-bg-color;
-    p, h3, h4, h5, span { font-family: $standard-font-family-1; color: $standard-white-color;}
-    h1, h2 { font-family: $standard-font-family-2; color: $standard-white-color; }
+    h1, h2, h3, h4, h5, p, span { font-family: $standard-font-family-2; color: $standard-white-color;}
     
     #landingPage {
         padding-inline: 0px !important;
@@ -211,16 +210,17 @@ body {
 
         #about {
             @extend %flex-justify-left-align-center;
-            padding-inline: 10%;
+            padding-inline: $standard-padding-inline-desktop;
             margin-top: 6rem;
             height: auto;
             gap: 4rem;
             @media screen and (max-width:900px) {
+                font-size: 14px;
                 display: block;
                 margin-top: 4rem;
             }
             @media screen and (max-width:500px) {
-                font-size: 10px;
+                font-size: 12px;
                 gap: 1rem;
             }
             
@@ -285,9 +285,9 @@ body {
         }
 
         #services {
-            padding-inline: 10%;
+            padding-inline: $standard-padding-inline-desktop;
             margin-block: 8rem 8rem;
-            @media screen and (max-width: 768px) { padding-inline: 5%; }
+            @media screen and (max-width: 768px) { padding-inline: $standard-padding-inline-tablet; }
             @media screen and (max-width: 500px) { margin-block: 6rem 6rem; }
         
             .service-heading {
@@ -304,7 +304,7 @@ body {
                 @extend %flex-justify-center;
                 gap: 2%;
                 transition-duration: 300ms;
-                @media screen and (max-width: 860px) {
+                @media screen and (max-width: 1000px) {
                     gap: 2rem;   
                     flex-direction: column;
                     align-items: center;
@@ -313,14 +313,14 @@ body {
                 .service-cards {
                     @extend %flex-col-direction;
                     border: 1.5px solid $standard-grey-color;
-                    width: 18rem;
+                    width: 20rem;
                     padding: 1rem;
                     gap: 1rem;
                     transition-duration: 300ms;
                     
                     .service-card-img-container {
-                        width: 15rem;
-                        height: 15rem;
+                        width: 18rem;
+                        height: 18rem;
                         margin-inline: auto;
                         
                         img {
@@ -364,7 +364,6 @@ body {
                         color: $standard-black-color;
                         text-decoration: none;
                         font: {
-                            family: 'Inter';
                             weight: 900;
                             size: 22px;
                         }
@@ -400,7 +399,7 @@ body {
                 }
                 @media screen and (max-width:500px) {
                     display: inline-block;
-                    padding-inline: 5%;
+                    padding-inline: $standard-padding-inline-tablet;
                 }
                 .project-img-blocks {
                     width: 50%;
@@ -417,7 +416,7 @@ body {
                     padding-inline: 10rem;
                     flex-wrap: wrap;
                     @media screen and (max-width:1024px) {
-                        padding-inline: 10%;
+                        padding-inline: $standard-padding-inline-desktop;
                     }
                     @media screen and (max-width:1024px) {
                         padding-inline: clamp(2%, 3%, 5%);
@@ -442,7 +441,7 @@ body {
             @media screen and (max-width: 800px) {
                 gap: 0;
                 display: block;
-                padding-inline: 5%;
+                padding-inline: $standard-padding-inline-tablet;
             }
 
             #howWeWorkCarousel {
@@ -517,7 +516,7 @@ body {
         #professionalHeadingCol {
             margin-top: 8rem;
             color: $standard-white-color;
-            padding-inline: 10%;
+            padding-inline: $standard-padding-inline-desktop;
             text-align: center;
         }
 
@@ -525,7 +524,7 @@ body {
             padding: 1rem 10% 8rem;
             justify-content: space-around;
             @include desktop { justify-content: space-around; }
-            @include large-tablet { padding-inline: 5%; }
+            @include large-tablet { padding-inline: $standard-padding-inline-tablet; }
             @include large-mobile { padding: 1rem 5% 4rem; }
 
             .professional-cards {
@@ -546,12 +545,15 @@ body {
         }
 
         #clientContainer {
-            padding-inline: 10%;
-            padding-block: 8rem;
+            padding-inline: $standard-padding-inline-desktop;
+            padding-block: 4rem;
             background-color: #fff;
             @media screen and (max-width: 768px) {
-                padding-block: 6rem;
-
+                padding-inline: $standard-padding-inline-tablet;
+            }
+            @media screen and (max-width: 500px) {
+                padding-inline: $standard-padding-inline-mobile-portrait;
+                padding-block: 4rem;
             }
 
             h2 {
@@ -615,12 +617,12 @@ body {
 
     #galleryHeading {
         @extend %flex-align-center-justify-between;
-        padding-inline: 10%;
+        padding-inline: $standard-padding-inline-desktop;
         padding-block: 1rem;
         color: $standard-grey-color;
         @media screen and (max-width: 768px) {
             padding-block: 0.8rem;
-            padding-inline: 5%;
+            padding-inline: $standard-padding-inline-tablet;
         }
         
         @include large-mobile { justify-content: space-between; }
@@ -662,12 +664,12 @@ body {
         @extend %flex-col-direction-justify-center;
         align-items: end;
         gap: 3.5rem;
-        padding-inline: 10%;
+        padding-inline: $standard-padding-inline-desktop;
         @media screen and (max-width: 768px) {
             gap: 1.8rem;
-            padding-inline: 5%;
+            padding-inline: $standard-padding-inline-tablet;
         }
-        a { color: $standard-hyperlink-color; font-family: sans-serif; }
+        a { color: $standard-hyperlink-color; font-family: $standard-font-family-2; }
         
         #galleryCheckBoxFilter {
             @extend %flex-align-start-justify-right;
@@ -702,11 +704,11 @@ body {
 
     #gridContainer {
         margin-block: 1.5rem;
-        padding-inline: 10%;
+        padding-inline: $standard-padding-inline-desktop;
         column-count: 4;
         column-gap: 2rem;
         @media screen and (max-width: 1024px) {column-count: 3;}
-        @media screen and (max-width: 768px) {column-count: 2; column-gap: 1rem; padding-inline: 5%;}
+        @media screen and (max-width: 768px) {column-count: 2; column-gap: 1rem; padding-inline: $standard-padding-inline-tablet;}
         @media screen and (max-width: 425px) {column-count: 1;}
         
         .grid-blocks {
@@ -772,7 +774,7 @@ footer {
     padding: 8rem 10%;
     @include large-mobile {
         flex-direction: column;
-        padding-inline: 5%;
+        padding-inline: $standard-padding-inline-tablet;
         justify-content: center;
     }
     @include large-tablet {
