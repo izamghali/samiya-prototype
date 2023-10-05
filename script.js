@@ -254,7 +254,7 @@ $(document).ready(function() {
       gsap.to('.contact-us-page', { duration: 0.8, x:0 })
       // gsap.to('.contact-us-hidden-layer', {display: 'block'})
     })
-    $('.contact-x-btn').on('click', () => {
+    $('.contact-x-btn svg').on('click', () => {
       gsap.to('.contact-us-page', { duration: 0.8, x:"100%" })
       // gsap.to('.contact-us-hidden-layer', {display: 'none'})
     })
