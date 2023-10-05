@@ -20,12 +20,13 @@
     bottom: 0;
     right: 0;
     z-index: 2;
+    overflow: scroll;
     // width: 25vw !important;
     // border-top-left-radius: 15px;
     // border-bottom-left-radius: 15px;
     width: 100vw;
     height: 100vh;
-    padding: 3% 8%;
+    padding: 4% 8%;
     @extend %flex-col-direction;
     gap: 1rem;
     transform: translateX(100%);
@@ -58,7 +59,6 @@
         border: 1.5px solid $standard-black-color;
         border-radius: $standard-border-radius-10px;
         overflow: hidden;
-        height: 30rem;
         iframe {
             border-radius: $standard-border-radius-10px;    
             border: none;
@@ -94,9 +94,9 @@
         }
 
         form {
-            width: 50%;
             @extend %flex-col-direction;
             gap: 2rem;
+            width: 50vw;
 
             .contact-form-padding { padding: 1rem; }
             .contact-form-bg { background-color: whitesmoke; }
@@ -114,10 +114,6 @@
                 }
             }
 
-            textarea { 
-                
-            }
-
             .contact-form-submit {
                 display: inline-flex;
                 input {
@@ -127,6 +123,35 @@
                     background-color: $standard-black-bg-color;
                 }
             }
+        }
+    }
+
+    .contact-cta {
+        @extend %flex-align-center;
+        background-color: whitesmoke;
+        color: $standard-grey-color;
+        text-decoration: none;
+        gap: 0.3rem;
+        width: max-content;
+        position: absolute;
+        right: 2%;
+        bottom: 5%;
+        transition-duration: 300ms;
+        border-radius: 30px;
+        border: 1.5px solid whitesmoke;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        svg {
+            width: 42px;
+            height: 42px;
+        }
+
+        p {
+            margin: 0;
+            padding: 0.5rem;
         }
     }
 }
