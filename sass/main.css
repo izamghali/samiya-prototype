@@ -1123,13 +1123,18 @@ footer {
     padding: 5%;
   }
 }
-footer #footerLeft h4 {
+footer #footerLeft h4, footer #footerLeft h5 {
   color: #212529;
 }
 footer #footerLeft p {
   color: #212529;
+}
+footer #footerLeft .footer-company p {
   font-style: italic;
   letter-spacing: 0.1rem;
+}
+footer #footerLeft .footer-address p {
+  margin: 0;
 }
 footer #footerRight {
   display: flex;

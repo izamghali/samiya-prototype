@@ -846,11 +846,23 @@ footer {
         padding: 5%;
     }
     #footerLeft {
-        h4 { color: $standard-black-color; }
+        h4, h5 { color: $standard-black-color; }
+
         p {
             color: $standard-black-color;
-            font-style: italic;
-            letter-spacing: 0.1rem;
+        }
+        
+        .footer-company {
+            p {
+                font-style: italic;
+                letter-spacing: 0.1rem;
+            }
+        }
+
+        .footer-address {
+            p {
+                margin: 0;
+            }
         }
     }
 
