@@ -13,17 +13,19 @@ body {
     h1, h2, h3, h4, h5, p, span { font-family: $standard-font-family-2; color: $standard-white-color;}
     
     #landingPage {
-        padding-inline: 0px !important;
-        margin-top: 4.5rem;
+        padding: 0;
         
         #mainNavbar {
             z-index: 1;
-            padding: 0 1.5rem;
-            margin-top: 1.5rem;
             width: 100%;
+            background-color: $standard-black-bg-color;
+            padding-block: 2rem;
+            padding-inline: 2%;
+            // padding-inline: 2rem;
+            // padding: 0 1.5rem;
+            // margin-top: 1.5rem;
             position: fixed;
             top: 0;
-            background-color: $standard-black-bg-color;
 
             #mainNavbarFirstChild {
                 padding: 0;
@@ -153,8 +155,9 @@ body {
         #mainCarousel {
             z-index: 0;
             .carousel-img {
+                // border: 2px solid orange;
                 width: 100%;
-                height: 90vh;
+                height: 100vh;
                 background: { size: cover; repeat: no-repeat; position: 50% 50%; }
                 @media screen and (max-width: 768px) {
                     background: {size: contain; repeat: no-repeat; position: 50% 50%; }
@@ -164,7 +167,6 @@ body {
                     background: {size: contain; repeat: no-repeat; position: 50% 50%; }
                     height: 30vh;
                 }
-                // @include large-mobile { height: 90vh; }
             }
             #carousel1 {
                 background-image: url(../assets/carousel/1.webp);
@@ -196,7 +198,7 @@ body {
                 // @include large-mobile { background-position: 50% 50% }
             }
             .carousel-layer {
-                border: 1.5rem solid $standard-black-bg-color;
+                // border: 1.5rem solid $standard-black-bg-color;
                 // border: 1.5rem solid red;
                 position: relative;
                 height: 100%;
@@ -225,13 +227,11 @@ body {
             @extend %flex-justify-left-align-center;
             background-color: whitesmoke;
             padding: $standard-padding-block-desktop $standard-padding-inline-desktop;
-            margin-top: 6rem;
             height: auto;
             gap: 4rem;
             @media screen and (max-width:900px) {
                 font-size: 14px;
                 display: block;
-                margin-top: 4rem;
             }
             @media screen and (max-width:500px) {
                 font-size: 12px;
@@ -475,7 +475,6 @@ body {
                 // carousel disappear at 880px
                 @media screen and (max-width: 880px) { display: none; }
                 .carousel-inner {
-                    // border: 10px solid $standard-black-color;
                     .carousel-item {
                         height: $standard-carousel-height;
                         min-width: 24rem;
@@ -551,16 +550,11 @@ body {
             }
 
             .how-we-work-content {
-                h2, h4, span {
-                    color: $standard-black-color;
-                }
+                h2, h4, span { color: $standard-black-color; }
 
                 h2 {
                     margin-bottom: 2rem;
-                    @media screen and (max-width: 1000px) {
-                        margin-bottom: 1rem;
-                        
-                    }
+                    @media screen and (max-width: 1000px) { margin-bottom: 1rem; }
                 }
 
                 .how-we-work-block-container {
@@ -575,6 +569,7 @@ body {
                         @media screen and (max-width: 500px) {
                             max-height: 15rem;
                         }
+
                         .how-we-work-block-icon-outer {
                             .how-we-work-block-icon-inner {
                                 border: 2px solid $standard-black-color;
@@ -608,7 +603,6 @@ body {
                     }
                 }
             }
-
         }
 
         // #professionalHeadingCol {

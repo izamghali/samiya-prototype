@@ -17,16 +17,21 @@ let hyperlinkColor2 = "hsl(216, 98%, 36%)";
 
 
 function effectAfterScroll() {
+  // arrow show/hide
   if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
     gsap.to("#arrowBox", {opacity: 1, duration: 0.4, display: 'block'})
   } else {
     gsap.to("#arrowBox", {opacity: 0, duration: 0.4, display: 'none'})
   }
-  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-    gsap.to("#mainNavbar", { duration: 0.2, marginTop: 0, paddingBlock: '0.4rem', borderBottom: "solid " + standardGrayColor })
+  // navbar size after scroll
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    // gsap.to("#mainNavbar", { y: '-150%' })
+    // gsap.to("#mainNavbar", { y: '0%' })
+    gsap.to("#mainNavbar", { duration: 0.2, marginTop: 0, paddingBlock: '1rem', borderBottom: "1.5px solid " + standardGrayColor })
     gsap.to("#navContactBtn", { padding: "0px 1rem" })
   } else {
-    gsap.to("#mainNavbar", { duration: 0.2, marginTop: '1.5rem',  paddingBlock: '0rem', borderBottom: 'none' })
+    // gsap.to("#mainNavbar", { position: 'static' })
+    gsap.to("#mainNavbar", { duration: 0.2, marginTop: '0rem',  paddingBlock: '2rem', borderBottom: 'none' })
     gsap.to("#navContactBtn", { padding: "0.2rem 1rem" })
   }
 }
