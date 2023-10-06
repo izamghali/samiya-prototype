@@ -460,26 +460,92 @@ body {
         #howWeWork {
             @extend %flex-align-center;
             background-color: whitesmoke;
-            gap: 3%;
-            padding-right: 3%;
-            @media screen and (max-width: 800px) {
-                gap: 0;
+            min-height: $standard-carousel-height;
+            @media screen and (min-width: 881px) {
+                padding-right: 3%;
+                gap: 3%;
+            }
+            @media screen and (max-width: 880px) {
                 display: block;
                 padding: $standard-padding-block-tablet $standard-padding-inline-tablet;
             }
 
             #howWeWorkCarousel {
-                width: 45%;
-                @media screen and (max-width: 800px) {
-                    display: none;
-                }
+                width: 55%;
+                // carousel disappear at 880px
+                @media screen and (max-width: 880px) { display: none; }
                 .carousel-inner {
+                    // border: 10px solid $standard-black-color;
                     .carousel-item {
+                        height: $standard-carousel-height;
+                        min-width: 24rem;
+                        
                         img {
-                            @media screen and (max-width: 970px) {
-                                width: 25rem !important;
-                            }
+                            object-fit: cover;
+                            transition-duration: 250ms;
                         }
+                        .carousel-1 {
+                            @include adjust-object-position(1130px, -4rem);
+                            @include adjust-object-position(1235px, -8rem);
+                            @include adjust-object-position(1300px, -12rem);
+                            @include adjust-object-position(1350px, -16rem);
+                            @include adjust-object-position(1500px, -18rem);
+                            @include adjust-object-position(1555px, -22rem);
+                            @include adjust-object-position(1635px, -25rem);
+                            @include adjust-object-position(1700px, -28rem);
+                            @include adjust-object-position(1800px, -30rem);
+                            @include adjust-object-position(1900px, -32rem);
+                            @include adjust-object-position(2000px, -34rem);
+                            @include adjust-object-position(2100px, -36rem);
+                            @include adjust-object-position(2200px, -38rem);
+                            @include adjust-object-position(2300px, -40rem);
+                            @include adjust-object-position(2400px, -42rem);
+                            @include adjust-object-position(2500px, -44rem);
+                            @include adjust-object-position(2600px, -48rem);
+
+                        }
+
+                        .carousel-2 {
+                            @include adjust-object-position(1060px, -3rem);
+                            @include adjust-object-position(1100px, -6rem);
+                            @include adjust-object-position(1160px, -9rem);
+                            @include adjust-object-position(1200px, -10rem);
+                            @include adjust-object-position(1450px, -12rem);
+                            @include adjust-object-position(1550px, -14rem);
+                            @include adjust-object-position(1600px, -16rem);
+                            @include adjust-object-position(1700px, -18rem);
+                            @include adjust-object-position(1800px, -20rem);
+                            @include adjust-object-position(1900px, -22rem);
+                            @include adjust-object-position(2100px, -24rem);
+                            @include adjust-object-position(2400px, -25rem);
+                            @include adjust-object-position(2500px, -27rem);
+                        }
+                        
+                        .carousel-3 {
+                            @include adjust-object-position(1100px, -3rem);
+                            @include adjust-object-position(1200px, -6rem);
+                            @include adjust-object-position(1275px, -8rem);
+                            @include adjust-object-position(1325px, -9rem);
+                            @include adjust-object-position(1400px, -12rem);
+                            @include adjust-object-position(1600px, -15rem);
+                            @include adjust-object-position(1900px, -18rem);
+                            @include adjust-object-position(2100px, -21rem);
+                            @include adjust-object-position(2300px, -23rem);
+                            @include adjust-object-position(2500px, -26rem);
+                        }
+
+                        .carousel-4 {
+                            @extend .carousel-2;
+                            @include adjust-object-position(2050px, -24rem);
+                            @include adjust-object-position(2250px, -26rem);
+                            @include adjust-object-position(2300px, -28rem);
+                            @include adjust-object-position(2400px, -30rem);
+                            @include adjust-object-position(2500px, -32rem);
+                            @include adjust-object-position(2550px, -34rem);
+                            @include adjust-object-position(2600px, -36rem);
+                        }
+
+                        .carousel-5 { @extend .carousel-3; }
                     }
                 }
             }
@@ -491,6 +557,10 @@ body {
 
                 h2 {
                     margin-bottom: 2rem;
+                    @media screen and (max-width: 1000px) {
+                        margin-bottom: 1rem;
+                        
+                    }
                 }
 
                 .how-we-work-block-container {

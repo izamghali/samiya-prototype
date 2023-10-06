@@ -3,3 +3,9 @@
     width: $width;
     padding-bottom: $padding-bottom;
 }
+
+@mixin adjust-object-position($device-width, $y-position) {
+    @media screen and (min-width: $device-width) {
+        object-position: 0rem $y-position;
+    }
+}

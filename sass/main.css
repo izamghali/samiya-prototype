@@ -685,27 +685,317 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
 }
 body #bodyPage #howWeWork {
   background-color: whitesmoke;
-  gap: 3%;
-  padding-right: 3%;
+  min-height: 35rem;
 }
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 881px) {
   body #bodyPage #howWeWork {
-    gap: 0;
+    padding-right: 3%;
+    gap: 3%;
+  }
+}
+@media screen and (max-width: 880px) {
+  body #bodyPage #howWeWork {
     display: block;
     padding: 4rem 5%;
   }
 }
 body #bodyPage #howWeWork #howWeWorkCarousel {
-  width: 45%;
+  width: 55%;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
   body #bodyPage #howWeWork #howWeWorkCarousel {
     display: none;
   }
 }
-@media screen and (max-width: 970px) {
-  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item img {
-    width: 25rem !important;
+body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item {
+  height: 35rem;
+  min-width: 24rem;
+}
+body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition-duration: 250ms;
+}
+@media screen and (min-width: 1130px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -4rem;
+       object-position: 0rem -4rem;
+  }
+}
+@media screen and (min-width: 1235px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -8rem;
+       object-position: 0rem -8rem;
+  }
+}
+@media screen and (min-width: 1300px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -12rem;
+       object-position: 0rem -12rem;
+  }
+}
+@media screen and (min-width: 1350px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -16rem;
+       object-position: 0rem -16rem;
+  }
+}
+@media screen and (min-width: 1500px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -18rem;
+       object-position: 0rem -18rem;
+  }
+}
+@media screen and (min-width: 1555px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -22rem;
+       object-position: 0rem -22rem;
+  }
+}
+@media screen and (min-width: 1635px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -25rem;
+       object-position: 0rem -25rem;
+  }
+}
+@media screen and (min-width: 1700px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -28rem;
+       object-position: 0rem -28rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -30rem;
+       object-position: 0rem -30rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -32rem;
+       object-position: 0rem -32rem;
+  }
+}
+@media screen and (min-width: 2000px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -34rem;
+       object-position: 0rem -34rem;
+  }
+}
+@media screen and (min-width: 2100px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -36rem;
+       object-position: 0rem -36rem;
+  }
+}
+@media screen and (min-width: 2200px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -38rem;
+       object-position: 0rem -38rem;
+  }
+}
+@media screen and (min-width: 2300px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -40rem;
+       object-position: 0rem -40rem;
+  }
+}
+@media screen and (min-width: 2400px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -42rem;
+       object-position: 0rem -42rem;
+  }
+}
+@media screen and (min-width: 2500px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -44rem;
+       object-position: 0rem -44rem;
+  }
+}
+@media screen and (min-width: 2600px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-1 {
+    -o-object-position: 0rem -48rem;
+       object-position: 0rem -48rem;
+  }
+}
+@media screen and (min-width: 1060px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -3rem;
+       object-position: 0rem -3rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -6rem;
+       object-position: 0rem -6rem;
+  }
+}
+@media screen and (min-width: 1160px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -9rem;
+       object-position: 0rem -9rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -10rem;
+       object-position: 0rem -10rem;
+  }
+}
+@media screen and (min-width: 1450px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -12rem;
+       object-position: 0rem -12rem;
+  }
+}
+@media screen and (min-width: 1550px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -14rem;
+       object-position: 0rem -14rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -16rem;
+       object-position: 0rem -16rem;
+  }
+}
+@media screen and (min-width: 1700px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -18rem;
+       object-position: 0rem -18rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -20rem;
+       object-position: 0rem -20rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -22rem;
+       object-position: 0rem -22rem;
+  }
+}
+@media screen and (min-width: 2100px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -24rem;
+       object-position: 0rem -24rem;
+  }
+}
+@media screen and (min-width: 2400px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -25rem;
+       object-position: 0rem -25rem;
+  }
+}
+@media screen and (min-width: 2500px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-2, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -27rem;
+       object-position: 0rem -27rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -3rem;
+       object-position: 0rem -3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -6rem;
+       object-position: 0rem -6rem;
+  }
+}
+@media screen and (min-width: 1275px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -8rem;
+       object-position: 0rem -8rem;
+  }
+}
+@media screen and (min-width: 1325px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -9rem;
+       object-position: 0rem -9rem;
+  }
+}
+@media screen and (min-width: 1400px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -12rem;
+       object-position: 0rem -12rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -15rem;
+       object-position: 0rem -15rem;
+  }
+}
+@media screen and (min-width: 1900px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -18rem;
+       object-position: 0rem -18rem;
+  }
+}
+@media screen and (min-width: 2100px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -21rem;
+       object-position: 0rem -21rem;
+  }
+}
+@media screen and (min-width: 2300px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -23rem;
+       object-position: 0rem -23rem;
+  }
+}
+@media screen and (min-width: 2500px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-3, body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-5 {
+    -o-object-position: 0rem -26rem;
+       object-position: 0rem -26rem;
+  }
+}
+@media screen and (min-width: 2050px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -24rem;
+       object-position: 0rem -24rem;
+  }
+}
+@media screen and (min-width: 2250px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -26rem;
+       object-position: 0rem -26rem;
+  }
+}
+@media screen and (min-width: 2300px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -28rem;
+       object-position: 0rem -28rem;
+  }
+}
+@media screen and (min-width: 2400px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -30rem;
+       object-position: 0rem -30rem;
+  }
+}
+@media screen and (min-width: 2500px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -32rem;
+       object-position: 0rem -32rem;
+  }
+}
+@media screen and (min-width: 2550px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -34rem;
+       object-position: 0rem -34rem;
+  }
+}
+@media screen and (min-width: 2600px) {
+  body #bodyPage #howWeWork #howWeWorkCarousel .carousel-inner .carousel-item .carousel-4 {
+    -o-object-position: 0rem -36rem;
+       object-position: 0rem -36rem;
   }
 }
 body #bodyPage #howWeWork .how-we-work-content h2, body #bodyPage #howWeWork .how-we-work-content h4, body #bodyPage #howWeWork .how-we-work-content span {
@@ -713,6 +1003,11 @@ body #bodyPage #howWeWork .how-we-work-content h2, body #bodyPage #howWeWork .ho
 }
 body #bodyPage #howWeWork .how-we-work-content h2 {
   margin-bottom: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  body #bodyPage #howWeWork .how-we-work-content h2 {
+    margin-bottom: 1rem;
+  }
 }
 body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container {
   gap: 1.5rem;
