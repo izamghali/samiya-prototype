@@ -1400,7 +1400,7 @@ footer {
   height: max-content;
   margin: 0;
   flex-wrap: wrap;
-  padding: 8rem 10%;
+  padding: 8rem 8%;
 }
 @media (max-width: 425px) {
   footer {
@@ -1412,6 +1412,11 @@ footer {
 @media (max-width: 950px) {
   footer {
     padding: 5%;
+  }
+}
+@media screen and (max-width: 1553px) {
+  footer {
+    gap: 3rem;
   }
 }
 footer #footerLeft h4, footer #footerLeft h5 {

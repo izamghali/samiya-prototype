@@ -900,7 +900,7 @@ footer {
     height: max-content; 
     margin: 0;
     flex-wrap: wrap;
-    padding: 8rem 10%;
+    padding: 8rem 8%;
     @include large-mobile {
         flex-direction: column;
         padding-inline: $standard-padding-inline-tablet;
@@ -909,6 +909,11 @@ footer {
     @include large-tablet {
         padding: 5%;
     }
+
+    @media screen and (max-width: 1553px) {
+        gap: 3rem;    
+    }
+
     #footerLeft {
         h4, h5 { color: $standard-black-color; }
 
