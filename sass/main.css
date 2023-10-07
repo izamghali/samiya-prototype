@@ -40,6 +40,11 @@ footer, .contact-us-page .contact-content form .contact-content-form-name-email,
   justify-content: space-between;
 }
 
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
+  display: flex;
+  justify-content: end;
+}
+
 body #galleryHeading, body #bodyPage #howWeWork .how-we-work-content .how-we-work-block-container .how-we-work-blocks .how-we-work-block-body .how-we-work-block-heading {
   justify-content: space-between;
 }
@@ -213,16 +218,22 @@ body #landingPage #mainNavbar {
 body #landingPage #mainNavbar #mainNavbarFirstChild {
   padding: 0;
 }
-@media screen and (min-width: 1440px) {
-  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
-    margin: 0;
-    width: 25rem;
-    display: flex;
-    justify-content: center;
-  }
+body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
+  margin: 0;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
-  width: 10rem;
+  transition-duration: 300ms;
+  width: 12rem;
+}
+@media screen and (max-width: 880px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
+    width: 11rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
+    width: 10rem;
+  }
 }
 @media screen and (max-width: 500px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
@@ -246,10 +257,6 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarToggler .navbar-toggl
   margin-block: 4px;
   border-radius: 10px;
 }
-body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
-  display: flex;
-  justify-content: end;
-}
 @media screen and (max-width: 991px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
     position: absolute;
@@ -269,22 +276,24 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList {
   }
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
+  transition-duration: 300ms;
   display: flex;
   z-index: 1;
+  gap: 0.4rem;
 }
-@media screen and (min-width: 1441px) {
-  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
-    gap: 3rem;
-  }
-}
-@media screen and (max-width: 1440px) and (min-width: 1024px) {
+@media screen and (min-width: 1144px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
     gap: 2rem;
   }
 }
-@media screen and (max-width: 1024px) and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
-    gap: 1rem;
+    gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 1441px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild {
+    gap: 3rem;
   }
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .dropdown-menu li {
@@ -295,6 +304,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .navbar-link {
   color: hsl(60, 0%, 100%);
+  font-size: larger;
 }
 @media screen and (max-width: 991px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .navbar-link {
@@ -335,6 +345,9 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
     background-color: #212529;
   }
 }
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn {
+  margin-left: 0.55rem;
+}
 @media screen and (min-width: 992px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn {
     padding: 0.2rem 1rem;
@@ -349,6 +362,11 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
   }
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn:hover a {
     color: #212529;
+  }
+}
+@media screen and (min-width: 1144px) {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #navContactBtn {
+    margin-left: 0rem;
   }
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarHiddenLayer {

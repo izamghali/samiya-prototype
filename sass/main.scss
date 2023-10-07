@@ -31,16 +31,15 @@ body {
                 padding: 0;
 
                 #aBrand {
-                    @media screen and (min-width: 1440px) {
-                        margin: 0;
-                        width: 25rem;
-                        display: flex;
-                        justify-content: center;
-                    }
-
+                    margin: 0;
                     div {
-                        width: 10rem;
-                        @media screen and (max-width:500px) { width: 8rem; }
+                        transition-duration: 300ms;
+                        width: 12rem;
+
+                        @include adjust-width(880px, 11rem);
+                        @include adjust-width(768px, 10rem);
+                        @include adjust-width(500px, 8rem);
+
                         img {
                             width: 100%;
                             &:nth-child(2) {
@@ -63,8 +62,7 @@ body {
                 }
                 
                 #navbarList {
-                    display: flex;
-                    justify-content: end;
+                    @extend %flex-justify-end;
                     
                     @media screen and (max-width: 991px) {
                         position: absolute;
@@ -83,19 +81,29 @@ body {
                         }
                     }
 
-                    #navbarListFirstChild {
+                    #navbarListFirstChild {                        
+                        transition-duration: 300ms;
                         display: flex;
                         z-index: 1;
-                        @media screen and (min-width: 1441px) { gap: 3rem; }
-                        @media screen and (max-width:1440px) and (min-width: 1024px) { gap: 2rem; }
-                        @media screen and (max-width: 1024px) and (min-width: 992px) { gap: 1rem }
+                        gap: 0.4rem;
 
-                        .dropdown-menu { li { margin: 0; } }
+                        @media screen and (min-width: 1144px) {
+                            gap: 2rem;
+                        }
+                        @media screen and (min-width: 1200px) {
+                            gap: 2.5rem;
+                        }
+                        @media screen and (min-width: 1441px) {
+                            gap: 3rem;
+                        }
+
+                        .dropdown-menu { li { margin: 0;  } }
                         
                         li { display: block; }       
-        
+                        
                         .navbar-link {
                             color: $standard-white-color;
+                            font-size: larger;
                             @media screen and (max-width: 991px) {color: $standard-black-color;}
                             &:hover { cursor: pointer; }
                         }
@@ -124,6 +132,9 @@ body {
                         }
                         
                         #navContactBtn {
+
+                            margin-left: 0.55rem;
+
                             @media screen and (min-width:992px) {
                                 padding: 0.2rem 1rem;
                                 border: 2px solid $standard-white-color;
@@ -136,6 +147,8 @@ body {
                                     a { color: $standard-black-color; }
                                 }
                             }
+
+                            @media screen and (min-width: 1144px) { margin-left: 0rem; }
                         }
                     }
 

@@ -62,6 +62,11 @@
     justify-content: space-between;
 }
 
+%flex-justify-end {
+    display: flex;
+    justify-content: end;
+}
+
 %flex-align-center-justify-between {
     @extend %flex-align-center;
     justify-content: space-between;
