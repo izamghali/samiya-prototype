@@ -58,6 +58,26 @@ body #bodyPage #projects .project-blocks .project-text-blocks {
   align-items: center;
 }
 
+body #bodyPage #services .service-heading p, body #bodyPage #about #aboutTextBlock p {
+  transition-duration: 300ms;
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  body #bodyPage #services .service-heading p, body #bodyPage #about #aboutTextBlock p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 650px) {
+  body #bodyPage #services .service-heading p, body #bodyPage #about #aboutTextBlock p {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 500px) {
+  body #bodyPage #services .service-heading p, body #bodyPage #about #aboutTextBlock p {
+    font-size: 16px;
+  }
+}
+
 .social-btn {
   border-radius: 50%;
   border: 0.99px solid #212529;
@@ -486,12 +506,21 @@ body #bodyPage #about {
 body #bodyPage #about #aboutImgBlock .about-img-container {
   width: 5.5rem;
 }
+@media screen and (max-width: 900px) {
+  body #bodyPage #about #aboutImgBlock .about-img-container {
+    display: none;
+  }
+}
 body #bodyPage #about #aboutImgBlock .about-img-container img {
   width: 100%;
 }
 body #bodyPage #about #aboutImgBlock .about-img-container img:nth-child(1) {
   display: none;
   opacity: 0;
+}
+body #bodyPage #about #aboutImgBlock h2 {
+  color: #212529;
+  border: 1px solid orange;
 }
 @media screen and (min-width: 901px) {
   body #bodyPage #about #aboutImgBlock h2 {
@@ -552,6 +581,9 @@ body #bodyPage #services .service-heading {
 }
 body #bodyPage #services .service-heading h2, body #bodyPage #services .service-heading p {
   text-align: center;
+}
+body #bodyPage #services .service-heading p {
+  color: #ADADAD;
 }
 @media screen and (max-width: 500px) {
   body #bodyPage #services .service-heading {

@@ -1,3 +1,5 @@
+@import './mixins';
+
 %display-none {
     display: none;
 }
@@ -81,4 +83,13 @@
 %inline-flex-align-center {
     display: inline-flex;
     align-items: center;
+}
+
+// font 
+%responsive-font-size {
+    transition-duration: 300ms;
+    font-size: 20px;
+    @include adjust-font-size(768px, 18px);
+    @include adjust-font-size(650px, 17px);
+    @include adjust-font-size(500px, 16px);
 }

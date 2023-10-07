@@ -15,3 +15,9 @@
         width: $width;
     }
 }
+
+@mixin adjust-font-size($device-width, $size) {
+    @media screen and (max-width: $device-width) {
+        font-size: $size;
+    }
+}
