@@ -321,6 +321,12 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild li {
   display: block;
+  border: none;
+  transition-duration: 500ms;
+  border-bottom: 1px solid #1C1C1C;
+}
+body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild li:not(.dark-light-toggle):not(.dropdown):not(.contact-btn):hover {
+  border-bottom: 1px solid hsl(60, 0%, 100%);
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild .navbar-link {
   color: hsl(60, 0%, 100%);

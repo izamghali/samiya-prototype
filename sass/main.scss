@@ -97,9 +97,25 @@ body {
                             gap: 3rem;
                         }
 
-                        .dropdown-menu { li { margin: 0;  } }
+                        .dropdown-menu { li { margin: 0; } }
                         
-                        li { display: block; }       
+                        li {
+                            display: block;
+                            border: none;
+                            transition-duration: 500ms;
+                            border-bottom: 1px solid $standard-black-bg-color;
+
+                            &:not(.dark-light-toggle) {
+                                &:not(.dropdown) {
+                                    &:not(.contact-btn) {
+                                        &:hover {
+                                            border-bottom: 1px solid $standard-white-color;
+                                        }
+                                    }
+                                }
+                            }
+
+                        }       
                         
                         .navbar-link {
                             color: $standard-white-color;

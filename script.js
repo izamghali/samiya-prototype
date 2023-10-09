@@ -201,17 +201,17 @@ function mobileSize() {
 $(document).ready(function() {
 
   // hover navbar
-  $(".navbar-link").on("mouseenter", (event) => {
-    $(".navbar-link").not(event.currentTarget).fadeTo("50", 0.4);
-  }).on("mouseleave", (event) => {
-    $(".navbar-link").not(event.currentTarget).fadeTo("50", 1);
-    $(".navbar-dark-light-toggle").fadeTo("50", 1);
-  })
-  $(".navbar-dark-light-toggle").on("mouseenter", () => {
-    $(".navbar-link").fadeTo("50", 0.4);
-  }).on("mouseleave", () => {
-    $(".navbar-link").fadeTo("50", 1);
-  })
+  // $(".navbar-link").on("mouseenter", (event) => {
+  //   $(".navbar-link").not(event.currentTarget).fadeTo("50", 0.4);
+  // }).on("mouseleave", (event) => {
+  //   $(".navbar-link").not(event.currentTarget).fadeTo("50", 1);
+  //   $(".navbar-dark-light-toggle").fadeTo("50", 1);
+  // })
+  // $(".navbar-dark-light-toggle").on("mouseenter", () => {
+  //   $(".navbar-link").fadeTo("50", 0.4);
+  // }).on("mouseleave", () => {
+  //   $(".navbar-link").fadeTo("50", 1);
+  // })
 
   // hover dropdown menu
   $("#galleryDropDownBtn").on("mouseenter", () => {
