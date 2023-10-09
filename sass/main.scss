@@ -97,13 +97,24 @@ body {
                             gap: 3rem;
                         }
 
-                        .dropdown-menu { li { margin: 0; } }
+                        .dropdown-menu {
+                            li {
+                                margin: 0;
+                                border: none;
+                                &:hover {
+                                    border: none;
+
+                                }
+                            }
+                        }
                         
                         li {
                             display: block;
                             border: none;
                             transition-duration: 500ms;
-                            border-bottom: 1px solid $standard-black-bg-color;
+                            @media screen and (min-width: 992px) {
+                                border-bottom: 1px solid $standard-black-bg-color;         
+                            }
 
                             &:not(.dark-light-toggle) {
                                 &:not(.dropdown) {
