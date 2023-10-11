@@ -16,7 +16,7 @@ body {
         padding: 0;
         
         #mainNavbar {
-            z-index: 1;
+            z-index: 10;
             width: 100%;
             background-color: $standard-black-bg-color;
             padding-block: 2rem;
@@ -257,13 +257,56 @@ body {
 
         .carousel {
 
+            .carousel-preload {
+                background-color: white;
+                opacity: 0.25;
+                height: 0.7rem;
+                position: absolute;
+                top: 0;
+                z-index: 1;
+            }
 
             .carousel-img-container {
-                img {
-                    width: 100%;
+                // &:not(.carousel-1) {
+                //     display: none;
+                // }
+                &:not(.carousel-1) {
+                    position: absolute;
+                    top: 0;
+                }
+                
+                img { width: 100%; }
+
+                .carousel-bg {
+                    background-color: #424242;
+                    opacity: 0;
+                    z-index: 2;
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100vw;
                 }
             }
         }
+
+
+        // #carousel {
+
+        //     .carousel-inner {
+
+        //         .carousel-item {
+
+        //             .carousel-bg {
+        //                 background-color: orange;
+        //                 // opacity: 0.3;
+        //                 position: absolute;
+        //                 top: 0;
+        //                 height: 100%;
+        //                 width: 100vw;
+        //             }
+        //         }
+        //     }
+        // }
 
         .contact-us-page {
             h2 { color: $standard-black-color;}

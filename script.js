@@ -15,13 +15,45 @@ let standardWhiteBg = "hsl(0, 0%, 96%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 36%)";
 
-// carousel pre-load
-gsap.to(".carousel-preload", {
-  width: "100vw",
-  duration: 4,
-  repeat: -1,
-  ease: "linear"
-})
+function carousel() {
+  let carouselTL = gsap.timeline();
+  let carouselDuration = 8;
+  let bgOpacityDuration = 1.2;
+  let blur = "blur(10px)";
+
+  function transition(img) {
+    // preload
+    carouselTL.to(".carousel-preload", { width: "100vw", duration: carouselDuration, ease: "linear", })
+    // bg opacity
+    carouselTL.to('.carousel-bg', { opacity: 1, duration: bgOpacityDuration, reverse: true })
+    // img blur
+    carouselTL.to('.carousel-img-container img', { filter: blur }, "<")
+  
+    // preload set to start
+    carouselTL.set(".carousel-preload", { width: "0vw", }, ">")
+    // img change
+    carouselTL.to(`${img}`, { opacity: 0 })
+    if (img === ".carousel-1") {
+      carouselTL.set([".carousel-1, .carousel-2, .carousel-3, .carousel-4, .carousel-5, .carousel-6"], { opacity: 1, duration: 1}, "<")
+    }
+  
+    // bg opacity
+    carouselTL.to('.carousel-bg', { opacity: 0, duration: bgOpacityDuration, reverse: true })
+    // img blur
+    carouselTL.to('.carousel-img-container img', { filter: "blur(0px)" }, "<")
+  }
+
+  transition(".carousel-6")
+  transition(".carousel-5")
+  transition(".carousel-4")
+  transition(".carousel-3")
+  transition(".carousel-2")
+  transition(".carousel-1")
+
+  carouselTL.repeat(-1)  
+}
+
+carousel();
 
 
 function effectAfterScroll() {
