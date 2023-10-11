@@ -21,3 +21,9 @@
         font-size: $size;
     }
 }
+
+@mixin adjust-flex-gap-min-width($device-width, $gap) {
+    @media screen and (min-width: $device-width) {
+        gap: $gap;
+    }
+}
