@@ -15,6 +15,14 @@ let standardWhiteBg = "hsl(0, 0%, 96%)";
 let hyperlinkColor1 = "hsl(168, 100%, 76%)";
 let hyperlinkColor2 = "hsl(216, 98%, 36%)";
 
+// carousel pre-load
+gsap.to(".carousel-preload", {
+  width: "100vw",
+  duration: 4,
+  repeat: -1,
+  ease: "linear"
+})
+
 
 function effectAfterScroll() {
   // arrow show/hide
