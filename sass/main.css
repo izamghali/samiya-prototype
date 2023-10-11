@@ -241,31 +241,25 @@ body #landingPage #mainNavbar #mainNavbarFirstChild {
 body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand {
   margin: 0;
 }
-body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
+body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand svg {
   transition-duration: 300ms;
-  width: 12rem;
+  width: 13rem;
+  fill: hsl(60, 0%, 100%);
 }
 @media screen and (max-width: 880px) {
-  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand svg {
     width: 11rem;
   }
 }
 @media screen and (max-width: 768px) {
-  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand svg {
     width: 10rem;
   }
 }
 @media screen and (max-width: 500px) {
-  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div {
+  body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand svg {
     width: 8rem;
   }
-}
-body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div img {
-  width: 100%;
-}
-body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand div img:nth-child(2) {
-  display: none;
-  opacity: 0;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarToggler {
   border: solid #ADADAD;
@@ -517,24 +511,16 @@ body #bodyPage #about {
     gap: 1.2rem;
   }
 }
-body #bodyPage #about #aboutImgBlock .about-img-container {
-  width: 5.5rem;
+body #bodyPage #about #aboutImgBlock svg {
+  fill: #212529;
 }
 @media screen and (max-width: 900px) {
-  body #bodyPage #about #aboutImgBlock .about-img-container {
+  body #bodyPage #about #aboutImgBlock svg {
     display: none;
   }
 }
-body #bodyPage #about #aboutImgBlock .about-img-container img {
-  width: 100%;
-}
-body #bodyPage #about #aboutImgBlock .about-img-container img:nth-child(1) {
-  display: none;
-  opacity: 0;
-}
 body #bodyPage #about #aboutImgBlock h2 {
   color: #212529;
-  border: 1px solid orange;
 }
 @media screen and (min-width: 901px) {
   body #bodyPage #about #aboutImgBlock h2 {

@@ -32,21 +32,14 @@ body {
 
                 #aBrand {
                     margin: 0;
-                    div {
+            
+                    svg {
                         transition-duration: 300ms;
-                        width: 12rem;
-
+                        width: 13rem;
                         @include adjust-width(880px, 11rem);
                         @include adjust-width(768px, 10rem);
                         @include adjust-width(500px, 8rem);
-
-                        img {
-                            width: 100%;
-                            &:nth-child(2) {
-                                display: none;
-                                opacity: 0;
-                            }
-                        }
+                        fill: $standard-white-color;
                     }
                 }
     
@@ -298,19 +291,16 @@ body {
                     gap: 1.2rem;
                 }
 
-                .about-img-container {
-                    width: 5.5rem;
-                    @media screen and (max-width: 900px) { display: none; }
-
-                    img {
-                        width: 100%;
-                        &:nth-child(1) { display: none; opacity: 0;}
+                svg {
+                    @media screen and (max-width: 900px) {
+                        display: none;
                     }
+
+                    fill: $standard-black-color;
                 }
 
                 h2 {
                     color: $standard-black-color;
-                    border: 1px solid orange;
                     @media screen and (min-width: 901px) {
                         display: none;
                     }
