@@ -44,7 +44,7 @@ body {
                 }
     
                 #navbarToggler {
-                    border: solid $standard-grey-color;
+                    border: 1.5px solid $standard-grey-color;
                     .navbar-toggler-stripes {
                         background-color: $standard-grey-color;
                         width: 1rem;
@@ -67,7 +67,7 @@ body {
                         justify-content: start;
                         background-color: rgba(255,255,255,0.7);
                         padding : { block: 2rem; left: 2rem; }
-                        border: solid $standard-black-color {
+                        border: 1.5px solid $standard-black-color {
                             top-left-radius: $standard-border-radius-20px;
                             bottom-left-radius: $standard-border-radius-20px;
                             bottom-right-radius: $standard-border-radius-20px;
@@ -140,7 +140,7 @@ body {
                             display: flex;
                             align-items: center;
                             &:hover { cursor: pointer; }
-                            @media screen and (max-width: 991px) {border: solid $standard-black-color}
+                            @media screen and (max-width: 991px) {border: 1.5px solid $standard-black-color}
         
                             #lightModeToggle {
                                 width: 0.8rem;
@@ -188,58 +188,64 @@ body {
         #mainCarousel {
             z-index: 0;
             .carousel-img {
-                // border: 2px solid orange;
+                border: 2px solid dodgerblue;
                 width: 100%;
-                height: 100vh;
-                background: { size: cover; repeat: no-repeat; position: 50% 50%; }
-                @media screen and (max-width: 768px) {
-                    background: {size: contain; repeat: no-repeat; position: 50% 50%; }
-                    height: 50vh;
+                height: auto;
+                background: {
+                    size: cover; 
+                    repeat: no-repeat; 
+                    position: 50% 50%;
                 }
-                @media screen and (max-width: 500px) {
-                    background: {size: contain; repeat: no-repeat; position: 50% 50%; }
-                    height: 30vh;
-                }
+                // @media screen  and (max-width: 1000px) {
+                //     background-size: contain;
+                //     height: 50vh;
+                // }
+                // @media screen and (max-width: 768px) {
+                //     background: {size: contain; repeat: no-repeat; position: 50% 50%; }
+                //     height: 50vh;
+                // }
+                // @media screen and (max-width: 500px) {
+                //     background: {size: contain; repeat: no-repeat; position: 50% 50%; }
+                //     height: 30vh;
+                // }
             }
             #carousel1 {
-                background-image: url(../assets/carousel/1.webp);
-                // background-image: url(../assets/gallery/food/food-100.webp);
+                // background-image: url(../assets/carousel/1.webp);
             }
             #carousel2 {
-                background-image: url(../assets/carousel/2.webp);
-                // background-image: url(../assets/gallery/company/company-1.webp);
+                // background-image: url(../assets/carousel/2.webp);
                 // @include large-mobile { background-position: 61% 50%; }
             }
             #carousel3 {
-                background-image: url(../assets/carousel/3.webp);
-                // background-image: url(../assets/gallery/food/food-75.webp);
+                // background-image: url(../assets/carousel/3.webp);
                 // @include large-mobile { background-position: 55% 50%; }
             }
             #carousel4 {
-                background-image: url(../assets/carousel/4.webp);
-                // background-image: url(../assets/gallery/architecture/architecture-4.webp);
+                // background-image: url(../assets/carousel/4.webp);
                 // @include large-mobile { background-position: 43% 50% }
             }
             #carousel5 {
-                background-image: url(../assets/carousel/5.webp);
-                // background-image: url(../assets/gallery/food/food-57.webp);
+                // background-image: url(../assets/carousel/5.webp);
                 // @include large-mobile { background-position: 50% 50% }
             }
             #carousel6 {
-                background-image: url(../assets/carousel/6.webp);
-                // background-image: url(../assets/gallery/food/food-57.webp);
+                // background-image: url(../assets/carousel/6.webp);
                 // @include large-mobile { background-position: 50% 50% }
             }
             .carousel-layer {
-                // border: 1.5rem solid $standard-black-bg-color;
-                // border: 1.5rem solid red;
                 position: relative;
-                height: 100%;
-                width: 100%;
+                width: 100vw;
+                border: 1px solid orange;
+                background: linear-gradient(0deg, rgba(0,0,0,0.8) 0% 22%, rgba(255,255,255, 0.1) 80% 100%);
+                z-index: 5;
+                // height: 100%;
                 // opacity: 1;
                 // border-radius: 35px;
-                // background: linear-gradient(0deg, rgba(0,0,0,0.8) 0% 22%, rgba(255,255,255, 0.1) 80% 100%);
                 // @include large-mobile { background: linear-gradient(0deg, rgba(255,255,255, 0.1) 0% 60%, rgba(0,0,0,0.8) 100% 0%); }
+
+                img {
+                    width: 100%;
+                }
             }
         }
 

@@ -262,7 +262,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #aBrand svg {
   }
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarToggler {
-  border: solid #ADADAD;
+  border: 1.5px solid #ADADAD;
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarToggler .navbar-toggler-stripes {
   background-color: #ADADAD;
@@ -283,7 +283,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarToggler .navbar-toggl
     background-color: rgba(255, 255, 255, 0.7);
     padding-block: 2rem;
     padding-left: 2rem;
-    border: solid #212529;
+    border: 1.5px solid #212529;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -359,7 +359,7 @@ body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirst
 }
 @media screen and (max-width: 991px) {
   body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #lightModeBtn {
-    border: solid #212529;
+    border: 1.5px solid #212529;
   }
 }
 body #landingPage #mainNavbar #mainNavbarFirstChild #navbarList #navbarListFirstChild #lightModeBtn #lightModeToggle {
@@ -410,49 +410,21 @@ body #landingPage #mainCarousel {
   z-index: 0;
 }
 body #landingPage #mainCarousel .carousel-img {
+  border: 2px solid dodgerblue;
   width: 100%;
-  height: 100vh;
+  height: auto;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
 }
-@media screen and (max-width: 768px) {
-  body #landingPage #mainCarousel .carousel-img {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    height: 50vh;
-  }
-}
-@media screen and (max-width: 500px) {
-  body #landingPage #mainCarousel .carousel-img {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    height: 30vh;
-  }
-}
-body #landingPage #mainCarousel #carousel1 {
-  background-image: url(../assets/carousel/1.webp);
-}
-body #landingPage #mainCarousel #carousel2 {
-  background-image: url(../assets/carousel/2.webp);
-}
-body #landingPage #mainCarousel #carousel3 {
-  background-image: url(../assets/carousel/3.webp);
-}
-body #landingPage #mainCarousel #carousel4 {
-  background-image: url(../assets/carousel/4.webp);
-}
-body #landingPage #mainCarousel #carousel5 {
-  background-image: url(../assets/carousel/5.webp);
-}
-body #landingPage #mainCarousel #carousel6 {
-  background-image: url(../assets/carousel/6.webp);
-}
 body #landingPage #mainCarousel .carousel-layer {
   position: relative;
-  height: 100%;
+  width: 100vw;
+  border: 1px solid orange;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0% 22%, rgba(255, 255, 255, 0.1) 80% 100%);
+  z-index: 5;
+}
+body #landingPage #mainCarousel .carousel-layer img {
   width: 100%;
 }
 body #landingPage .contact-us-page h2 {
